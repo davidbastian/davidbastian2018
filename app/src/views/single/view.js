@@ -31,50 +31,6 @@ class SingleView {
     });
   }
 
-  appearView() {
-    const self = this;
-    const oldView = App.model.getActiveView();
-
-    document.querySelector("main").appendChild(self.el);
-
-    if (oldView) {
-      oldView.scroll.removeEvents();
-      TweenMax.to(oldView.el, 1, {
-        autoAlpha: 0,
-        ease: "Power3.easeInOut",
-        y: -100,
-        onComplete: function() {
-          oldView.el.outerHTML = "";
-        }
-      });
-    }
-
-    TweenMax.set(self.el, {
-      autoAlpha: 0,
-      y: 100
-    });
-
-    TweenMax.fromTo(
-      self.el,
-      1,
-      {
-        autoAlpha: 0,
-        y: 50
-      },
-      {
-        autoAlpha: 1,
-        ease: "Power3.easeInOut",
-        delay: 0.5,
-        y: 0,
-        onComplete: function() {
-          if (!oldView) {
-            App.controller.updateActiveView(self);
-          }
-        }
-      }
-    );
-  }
-
   setScroll() {
     const self = this;
     this.scroll = new ScrollModule({

@@ -89,6 +89,7 @@ class ScrollModule {
       (directionEl - directionWrap) * -1,
       self.scrollTarget
     );
+    
     self.scrollTarget = Math.min(0, self.scrollTarget);
   }
 
