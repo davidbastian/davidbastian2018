@@ -41,7 +41,6 @@ class DotModule {
 
   onLeave() {
     this.dotLeave = true;
-    // this.dotActive = false;
   }
 
   onMove(e) {
@@ -75,7 +74,6 @@ class DotModule {
     this.dotX += vx;
     this.dotY += vy;
 
-
     this.dot.style.left = this.dotX + "%";
     this.dot.style.top = this.dotY + "%";
 
@@ -86,7 +84,6 @@ class DotModule {
       if (this.dotX !== 0) {
         if (this.dotLeave) {
           if (this.dotMouseXPercent.toFixed(2) === this.dotX.toFixed(2)) {
-            console.log("es lo mismo");
             this.dotActive = false;
           }
         }

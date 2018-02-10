@@ -81,7 +81,10 @@ footer {
 
 .dot {
   width: 5vw;
+  min-height: 5vw;
+  
   height: 80px;
+
   position: fixed;
   top: 40%;
   left: 0;
