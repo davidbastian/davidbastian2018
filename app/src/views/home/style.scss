@@ -1,0 +1,28 @@
+#home {
+  display: flex;
+
+  .home-wrap {
+    display: flex;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 18vh;
+    position: relative;
+
+    a {
+      height: 53vh;
+      min-height: 500px;
+      margin-right: 10px;
+      display: block;
+      &:last-child {
+        margin-right: 0;
+      }
+      p {
+        padding-top: 40px;
+      }
+      img {
+        display: block;
+        height: 100%;
+      }
+    }
+  }
+}

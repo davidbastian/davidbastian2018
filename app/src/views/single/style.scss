@@ -1,0 +1,69 @@
+@import "../../../common/styles/_variables";
+#single {
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .single-description {
+    position: relative;
+    max-width: 380px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .single-info {
+      padding-bottom: 22vh;
+    }
+
+    h2 {
+      padding-top: 30vh;
+
+      small {
+        letter-spacing: 0;
+        font-weight: 100;
+        font-size: 17px;
+        display: block;
+        margin-bottom: 10px;
+        position: relative;
+      }
+
+      span {
+        position: relative;
+        display: inline-block;
+      }
+    }
+
+    p {
+      font-weight: 100;
+      line-height: 1.6em;
+    }
+
+    .single-credits {
+      > div {
+        margin-top: 20px;
+        div,
+        a {
+          display: block;
+          border-bottom: 1px dotted $color03;
+          padding: 8px 0;
+          line-height: 1.6em;
+        }
+      }
+    }
+  }
+
+  .single-media {
+    max-width: 50vw;
+    width: 100%;
+    .single-media-inner {
+      padding-top: 18vh;
+    }
+    img,
+    video {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+}

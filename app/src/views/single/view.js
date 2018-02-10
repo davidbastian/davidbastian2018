@@ -1,0 +1,219 @@
+import { toSlug } from "../../../common/utils/utils";
+import App from "../../../index";
+import "./style.scss";
+import ScrollModule from "../../modules/module.scroll";
+import DotModule from "../../modules/module.dot";
+import TransitionModule from "../../modules/module.transition";
+import { TweenMax } from "gsap";
+
+class SingleView {
+  init(params) {
+    console.log("init Single", params);
+    this.params = params;
+    this.data = App.model.getData();
+    this.setup();
+  }
+  setup() {
+    this.setData();
+    this.setScroll();
+    this.setDot();
+    this.setTransition();
+    App.controller.updateActiveView(this);
+  }
+
+  setDot() {}
+
+  setTransition() {
+    const self = this;
+    this.transition = new TransitionModule({
+      oldView: App.model.getActiveView(),
+      activeView: self
+    });
+  }
+
+  appearView() {
+    const self = this;
+    const oldView = App.model.getActiveView();
+
+    document.querySelector("main").appendChild(self.el);
+
+    if (oldView) {
+      oldView.scroll.removeEvents();
+      TweenMax.to(oldView.el, 1, {
+        autoAlpha: 0,
+        ease: "Power3.easeInOut",
+        y: -100,
+        onComplete: function() {
+          oldView.el.outerHTML = "";
+        }
+      });
+    }
+
+    TweenMax.set(self.el, {
+      autoAlpha: 0,
+      y: 100
+    });
+
+    TweenMax.fromTo(
+      self.el,
+      1,
+      {
+        autoAlpha: 0,
+        y: 50
+      },
+      {
+        autoAlpha: 1,
+        ease: "Power3.easeInOut",
+        delay: 0.5,
+        y: 0,
+        onComplete: function() {
+          if (!oldView) {
+            App.controller.updateActiveView(self);
+          }
+        }
+      }
+    );
+  }
+
+  setScroll() {
+    const self = this;
+    this.scroll = new ScrollModule({
+      el: self.el.querySelector(".single-media-inner"),
+      wrap: window,
+      ease: 0.06,
+      delta: "y",
+      direction: "y"
+    });
+  }
+
+  setData() {
+    const self = this;
+    const section = new DOMParser().parseFromString(
+      '<section id="single"><div class="single-wrap"></div></section>',
+      "text/html"
+    );
+
+    const singleHTML = section.body.firstChild;
+    self.el = singleHTML;
+    const singleWrap = singleHTML.querySelector(".single-wrap");
+
+    for (let i = 0; i < this.data.projects.length; i++) {
+      const project = this.data.projects[i];
+      const slug = "/" + toSlug(project.slug);
+
+      if (this.params === slug) {
+        console.log(project);
+
+        const markup = `
+                <div class= "container">
+                    <div class="single-description">
+                        <h2>
+                            ${project.title}
+                        </h2>
+
+                        <div class= "single-info">
+                            <p>${project.description}</p>
+                            <div class="single-credits"> </div>
+                        </div>
+
+                    </div>
+
+                    <div class="single-media">
+                        <div class="single-media-inner">
+                        </div>
+
+                    </div>
+                </div>  
+            `;
+
+        const projectHTML = new DOMParser().parseFromString(
+          markup,
+          "text/html"
+        );
+        singleWrap.appendChild(projectHTML.body.firstChild);
+
+        //set credits
+        const credits = this.setCredits(
+          project,
+          singleWrap.querySelector(".single-credits")
+        );
+
+        //set media
+        const media = this.setMedia(
+          project,
+          singleWrap.querySelector(".single-media-inner")
+        );
+      }
+    }
+  }
+
+  setMedia(project, mediaDOM) {
+    for (let i = 0; i < project.media.length; i++) {
+      const media = project.media[i];
+
+      if (media.type === "image") {
+        const markupImage = `
+          <img alt="${media.type}" src="${media.links[0].src}"/>
+          `;
+        const ImageHTML = new DOMParser().parseFromString(
+          markupImage,
+          "text/html"
+        );
+
+        mediaDOM.appendChild(ImageHTML.body.firstChild);
+      }
+
+      if (media.type === "video") {
+        const markupVideo = `
+        <video  preload="auto" playsinline loop muted autoplay>
+                <source src="${media.links[0].src}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        `;
+        const videoHTML = new DOMParser().parseFromString(
+          markupVideo,
+          "text/html"
+        );
+
+        mediaDOM.appendChild(videoHTML.body.firstChild);
+      }
+    }
+  }
+
+  setCredits(project, creditsDOM) {
+    let markupYear, markupLink, markupAgency;
+
+    if (project.agency) {
+      markupAgency = `<div>Agency: ${project.agency}</div>`;
+    } else {
+      markupAgency = "";
+    }
+
+    if (project.year) {
+      markupYear = `<div>Year: ${project.year}</div>`;
+    } else {
+      markupYear = "";
+    }
+
+    if (project.link) {
+      markupLink = `<a href = "${
+        project.link
+      }" target="_blank">Take a Look</a>`;
+    } else {
+      markupLink = "";
+    }
+
+    const creditsHTML = new DOMParser().parseFromString(
+      "<div>" + [markupAgency + markupYear + markupLink] + "</div>",
+      "text/html"
+    );
+
+    creditsDOM.appendChild(creditsHTML.body.firstChild);
+  }
+
+  removeEvents() {}
+}
+
+var view = new SingleView();
+
+export default view;
