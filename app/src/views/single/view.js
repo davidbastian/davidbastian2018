@@ -21,7 +21,9 @@ class SingleView {
     App.controller.updateActiveView(this);
   }
 
-  setDot() {}
+  setDot() {
+    
+  }
 
   setTransition() {
     const self = this;

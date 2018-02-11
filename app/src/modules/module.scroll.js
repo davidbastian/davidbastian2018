@@ -42,7 +42,7 @@ class ScrollModule {
     const self = this;
     window.removeEventListener("resize", self.onResize);
     self.instance.off(self.onScroll);
-    self.scrollStop = true;
+  //  self.scrollStop = true;
   }
 
   pauseScroll() {
@@ -139,7 +139,7 @@ class ScrollModule {
 
         if (self.trackDot) {
           //check if track dot with scroll
-          //reset dot position
+          //then reset dot position
           if (self.view.dot) {
             const pos =
               -self.scrollPos *

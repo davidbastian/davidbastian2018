@@ -14,6 +14,19 @@ class TransitionModule {
 
     if (self.oldView) {
       self.oldView.scroll.removeEvents();
+
+      if (self.oldView.dot) {
+        self.oldView.dot.removeEvents();
+
+        TweenMax.to(self.oldView.dot.dot, 1, {
+          autoAlpha: 0,
+          ease: "Power3.easeOut",
+          onComplete: function() {
+            self.oldView.dot.dot.outerHTML = "";
+          }
+        });
+      }
+
       TweenMax.to(self.oldView.el, 1, {
         autoAlpha: 0,
         ease: "Power3.easeInOut",
@@ -21,6 +34,18 @@ class TransitionModule {
         onComplete: function() {
           self.oldView.el.outerHTML = "";
         }
+      });
+    }
+
+    if (self.activeView.dot) {
+      TweenMax.set(self.activeView.dot.dot.querySelector(".dot-inner"), {
+        autoAlpha: 0
+      });
+
+      TweenMax.to(self.activeView.dot.dot.querySelector(".dot-inner"), 1, {
+        autoAlpha: 1,
+        ease: "Power3.easeInOut",
+        delay: 0.5
       });
     }
 
@@ -41,6 +66,9 @@ class TransitionModule {
         ease: "Power3.easeInOut",
         delay: 0.5,
         y: 0,
+        onStart:function(){
+
+        },
         onComplete: function() {
           if (!self.oldView) {
             App.controller.updateActiveView(self.activeView);

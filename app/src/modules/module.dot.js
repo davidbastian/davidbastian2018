@@ -22,8 +22,9 @@ class DotModule {
 
   setup() {
     this.createDot();
-    this.addEvents();
-    this.startDrag();
+
+    //this.startDrag();
+   // this.addEvents();
   }
 
   addEvents() {
@@ -33,11 +34,22 @@ class DotModule {
     window.addEventListener("mouseup", self.onLeave.bind(this));
   }
 
+  removeEvents() {
+    const self = this;
+    this.dot.removeEventListener("mousedown", self.onEnter);
+    window.removeEventListener("mousemove", self.onMove);
+    window.removeEventListener("mouseup", self.onLeave);
+  }
+
   onEnter() {
     this.dotActive = true;
     this.dotLeave = false;
     this.dotStop = false;
-    this.view.scroll.pauseScroll();
+
+    //pause scroll if dot is tracking scroll
+    if (this.trackScroll) {
+      this.view.scroll.pauseScroll();
+    }
   }
 
   onLeave() {
@@ -60,6 +72,8 @@ class DotModule {
           0,
           this.areaY
         );
+
+        console.log(this.dotMouseX, this.dotMouseXPercent);
       }
     }
   }
@@ -77,7 +91,6 @@ class DotModule {
 
       this.dot.style.left = this.dotX + "%";
       this.dot.style.top = this.dotY + "%";
-
 
       //if track scroll then update scroll
       if (self.trackScroll) {
