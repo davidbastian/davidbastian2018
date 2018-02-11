@@ -1,4 +1,5 @@
 import VirtualScroll from "virtual-scroll";
+import { constrain } from "../../common/utils/utils";
 
 class ScrollModule {
   constructor(opt) {
@@ -12,7 +13,9 @@ class ScrollModule {
     this.scrollPercent = 0;
     this.scrollDirection = opt.direction;
     this.scrollDelta = opt.delta;
-    this.scrollStop = false;
+    this.scrollStop = true;
+    this.trackDot = opt.trackDot;
+    this.view = opt.view;
 
     this.init();
   }
@@ -42,10 +45,10 @@ class ScrollModule {
     self.scrollStop = true;
   }
 
-  pauseScroll(){
+  pauseScroll() {
     this.scrollReady = false;
   }
-  playScroll(){
+  playScroll() {
     this.scrollReady = true;
   }
 
@@ -64,6 +67,9 @@ class ScrollModule {
 
   onScroll(e) {
     const self = this;
+
+    self.scrollStop = false;
+
     let delta, directionWrap, directionEl;
 
     if (self.scrollDirection === "x") {
@@ -89,22 +95,33 @@ class ScrollModule {
       (directionEl - directionWrap) * -1,
       self.scrollTarget
     );
-    
+
     self.scrollTarget = Math.min(0, self.scrollTarget);
+
+    //update dot
+    if (self.trackDot) {
+      if (!self.view.dot.dotStop) {
+        self.view.dot.dotStop = true;
+        self.scrollReady = true;
+      }
+    }
   }
 
   startScroll() {
     const self = this;
     let directionWrap, directionEl;
 
+    requestAnimationFrame(self.startScroll.bind(this));
+
     if (!self.scrollStop) {
-      requestAnimationFrame(self.startScroll.bind(this));
       if (self.scrollReady === true) {
         if (self.scrollDirection === "x") {
           directionEl = self.scrollEl.offsetWidth;
+          directionWrap = self.scrollWrap.innerWidth;
         }
         if (self.scrollDirection === "y") {
           directionEl = self.scrollEl.offsetHeight;
+          directionWrap = self.scrollWrap.innerHeight;
         }
 
         self.scrollPos +=
@@ -118,6 +135,20 @@ class ScrollModule {
         if (self.scrollDirection === "y") {
           self.scrollEl.style.transform =
             "translateY(" + self.scrollPercent + "%)";
+        }
+
+        if (self.trackDot) {
+          //check if track dot with scroll
+          //reset dot position
+          if (self.view.dot) {
+            const pos =
+              -self.scrollPos *
+              self.view.dot.areaX /
+              (directionEl - directionWrap);
+            self.view.dot.dotX = pos;
+            self.view.dot.dotMouseXPercent = pos;
+            self.view.dot.dot.style.left = pos + "%";
+          }
         }
       }
     }

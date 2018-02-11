@@ -4,10 +4,6 @@ class DotModule {
   constructor(opt) {
     this.dotActive = false;
     this.view = opt.view;
-
-    this.init();
-  }
-  init() {
     this.dotEase = 0.08;
     this.dotX = 0;
     this.dotY = 40;
@@ -15,9 +11,13 @@ class DotModule {
     this.dotMouseY = 0;
     this.dotMouseXPercent = 0;
     this.dotMouseYPercent = 40;
-    this.setup();
+    this.dotStop = false;
+    this.trackScroll = opt.trackScroll;
 
-    console.log(this.view);
+    this.init();
+  }
+  init() {
+    this.setup();
   }
 
   setup() {
@@ -36,6 +36,7 @@ class DotModule {
   onEnter() {
     this.dotActive = true;
     this.dotLeave = false;
+    this.dotStop = false;
     this.view.scroll.pauseScroll();
   }
 
@@ -44,23 +45,22 @@ class DotModule {
   }
 
   onMove(e) {
-    if (this.dotActive && !this.dotLeave) {
-      this.dotMouseX = e.x - this.dot.clientWidth / 2;
-      this.dotMouseY = e.y - this.dot.clientHeight / 2;
-      const areaX =
-        (window.innerWidth - this.dot.clientWidth) * 100 / window.innerWidth;
-      const areaY =
-        (window.innerHeight - this.dot.clientHeight) * 100 / window.innerHeight;
-      this.dotMouseXPercent = constrain(
-        this.dotMouseX * 100 / window.innerWidth,
-        0,
-        areaX
-      );
-      this.dotMouseYPercent = constrain(
-        this.dotMouseY * 100 / window.innerHeight,
-        0,
-        areaY
-      );
+    if (!this.dotStop) {
+      if (this.dotActive && !this.dotLeave) {
+        this.dotMouseX = e.x - this.dot.clientWidth / 2;
+        this.dotMouseY = e.y - this.dot.clientHeight / 2;
+
+        this.dotMouseXPercent = constrain(
+          this.dotMouseX * 100 / window.innerWidth,
+          0,
+          this.areaX
+        );
+        this.dotMouseYPercent = constrain(
+          this.dotMouseY * 100 / window.innerHeight,
+          0,
+          this.areaY
+        );
+      }
     }
   }
 
@@ -68,29 +68,35 @@ class DotModule {
     const self = this;
     requestAnimationFrame(self.startDrag.bind(this));
 
-    let vx = (this.dotMouseXPercent - this.dotX) * this.dotEase;
-    let vy = (this.dotMouseYPercent - this.dotY) * this.dotEase;
+    if (!this.dotStop) {
+      let vx = (this.dotMouseXPercent - this.dotX) * this.dotEase;
+      let vy = (this.dotMouseYPercent - this.dotY) * this.dotEase;
 
-    this.dotX += vx;
-    this.dotY += vy;
+      this.dotX += vx;
+      this.dotY += vy;
 
-    this.dot.style.left = this.dotX + "%";
-    this.dot.style.top = this.dotY + "%";
+      this.dot.style.left = this.dotX + "%";
+      this.dot.style.top = this.dotY + "%";
 
-    if (this.dotActive) {
-      this.view.scroll.scrollTarget = -self.dotX;
-      this.view.scroll.scrollPercent = -self.dotX;
 
-      if (this.dotX !== 0) {
-        if (this.dotLeave) {
-          if (this.dotMouseXPercent.toFixed(2) === this.dotX.toFixed(2)) {
-            this.dotActive = false;
-          }
+      //if track scroll then update scroll
+      if (self.trackScroll) {
+        if (this.dotActive) {
+          const pos =
+            this.dotX *
+            (this.view.scroll.scrollEl.offsetWidth -
+              this.view.scroll.scrollWrap.innerWidth) /
+            this.areaX;
+          const posPercent = pos * 100 / this.view.scroll.scrollEl.offsetWidth;
+
+          // reset scroll position
+          this.view.scroll.scrollPos = -pos;
+          this.view.scroll.scrollTarget = -pos;
+          this.view.scroll.scrollPercent = -posPercent;
+          this.view.scroll.scrollEl.style.transform =
+            "translateX(" + -posPercent + "%)";
         }
       }
-
-      this.view.scroll.scrollEl.style.transform =
-        "translateX(" + -self.dotX + "%)";
     }
   }
 
@@ -103,10 +109,12 @@ class DotModule {
 
     const dotHTML = new DOMParser().parseFromString(markup, "text/html");
     this.dot = dotHTML.body.firstChild;
-
-    console.log(this.dot.style.top, this.dot);
-
     document.body.appendChild(this.dot);
+
+    this.areaX =
+      (window.innerWidth - this.dot.clientWidth) * 100 / window.innerWidth;
+    this.areaY =
+      (window.innerHeight - this.dot.clientHeight) * 100 / window.innerHeight;
   }
 }
 

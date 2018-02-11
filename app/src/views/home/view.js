@@ -26,7 +26,8 @@ class HomeView {
   setDot() {
     const self = this;
     this.dot = new DotModule({
-      view:self
+      view: self,
+      trackScroll:true
     });
   }
 
@@ -45,7 +46,9 @@ class HomeView {
       wrap: window,
       ease: 0.06,
       delta: "y",
-      direction: "x"
+      direction: "x",
+      view: self,
+      trackDot:true,
     });
   }
   setData() {
