@@ -3,65 +3,148 @@ import { constrain } from "../../common/utils/utils";
 
 class ScrollModule {
   constructor(opt) {
+    this.view = opt.view;
+
     this.scrollWrap = opt.wrap;
     this.scrollEl = opt.el;
     this.scrollTarget = 0;
     this.scrollPos = 0;
+
     this.scrollEase = opt.ease;
     this.scrollActive = true;
     this.scrollReady = true;
-    this.scrollPercent = 0;
+
     this.scrollDirection = opt.direction;
     this.scrollDelta = opt.delta;
     this.scrollStop = true;
-    this.trackDot = opt.trackDot;
-    this.view = opt.view;
+
+    this.dotTrack = opt.track;
+    this.dot = opt.dot;
+    this.dotPosX = 0;
+    this.dotPosY = -40;
+    this.dotTargetX = 0;
+    this.dotTargetY = -40;
 
     this.init();
   }
 
   init() {
+    if (this.dot) {
+      this.setDot();
+    }
     this.setScroll();
     this.addEvents();
+
     this.startScroll();
+  }
+
+  setDot() {
+    //append dot inside html
+    const markup = `
+        <div class= "dot">
+            <div class="dot-inner"></div>
+        </div>  
+    `;
+
+    const dotHTML = new DOMParser().parseFromString(markup, "text/html");
+    this.dotEl = dotHTML.body.firstChild;
+    document.body.appendChild(this.dotEl);
+
+    //set max area of the dot
+    this.dotAreaX =
+      (window.innerWidth - this.dotEl.clientWidth) * 100 / window.innerWidth;
+    this.dotAreaY =
+      (window.innerHeight - this.dotEl.clientHeight) * 100 / window.innerHeight;
   }
 
   setScroll() {
     const self = this;
+
+    let directionWrap, directionEl;
+
+    if (self.scrollDirection === "x") {
+      directionWrap = self.scrollWrap.innerWidth;
+      directionEl = self.scrollEl.offsetWidth;
+    }
+
+    if (self.scrollDirection === "y") {
+      directionWrap = self.scrollWrap.innerHeight;
+      directionEl = self.scrollEl.offsetHeight;
+    }
+
+    self.scrollArea = (directionEl - directionWrap) * 100 / directionEl;
+
     self.instance = new VirtualScroll({
       el: this.scrollWrap
     });
   }
+
   addEvents() {
     const self = this;
     self.instance.on(self.onScroll.bind(this));
-    window.addEventListener("resize", self.onResize.bind(this));
+    self.dotEl.addEventListener("mousedown", self.onDotEnter.bind(this));
+    window.addEventListener("mousemove", self.onDotMove.bind(this));
+    window.addEventListener("mouseup", self.onDotLeave.bind(this));
+
+    // window.addEventListener("resize", self.onResize.bind(this));
   }
 
   removeEvents() {
     const self = this;
-    window.removeEventListener("resize", self.onResize);
     self.instance.off(self.onScroll);
-  //  self.scrollStop = true;
   }
 
-  pauseScroll() {
-    this.scrollReady = false;
-  }
-  playScroll() {
-    this.scrollReady = true;
-  }
-
-  onResize() {
+  onDotEnter(e) {
     const self = this;
+    self.scrollReady = false;
+    if (!self.scrollReady) {
+      console.log(e, "start moving dot");
+      this.dotMouseX = e.x - this.dotEl.clientWidth / 2;
+      this.dotMouseY = e.y - this.dotEl.clientHeight / 2;
 
-    if (self.scrollDirection === "x") {
-      self.scrollPos = self.scrollPercent * self.scrollEl.offsetWidth / 100;
-      self.scrollEl.style.transform = "translateX(" + self.scrollPercent + "%)";
+      this.dotTargetX = constrain(
+        this.dotMouseX * 100 / window.innerWidth,
+        0,
+        this.dotAreaX
+      );
+
+      this.dotTargetY = constrain(
+        this.dotMouseY * 100 / window.innerHeight,
+        0,
+        this.dotAreaY
+      );
+
+      this.dotTargetX = -1 * this.dotTargetX;
+      this.dotTargetY = -1 * this.dotTargetY;
     }
-    if (self.scrollDirection === "y") {
-      self.scrollPos = self.scrollPercent * self.scrollEl.offsetHeight / 100;
-      self.scrollEl.style.transform = "translateY(" + self.scrollPercent + "%)";
+  }
+
+  onDotLeave() {
+    const self = this;
+    self.scrollReady = true;
+  }
+
+  onDotMove(e) {
+    const self = this;
+    if (!self.scrollReady) {
+      console.log(e, "start moving dot");
+      this.dotMouseX = e.x - this.dotEl.clientWidth / 2;
+      this.dotMouseY = e.y - this.dotEl.clientHeight / 2;
+
+      this.dotTargetX = constrain(
+        this.dotMouseX * 100 / window.innerWidth,
+        0,
+        this.dotAreaX
+      );
+
+      this.dotTargetY = constrain(
+        this.dotMouseY * 100 / window.innerHeight,
+        0,
+        this.dotAreaY
+      );
+
+      this.dotTargetX = -1 * this.dotTargetX;
+      this.dotTargetY = -1 * this.dotTargetY;
     }
   }
 
@@ -83,28 +166,23 @@ class ScrollModule {
     }
 
     if (self.scrollDelta === "x") {
-      delta = e.deltaX;
+      delta = e.deltaX * 0.01;
     }
 
     if (self.scrollDelta === "y") {
-      delta = e.deltaY;
+      delta = e.deltaY * 0.01;
     }
 
+    //set target for scroll
     self.scrollTarget += delta;
-    self.scrollTarget = Math.max(
-      (directionEl - directionWrap) * -1,
-      self.scrollTarget
-    );
+    self.scrollArea = (directionEl - directionWrap) * 100 / directionEl;
+    self.scrollTarget = constrain(self.scrollTarget, -self.scrollArea, 0);
 
-    self.scrollTarget = Math.min(0, self.scrollTarget);
-
-    //update dot
-    if (self.trackDot) {
-      if (!self.view.dot.dotStop) {
-        self.view.dot.dotStop = true;
-        self.scrollReady = true;
-      }
-    }
+    //set target for dot
+    self.dotTargetX += delta;
+    self.dotAreaX =
+      (window.innerWidth - self.dotEl.clientWidth) * 100 / window.innerWidth;
+    self.dotTargetX = constrain(self.dotTargetX, -self.dotAreaX, 0);
   }
 
   startScroll() {
@@ -112,46 +190,47 @@ class ScrollModule {
     let directionWrap, directionEl;
 
     requestAnimationFrame(self.startScroll.bind(this));
-
-    if (!self.scrollStop) {
-      if (self.scrollReady === true) {
-        if (self.scrollDirection === "x") {
-          directionEl = self.scrollEl.offsetWidth;
-          directionWrap = self.scrollWrap.innerWidth;
-        }
-        if (self.scrollDirection === "y") {
-          directionEl = self.scrollEl.offsetHeight;
-          directionWrap = self.scrollWrap.innerHeight;
-        }
-
-        self.scrollPos +=
-          (self.scrollTarget - self.scrollPos) * self.scrollEase;
-        self.scrollPercent = self.scrollPos * 100 / directionEl;
-
-        if (self.scrollDirection === "x") {
-          self.scrollEl.style.transform =
-            "translateX(" + self.scrollPercent + "%)";
-        }
-        if (self.scrollDirection === "y") {
-          self.scrollEl.style.transform =
-            "translateY(" + self.scrollPercent + "%)";
-        }
-
-        if (self.trackDot) {
-          //check if track dot with scroll
-          //then reset dot position
-          if (self.view.dot) {
-            const pos =
-              -self.scrollPos *
-              self.view.dot.areaX /
-              (directionEl - directionWrap);
-            self.view.dot.dotX = pos;
-            self.view.dot.dotMouseXPercent = pos;
-            self.view.dot.dot.style.left = pos + "%";
-          }
-        }
-      }
+    if (self.scrollDirection === "x") {
+      directionEl = self.scrollEl.offsetWidth;
+      directionWrap = self.scrollWrap.innerWidth;
     }
+    if (self.scrollDirection === "y") {
+      directionEl = self.scrollEl.offsetHeight;
+      directionWrap = self.scrollWrap.innerHeight;
+    }
+    self.scrollArea = (directionEl - directionWrap) * 100 / directionEl;
+
+
+    if (self.scrollReady === true) {
+      
+
+      // set position for scroll
+      self.scrollPos += (self.scrollTarget - self.scrollPos) * self.scrollEase;
+
+      if (self.scrollDirection === "x") {
+        self.scrollEl.style.transform = "translateX(" + self.scrollPos + "%)";
+      }
+      if (self.scrollDirection === "y") {
+        self.scrollEl.style.transform = "translateY(" + self.scrollPos + "%)";
+      }
+
+      //set position for dot on scroll
+      self.dotPosX += (self.dotTargetX - self.dotPosX) * self.scrollEase;
+      self.dotEl.style.left = -self.dotPosX + "%";
+    } else {
+      //set dot onDrag
+      let vx = (self.dotTargetX - self.dotPosX) * self.scrollEase;
+      self.dotPosX += vx;
+      self.dotEl.style.left = -self.dotPosX + "%";
+    }
+
+    self.scrollPos =  (-self.dotPosX* self.scrollArea)/self.dotAreaX*-1;
+    self.scrollTarget = self.scrollPos;
+    self.scrollEl.style.transform = "translateX(" + self.scrollPos + "%)";
+
+    let vy = (self.dotTargetY - self.dotPosY) * self.scrollEase;
+    self.dotPosY += vy;
+    self.dotEl.style.top = -self.dotPosY + "%";
   }
 }
 

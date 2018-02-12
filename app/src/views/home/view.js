@@ -17,19 +17,11 @@ class HomeView {
   setup() {
     this.setData();
     this.setScroll();
-    this.setDot();
     this.setTransition();
 
     App.controller.updateActiveView(this);
   }
 
-  setDot() {
-    const self = this;
-    this.dot = new DotModule({
-      view: self,
-      trackScroll:true
-    });
-  }
 
   setTransition() {
     const self = this;
@@ -48,7 +40,8 @@ class HomeView {
       delta: "y",
       direction: "x",
       view: self,
-      trackDot:true,
+      dot:true,
+      track:true
     });
   }
   setData() {

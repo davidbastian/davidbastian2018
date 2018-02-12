@@ -11,8 +11,8 @@ class DotModule {
     this.dotMouseY = 0;
     this.dotMouseXPercent = 0;
     this.dotMouseYPercent = 40;
-    this.dotStop = false;
     this.trackScroll = opt.trackScroll;
+    this.dotActive = false;
 
     this.init();
   }
@@ -22,9 +22,8 @@ class DotModule {
 
   setup() {
     this.createDot();
-
-    //this.startDrag();
-   // this.addEvents();
+    this.addEvents();
+    this.startDrag();
   }
 
   addEvents() {
@@ -44,12 +43,10 @@ class DotModule {
   onEnter() {
     this.dotActive = true;
     this.dotLeave = false;
-    this.dotStop = false;
 
-    //pause scroll if dot is tracking scroll
-    if (this.trackScroll) {
+   // if (this.trackScroll) {
       this.view.scroll.pauseScroll();
-    }
+  //  }
   }
 
   onLeave() {
@@ -57,8 +54,8 @@ class DotModule {
   }
 
   onMove(e) {
-    if (!this.dotStop) {
-      if (this.dotActive && !this.dotLeave) {
+    if (this.dotActive) {
+      if (!this.dotLeave) {
         this.dotMouseX = e.x - this.dot.clientWidth / 2;
         this.dotMouseY = e.y - this.dot.clientHeight / 2;
 
@@ -72,8 +69,6 @@ class DotModule {
           0,
           this.areaY
         );
-
-        console.log(this.dotMouseX, this.dotMouseXPercent);
       }
     }
   }
@@ -82,7 +77,7 @@ class DotModule {
     const self = this;
     requestAnimationFrame(self.startDrag.bind(this));
 
-    if (!this.dotStop) {
+    if (this.dotActive) {
       let vx = (this.dotMouseXPercent - this.dotX) * this.dotEase;
       let vy = (this.dotMouseYPercent - this.dotY) * this.dotEase;
 
@@ -93,23 +88,21 @@ class DotModule {
       this.dot.style.top = this.dotY + "%";
 
       //if track scroll then update scroll
-      if (self.trackScroll) {
-        if (this.dotActive) {
-          const pos =
-            this.dotX *
-            (this.view.scroll.scrollEl.offsetWidth -
-              this.view.scroll.scrollWrap.innerWidth) /
-            this.areaX;
-          const posPercent = pos * 100 / this.view.scroll.scrollEl.offsetWidth;
+    //  if (self.trackScroll) {
+        const pos =
+          this.dotX *
+          (this.view.scroll.scrollEl.offsetWidth -
+            this.view.scroll.scrollWrap.innerWidth) /
+          this.areaX;
+        const posPercent = pos * 100 / this.view.scroll.scrollEl.offsetWidth;
 
-          // reset scroll position
-          this.view.scroll.scrollPos = -pos;
-          this.view.scroll.scrollTarget = -pos;
-          this.view.scroll.scrollPercent = -posPercent;
-          this.view.scroll.scrollEl.style.transform =
-            "translateX(" + -posPercent + "%)";
-        }
-      }
+        // reset scroll position
+        this.view.scroll.scrollPos = -pos;
+        this.view.scroll.scrollTarget = -pos;
+        this.view.scroll.scrollPercent = -posPercent;
+        this.view.scroll.scrollEl.style.transform =
+          "translateX(" + -posPercent + "%)";
+     // }
     }
   }
 
