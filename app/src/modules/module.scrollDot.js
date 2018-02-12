@@ -1,7 +1,7 @@
 import VirtualScroll from "virtual-scroll";
 import { constrain } from "../../common/utils/utils";
 
-class ScrollModule {
+class ScrollDotModule {
   constructor(opt) {
     this.view = opt.view;
 
@@ -18,15 +18,42 @@ class ScrollModule {
     this.scrollDelta = opt.delta;
     this.scrollStop = true;
 
+    this.dotTrack = opt.track;
+    this.dot = opt.dot;
+    this.dotPosX = 0;
+    this.dotPosY = -40;
+    this.dotTargetX = 0;
+    this.dotTargetY = -40;
+
     this.init();
   }
 
   init() {
+    this.setDot();
     this.setScroll();
     this.addEvents();
+
     this.startScroll();
   }
 
+  setDot() {
+    //append dot inside html
+    const markup = `
+        <div class= "dot">
+            <div class="dot-inner"></div>
+        </div>  
+    `;
+
+    const dotHTML = new DOMParser().parseFromString(markup, "text/html");
+    this.dotEl = dotHTML.body.firstChild;
+    document.body.appendChild(this.dotEl);
+
+    //set max area of the dot
+    this.dotAreaX =
+      (window.innerWidth - this.dotEl.clientWidth) * 100 / window.innerWidth;
+    this.dotAreaY =
+      (window.innerHeight - this.dotEl.clientHeight) * 100 / window.innerHeight;
+  }
 
   setScroll() {
     const self = this;
@@ -53,6 +80,9 @@ class ScrollModule {
   addEvents() {
     const self = this;
     self.instance.on(self.onScroll.bind(this));
+    self.dotEl.addEventListener("mousedown", self.onDotEnter.bind(this));
+    window.addEventListener("mousemove", self.onDotMove.bind(this));
+    window.addEventListener("mouseup", self.onDotLeave.bind(this));
   }
 
   removeEvents() {
@@ -60,6 +90,38 @@ class ScrollModule {
     self.instance.off(self.onScroll);
   }
 
+  onDotEnter(e) {
+    const self = this;
+    self.scrollReady = false;
+  }
+
+  onDotLeave() {
+    const self = this;
+    self.scrollReady = true;
+  }
+
+  onDotMove(e) {
+    const self = this;
+    if (!self.scrollReady) {
+      this.dotMouseX = e.x - this.dotEl.clientWidth / 2;
+      this.dotMouseY = e.y - this.dotEl.clientHeight / 2;
+
+      this.dotTargetX = constrain(
+        this.dotMouseX * 100 / window.innerWidth,
+        0,
+        this.dotAreaX
+      );
+
+      this.dotTargetY = constrain(
+        this.dotMouseY * 100 / window.innerHeight,
+        0,
+        this.dotAreaY
+      );
+
+      this.dotTargetX = -1 * this.dotTargetX;
+      this.dotTargetY = -1 * this.dotTargetY;
+    }
+  }
 
   onScroll(e) {
     const self = this;
@@ -91,6 +153,11 @@ class ScrollModule {
     self.scrollArea = (directionEl - directionWrap) * 100 / directionEl;
     self.scrollTarget = constrain(self.scrollTarget, -self.scrollArea, 0);
 
+    //set target for dot
+    self.dotTargetX += delta;
+    self.dotAreaX =
+      (window.innerWidth - self.dotEl.clientWidth) * 100 / window.innerWidth;
+    self.dotTargetX = constrain(self.dotTargetX, -self.dotAreaX, 0);
   }
 
   startScroll() {
@@ -118,9 +185,26 @@ class ScrollModule {
       if (self.scrollDirection === "y") {
         self.scrollEl.style.transform = "translateY(" + self.scrollPos + "%)";
       }
+
+      //set position for dot on scroll
+      self.dotPosX += (self.dotTargetX - self.dotPosX) * self.scrollEase;
+      self.dotEl.style.left = -self.dotPosX + "%";
+    } else {
+      //set dot onDrag
+      let vx = (self.dotTargetX - self.dotPosX) * self.scrollEase;
+      self.dotPosX += vx;
+      self.dotEl.style.left = -self.dotPosX + "%";
     }
 
+    self.scrollPos = -self.dotPosX * self.scrollArea / self.dotAreaX * -1;
+    self.scrollTarget = self.scrollPos;
+    self.scrollEl.style.transform = "translateX(" + self.scrollPos + "%)";
+
+    //dot dragY
+    let vy = (self.dotTargetY - self.dotPosY) * self.scrollEase;
+    self.dotPosY += vy;
+    self.dotEl.style.top = -self.dotPosY + "%";
   }
 }
 
-export default ScrollModule;
+export default ScrollDotModule;

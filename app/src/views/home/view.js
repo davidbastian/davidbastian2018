@@ -1,47 +1,38 @@
 import { toSlug } from "../../../common/utils/utils";
 import App from "../../../index";
 import "./style.scss";
-import ScrollModule from "../../modules/module.scroll";
-import DotModule from "../../modules/module.dot";
-import TransitionModule from "../../modules/module.transition";
+import ScrollDotModule from "../../modules/module.scrollDot";
 import { TweenMax } from "gsap";
 
 class HomeView {
   init(params) {
-    console.log("init Home", params);
+    console.log("init Home", params, App);
 
     this.params = params;
     this.data = App.model.getData();
+
+    console.log(App);
     this.setup();
   }
   setup() {
     this.setData();
-    this.setScroll();
-    this.setTransition();
+    this.setScrollDot();
 
     App.controller.updateActiveView(this);
+    document.querySelector("main").appendChild(this.el);
   }
 
-
-  setTransition() {
+  setScrollDot() {
     const self = this;
-    this.transition = new TransitionModule({
-      oldView: App.model.getActiveView(),
-      activeView: self
-    });
-  }
-
-  setScroll() {
-    const self = this;
-    this.scroll = new ScrollModule({
+    this.scroll = new ScrollDotModule({
       el: self.el.querySelector(".home-wrap"),
       wrap: window,
       ease: 0.06,
       delta: "y",
       direction: "x",
       view: self,
-      dot:true,
-      track:true
+      dot: true,
+      track: true
     });
   }
   setData() {

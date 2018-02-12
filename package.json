@@ -19,6 +19,7 @@
     "ip": "^1.1.5",
     "json-loader": "^0.5.4",
     "node-sass": "^4.5.3",
+    "page.js": "^4.13.3",
     "path": "^0.12.7",
     "postcss-load-config": "1.0.0",
     "postcss-loader": "1.0.0",

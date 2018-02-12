@@ -2,8 +2,6 @@ import { toSlug } from "../../../common/utils/utils";
 import App from "../../../index";
 import "./style.scss";
 import ScrollModule from "../../modules/module.scroll";
-import DotModule from "../../modules/module.dot";
-import TransitionModule from "../../modules/module.transition";
 import { TweenMax } from "gsap";
 
 class SingleView {
@@ -16,21 +14,8 @@ class SingleView {
   setup() {
     this.setData();
     this.setScroll();
-    this.setDot();
-    this.setTransition();
     App.controller.updateActiveView(this);
-  }
-
-  setDot() {
-    
-  }
-
-  setTransition() {
-    const self = this;
-    this.transition = new TransitionModule({
-      oldView: App.model.getActiveView(),
-      activeView: self
-    });
+    document.querySelector("main").appendChild(this.el);
   }
 
   setScroll() {
@@ -40,7 +25,8 @@ class SingleView {
       wrap: window,
       ease: 0.06,
       delta: "y",
-      direction: "y"
+      direction: "y",
+      view: self
     });
   }
 
