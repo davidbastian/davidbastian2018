@@ -2,6 +2,7 @@ import { toSlug } from "../../../common/utils/utils";
 import App from "../../../index";
 import "./style.scss";
 import ScrollDotModule from "../../modules/module.scrollDot";
+import transitionModule from "../../modules/module.transition";
 import { TweenMax } from "gsap";
 
 class HomeView {
@@ -17,9 +18,22 @@ class HomeView {
   setup() {
     this.setData();
     this.setScrollDot();
-
+    this.setTransition();
     App.controller.updateActiveView(this);
-    document.querySelector("main").appendChild(this.el);
+
+  }
+
+  setTransition() {
+    const self = this;
+    this.transition = new transitionModule({
+      oldView:App.model.getActiveView(),
+      activeView:self
+    });
+
+  }
+
+  removeEvents(){
+    this.scroll.removeEvents();
   }
 
   setScrollDot() {

@@ -2,6 +2,7 @@ class AppController {
   constructor(model, view) {
     this.view = view;
     this.model = model;
+
   }
 
   updateActiveView(view){
@@ -11,6 +12,8 @@ class AppController {
   setData(data) {
     this.model.setData(data);
   }
+
+
 
 }
 

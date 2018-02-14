@@ -4,16 +4,21 @@ class TransitionModule {
   constructor(opt) {
     this.oldView = opt.oldView;
     this.activeView = opt.activeView;
-
     this.init();
   }
+
   init() {
     const self = this;
+    const currentURL = App.model.currentURL;
 
     document.querySelector("main").appendChild(self.activeView.el);
 
+    const url = location.hash.slice(1) || "/";
+
+    App.model.updatingView = true;
+
     if (self.oldView) {
-      self.oldView.scroll.removeEvents();
+      this.oldView.removeEvents();
 
       TweenMax.to(self.oldView.el, 1, {
         autoAlpha: 0,
@@ -44,6 +49,25 @@ class TransitionModule {
         y: 0,
         onStart: function() {},
         onComplete: function() {
+          App.model.updatingView = false;
+
+          /*  history.pushState(
+            "page2",
+            "Title",
+            "#" + App.model.getActiveView().params
+          );*/
+
+          history.replaceState(undefined, undefined,   "#" + App.model.getActiveView().params);
+
+         /* window.addEventListener("hashchange", function() {});
+
+          if (url !== App.model.getActiveView().params) {
+            setTimeout(function() {
+              App.model.updatingView = true;
+              location.hash = "#" + App.model.getActiveView().params;
+            }, 1000);
+          }*/
+
           if (!self.oldView) {
             App.controller.updateActiveView(self.activeView);
           }

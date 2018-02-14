@@ -46,7 +46,7 @@ class ScrollDotModule {
 
     const dotHTML = new DOMParser().parseFromString(markup, "text/html");
     this.dotEl = dotHTML.body.firstChild;
-    document.body.appendChild(this.dotEl);
+    this.view.el.appendChild(this.dotEl);
 
     //set max area of the dot
     this.dotAreaX =
@@ -88,6 +88,9 @@ class ScrollDotModule {
   removeEvents() {
     const self = this;
     self.instance.off(self.onScroll);
+    self.dotEl.removeEventListener("mousedown", self.onDotEnter);
+    window.removeEventListener("mousemove", self.onDotMove);
+    window.removeEventListener("mouseup", self.onDotLeave);
   }
 
   onDotEnter(e) {
