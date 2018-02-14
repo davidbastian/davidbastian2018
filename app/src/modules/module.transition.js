@@ -50,24 +50,7 @@ class TransitionModule {
         onStart: function() {},
         onComplete: function() {
           App.model.updatingView = false;
-
-          /*  history.pushState(
-            "page2",
-            "Title",
-            "#" + App.model.getActiveView().params
-          );*/
-
           history.replaceState(undefined, undefined,   "#" + App.model.getActiveView().params);
-
-         /* window.addEventListener("hashchange", function() {});
-
-          if (url !== App.model.getActiveView().params) {
-            setTimeout(function() {
-              App.model.updatingView = true;
-              location.hash = "#" + App.model.getActiveView().params;
-            }, 1000);
-          }*/
-
           if (!self.oldView) {
             App.controller.updateActiveView(self.activeView);
           }
