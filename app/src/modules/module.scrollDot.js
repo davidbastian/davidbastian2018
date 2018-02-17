@@ -103,11 +103,21 @@ class ScrollDotModule {
   onDotEnter(e) {
     const self = this;
     self.scrollReady = false;
+    TweenMax.to(self.dotEl.querySelectorAll('.dot-inner'), 0.5, {
+      ease: 'Expo.easeOut',
+      scale: 0.85,
+    });
   }
 
   onDotLeave() {
     const self = this;
     self.scrollReady = true;
+
+    TweenMax.to(self.dotEl.querySelectorAll('.dot-inner'), 0.5, {
+      ease: 'Expo.easeOut',
+      scale: 0.25,
+    });
+
   }
 
   onDotMove(e) {

@@ -80,6 +80,11 @@ class DotNextModule {
   onDotEnter(e) {
     const self = this;
     self.dotReady = false;
+
+    TweenMax.to(self.dotEl.querySelectorAll('.dot-inner'), 0.5, {
+      ease: 'Expo.easeOut',
+      scale: 0.85,
+    });
   }
 
   onDotLeave() {
@@ -89,39 +94,47 @@ class DotNextModule {
 
     const timingBack = 1.3;
 
+    TweenMax.to(self.dotEl.querySelectorAll('.dot-inner'), 0.5, {
+      ease: 'Expo.easeOut',
+      scale: 0.25,
+    });
 
-    if (self.dotPosX < -25) {
 
-      TweenMax.to(self.dotEl, timingBack, {
-        top: 40 + "%",
-        left: self.dotAreaX + "%",
-        ease: "Expo.easeOut",
-        onComplete: function () {
-          self.dotPosX = self.dotTargetX = -self.dotAreaX;
-          self.dotPosY = self.dotTargetY = -40;
-          self.dotLeft = false;
-        }
-      });
+    if (self.dotPosX < -35) {
 
-      TweenMax.to(self.singleMedia, timingBack, {
-        css: {
-          x: (0) + '%',
-          'filter': 'grayscale(' + 0 + '%)'
-        },
+      if (!self.dotChanging) {
 
-        ease: "Expo.easeOut"
-      });
+        TweenMax.to(self.dotEl, timingBack, {
+          top: 40 + "%",
+          left: self.dotAreaX + "%",
+          ease: "Expo.easeOut",
+          onComplete: function () {
+            self.dotPosX = self.dotTargetX = -self.dotAreaX;
+            self.dotPosY = self.dotTargetY = -40;
+            self.dotLeft = false;
+          }
+        });
 
-      TweenMax.to(self.singleDescription, timingBack, {
-        x: 0,
-        opacity: 1,
-        ease: "Expo.easeOut"
-      });
+        TweenMax.to(self.singleMedia, timingBack, {
+          css: {
+            x: (0) + '%',
+            'filter': 'grayscale(' + 0 + '%)'
+          },
 
-      TweenMax.to(self.singleNext, timingBack, {
-        xPercent: 100,
-        ease: "Expo.easeOut"
-      });
+          ease: "Expo.easeOut"
+        });
+
+        TweenMax.to(self.singleDescription, timingBack, {
+          x: 0,
+          opacity: 1,
+          ease: "Expo.easeOut"
+        });
+
+        TweenMax.to(self.singleNext, timingBack, {
+          xPercent: 100,
+          ease: "Expo.easeOut"
+        });
+      }
 
     } else {
       location.hash = '#/' + self.viewNext;
@@ -154,6 +167,15 @@ class DotNextModule {
         this.dotTargetY = -1 * this.dotTargetY;
       }
     }
+
+
+    if (self.dotPosX > -22) {
+      self.dotChanging = true;
+      self.dotReady = true;
+      self.dotLeft = true;
+      location.hash = '#/' + self.viewNext;
+      self.dotPosX = self.dotTargetX = -self.dotAreaX;
+    }
   }
 
   startDot() {
@@ -178,9 +200,11 @@ class DotNextModule {
 
 
       //next
+
+      console.log(posSingleMedia)
       TweenMax.set(self.singleMedia, {
         css: {
-          x: (-(self.dotAreaX + self.dotPosX)/0.8) + '%',
+          x: (-(self.dotAreaX + self.dotPosX) / 0.8) + '%',
           'filter': 'grayscale(' + (self.dotAreaX + self.dotPosX) / 0.5 + '%)'
         }
       });
@@ -189,14 +213,19 @@ class DotNextModule {
         xPercent: 100 - (self.dotAreaX + self.dotPosX) / 0.6
       });
 
-      if (posSingleMedia <= posSingleDescription) {
+      TweenMax.set(self.singleDescription, {
+        //  x: (-(self.dotAreaX + self.dotPosX)/5) + '%',
+        opacity: 1 - (self.dotAreaX + self.dotPosX) * 0.04
+      });
+
+      /*if (posSingleMedia <= posSingleDescription) {
         const rest = posSingleDescription - posSingleMedia;
 
         TweenMax.set(self.singleDescription, {
-          x: -rest / 3,
-          opacity: 1 - (self.dotAreaX + self.dotPosX) * 0.02
+          x: -rest ,
+         // opacity: 1 - (self.dotAreaX + self.dotPosX) * 0.02
         });
-      }
+      }*/
     }
   }
 }

@@ -85,7 +85,7 @@ class SingleView {
           )}><div class="single-wrap"><div class="single-next">Next</div></div></section>`,
           "text/html"
         );
-
+ 
         const singleHTML = section.body.firstChild;
         self.el = singleHTML;
         const singleWrap = singleHTML.querySelector(".single-wrap");

@@ -13,18 +13,18 @@ class TransitionModule {
     App.model.updatingView = true;
 
     if (self.oldView === self.activeView) {
-       
+
       const s = document.querySelectorAll('.single')[0];
       TweenMax.to(s, 1, {
         autoAlpha: 0,
         ease: "Power3.easeInOut",
-        y: 0,
-        onComplete: function() {
+        y: -100,
+        onComplete: function () {
           s.outerHTML = "";
         }
       });
     }
-    
+
 
     if (self.oldView) {
       this.oldView.removeEvents();
@@ -33,7 +33,7 @@ class TransitionModule {
         autoAlpha: 0,
         ease: "Power3.easeInOut",
         y: -100,
-        onComplete: function() {
+        onComplete: function () {
           self.oldView.el.outerHTML = "";
         }
       });
@@ -46,20 +46,18 @@ class TransitionModule {
 
     TweenMax.fromTo(
       self.activeView.el,
-      1,
-      {
+      1, {
         autoAlpha: 0,
         y: 50
-      },
-      {
+      }, {
         autoAlpha: 1,
         ease: "Power3.easeInOut",
         delay: 0.5,
         y: 0,
-        onStart: function() {},
-        onComplete: function() {
+        onStart: function () {},
+        onComplete: function () {
           App.model.updatingView = false;
-          history.replaceState(undefined, undefined,   "#" + App.model.getActiveView().params);
+          history.replaceState(undefined, undefined, "#" + App.model.getActiveView().params);
           if (!self.oldView) {
             App.controller.updateActiveView(self.activeView);
           }
