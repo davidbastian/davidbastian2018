@@ -20,19 +20,17 @@ class HomeView {
     this.setScrollDot();
     this.setTransition();
     App.controller.updateActiveView(this);
-
   }
 
   setTransition() {
     const self = this;
     this.transition = new transitionModule({
-      oldView:App.model.getActiveView(),
-      activeView:self
+      oldView: App.model.getActiveView(),
+      activeView: self
     });
-
   }
 
-  removeEvents(){
+  removeEvents() {
     this.scroll.removeEvents();
   }
 

@@ -38,6 +38,7 @@ class ScrollDotModule {
 
   setDot() {
     //append dot inside html
+    const self = this;
     const markup = `
         <div class= "dot">
             <div class="dot-inner"></div>
@@ -46,13 +47,19 @@ class ScrollDotModule {
 
     const dotHTML = new DOMParser().parseFromString(markup, "text/html");
     this.dotEl = dotHTML.body.firstChild;
+
     this.view.el.appendChild(this.dotEl);
 
-    //set max area of the dot
-    this.dotAreaX =
-      (window.innerWidth - this.dotEl.clientWidth) * 100 / window.innerWidth;
-    this.dotAreaY =
-      (window.innerHeight - this.dotEl.clientHeight) * 100 / window.innerHeight;
+    setTimeout(function() {
+      self.dotAreaX =
+        (window.innerWidth - self.dotEl.clientWidth) * 100 / window.innerWidth;
+      self.dotAreaY =
+        (window.innerHeight - self.dotEl.clientHeight) *
+        100 /
+        window.innerHeight;
+
+
+    }, 100);
   }
 
   setScroll() {

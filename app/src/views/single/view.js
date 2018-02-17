@@ -2,6 +2,7 @@ import { toSlug } from "../../../common/utils/utils";
 import App from "../../../index";
 import "./style.scss";
 import ScrollModule from "../../modules/module.scroll";
+import DotNextModule from "../../modules/module.dotNext";
 import transitionModule from "../../modules/module.transition";
 import { TweenMax } from "gsap";
 
@@ -15,6 +16,7 @@ class SingleView {
   setup() {
     this.setData();
     this.setScroll();
+    this.setDotNext();
     this.setTransition();
     App.controller.updateActiveView(this);
   }
@@ -25,6 +27,14 @@ class SingleView {
       oldView: App.model.getActiveView(),
       activeView: self
     });
+  }
+
+  setDotNext(){
+    const self = this;
+    this.dotNext = new DotNextModule({
+      ease:0.06,
+      view: self
+    })
   }
 
   removeEvents() {
@@ -54,14 +64,15 @@ class SingleView {
         console.log(project);
 
         const section = new DOMParser().parseFromString(
-          `<section class="single" id=${toSlug(project.slug)}><div class="single-wrap"></div></section>`,
+          `<section class="single" id=${toSlug(
+            project.slug
+          )}><div class="single-wrap"><div class="single-next">Next</div></div></section>`,
           "text/html"
         );
-    
+
         const singleHTML = section.body.firstChild;
         self.el = singleHTML;
         const singleWrap = singleHTML.querySelector(".single-wrap");
-
 
         const markup = `
                 <div class= "container">
@@ -169,7 +180,6 @@ class SingleView {
 
     creditsDOM.appendChild(creditsHTML.body.firstChild);
   }
-
 }
 
 var view = new SingleView();

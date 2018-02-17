@@ -1,5 +1,14 @@
 @import "../../../common/styles/_variables";
 .single {
+
+  .single-next {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 19vw;
+    transform: translateX(100%);
+}
+
   .container {
     display: flex;
     justify-content: space-between;
@@ -11,6 +20,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding-right: 5vw;
+    margin-left: -5vw;
+    padding-left: 5vw;
 
     .single-info {
       padding-bottom: 22vh;
@@ -21,7 +33,6 @@
 
       small {
         letter-spacing: 0;
-        font-weight: 100;
         font-size: 17px;
         display: block;
         margin-bottom: 10px;

@@ -1,10 +1,9 @@
-
 class AppView {
-  init() {
-    this.addEvents();
-    console.log("AppView");
+    init() {
+        this.addEvents();
+        console.log("AppView");
 
-    const markup = `
+        const markup = `
         <header>
             <div class="container">
                 <a id="logo" href="#/">David Bastian.</a>
@@ -25,16 +24,16 @@ class AppView {
         </footer>
     `;
 
-    document.body.innerHTML = markup;
-  }
+        document.body.innerHTML = markup;
+    }
 
-  addEvents() {
-    document.addEventListener("touchmove mousewheel DOMMouseScroll", function(
-      e
-    ) {
-      e.preventDefault();
-    });
-  }
+    addEvents() {
+        document.addEventListener("touchmove mousewheel DOMMouseScroll", function (
+            e
+        ) {
+            e.preventDefault();
+        });
+    }
 }
 
 var view = new AppView();

@@ -9,11 +9,8 @@ class TransitionModule {
 
   init() {
     const self = this;
-    const currentURL = App.model.currentURL;
 
     document.querySelector("main").appendChild(self.activeView.el);
-
-    const url = location.hash.slice(1) || "/";
 
     App.model.updatingView = true;
 
