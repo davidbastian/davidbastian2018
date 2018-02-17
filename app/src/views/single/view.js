@@ -1,14 +1,18 @@
-import { toSlug } from "../../../common/utils/utils";
+import {
+  toSlug
+} from "../../../common/utils/utils";
 import App from "../../../index";
 import "./style.scss";
 import ScrollModule from "../../modules/module.scroll";
 import DotNextModule from "../../modules/module.dotNext";
 import transitionModule from "../../modules/module.transition";
-import { TweenMax } from "gsap";
+import {
+  TweenMax
+} from "gsap";
 
 class SingleView {
   init(params) {
-    console.log("init Single", params);
+  //  console.log("init Single", params);
     this.params = params;
     this.data = App.model.getData();
     this.setup();
@@ -29,11 +33,12 @@ class SingleView {
     });
   }
 
-  setDotNext(){
+  setDotNext() {
     const self = this;
     this.dotNext = new DotNextModule({
-      ease:0.06,
-      view: self
+      ease: 0.06,
+      view: self,
+      slug: self.nextSlug
     })
   }
 
@@ -60,8 +65,19 @@ class SingleView {
       const project = this.data.projects[i];
       const slug = "/" + toSlug(project.slug);
 
+
       if (this.params === slug) {
         console.log(project);
+
+        self.nextSlug =undefined;
+
+        if (this.data.projects[i + 1]) {
+          self.nextSlug = toSlug(this.data.projects[i + 1].slug);
+
+        } else {
+          self.nextSlug = toSlug(this.data.projects[0].slug);
+        }
+
 
         const section = new DOMParser().parseFromString(
           `<section class="single" id=${toSlug(

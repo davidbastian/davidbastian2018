@@ -9,10 +9,22 @@ class TransitionModule {
 
   init() {
     const self = this;
-
     document.querySelector("main").appendChild(self.activeView.el);
-
     App.model.updatingView = true;
+
+    if (self.oldView === self.activeView) {
+       
+      const s = document.querySelectorAll('.single')[0];
+      TweenMax.to(s, 1, {
+        autoAlpha: 0,
+        ease: "Power3.easeInOut",
+        y: 0,
+        onComplete: function() {
+          s.outerHTML = "";
+        }
+      });
+    }
+    
 
     if (self.oldView) {
       this.oldView.removeEvents();

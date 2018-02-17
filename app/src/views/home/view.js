@@ -7,12 +7,10 @@ import { TweenMax } from "gsap";
 
 class HomeView {
   init(params) {
-    console.log("init Home", params, App);
+  //  console.log("init Home", params, App);
 
     this.params = params;
     this.data = App.model.getData();
-
-    console.log(App);
     this.setup();
   }
   setup() {

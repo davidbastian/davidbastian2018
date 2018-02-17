@@ -1,6 +1,5 @@
 @import "reset";
 @import "variables";
-
 html,
 body {
   font-family: sans-serif;
@@ -25,20 +24,17 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-
   .container {
     height: 10vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-
   nav {
     a {
       margin-left: 40px;
     }
   }
-
   #logo {
     font-size: 17px;
   }
@@ -60,14 +56,12 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
-
   .container {
     height: 10vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-
   #copyright {
     color: $color03;
   }
@@ -82,9 +76,7 @@ footer {
 .dot {
   width: 5vw;
   min-height: 5vw;
-
   height: 80px;
-
   position: fixed;
   top: 40%;
   left: 0;
@@ -92,7 +84,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-
   .dot-inner {
     background-color: $color04;
     width: 60px;

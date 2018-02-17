@@ -9,6 +9,7 @@ import {
 class DotNextModule {
   constructor(opt) {
     this.view = opt.view;
+    this.viewNext = opt.slug;
 
     this.dotEase = opt.ease;
     this.dotReady = true;
@@ -33,6 +34,7 @@ class DotNextModule {
     this.setDot();
     this.addEvents();
     this.startDot();
+
   }
 
   setDot() {
@@ -87,33 +89,45 @@ class DotNextModule {
 
     const timingBack = 1.3;
 
-    TweenMax.to(self.dotEl, timingBack, {
-      top: 40 + "%",
-      left: self.dotAreaX + "%",
-      ease: "Expo.easeOut",
-      onComplete: function () {
-        self.dotPosX = self.dotTargetX = -self.dotAreaX;
-        self.dotPosY = self.dotTargetY = -40;
 
-        self.dotLeft = false;
-      }
-    });
+    if (self.dotPosX < -25) {
 
-    TweenMax.to(self.singleMedia, timingBack, {
-      xPercent: 0,
-      ease: "Expo.easeOut"
-    });
+      TweenMax.to(self.dotEl, timingBack, {
+        top: 40 + "%",
+        left: self.dotAreaX + "%",
+        ease: "Expo.easeOut",
+        onComplete: function () {
+          self.dotPosX = self.dotTargetX = -self.dotAreaX;
+          self.dotPosY = self.dotTargetY = -40;
+          self.dotLeft = false;
+        }
+      });
 
-    TweenMax.to(self.singleDescription, timingBack, {
-      x: 0,
-      opacity: 1,
-      ease: "Expo.easeOut"
-    });
+      TweenMax.to(self.singleMedia, timingBack, {
+        css: {
+          x: (0) + '%',
+          'filter': 'grayscale(' + 0 + '%)'
+        },
 
-    TweenMax.to(self.singleNext, timingBack, {
-      xPercent: 100,
-      ease: "Expo.easeOut"
-    });
+        ease: "Expo.easeOut"
+      });
+
+      TweenMax.to(self.singleDescription, timingBack, {
+        x: 0,
+        opacity: 1,
+        ease: "Expo.easeOut"
+      });
+
+      TweenMax.to(self.singleNext, timingBack, {
+        xPercent: 100,
+        ease: "Expo.easeOut"
+      });
+
+    } else {
+      location.hash = '#/' + self.viewNext;
+      self.dotPosX = self.dotTargetX = -self.dotAreaX;
+    }
+
   }
 
   onDotMove(e) {
@@ -162,30 +176,27 @@ class DotNextModule {
       const posSingleMedia = self.singleMedia[0].getBoundingClientRect().left;
       const posSingleDescription = self.singleDescription[0].offsetWidth;
 
-      // console.log(posSingleMedia,posSingleDescription);
 
       //next
       TweenMax.set(self.singleMedia, {
-        xPercent: -(self.dotAreaX + self.dotPosX) / 1
+        css: {
+          x: (-(self.dotAreaX + self.dotPosX)/0.8) + '%',
+          'filter': 'grayscale(' + (self.dotAreaX + self.dotPosX) / 0.5 + '%)'
+        }
       });
 
       TweenMax.set(self.singleNext, {
-        xPercent: 100 - (self.dotAreaX + self.dotPosX) / 0.8
+        xPercent: 100 - (self.dotAreaX + self.dotPosX) / 0.6
       });
 
       if (posSingleMedia <= posSingleDescription) {
         const rest = posSingleDescription - posSingleMedia;
 
-        console.log(rest);
-
         TweenMax.set(self.singleDescription, {
-          x: -rest / 3
+          x: -rest / 3,
+          opacity: 1 - (self.dotAreaX + self.dotPosX) * 0.02
         });
       }
-
-      TweenMax.set(self.singleDescription, {
-        opacity: 1 - (self.dotAreaX + self.dotPosX) * 0.02
-      });
     }
   }
 }
