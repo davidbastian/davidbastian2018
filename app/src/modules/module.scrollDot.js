@@ -12,7 +12,7 @@ class ScrollDotModule {
     this.scrollWrap = opt.wrap;
     this.scrollEl = opt.el;
     this.scrollTarget = App.model.homeScroll.scrollTarget;
-    this.scrollPos =  App.model.homeScroll.scrollPos;
+    this.scrollPos = App.model.homeScroll.scrollPos;
 
     this.scrollEase = opt.ease;
     this.scrollActive = true;
@@ -24,10 +24,10 @@ class ScrollDotModule {
 
     this.dotTrack = opt.track;
     this.dot = opt.dot;
-    this.dotPosX =  App.model.homeScroll.dotPosX;
-    this.dotPosY =  App.model.homeScroll.dotPosY;
+    this.dotPosX = App.model.homeScroll.dotPosX;
+    this.dotPosY = App.model.homeScroll.dotPosY;
     this.dotTargetX = App.model.homeScroll.dotTargetX;
-    this.dotTargetY =  App.model.homeScroll.dotTargetY;
+    this.dotTargetY = App.model.homeScroll.dotTargetY;
 
     this.init();
   }
@@ -248,9 +248,6 @@ class ScrollDotModule {
     App.model.homeScroll.dotTargetY = self.dotTargetY;
     App.model.homeScroll.dotTargetX = self.dotTargetX;
 
-
-
-    console.log(self.dotPosY)
   }
 }
 
