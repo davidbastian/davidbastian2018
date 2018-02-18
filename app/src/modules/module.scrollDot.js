@@ -3,14 +3,16 @@ import {
   constrain
 } from "../../common/utils/utils";
 
+import App from '../../index';
+
 class ScrollDotModule {
   constructor(opt) {
     this.view = opt.view;
 
     this.scrollWrap = opt.wrap;
     this.scrollEl = opt.el;
-    this.scrollTarget = 0;
-    this.scrollPos = 0;
+    this.scrollTarget = App.model.homeScroll.scrollTarget;
+    this.scrollPos =  App.model.homeScroll.scrollPos;
 
     this.scrollEase = opt.ease;
     this.scrollActive = true;
@@ -22,10 +24,10 @@ class ScrollDotModule {
 
     this.dotTrack = opt.track;
     this.dot = opt.dot;
-    this.dotPosX = 0;
-    this.dotPosY = -40;
-    this.dotTargetX = 0;
-    this.dotTargetY = -40;
+    this.dotPosX =  App.model.homeScroll.dotPosX;
+    this.dotPosY =  App.model.homeScroll.dotPosY;
+    this.dotTargetX = App.model.homeScroll.dotTargetX;
+    this.dotTargetY =  App.model.homeScroll.dotTargetY;
 
     this.init();
   }
@@ -237,6 +239,18 @@ class ScrollDotModule {
     let vy = (self.dotTargetY - self.dotPosY) * self.scrollEase;
     self.dotPosY += vy;
     self.dotEl.style.top = -self.dotPosY + "%";
+
+
+    App.model.homeScroll.scrollTarget = self.scrollTarget;
+    App.model.homeScroll.scrollPos = self.scrollPos;
+    App.model.homeScroll.dotPosX = self.dotPosX;
+    App.model.homeScroll.dotPosY = self.dotPosY;
+    App.model.homeScroll.dotTargetY = self.dotTargetY;
+    App.model.homeScroll.dotTargetX = self.dotTargetX;
+
+
+
+    console.log(self.dotPosY)
   }
 }
 

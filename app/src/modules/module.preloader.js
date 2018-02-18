@@ -7,6 +7,7 @@ import {
 class Preloader {
     constructor(opt) {
 
+        this.startCounting();
         this.getData();
         this.counter = 0;
         this.countingDOM = 0;
@@ -14,7 +15,7 @@ class Preloader {
         this.countingNumberDOM = 0;
         this.countingRound = 0;
 
-        this.startCounting();
+       
     }
 
     startCounting() {
@@ -29,7 +30,24 @@ class Preloader {
             };
 
             document.body.querySelectorAll('.preloader-counter')[0].innerHTML = this.countingNumberDOM.val + '.';
+
+            if (this.countingRound === 99) {
+                self.stopCounting = true;
+                App.router.addEvents();
+                App.router.updateUrl();
+
+                TweenMax.to(document.body.querySelectorAll('.preloader'), 1, {
+                    y: -100,
+                    opacity: 0,
+                    ease: 'Expo.easeInOut',
+                    onComplete: function () {
+                        document.body.querySelectorAll('.preloader')[0].outerHTML = "";
+                    }
+                });
+
+            }
         }
+
     }
 
     getData() {
@@ -70,6 +88,7 @@ class Preloader {
                     ease: 'Expo.easeInOut',
                     onUpdate: updateHandler,
                     onComplete: function () {
+
                         App.router.addEvents();
                         App.router.updateUrl();
 

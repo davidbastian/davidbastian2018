@@ -32,13 +32,36 @@ class TransitionModule {
 
   }
 
+  standardAnima() {
+    const self = this;
+
+    TweenMax.fromTo(
+      self.activeView.el,
+      1, {
+        autoAlpha: 0,
+        y: 50
+      }, {
+        autoAlpha: 1,
+        ease: "Power3.easeInOut",
+        delay: 0.5,
+        y: 0,
+        onStart: function () {},
+        onComplete: function () {
+          App.model.updatingView = false;
+          history.replaceState(undefined, undefined, "#" + App.model.getActiveView().params);
+          if (!self.oldView) {
+            App.controller.updateActiveView(self.activeView);
+          }
+        }
+      }
+    );
+
+  }
+
   init() {
     const self = this;
     document.querySelector("main").appendChild(self.activeView.el);
     App.model.updatingView = true;
-
-
-
 
     if (self.oldView === self.activeView) {
       const s = document.querySelectorAll('.single')[0];
@@ -85,74 +108,16 @@ class TransitionModule {
           self.firstAnima();
         }, 3000);
 
-        TweenMax.fromTo(
-          self.activeView.el,
-          1, {
-            autoAlpha: 0,
-            y: 0
-          }, {
-            autoAlpha: 1,
-            ease: "Power3.easeInOut",
-            delay: 0.5,
-            y: 0,
-            onStart: function () {},
-            onComplete: function () {
-              App.model.updatingView = false;
-              history.replaceState(undefined, undefined, "#" + App.model.getActiveView().params);
-              if (!self.oldView) {
-                App.controller.updateActiveView(self.activeView);
-              }
-            }
-          }
-        );
+        self.standardAnima();
 
       } else {
-        TweenMax.fromTo(
-          self.activeView.el,
-          1, {
-            autoAlpha: 0,
-            y: 50
-          }, {
-            autoAlpha: 1,
-            ease: "Power3.easeInOut",
-            delay: 0.5,
-            y: 0,
-            onStart: function () {},
-            onComplete: function () {
-              App.model.updatingView = false;
-              history.replaceState(undefined, undefined, "#" + App.model.getActiveView().params);
-              if (!self.oldView) {
-                App.controller.updateActiveView(self.activeView);
-              }
-            }
-          }
-        );
+        self.standardAnima();
       }
 
 
     } else {
 
-      TweenMax.fromTo(
-        self.activeView.el,
-        1, {
-          autoAlpha: 0,
-          y: 50
-        }, {
-          autoAlpha: 1,
-          ease: "Power3.easeInOut",
-          delay: 0.5,
-          y: 0,
-          onStart: function () {},
-          onComplete: function () {
-            App.model.updatingView = false;
-            history.replaceState(undefined, undefined, "#" + App.model.getActiveView().params);
-            if (!self.oldView) {
-              App.controller.updateActiveView(self.activeView);
-            }
-          }
-        }
-      );
-
+      self.standardAnima();
 
     }
 
