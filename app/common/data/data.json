@@ -4,7 +4,7 @@
     "copyright": "© 2018 David Bastian. Chilean Designer & Web Developer.",
     "email": "d@davidbastian.red",
     "aboutme":
-      "Im a Designer & Web Developer from Viña del Mar (Chile), based in New Zealand. I love to enjoy Good Art, Conceptualize, Design & Develop simple and clean Interfaces.",
+      "<span>Im a Designer & Web Developer from Viña del Mar (Chile),</span> <span>but I am based in New Zealand.</span><span> I love to enjoy Good Art, Conceptualize, Design & Develop simple and clean Interfaces.</span>",
     "social": [
       {
         "title": "Twitter",
@@ -15,7 +15,7 @@
         "url": "www.google.cl"
       },
       {
-        "title": "LinkdIn",
+        "title": "LinkedIn",
         "url": "www.google.cl"
       }
     ]

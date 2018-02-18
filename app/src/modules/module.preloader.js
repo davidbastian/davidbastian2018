@@ -25,7 +25,7 @@ class Preloader {
         requestAnimationFrame(self.startCounting.bind(this));
 
         if (!self.stopCounting) {
-            this.countingDOM = this.countingDOM + 0.03;
+            this.countingDOM = this.countingDOM + 0.2;
             this.countingRound = Math.round(this.countingDOM);
             this.countingNumberDOM = {
                 val: this.countingRound

@@ -5,6 +5,7 @@ import {
     TweenMax
 } from "gsap";
 
+import SplitText from '../../../common/plugins/SplitText.min';
 
 class AboutView {
 
@@ -57,6 +58,26 @@ class AboutView {
         </div>
       `;
         const aboutHTMLDOM = new DOMParser().parseFromString(markup, "text/html");
+        const mySplitText = new SplitText(aboutHTMLDOM.querySelectorAll('h2 span')[0], {
+            type: "words,chars"
+        });
+        const chars = mySplitText.chars;
+
+        setTimeout(function(){
+
+            for (let i = 0; i < chars.length; i++) {
+                const char = chars[i];
+    
+                TweenMax.to(char, (i + Math.random()) * 0.02, {
+                    opacity: 1,
+                    delay: (i + Math.random()) * 0.06,
+                    ease: SteppedEase.config(1)
+                });
+            }
+
+        },1500);
+       
+
         aboutWrap.appendChild(aboutHTMLDOM.body.firstChild);
 
     }

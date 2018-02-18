@@ -3,7 +3,7 @@ import Data from '../../common/data/data';
 class AppView {
     init() {
         this.addEvents();
-        console.log("AppView",Data);
+        console.log("AppView", Data);
         const markup = `
         <header>
             <div class="container">
