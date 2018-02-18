@@ -1,4 +1,5 @@
 import Data from '../../common/data/data';
+
 class AppView {
     init() {
         this.addEvents();
@@ -9,11 +10,17 @@ class AppView {
                 <a id="logo" href="#/">${Data.details.logo}</a>
                 <nav class="menu">
                     <a href="#/about">about me</a>
-                    <a href="${Data.details.email}" target="_blank">${Data.details.email}</a>
+                    <a href="mailto:${Data.details.email}" target="_blank">${Data.details.email}</a>
                 </nav>
             </div>
         </header>
         <main></main>
+        
+        <div class="preloader">
+            <div class="preloader-counter">
+                0
+            </div>
+        </div>
         <footer>
             <div class="container">
                 <p id="copyright">${Data.details.copyright}</a>

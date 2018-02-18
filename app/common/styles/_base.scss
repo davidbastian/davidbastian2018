@@ -18,6 +18,19 @@ h2 {
   letter-spacing: -1px;
 }
 
+.preloader {
+  position: fixed;
+  height: 100vh;
+  left: 4vw;
+  top: 0;
+  align-items: center;
+  display: flex;
+  .preloader-counter {
+    font-size: 25vw;
+    margin-top: -5vw;
+  }
+}
+
 header {
   position: fixed;
   z-index: 1;

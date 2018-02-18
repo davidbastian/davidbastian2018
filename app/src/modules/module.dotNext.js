@@ -204,7 +204,7 @@ class DotNextModule {
       console.log(posSingleMedia)
       TweenMax.set(self.singleMedia, {
         css: {
-          x: (-(self.dotAreaX + self.dotPosX) / 0.8) + '%',
+          x: (-(self.dotAreaX + self.dotPosX) / 0.6) + '%',
           'filter': 'grayscale(' + (self.dotAreaX + self.dotPosX) / 0.5 + '%)'
         }
       });

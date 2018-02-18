@@ -12,7 +12,7 @@ import {
 
 class SingleView {
   init(params) {
-  //  console.log("init Single", params);
+    //  console.log("init Single", params);
     this.params = params;
     this.data = App.model.getData();
     this.setup();
@@ -69,7 +69,7 @@ class SingleView {
       if (this.params === slug) {
         console.log(project);
 
-        self.nextSlug =undefined;
+        self.nextSlug = undefined;
 
         if (this.data.projects[i + 1]) {
           self.nextSlug = toSlug(this.data.projects[i + 1].slug);
@@ -85,7 +85,7 @@ class SingleView {
           )}><div class="single-wrap"><div class="single-next">Next</div></div></section>`,
           "text/html"
         );
- 
+
         const singleHTML = section.body.firstChild;
         self.el = singleHTML;
         const singleWrap = singleHTML.querySelector(".single-wrap");

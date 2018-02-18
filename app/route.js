@@ -1,8 +1,12 @@
 import RouteController from "../app/src/controllers/controller.route";
 import App from "../app/index";
+import Preloader from './src/modules/module.preloader';
+
 class Route {
   start() {
-    this.addEvents();
+   // this.addEvents();
+    this.preloader = new Preloader();
+
   }
   updateUrl(event) {
     this.url = location.hash.slice(1) || "/";
