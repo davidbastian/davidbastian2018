@@ -7,13 +7,40 @@ class TransitionModule {
     this.init();
   }
 
+
+  firstAnima() {
+    const self = this;
+
+
+    TweenMax.to(self.activeView.el.querySelectorAll('.dot-instruction'), 0.5, {
+      autoAlpha: 0,
+      ease: "Power3.easeInOut",
+      onComplete: function () {
+        self.activeView.el.querySelectorAll('.dot-instruction')[0].outerHTML = "";
+      }
+    });
+
+
+    TweenMax.fromTo(self.activeView.el.querySelectorAll('.home-wrap'), 1, {
+      top: 50,
+      autoAlpha: 0,
+    }, {
+      top: 0,
+      autoAlpha: 1,
+      ease: "Power3.easeInOut",
+    });
+
+  }
+
   init() {
     const self = this;
     document.querySelector("main").appendChild(self.activeView.el);
     App.model.updatingView = true;
 
-    if (self.oldView === self.activeView) {
 
+
+
+    if (self.oldView === self.activeView) {
       const s = document.querySelectorAll('.single')[0];
       TweenMax.to(s, 1, {
         autoAlpha: 0,
@@ -41,29 +68,95 @@ class TransitionModule {
 
     TweenMax.set(self.activeView.el, {
       autoAlpha: 0,
-      y: 100
     });
 
-    TweenMax.fromTo(
-      self.activeView.el,
-      1, {
-        autoAlpha: 0,
-        y: 50
-      }, {
-        autoAlpha: 1,
-        ease: "Power3.easeInOut",
-        delay: 0.5,
-        y: 0,
-        onStart: function () {},
-        onComplete: function () {
-          App.model.updatingView = false;
-          history.replaceState(undefined, undefined, "#" + App.model.getActiveView().params);
-          if (!self.oldView) {
-            App.controller.updateActiveView(self.activeView);
+
+    if (this.activeView.name === 'home') {
+
+      if (App.model.firstView) {
+        App.model.firstView = false;
+        TweenMax.set(self.activeView.el.querySelectorAll('.home-wrap'), {
+          autoAlpha: 0,
+          top: 50,
+        });
+
+
+        setTimeout(function () {
+          self.firstAnima();
+        }, 3000);
+
+        TweenMax.fromTo(
+          self.activeView.el,
+          1, {
+            autoAlpha: 0,
+            y: 0
+          }, {
+            autoAlpha: 1,
+            ease: "Power3.easeInOut",
+            delay: 0.5,
+            y: 0,
+            onStart: function () {},
+            onComplete: function () {
+              App.model.updatingView = false;
+              history.replaceState(undefined, undefined, "#" + App.model.getActiveView().params);
+              if (!self.oldView) {
+                App.controller.updateActiveView(self.activeView);
+              }
+            }
+          }
+        );
+
+      } else {
+        TweenMax.fromTo(
+          self.activeView.el,
+          1, {
+            autoAlpha: 0,
+            y: 50
+          }, {
+            autoAlpha: 1,
+            ease: "Power3.easeInOut",
+            delay: 0.5,
+            y: 0,
+            onStart: function () {},
+            onComplete: function () {
+              App.model.updatingView = false;
+              history.replaceState(undefined, undefined, "#" + App.model.getActiveView().params);
+              if (!self.oldView) {
+                App.controller.updateActiveView(self.activeView);
+              }
+            }
+          }
+        );
+      }
+
+
+    } else {
+
+      TweenMax.fromTo(
+        self.activeView.el,
+        1, {
+          autoAlpha: 0,
+          y: 50
+        }, {
+          autoAlpha: 1,
+          ease: "Power3.easeInOut",
+          delay: 0.5,
+          y: 0,
+          onStart: function () {},
+          onComplete: function () {
+            App.model.updatingView = false;
+            history.replaceState(undefined, undefined, "#" + App.model.getActiveView().params);
+            if (!self.oldView) {
+              App.controller.updateActiveView(self.activeView);
+            }
           }
         }
-      }
-    );
+      );
+
+
+    }
+
+
   }
 }
 

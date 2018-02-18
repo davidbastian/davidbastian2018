@@ -15,6 +15,7 @@ class SingleView {
     //  console.log("init Single", params);
     this.params = params;
     this.data = App.model.getData();
+    this.name = 'single',
     this.setup();
   }
   setup() {

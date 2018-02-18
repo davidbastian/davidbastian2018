@@ -9,6 +9,10 @@ body {
   user-select: none;
 }
 
+.hide {
+  display: none !important;
+}
+
 a {
   color: inherit;
 }
@@ -38,18 +42,34 @@ header {
   left: 0;
   width: 100%;
   .container {
-    height: 10vh;
+    //height: 10vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
   }
   nav {
     a {
       margin-left: 40px;
     }
+    &.menu {
+      position: absolute;
+      right: 0;
+      height: 10vh;
+      top: 0;
+      display: flex;
+      align-items: center;
+    }
   }
   #logo {
     font-size: 17px;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
   }
 }
 
@@ -103,5 +123,14 @@ footer {
     height: 60px;
     border-radius: 100%;
     transform: scale(0.25);
+  }
+  .dot-instruction {
+    display: flex;
+    position: inherit;
+    left: 5vw;
+    h2 {
+      color: $color03;
+      margin-top: -4px;
+    }
   }
 }

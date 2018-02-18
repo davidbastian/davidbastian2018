@@ -1,6 +1,7 @@
 class AppModel {
   constructor(){
     this.updatingView = false;
+    this.firstView = true;
   }
   setData(data) {
     this.data = data;

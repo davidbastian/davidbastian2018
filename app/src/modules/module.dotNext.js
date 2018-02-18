@@ -198,9 +198,7 @@ class DotNextModule {
       const posSingleMedia = self.singleMedia[0].getBoundingClientRect().left;
       const posSingleDescription = self.singleDescription[0].offsetWidth;
 
-
       //next
-
       console.log(posSingleMedia)
       TweenMax.set(self.singleMedia, {
         css: {

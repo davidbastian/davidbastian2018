@@ -1,5 +1,7 @@
 import VirtualScroll from "virtual-scroll";
-import { constrain } from "../../common/utils/utils";
+import {
+  constrain
+} from "../../common/utils/utils";
 
 class ScrollDotModule {
   constructor(opt) {
@@ -39,9 +41,20 @@ class ScrollDotModule {
   setDot() {
     //append dot inside html
     const self = this;
+
+    let hide;
+
+    if (App.model.firstView) {
+      hide = "";
+    } else {
+      hide = 'hide';
+    }
     const markup = `
         <div class= "dot">
             <div class="dot-inner"></div>
+            <div class="dot-instruction ${hide}">
+                <h2>drag the dot to navigate</h2>
+            </div>
         </div>  
     `;
 
@@ -50,7 +63,7 @@ class ScrollDotModule {
 
     this.view.el.appendChild(this.dotEl);
 
-    setTimeout(function() {
+    setTimeout(function () {
       self.dotAreaX =
         (window.innerWidth - self.dotEl.clientWidth) * 100 / window.innerWidth;
       self.dotAreaY =

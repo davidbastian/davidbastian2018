@@ -11,6 +11,7 @@ class HomeView {
 
     this.params = params;
     this.data = App.model.getData();
+    this.name = 'home',
     this.setup();
   }
   setup() {

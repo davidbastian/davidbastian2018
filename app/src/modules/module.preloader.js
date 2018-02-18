@@ -5,14 +5,16 @@ import {
 } from 'gsap';
 
 class Preloader {
-
     constructor(opt) {
-        this.startCounting();
+
         this.getData();
         this.counter = 0;
         this.countingDOM = 0;
         this.stopCounting = false;
         this.countingNumberDOM = 0;
+        this.countingRound = 0;
+
+        this.startCounting();
     }
 
     startCounting() {
@@ -26,7 +28,7 @@ class Preloader {
                 val: this.countingRound
             };
 
-            document.body.querySelectorAll('.preloader-counter')[0].innerHTML = this.countingNumberDOM.val;
+            document.body.querySelectorAll('.preloader-counter')[0].innerHTML = this.countingNumberDOM.val + '.';
         }
     }
 
@@ -54,7 +56,7 @@ class Preloader {
         xhr.open('get', link);
 
         function updateHandler() {
-            document.body.querySelectorAll('.preloader-counter')[0].innerHTML = Math.round(self.countingNumberDOM.val);
+            document.body.querySelectorAll('.preloader-counter')[0].innerHTML = Math.round(self.countingNumberDOM.val) + '.';
         }
 
         xhr.onload = function () {
@@ -79,13 +81,8 @@ class Preloader {
                                 document.body.querySelectorAll('.preloader')[0].outerHTML = "";
                             }
                         });
-
-
                     }
                 });
-
-
-
             }
         };
         xhr.send();

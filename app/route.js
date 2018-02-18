@@ -4,9 +4,7 @@ import Preloader from './src/modules/module.preloader';
 
 class Route {
   start() {
-   // this.addEvents();
     this.preloader = new Preloader();
-
   }
   updateUrl(event) {
     this.url = location.hash.slice(1) || "/";
