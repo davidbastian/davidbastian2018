@@ -1,0 +1,22 @@
+#about {
+    .about-wrap {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 5vw;
+        max-width: 850px;
+        h2 {
+            line-height: 60px;
+        }
+        .social {
+            display: flex;
+            margin-top: 50px;
+            a {
+                margin-left: 21px;
+                border-bottom: 1px solid;
+                padding-bottom: 5px;
+            }
+        }
+    }
+}

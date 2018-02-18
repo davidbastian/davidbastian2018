@@ -12,10 +12,12 @@ class Preloader {
         this.counter = 0;
         this.countingDOM = 0;
         this.stopCounting = false;
-        this.countingNumberDOM = 0;
+        this.countingNumberDOM = {
+            val: 0
+        };
         this.countingRound = 0;
 
-       
+
     }
 
     startCounting() {
@@ -85,7 +87,7 @@ class Preloader {
                 self.stopCounting = true;
                 TweenMax.to(self.countingNumberDOM, 3, {
                     val: 99,
-                    ease: 'Expo.easeInOut',
+                    ease: 'Power3.easeInOut',
                     onUpdate: updateHandler,
                     onComplete: function () {
 
@@ -95,7 +97,7 @@ class Preloader {
                         TweenMax.to(document.body.querySelectorAll('.preloader'), 1, {
                             y: -100,
                             opacity: 0,
-                            ease: 'Expo.easeInOut',
+                            ease: 'Power3.easeInOut',
                             onComplete: function () {
                                 document.body.querySelectorAll('.preloader')[0].outerHTML = "";
                             }

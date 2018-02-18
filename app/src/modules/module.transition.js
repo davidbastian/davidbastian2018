@@ -12,7 +12,7 @@ class TransitionModule {
     const self = this;
 
 
-    TweenMax.to(self.activeView.el.querySelectorAll('.dot-instruction'), 0.5, {
+    TweenMax.to(self.activeView.el.querySelectorAll('.dot-instruction'), 1, {
       autoAlpha: 0,
       ease: "Power3.easeInOut",
       onComplete: function () {
@@ -22,7 +22,7 @@ class TransitionModule {
 
 
     TweenMax.fromTo(self.activeView.el.querySelectorAll('.home-wrap'), 1, {
-      top: 50,
+      top: 100,
       autoAlpha: 0,
     }, {
       top: 0,

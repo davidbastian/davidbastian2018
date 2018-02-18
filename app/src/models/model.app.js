@@ -2,7 +2,6 @@ class AppModel {
   constructor() {
     this.updatingView = false;
     this.firstView = true;
-
     this.homeScroll = {
       scrollTarget: 0,
       scrollPos: 0,

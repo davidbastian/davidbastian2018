@@ -90,13 +90,31 @@ footer {
   left: 0;
   width: 100%;
   .container {
-    height: 10vh;
+    // height: 10vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
   }
   #copyright {
     color: $color03;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  .menu {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
   }
 }
 
