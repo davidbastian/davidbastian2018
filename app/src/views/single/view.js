@@ -16,7 +16,7 @@ class SingleView {
     this.params = params;
     this.data = App.model.getData();
     this.name = 'single',
-    this.setup();
+      this.setup();
   }
   setup() {
     this.setData();
@@ -28,6 +28,16 @@ class SingleView {
 
   setTransition() {
     const self = this;
+    const dot = (self.el.querySelector('.dot-inner'));
+
+    TweenMax.to(dot, 0.7, {
+      ease: 'Expo.easeIn',
+      delay: 1,
+      scale: 0.85,
+      yoyo: true,
+      repeat: 1,
+    });;
+
     this.transition = new transitionModule({
       oldView: App.model.getActiveView(),
       activeView: self

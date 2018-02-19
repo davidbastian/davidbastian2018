@@ -1,18 +1,22 @@
-import { toSlug } from "../../../common/utils/utils";
+import {
+  toSlug
+} from "../../../common/utils/utils";
 import App from "../../../index";
 import "./style.scss";
 import ScrollDotModule from "../../modules/module.scrollDot";
 import transitionModule from "../../modules/module.transition";
-import { TweenMax } from "gsap";
+import {
+  TweenMax
+} from "gsap";
 
 class HomeView {
   init(params) {
-  //  console.log("init Home", params, App);
+    //  console.log("init Home", params, App);
 
     this.params = params;
     this.data = App.model.getData();
     this.name = 'home',
-    this.setup();
+      this.setup();
   }
   setup() {
     this.setData();
@@ -23,6 +27,22 @@ class HomeView {
 
   setTransition() {
     const self = this;
+
+
+    if (!App.model.firstView) {
+
+      const dot = (self.el.querySelector('.dot-inner'));
+
+      TweenMax.to(dot, 0.7, {
+        ease: 'Expo.easeIn',
+        delay: 1,
+        scale: 0.85,
+        yoyo: true,
+        repeat: 1,
+      });
+
+    }
+
     this.transition = new transitionModule({
       oldView: App.model.getActiveView(),
       activeView: self
