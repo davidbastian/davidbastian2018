@@ -199,7 +199,7 @@ class DotNextModule {
       const posSingleDescription = self.singleDescription[0].offsetWidth;
 
       //next
-      console.log(posSingleMedia)
+     // console.log(posSingleMedia)
       TweenMax.set(self.singleMedia, {
         css: {
           x: (-(self.dotAreaX + self.dotPosX) / 0.6) + '%',

@@ -16,7 +16,7 @@ import SplitText from '../../../common/plugins/SplitText.min';
 class AboutView {
 
     init(params) {
-        console.log('init About', params);
+      //  console.log('init About', params);
         this.params = params;
         this.data = App.model.getData();
         this.setup();

@@ -28,7 +28,7 @@ class Preloader {
             this.countingDOM = this.countingDOM + 0.2;
             this.countingRound = Math.round(this.countingDOM);
             this.countingNumberDOM = {
-                val: this.countingRound
+                val: 0+this.countingRound
             };
 
             document.body.querySelectorAll('.preloader-counter')[0].innerHTML = this.countingNumberDOM.val + '.';
