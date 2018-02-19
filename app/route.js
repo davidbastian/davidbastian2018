@@ -3,8 +3,11 @@ import App from "../app/index";
 import Preloader from './src/modules/module.preloader';
 
 class Route {
+  constructor(){
+    this.url = location.hash.slice(1) || "/";
+  }
   start() {
-    this.preloader = new Preloader();
+    this.preloader = new Preloader(this.url);
   }
   updateUrl(event) {
     this.url = location.hash.slice(1) || "/";

@@ -5,7 +5,9 @@ import {
 } from 'gsap';
 
 class Preloader {
-    constructor(opt) {
+    constructor(url) {
+
+        this.url = url;
 
         this.startCounting();
         this.getData();
@@ -54,20 +56,40 @@ class Preloader {
 
     getData() {
         const mediaArray = [];
-        for (let i = 0; i < Data.projects.length; i++) {
-            const project = Data.projects[i];
-            for (let m = 0; m < project.media.length; m++) {
-                const media = project.media[m];
-                mediaArray.push(media);
+
+
+        console.log(this.url);
+
+        if (this.url === '/') {
+
+            for (let i = 0; i < Data.projects.length; i++) {
+                const project = Data.projects[i];
+                const mediaLink = project.img;
+                this.preloadMedia(mediaLink);
             }
+
+            this.size = Data.projects.length;
+
+        } else {
+            for (let i = 0; i < Data.projects.length; i++) {
+                const project = Data.projects[i];
+                for (let m = 0; m < project.media.length; m++) {
+                    const media = project.media[m];
+                    mediaArray.push(media);
+                }
+            }
+
+            for (let e = 0; e < mediaArray.length; e++) {
+                const mediaLink = mediaArray[e].links[0].src;
+                const mediaType = mediaArray[e].type;
+                this.preloadMedia(mediaLink, mediaType);
+            }
+
+            this.size = mediaArray.length;
+
         }
 
-        for (let e = 0; e < mediaArray.length; e++) {
-            const mediaLink = mediaArray[e].links[0].src;
-            const mediaType = mediaArray[e].type;
-            this.preloadMedia(mediaLink, mediaType);
-        }
-        this.size = mediaArray.length;
+
     }
 
     preloadMedia(link, type) {
