@@ -4,6 +4,7 @@ class AppView {
     init() {
         this.addEvents();
         console.log("AppView", Data);
+
         const markup = `
         <header>
             <div class="container">
@@ -25,7 +26,7 @@ class AppView {
             <div class="container">
                 <p id="copyright">${Data.details.copyright}</a>
                 <nav class="menu">
-                    <a href="#/full" target="_blank">Maybe another View?</a>
+                    <a href="#/full" target="_blank"></a>
                 </nav>
             </div>
         </footer>

@@ -11,38 +11,7 @@ class TransitionModule {
   firstAnima() {
     const self = this;
 
-
-    self.activeView.el.addEventListener('mousemove', function () {
-
-
-      setTimeout(function () {
-        if (App.model.firstView) {
-
-          TweenMax.to(self.activeView.el.querySelectorAll('.dot-instruction'), 1, {
-            autoAlpha: 0,
-            ease: "Power3.easeInOut",
-            onComplete: function () {
-              self.activeView.el.querySelectorAll('.dot-instruction')[0].outerHTML = "";
-            }
-          });
-
-          TweenMax.to(self.activeView.el.querySelectorAll('.home-wrap'), 1, {
-            top: 0,
-            autoAlpha: 1,
-            ease: "Power3.easeInOut",
-          });
-
-
-          App.model.firstView = false;
-
-        }
-
-      }, 3000);
-
-    });
-
-
-    self.activeView.el.querySelector('.dot').addEventListener('mouseenter', function () {
+    function anima() {
 
       if (App.model.firstView) {
 
@@ -65,7 +34,17 @@ class TransitionModule {
 
       }
 
+    }
 
+    self.activeView.el.addEventListener('mousemove', function () {
+      setTimeout(function () {
+        anima();
+      }, 3000);
+    });
+
+
+    self.activeView.el.querySelector('.dot').addEventListener('mouseenter', function () {
+      anima();
     });
 
 
