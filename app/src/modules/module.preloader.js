@@ -16,18 +16,12 @@ class Preloader {
         //  this.startCounting();
         this.getData();
         this.counter = 0;
-        this.countingDOM = 0;
-        this.stopCounting = false;
         this.randomPercent = getRandomInt(20, 40);
-        this.countingNumberDOM = {
-            val: 0
-        };
-        this.countingRound = 0;
-
 
     }
 
     getData() {
+        const self = this;
         const mediaArray = [];
 
         if (self.url === '/' || self.url === '/about') {
@@ -89,8 +83,6 @@ class Preloader {
             self.preload(mediaLink);
         }
 
-        this.size = mediaArray.length;
-
     }
 
     preloadHome() {
@@ -102,7 +94,7 @@ class Preloader {
             self.preload(mediaLink);
         }
 
-        this.size = Data.projects.length;
+
 
 
     }
@@ -135,11 +127,12 @@ class Preloader {
 
                 if (self.url === '/' || self.url === '/about') {
                     self.preloadSingle();
+                    console.log('load single');
                 } else {
+                    console.log('load home');
                     self.preloadHome();
                 }
 
-                self.stopCounting = true;
                 TweenMax.to(progress, 3, {
                     val: 99,
                     ease: 'Power3.easeInOut',
