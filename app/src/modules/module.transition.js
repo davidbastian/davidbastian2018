@@ -29,7 +29,6 @@ class TransitionModule {
           ease: "Power3.easeInOut",
         });
 
-
         App.model.firstView = false;
 
       }

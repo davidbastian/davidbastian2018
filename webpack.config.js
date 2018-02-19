@@ -83,7 +83,8 @@ module.exports = {
     new CopyWebpackPlugin([
       { from: "app/index.html" },
       { from: "app/common/media/", to: "common/media/" },
-      { from: "app/favicon.ico" }
+      { from: "app/common/social/", to: "common/social/" },
+      { from: "app/favicon.png" }
     ])
   ]
 };

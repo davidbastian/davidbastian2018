@@ -361,11 +361,14 @@ footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-top: 50px; }
+    margin-top: 50px;
+    opacity: 0; }
     #about .about-wrap .social a {
       margin-left: 21px;
       border-bottom: 1px solid;
       padding-bottom: 5px; }
+  #about .about-wrap .char {
+    opacity: 0; }
 .single .single-next {
   position: absolute;
   right: 0;
