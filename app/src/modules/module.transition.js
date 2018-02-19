@@ -12,23 +12,63 @@ class TransitionModule {
     const self = this;
 
 
-    TweenMax.to(self.activeView.el.querySelectorAll('.dot-instruction'), 1, {
-      autoAlpha: 0,
-      ease: "Power3.easeInOut",
-      onComplete: function () {
-        self.activeView.el.querySelectorAll('.dot-instruction')[0].outerHTML = "";
+    self.activeView.el.addEventListener('mousemove', function () {
+
+
+      setTimeout(function () {
+        if (App.model.firstView) {
+
+          TweenMax.to(self.activeView.el.querySelectorAll('.dot-instruction'), 1, {
+            autoAlpha: 0,
+            ease: "Power3.easeInOut",
+            onComplete: function () {
+              self.activeView.el.querySelectorAll('.dot-instruction')[0].outerHTML = "";
+            }
+          });
+
+          TweenMax.to(self.activeView.el.querySelectorAll('.home-wrap'), 1, {
+            top: 0,
+            autoAlpha: 1,
+            ease: "Power3.easeInOut",
+          });
+
+
+          App.model.firstView = false;
+
+        }
+
+      }, 3000);
+
+    });
+
+
+    self.activeView.el.querySelector('.dot').addEventListener('mouseenter', function () {
+
+      if (App.model.firstView) {
+
+        TweenMax.to(self.activeView.el.querySelectorAll('.dot-instruction'), 1, {
+          autoAlpha: 0,
+          ease: "Power3.easeInOut",
+          onComplete: function () {
+            self.activeView.el.querySelectorAll('.dot-instruction')[0].outerHTML = "";
+          }
+        });
+
+        TweenMax.to(self.activeView.el.querySelectorAll('.home-wrap'), 1, {
+          top: 0,
+          autoAlpha: 1,
+          ease: "Power3.easeInOut",
+        });
+
+
+        App.model.firstView = false;
+
       }
+
+
     });
 
 
-    TweenMax.fromTo(self.activeView.el.querySelectorAll('.home-wrap'), 1, {
-      top: 100,
-      autoAlpha: 0,
-    }, {
-      top: 0,
-      autoAlpha: 1,
-      ease: "Power3.easeInOut",
-    });
 
   }
 
@@ -97,16 +137,13 @@ class TransitionModule {
     if (this.activeView.name === 'home') {
 
       if (App.model.firstView) {
-        App.model.firstView = false;
+
         TweenMax.set(self.activeView.el.querySelectorAll('.home-wrap'), {
           autoAlpha: 0,
           top: 50,
         });
 
-
-        setTimeout(function () {
-          self.firstAnima();
-        }, 3000);
+        self.firstAnima();
 
         self.standardAnima();
 

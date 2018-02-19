@@ -25,7 +25,7 @@ class AppView {
             <div class="container">
                 <p id="copyright">${Data.details.copyright}</a>
                 <nav class="menu">
-                    <a href="#/full" target="_blank">F</a>
+                    <a href="#/full" target="_blank">Maybe another View?</a>
                 </nav>
             </div>
         </footer>

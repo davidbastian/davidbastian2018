@@ -1,9 +1,15 @@
 import App from "../../../index";
+import {
+    getRandomArbitrary
+} from '../../../common/utils/utils';
 import "./style.scss";
 import transitionModule from "../../modules/module.transition";
 import {
-    TweenMax
+    TimeLineMax,
+    TweenMax,
+    TimelineLite
 } from "gsap";
+
 
 import SplitText from '../../../common/plugins/SplitText.min';
 
@@ -28,6 +34,10 @@ class AboutView {
             oldView: App.model.getActiveView(),
             activeView: self
         });
+
+    }
+
+    removeEvents(){
 
     }
 
@@ -58,39 +68,48 @@ class AboutView {
         </div>
       `;
         const aboutHTMLDOM = new DOMParser().parseFromString(markup, "text/html");
-        const mySplitText = new SplitText(aboutHTMLDOM.querySelectorAll('h2 span')[0], {
-            type: "words,chars"
-        });
-        const chars = mySplitText.chars;
-
-        setTimeout(function(){
-
-            for (let i = 0; i < chars.length; i++) {
-                const char = chars[i];
-    
-                TweenMax.to(char, (i + Math.random()) * 0.02, {
+        const spans = aboutHTMLDOM.querySelectorAll('h2 span');
+        const social = aboutHTMLDOM.querySelectorAll('.social')[0];
+        const tlParent = new TimelineMax({
+            delay: 0.5,
+            onComplete: function () {
+                TweenMax.to(social, 1.3, {
+                    ease: 'Power3.easeInOut',
                     opacity: 1,
-                    delay: (i + Math.random()) * 0.06,
-                    ease: SteppedEase.config(1)
+                    delay:0.2
                 });
             }
+        });
+        tlParent.pause();
 
-        },1500);
-       
+        for (let i = 0; i < spans.length; i++) {
+            const tl = new TimelineMax({
+                delay: getRandomArbitrary(0.4, 0.5)
+            });
+            const span = spans[i];
+            const spanSplit = new SplitText(span, {
+                type: "words,chars",
+                charsClass: 'char'
+            });
+            const spanSplitChars = spanSplit.chars;
 
+            for (let j = 0; j < spanSplitChars.length; j++) {
+                const char = spanSplitChars[j];
+
+                const charTween = TweenMax.to(char, getRandomArbitrary(0.02, 0.04), {
+                    opacity: 1,
+                    delay: getRandomArbitrary(0.01, 0.04),
+                    ease: SteppedEase.config(1)
+                });
+
+                tl.add(charTween);
+
+            }
+            tlParent.add(tl);
+        }
+
+        tlParent.play();
         aboutWrap.appendChild(aboutHTMLDOM.body.firstChild);
-
-    }
-
-    addEvents() {
-
-    }
-
-    removeEvents() {
-
-    }
-
-    render() {
 
     }
 }

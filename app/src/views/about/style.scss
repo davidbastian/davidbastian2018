@@ -12,11 +12,16 @@
         .social {
             display: flex;
             margin-top: 50px;
+            opacity: 0;
             a {
                 margin-left: 21px;
                 border-bottom: 1px solid;
                 padding-bottom: 5px;
             }
+        }
+
+        .char {
+            opacity: 0;
         }
     }
 }
