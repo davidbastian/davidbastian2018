@@ -64,6 +64,8 @@ class AboutView {
                <a href="https://cl.linkedin.com/in/davidbastianf" target="_blank">LinkedIn</a>
                <a href="" target="_blank">Instagram</a>
                <a href="http://davidbastiancl.tumblr.com/" target="_blank">Tumblr</a>
+               <a href="
+               " target="_blank">CV</a>
             </div>
         </div>
       `;

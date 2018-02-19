@@ -13,8 +13,6 @@ class AppController {
     this.model.setData(data);
   }
 
-
-
 }
 
 const controller = new AppController();

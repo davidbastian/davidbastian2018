@@ -10,6 +10,8 @@ class Route {
     this.preloader = new Preloader(this.url);
   }
   updateUrl(event) {
+    ga('send', 'pageview', location.href);
+
     this.url = location.hash.slice(1) || "/";
     App.model.currentURL = this.url;
     RouteController.checkParams(this.url);
