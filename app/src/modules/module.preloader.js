@@ -4,16 +4,21 @@ import {
     TweenMax
 } from 'gsap';
 
+import {
+    getRandomInt
+} from '../../common/utils/utils';
+
 class Preloader {
     constructor(url) {
 
         this.url = url;
 
-        this.startCounting();
+        //  this.startCounting();
         this.getData();
         this.counter = 0;
         this.countingDOM = 0;
         this.stopCounting = false;
+        this.randomPercent = getRandomInt(20, 40);
         this.countingNumberDOM = {
             val: 0
         };
@@ -22,45 +27,10 @@ class Preloader {
 
     }
 
-    startCounting() {
-        const self = this;
-        requestAnimationFrame(self.startCounting.bind(this));
-
-        if (!self.stopCounting) {
-            this.countingDOM = this.countingDOM + 0.2;
-            this.countingRound = Math.round(this.countingDOM);
-            this.countingNumberDOM = {
-                val: 0 + this.countingRound
-            };
-
-            document.body.querySelectorAll('.preloader-counter')[0].innerHTML = this.countingNumberDOM.val + '.';
-
-            if (this.countingRound === 99) {
-                self.stopCounting = true;
-                App.router.addEvents();
-                App.router.updateUrl();
-
-                TweenMax.to(document.body.querySelectorAll('.preloader'), 1, {
-                    y: -100,
-                    opacity: 0,
-                    ease: 'Expo.easeInOut',
-                    onComplete: function () {
-                        document.body.querySelectorAll('.preloader')[0].outerHTML = "";
-                    }
-                });
-
-            }
-        }
-
-    }
-
     getData() {
         const mediaArray = [];
 
-
-        console.log(this.url);
-
-        if (this.url === '/') {
+        if (self.url === '/' || self.url === '/about') {
 
             for (let i = 0; i < Data.projects.length; i++) {
                 const project = Data.projects[i];
@@ -92,42 +62,117 @@ class Preloader {
 
     }
 
+    preload(link) {
+        let xhr = new XMLHttpRequest();
+        xhr.open('get', link);
+        xhr.send();
+    }
+
+
+    preloadSingle() {
+        const self = this;
+        const mediaArray = [];
+
+
+        for (let i = 0; i < Data.projects.length; i++) {
+            const project = Data.projects[i];
+            for (let m = 0; m < project.media.length; m++) {
+                const media = project.media[m];
+                mediaArray.push(media);
+            }
+        }
+
+        for (let e = 0; e < mediaArray.length; e++) {
+            const mediaLink = mediaArray[e].links[0].src;
+            const mediaType = mediaArray[e].type;
+
+            self.preload(mediaLink);
+        }
+
+        this.size = mediaArray.length;
+
+    }
+
+    preloadHome() {
+        const self = this;
+
+        for (let i = 0; i < Data.projects.length; i++) {
+            const project = Data.projects[i];
+            const mediaLink = project.img;
+            self.preload(mediaLink);
+        }
+
+        this.size = Data.projects.length;
+
+
+    }
+
     preloadMedia(link, type) {
         const self = this;
+        let progress = {
+            val: 0
+        };
+
+
         let xhr = new XMLHttpRequest();
         xhr.open('get', link);
 
+
         function updateHandler() {
-            document.body.querySelectorAll('.preloader-counter')[0].innerHTML = Math.round(self.countingNumberDOM.val) + '.';
+            document.body.querySelectorAll('.preloader-counter')[0].innerHTML = Math.round(progress.val) + '.';
         }
 
         xhr.onload = function () {
             self.counter = self.counter + 1;
             // console.log(link, type + ' ready', self.size, self.counter);
-            if (self.counter === self.size) {
-                // console.log('all done');
+
+            progress.val = (self.counter * self.randomPercent) / self.size;
+
+            document.body.querySelectorAll('.preloader-counter')[0].innerHTML = Math.round(progress.val) + '.';
+
+            if (progress.val === self.randomPercent) {
+
+
+                if (self.url === '/' || self.url === '/about') {
+                    self.preloadSingle();
+                } else {
+                    self.preloadHome();
+                }
+
                 self.stopCounting = true;
-                TweenMax.to(self.countingNumberDOM, 3, {
+                TweenMax.to(progress, 3, {
                     val: 99,
                     ease: 'Power3.easeInOut',
                     onUpdate: updateHandler,
                     onComplete: function () {
 
-                        App.router.addEvents();
-                        App.router.updateUrl();
+                        if (!self.firstPreload) {
 
-                        TweenMax.to(document.body.querySelectorAll('.preloader'), 1, {
-                            y: -100,
-                            opacity: 0,
-                            ease: 'Power3.easeInOut',
-                            onComplete: function () {
-                                document.body.querySelectorAll('.preloader')[0].outerHTML = "";
-                            }
-                        });
+                            App.router.addEvents();
+                            App.router.updateUrl();
+
+                            self.firstPreload = true;
+
+                            TweenMax.to(document.body.querySelectorAll('.preloader'), 1, {
+                                y: -100,
+                                opacity: 0,
+                                ease: 'Power3.easeInOut',
+                                onComplete: function () {
+                                    document.body.querySelectorAll('.preloader')[0].outerHTML = "";
+                                }
+                            });
+
+
+
+                        }
                     }
                 });
+
             }
         };
+
+
+
         xhr.send();
     }
 

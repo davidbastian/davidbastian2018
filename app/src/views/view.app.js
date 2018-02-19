@@ -19,7 +19,7 @@ class AppView {
         
         <div class="preloader">
             <div class="preloader-counter">
-                0
+                0.
             </div>
         </div>
         <footer>
