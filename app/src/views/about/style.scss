@@ -1,5 +1,4 @@
 @import "../../../common/styles/_variables";
-
 #about {
     .about-wrap {
         height: 100vh;
@@ -17,7 +16,6 @@
         max-width: 850px;
         h2 {
             line-height: 60px;
-            
             @media screen and (max-width: 767px) {
                 font-size: 26px;
                 line-height: 36px;
@@ -27,31 +25,21 @@
             display: flex;
             margin-top: 50px;
             opacity: 0;
-            padding-bottom: 20vh;
-
             @media screen and (max-width: 767px) {
                 margin-top: 50px;
-              //  flex-direction: column;
+                padding-bottom: 10vh;
                 p {
                     display: none;
                 }
             }
-
             a {
                 margin-left: 21px;
                 border-bottom: 1px solid;
                 padding-bottom: 5px;
-                
-
                 @media screen and (max-width: 767px) {
-                  //  padding: 15px 0;
+                    //  padding: 15px 0;
                     margin: 0;
                     margin-right: 25px;
-                   // border-bottom: 1px dotted $color03;
-
-                    &:last-child {
-                       // border-bottom: 0px;
-                    }
                 }
             }
         }
