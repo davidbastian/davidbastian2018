@@ -46,7 +46,8 @@ class ScrollModule {
     self.scrollArea = (directionEl - directionWrap) * 100 / directionEl;
 
     self.instance = new VirtualScroll({
-      el: this.scrollWrap
+      el: this.scrollWrap,
+      touchMultiplier: 5
     });
   }
 

@@ -24,6 +24,9 @@ a {
 h2 {
   font-size: 40px;
   letter-spacing: -1px;
+  @media screen and (max-width: 767px) {
+    font-size: 26px;
+  }
 }
 
 .preloader {
@@ -39,7 +42,6 @@ h2 {
   @media screen and (max-width: 767px) {
     left: 20px;
   }
-  
   .preloader-counter {
     font-size: 25vw;
     margin-top: -5vw;

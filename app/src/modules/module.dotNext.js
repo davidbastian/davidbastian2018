@@ -241,21 +241,53 @@ class DotNextModule {
 
       //next
       // console.log(posSingleMedia)
-      TweenMax.set(self.singleMedia, {
-        css: {
-          x: (-(self.dotAreaX + self.dotPosX) / 0.6) + '%',
-          'filter': 'grayscale(' + (self.dotAreaX + self.dotPosX) / 0.5 + '%)'
-        }
-      });
+      
 
-      TweenMax.set(self.singleNext, {
-        xPercent: 100 - (self.dotAreaX + self.dotPosX) / 0.6
-      });
+     
 
-      TweenMax.set(self.singleDescription, {
-        //  x: (-(self.dotAreaX + self.dotPosX)/5) + '%',
-        opacity: 1 - (self.dotAreaX + self.dotPosX) * 0.04
-      });
+      if (Config.checkDevice() === 'mobile') {
+
+        TweenMax.set(self.singleNext, {
+          xPercent: 100 - (self.dotAreaX + self.dotPosX) /0.4
+        });
+
+        TweenMax.set(self.singleMedia, {
+          css: {
+            x: (-(self.dotAreaX + self.dotPosX) / 0.6) + '%',
+         //   'filter': 'grayscale(' + (self.dotAreaX + self.dotPosX) / 0.5 + '%)'
+          }
+        });
+
+        TweenMax.set(self.singleDescription, {
+          //  x: (-(self.dotAreaX + self.dotPosX)/5) + '%',
+         // opacity: 1 - (self.dotAreaX + self.dotPosX) * 0.04
+        });
+
+
+      } else {
+
+       
+
+        TweenMax.set(self.singleNext, {
+          xPercent: 100 - (self.dotAreaX + self.dotPosX) / 0.6
+        });
+
+        TweenMax.set(self.singleMedia, {
+          css: {
+            x: (-(self.dotAreaX + self.dotPosX) / 0.6) + '%',
+            'filter': 'grayscale(' + (self.dotAreaX + self.dotPosX) / 0.5 + '%)'
+          }
+        });
+
+        TweenMax.set(self.singleDescription, {
+          //  x: (-(self.dotAreaX + self.dotPosX)/5) + '%',
+          opacity: 1 - (self.dotAreaX + self.dotPosX) * 0.04
+        });
+
+
+      }
+
+     
 
       /*if (posSingleMedia <= posSingleDescription) {
         const rest = posSingleDescription - posSingleMedia;
