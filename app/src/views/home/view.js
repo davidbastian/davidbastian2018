@@ -9,6 +9,9 @@ import {
   TweenMax
 } from "gsap";
 
+import Config from '../../../config';
+
+
 class HomeView {
   init(params) {
     //  console.log("init Home", params, App);
@@ -43,6 +46,15 @@ class HomeView {
 
     }
 
+
+    const footer = document.querySelector('footer');
+    TweenMax.to(footer, 1, {
+      ease: 'Power3.easeInOut',
+      opacity: 1
+    });
+
+
+
     this.transition = new transitionModule({
       oldView: App.model.getActiveView(),
       activeView: self
@@ -55,11 +67,19 @@ class HomeView {
 
   setScrollDot() {
     const self = this;
+    let d;
+
+    if (Config.checkDevice() === 'mobile' || Config.checkDevice() === 'tablet') {
+      d = 'x';
+    } else {
+      d = "y";
+    }
+
     this.scroll = new ScrollDotModule({
       el: self.el.querySelector(".home-wrap"),
       wrap: window,
       ease: 0.06,
-      delta: "y",
+      delta: d,
       direction: "x",
       view: self,
       dot: true,

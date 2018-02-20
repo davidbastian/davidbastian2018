@@ -1,6 +1,5 @@
 #home {
   display: flex;
-
   .home-wrap {
     display: flex;
     padding-left: 5vw;
@@ -9,13 +8,13 @@
       padding-left: 60px;
       padding-right: 60px;
     }
-
     padding-top: 18vh;
     position: relative;
-
     a {
-      height: 53vh;
-      // min-height: 500px;
+      height: 53vh; // min-height: 500px;
+      @media screen and (max-width: 767px) {
+        height: 48vh;
+      }
       margin-right: 10px;
       display: block;
       &:last-child {
@@ -23,6 +22,9 @@
       }
       p {
         padding-top: 40px;
+        @media screen and (max-width: 767px) {
+          line-height: 1.6em;
+        }
       }
       img {
         display: block;

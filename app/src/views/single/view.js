@@ -39,7 +39,19 @@ class SingleView {
       scale: 0.85,
       yoyo: true,
       repeat: 1,
-    });;
+    });
+
+
+    if (Config.checkDevice() === 'mobile' || Config.checkDevice() === 'tablet') {
+
+      const footer = document.querySelector('footer');
+      TweenMax.to(footer, 0.5, {
+        ease: 'Power3.easeInOut',
+        opacity: 0
+      });
+    }
+
+
 
     this.transition = new transitionModule({
       oldView: App.model.getActiveView(),

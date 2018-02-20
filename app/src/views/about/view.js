@@ -16,7 +16,7 @@ import SplitText from '../../../common/plugins/SplitText.min';
 class AboutView {
 
     init(params) {
-      //  console.log('init About', params);
+        //  console.log('init About', params);
         this.params = params;
         this.data = App.model.getData();
         this.setup();
@@ -35,9 +35,15 @@ class AboutView {
             activeView: self
         });
 
+        const footer = document.querySelector('footer');
+        TweenMax.to(footer, 1, {
+            ease: 'Power3.easeInOut',
+            opacity: 1
+        });
+
     }
 
-    removeEvents(){
+    removeEvents() {
 
     }
 
@@ -78,7 +84,7 @@ class AboutView {
                 TweenMax.to(social, 1.3, {
                     ease: 'Power3.easeInOut',
                     opacity: 1,
-                    delay:0.2
+                    delay: 0.2
                 });
             }
         });
