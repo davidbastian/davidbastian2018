@@ -8,12 +8,18 @@
       padding-left: 60px;
       padding-right: 60px;
     }
+
+    @media screen and (max-width: 767px) {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+
     padding-top: 18vh;
     position: relative;
     a {
       height: 53vh; // min-height: 500px;
       @media screen and (max-width: 767px) {
-        height: 48vh;
+        height: 50vh;
       }
       margin-right: 10px;
       display: block;
