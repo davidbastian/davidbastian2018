@@ -63,6 +63,11 @@ header {
     justify-content: space-between;
     align-items: center;
     position: relative;
+    @media screen and (max-width: 767px) {
+      background: $color02;
+      height: 10vh;
+      border-bottom: 1px solid #cacaca;
+    }
   }
   nav {
     a {
@@ -102,6 +107,14 @@ main {
   }
 }
 
+.copyright {
+  color: $color03;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 footer {
   position: fixed;
   z-index: 1;
@@ -115,16 +128,6 @@ footer {
     align-items: center;
     position: relative;
   }
-  #copyright {
-    color: $color03;
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-  }
   .menu {
     position: absolute;
     right: 0;
@@ -134,6 +137,11 @@ footer {
     justify-content: center;
     align-items: center;
     position: absolute;
+  }
+  .copyright {
+    position: absolute;
+    left: 0;
+    bottom: 0;
   }
 }
 

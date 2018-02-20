@@ -33,7 +33,7 @@ class AppView {
         </div>
         <footer>
             <div class="container">
-                <p id="copyright">${Data.details.copyright}</a>
+                <p class="copyright">${Data.details.copyright}</a>
                 <nav class="menu">
                     <a href="#/full" target="_blank"></a>
                 </nav>

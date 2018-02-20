@@ -81,7 +81,7 @@ class SingleView {
 
 
       if (this.params === slug) {
-       // console.log(project);
+        // console.log(project);
 
         self.nextSlug = undefined;
 
@@ -205,6 +205,22 @@ class SingleView {
 
         mediaDOM.appendChild(videoHTML.body.firstChild);
       }
+
+    }
+
+    if (Config.checkDevice() === 'mobile' || Config.checkDevice() === 'tablet') {
+
+
+      const markupFooter = `<p class="copyright">© 2018 David Bastian. Chilean Designer &amp; Web Developer.
+            </p>`;
+
+      const markupFooterHTML = new DOMParser().parseFromString(
+        markupFooter,
+        "text/html"
+      );
+
+      mediaDOM.appendChild(markupFooterHTML.body.firstChild);
+
     }
   }
 
