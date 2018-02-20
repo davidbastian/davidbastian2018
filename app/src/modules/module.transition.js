@@ -41,8 +41,18 @@ class TransitionModule {
       }, 3000);
     });
 
+    self.activeView.el.addEventListener('touchmove', function () {
+      setTimeout(function () {
+        anima();
+      }, 3000);
+    });
+
 
     self.activeView.el.querySelector('.dot').addEventListener('mouseenter', function () {
+      anima();
+    });
+
+    self.activeView.el.querySelector('.dot').addEventListener('touchstart', function () {
       anima();
     });
 

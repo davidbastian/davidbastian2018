@@ -10,13 +10,17 @@ import {
   TweenMax
 } from "gsap";
 
+import Config from '../../../config';
+
 class SingleView {
   init(params) {
     //  console.log("init Single", params);
     this.params = params;
     this.data = App.model.getData();
-    this.name = 'single',
-      this.setup();
+    this.name = 'single';
+    this.setup();
+
+    console.log(Config.checkDevice());
   }
   setup() {
     this.setData();
@@ -101,7 +105,34 @@ class SingleView {
         self.el = singleHTML;
         const singleWrap = singleHTML.querySelector(".single-wrap");
 
-        const markup = `
+        let markup;
+
+        if (Config.checkDevice() === 'mobile' || Config.checkDevice() === 'tablet') {
+          markup = `
+                <div class= "container">
+                  
+                    <div class="single-media">
+                        
+                        <div class="single-media-inner">
+                          <div class="single-description">
+                              <h2>
+                                  ${project.title}
+                              </h2>
+
+                              <div class= "single-info">
+                                  <p>${project.description}</p>
+                                  <div class="single-credits"> </div>
+                              </div>
+
+                          </div>
+                        </div>
+
+                    </div>
+                </div>  
+            `;
+
+        } else {
+          markup = `
                 <div class= "container">
                     <div class="single-description">
                         <h2>
@@ -122,6 +153,7 @@ class SingleView {
                     </div>
                 </div>  
             `;
+        }
 
         const projectHTML = new DOMParser().parseFromString(
           markup,

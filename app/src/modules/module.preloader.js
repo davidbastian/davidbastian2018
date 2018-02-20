@@ -12,8 +12,6 @@ class Preloader {
     constructor(url) {
 
         this.url = url;
-
-        //  this.startCounting();
         this.getData();
         this.counter = 0;
         this.randomPercent = getRandomInt(20, 40);
@@ -50,10 +48,7 @@ class Preloader {
             }
 
             this.size = mediaArray.length;
-
         }
-
-
     }
 
     preload(link) {

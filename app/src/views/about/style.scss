@@ -5,6 +5,10 @@
         justify-content: center;
         align-items: center;
         padding-left: 5vw;
+        @media screen and (max-width: 1200px) {
+            padding-left:60px;
+          }
+
         max-width: 850px;
         h2 {
             line-height: 60px;

@@ -9,6 +9,10 @@ body {
   user-select: none;
 }
 
+body {
+  overflow: hidden;
+}
+
 .hide {
   display: none !important;
 }
@@ -29,9 +33,19 @@ h2 {
   top: 0;
   align-items: center;
   display: flex;
+  @media screen and (max-width: 1200px) {
+    left: 60px;
+  }
+  @media screen and (max-width: 767px) {
+    left: 20px;
+  }
+  
   .preloader-counter {
     font-size: 25vw;
     margin-top: -5vw;
+    @media screen and (max-width: 1200px) {
+      margin-top: -60px;
+    }
   }
 }
 
@@ -51,6 +65,9 @@ header {
   nav {
     a {
       margin-left: 40px;
+      @media screen and (max-width: 767px) {
+        margin-left: 20px;
+      }
     }
     &.menu {
       position: absolute;
@@ -119,14 +136,28 @@ footer {
 }
 
 .container {
-  width: 90%;
   max-width: 2400px;
   margin: 0 auto;
+  border-left: 5vw solid transparent;
+  border-right: 5vw solid transparent;
+  @media screen and (max-width: 1200px) {
+    border-left:60px solid transparent;
+    border-right: 60px solid transparent;
+  }
+  @media screen and (max-width: 767px) {
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+  }
+  box-sizing: content-box;
 }
 
 .dot {
   width: 5vw;
   min-height: 5vw;
+  @media screen and (max-width: 1200px) {
+    width:60px;
+    min-height: 60px;
+  }
   height: 80px;
   position: fixed;
   top: 40%;
@@ -146,6 +177,9 @@ footer {
     display: flex;
     position: inherit;
     left: 5vw;
+    @media screen and (max-width: 1200px) {
+      left:60px;
+    }
     h2 {
       color: $color03;
       margin-top: -4px;

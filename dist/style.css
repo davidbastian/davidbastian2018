@@ -179,6 +179,9 @@ h2 {
   .preloader .preloader-counter {
     font-size: 25vw;
     margin-top: -5vw; }
+    @media screen and (max-width: 1200px) {
+      .preloader .preloader-counter {
+        margin-top: 60px; } }
 
 header {
   position: fixed;
@@ -282,9 +285,16 @@ footer {
     position: absolute; }
 
 .container {
-  width: 90%;
   max-width: 2400px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  border-left: 5vw solid transparent;
+  border-right: 5vw solid transparent;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+  @media screen and (max-width: 1200px) {
+    .container {
+      border-left: 60px solid transparent;
+      border-right: 60px solid transparent; } }
 
 .dot {
   width: 5vw;
@@ -303,6 +313,10 @@ footer {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+  @media screen and (max-width: 1200px) {
+    .dot {
+      width: 60px;
+      min-height: 60px; } }
   .dot .dot-inner {
     background-color: #ff0000;
     width: 60px;
@@ -316,6 +330,9 @@ footer {
     display: flex;
     position: inherit;
     left: 5vw; }
+    @media screen and (max-width: 1200px) {
+      .dot .dot-instruction {
+        left: 60px; } }
     .dot .dot-instruction h2 {
       color: #afafaf;
       margin-top: -4px; }
@@ -331,6 +348,10 @@ footer {
     padding-right: 5vw;
     padding-top: 18vh;
     position: relative; }
+    @media screen and (max-width: 1200px) {
+      #home .home-wrap {
+        padding-left: 60px;
+        padding-right: 60px; } }
     #home .home-wrap a {
       height: 53vh;
       margin-right: 10px;
@@ -355,6 +376,9 @@ footer {
   align-items: center;
   padding-left: 5vw;
   max-width: 850px; }
+  @media screen and (max-width: 1200px) {
+    #about .about-wrap {
+      padding-left: 60px; } }
   #about .about-wrap h2 {
     line-height: 60px; }
   #about .about-wrap .social {
@@ -402,6 +426,11 @@ footer {
   padding-right: 5vw;
   margin-left: -5vw;
   padding-left: 5vw; }
+  @media screen and (max-width: 1200px) {
+    .single .single-description {
+      padding-right: 60px;
+      margin-left: -60px;
+      padding-left: 60px; } }
   .single .single-description .single-info {
     padding-bottom: 22vh; }
   .single .single-description h2 {

@@ -1,9 +1,18 @@
 import Data from '../../common/data/data';
 
+import Config from '../../config';
+
 class AppView {
     init() {
+
+        if (Config.checkDevice() === 'mobile') {
+            let viewport = document.querySelector("meta[name=viewport]");
+            viewport.setAttribute('content', 'width=device-width, initial-scale=0.8, maximum-scale=0.8, user-scalable=0');
+        }
+
+
         this.addEvents();
-       // console.log("AppView", Data);
+        // console.log("AppView", Data);
 
         const markup = `
         <header>
@@ -36,7 +45,9 @@ class AppView {
     }
 
     addEvents() {
-        document.addEventListener("touchmove mousewheel DOMMouseScroll", function (e) {
+
+
+        document.addEventListener("touchmove", function (e) {
             e.preventDefault();
         });
     }

@@ -6,6 +6,8 @@ import {
   TweenMax
 } from "gsap";
 
+import Config from '../../config';
+
 class DotNextModule {
   constructor(opt) {
     this.view = opt.view;
@@ -68,13 +70,38 @@ class DotNextModule {
     self.dotEl.addEventListener("mousedown", self.onDotEnter.bind(this));
     window.addEventListener("mousemove", self.onDotMove.bind(this));
     window.addEventListener("mouseup", self.onDotLeave.bind(this));
+
+
+    self.dotEl.addEventListener("touchstart", self.onDotEnter.bind(this));
+    window.addEventListener("touchmove", self.onDotMove.bind(this));
+    window.addEventListener("touchend", self.onDotLeave.bind(this));
+    window.addEventListener("resize", self.onDotResize.bind(this));
   }
+
+
 
   removeEvents() {
     const self = this;
     self.dotEl.removeEventListener("mousedown", self.onDotEnter);
     window.removeEventListener("mousemove", self.onDotMove);
     window.removeEventListener("mouseup", self.onDotLeave);
+
+
+    self.dotEl.removeEventListener("touchstart", self.onDotEnter);
+    window.removeEventListener("touchmove", self.onDotMove);
+    window.removeEventListener("touchend", self.onDotLeave);
+    window.removeEventListener("resize", self.onDotResize);
+  }
+
+  onDotResize() {
+    const self = this;
+    self.dotAreaX =
+      (window.innerWidth - self.dotEl.clientWidth) * 100 / window.innerWidth;
+    self.dotAreaY =
+      (window.innerHeight - self.dotEl.clientHeight) *
+      100 /
+      window.innerHeight;
+
   }
 
   onDotEnter(e) {
@@ -143,8 +170,22 @@ class DotNextModule {
 
   }
 
-  onDotMove(e) {
+  onDotMove(event) {
     const self = this;
+    let e;
+
+    if (Config.checkDevice() === 'mobile' || Config.checkDevice() === 'tablet') {
+      e = {
+        x: event.changedTouches[0].pageX,
+        y: event.changedTouches[0].pageY,
+      };
+
+    } else {
+      e = {
+        x: event.x,
+        y: event.y,
+      };
+    }
 
     if (!self.dotLeft) {
       if (!self.dotReady) {
@@ -199,7 +240,7 @@ class DotNextModule {
       const posSingleDescription = self.singleDescription[0].offsetWidth;
 
       //next
-     // console.log(posSingleMedia)
+      // console.log(posSingleMedia)
       TweenMax.set(self.singleMedia, {
         css: {
           x: (-(self.dotAreaX + self.dotPosX) / 0.6) + '%',
