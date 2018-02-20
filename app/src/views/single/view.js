@@ -20,7 +20,6 @@ class SingleView {
     this.name = 'single';
     this.setup();
 
-    console.log(Config.checkDevice());
   }
   setup() {
     this.setData();
@@ -82,7 +81,7 @@ class SingleView {
 
 
       if (this.params === slug) {
-        console.log(project);
+       // console.log(project);
 
         self.nextSlug = undefined;
 
