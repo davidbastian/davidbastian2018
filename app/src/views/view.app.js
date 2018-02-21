@@ -31,6 +31,14 @@ class AppView {
                 0.
             </div>
         </div>
+
+        <div id="wrong-device">
+            <div class= "dot">
+                <div class="dot-inner"></div>
+            </div>  
+            <h3></h3>
+        </div>
+
         <footer>
             <div class="container">
                 <p class="copyright">${Data.details.copyright}</a>
@@ -46,10 +54,42 @@ class AppView {
 
     addEvents() {
 
-
         document.addEventListener("touchmove", function (e) {
             e.preventDefault();
         });
+
+        if (Config.checkDevice() === 'desktop') {
+            window.addEventListener('resize', this.onResize.bind(this));
+            window.addEventListener('load', this.onResize.bind(this));
+            window.addEventListener('ready', this.onResize.bind(this));
+        }
+    }
+
+    onResize(e) {
+        const w = e.currentTarget.innerWidth;
+        const wrongDevice = document.getElementById('wrong-device');
+        const title = wrongDevice.getElementsByTagName('h3')[0];
+
+        if ((w <= 1024) && (w > 767)) {
+            wrongDevice.classList.add('show');
+            title.innerHTML = 'Please resize your window or buy a Tablet';
+        } else if ((w <= 767) && (w > 430)) {
+            wrongDevice.classList.add('show');
+            title.innerHTML = 'Please resize your window or buy a <span>Phone</span>';
+
+        } else if ((w <= 430) && (w > 330)) {
+            wrongDevice.classList.add('show');
+            title.innerHTML = 'Please resize your window or buy a <span>little Phone</span>';
+
+        } else if ((w <= 330)) {
+            wrongDevice.classList.add('show');
+            title.innerHTML = 'Please resize your window or buy a <span>Tamagoshi</span>';
+
+        } 
+        else {
+            wrongDevice.classList.remove('show');
+
+        }
     }
 }
 

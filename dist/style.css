@@ -427,11 +427,11 @@ footer {
     display: -ms-flexbox;
     display: flex;
     margin-top: 50px;
-    opacity: 0;
-    padding-bottom: 20vh; }
+    opacity: 0; }
     @media screen and (max-width: 767px) {
       #about .about-wrap .social {
-        margin-top: 50px; }
+        margin-top: 50px;
+        padding-bottom: 10vh; }
         #about .about-wrap .social p {
           display: none; } }
     #about .about-wrap .social a {

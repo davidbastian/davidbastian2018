@@ -51,6 +51,31 @@ h2 {
   }
 }
 
+#wrong-device {
+  position: fixed;
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  z-index: 4;
+  background: $color02;
+  text-align: center;
+  .dot {
+    position: static;
+  }
+  h3 {
+    font-size: 17px;
+    max-width: 70%;
+    color: $color01;
+    line-height: 25px;
+  }
+  &.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 header {
   position: fixed;
   z-index: 1;
@@ -110,8 +135,7 @@ main {
 .copyright {
   color: $color03;
   height: 10vh;
-  display: flex;
-//  justify-content: center;
+  display: flex; //  justify-content: center;
   align-items: center;
 }
 

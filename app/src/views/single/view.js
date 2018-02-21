@@ -52,7 +52,6 @@ class SingleView {
     }
 
 
-
     this.transition = new transitionModule({
       oldView: App.model.getActiveView(),
       activeView: self
