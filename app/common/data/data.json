@@ -5,16 +5,16 @@
     "email": "d@davidbastian.red",
     "aboutme": "<span>Im a Designer & Web Developer from Viña del Mar (Chile),</span> <span>but I am based in New Zealand.</span><span> I love to enjoy Good Art, Conceptualize, Design & Develop simple and clean Interfaces.</span>",
     "social": [{
-        "title": "Twitter",
-        "url": "www.google.cl"
+        "title": "Twitter"
+
       },
       {
-        "title": "Instagram",
-        "url": "www.google.cl"
+        "title": "Instagram"
+
       },
       {
-        "title": "LinkedIn",
-        "url": "www.google.cl"
+        "title": "LinkedIn"
+
       }
     ]
   },
@@ -22,8 +22,8 @@
       "slug": "Resn FWA Club 100",
       "title": "<small>Resn Club 100</small><div><span>FWA<span></div>",
       "role": "Interaction Design & Front End Development.",
-      "description": "At Resn I was encharge to develop the mobile site to celebrate 100 FWA, doing prototypes, animations, physics, audio, little games, I used mainly GSAP Libraries for the motion transitions, Howler.js for the audio intergration. and classic Javascript + CSS Perspective. for the interactions.",
-      "link": "#",
+      "description": "At Resn I was encharge to develop the mobile site to celebrate 100 FWA, doing prototypes, animations, physics, audio, little games, I used mainly GSAP Libraries for the motion transitions, Howler.js for the audio intergration and classic Javascript + CSS Perspective for the interactions.",
+      "link": "https://thefwa.com/cases/fwa-club-100",
       "year": "2017",
       "agency": "Resn",
       "img": "common/media/027.jpg",
@@ -114,7 +114,7 @@
       "slug": "Adidas ZX Flux Phase 01",
       "title": "<small>Adidas</small><div><span>ZX Flux Phase 01<span></div>",
       "role": "Design.",
-      "description": "Design for the first stage of this ecommerce campaign, using cinemagraph technique to develop the images and an unbalanced proportion for the text giving the idea of tension.",
+      "description": "Design for the first stage of this ecommerce campaign, using cinemagraph technique for the development of the images and an unbalanced proportion for the text giving the idea of tension.",
       "year": "2016",
       "agency": "Resn",
       "img": "common/media/028b.jpg",
@@ -154,8 +154,8 @@
       "slug": "Mailchimp.com",
       "title": "<small>Sections</small><div><span>Mailchimp.com<span></div>",
       "role": "Frontend & CMS Integration Developtment.",
-      "description": "At Resn",
-      "link": "https://mailchimp.com/did-you-mean/",
+      "description": "At Resn we worked in several sections for the main site of Mailchimp, my role was mainly develop minisites, cms wordpress integration, custom dashboards, created guidelines for main sections, using multiples technologies & libraries such as PixiJS, Haml, Php, Ruby and Rails, Google Maps among others.",
+      "link": "https://mailchimp.com/",
       "year": "2017",
       "agency": "Resn",
       "img": "common/media/031.jpg",
@@ -163,66 +163,29 @@
           "type": "image",
 
           "links": [{
-            "src": "common/media/029d.jpg"
-          }]
-        }, {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/029b.jpg"
+            "src": "common/media/031a.jpg"
           }]
         },
         {
           "type": "image",
 
           "links": [{
-            "src": "common/media/029a.jpg"
+            "src": "common/media/031c.jpg"
+          }]
+        },
+
+        {
+          "type": "video",
+
+          "links": [{
+            "src": "common/media/031.mp4"
           }]
         },
         {
           "type": "image",
 
           "links": [{
-            "src": "common/media/029c.jpg"
-          }]
-        }
-      ]
-    },
-
-    {
-      "slug": "The Crowns of Croswalds",
-      "title": "<small>Marketing Sites</small><div><span>The Crowns of Croswalds<span></div>",
-      "role": "Frontend & CMS Integration Developtment.",
-      "description": "lorem3",
-      "link": "http://denight.com/",
-      "year": "2017",
-      "agency": "Resn",
-      "img": "common/media/032.jpg",
-      "media": [{
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/032.jpg"
-          }]
-        }, {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/029b.jpg"
-          }]
-        },
-        {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/029a.jpg"
-          }]
-        },
-        {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/029c.jpg"
+            "src": "common/media/031d.jpg"
           }]
         }
       ]
@@ -232,7 +195,7 @@
       "slug": "Milladelpino",
       "title": "<small>Wedding photographers</small><div><span>Milladelpino<span></div>",
       "role": "Design.",
-      "description": "Designm Frontend & Backend Development for friends, they are wedding photographers and I am working in their website, It is still work in progress, ask me if you want to know more about the project or about development direction.",
+      "description": "Design, Frontend & Backend Development for friends, they are wedding photographers and I am working in their website, It is still work in progress, Feel free to ask me if you want to know more about the project or about development direction.",
       "year": "2016",
       "agency": "Freelance",
       "img": "common/media/030.jpg",
@@ -263,7 +226,7 @@
       "slug": "Gallipoli The Scale of War",
       "title": "<small>Gallipoli:</small><div><span>The Scale of War<span></div>",
       "role": "Interaction Design & Front End Development.",
-      "description": "With Designworks we worked in this project and I did wireframes, Front-end, and Interaction design. using GSAP for the animations & AngularJS for the implemetation, also we got a Gold Pin - Best Awards NZ for this site.",
+      "description": "With Designworks we worked in this project, my role was doing  Wireframes, Front end, and Interaction design. using GSAP for the animations & AngularJS for the implemetation, also we got a Gold Pin - Best Awards NZ for this site.",
       "link": "http://davidbastian.cl/proyectos/gallipoli/#/scrubber",
       "year": "2015",
       "agency": "Designworks",
@@ -309,7 +272,7 @@
       "slug": "Manfeild",
       "title": "<small>Events centre</small><div><span>Manfeild</span></div>",
       "role": "Design.",
-      "description": "I did wireframes, art direction and design using Adobe Photoshop, the main idea for this project was take the colors of the main photography of the page and implement in each of its segments.",
+      "description": "Wireframes, Art direction & Design, Main idea for this project was take the colors of the main photography of the page and implement in each of its segments.",
       "img": "common/media/008.jpg",
       "year": "2013",
       "agency": "Blacksheepdesign",
@@ -355,7 +318,7 @@
       "slug": "Christian Andrada",
       "title": "<small>Speaker, Couch & Consultant</small><div><span>Christian Andrada</span></div>",
       "role": "Design, Development, Art & Creative Direction.",
-      "description": "For this project I did Art direction, Creative idea & Web Development, I used AngularJS for the Front-end Implementation and Wordpress for the Back-end, powered with GSAP TweenMax.",
+      "description": "My Role for this project was Art direction, Creative idea & Web Development, I used AngularJS for the Front-end Implementation and Wordpress for the Back-end, powered with GSAP Utils.",
       "link": "http://davidbastian.cl/proyectos/christian-andrada/",
       "year": "2015",
       "img": "common/media/001.jpg",
@@ -393,7 +356,7 @@
       "slug": "Allan Mcneill",
       "title": "<small>Chartered Accountants</small><div><span>Allan Mcneill</span></div>",
       "role": "Look & Feel Design Direction.",
-      "description": "I did the look and feel, and the  begin of the design direction for this site. I tried to do a design focused in boxes with the same  proportion and big and clean spaces for the margins.",
+      "description": "Look & Feel Design Direction. My intention was make a design focused in boxes with equal proportion 50/50 making  clean and elegant solution  with large spaces for margins.",
       "year": "2013",
       "agency": "Blacksheepdesign",
       "img": "common/media/007.jpg",
@@ -410,7 +373,7 @@
       "slug": "Proposal Alloy Yachts",
       "title": "<small>Design Proposal</small><div><span> Alloy Yachts</span></div>",
       "role": "Design and Development.",
-      "description": "In this design proposal my idea was focused in the quality of the yachts therefore I tried to keep a clean and elegant design with lots of white space and a big percent of the site with a powerful image.",
+      "description": "Design & Frontend Development. In this design proposal my idea was focused in the quality of the yachts, keeping a clean and elegant design with lots of white and most percent of the site with a powerful image.",
       "year": "2014",
       "agency": "Designworks",
       "img": "common/media/004.jpg",
@@ -450,7 +413,7 @@
       "slug": "Super Diversity Centre",
       "title": "<small>Centre</small> <div><span>Super Diversity</span></div>",
       "role": "Interaction Design & Front End Development.",
-      "description": "With the Designworks team we tried to do something different for this site. So the challenge for me it was focused in the background, making a nice animation with 'the gooey effect' with the blur css filter. Also I did the Front-end.",
+      "description": "Interaction Design & Frontend Development. The challenge for me  was focused in the background, making a nice animation 'the gooey effect' mixing blur and constrast css filters.",
       "year": "2015",
       "agency": "Designworks",
       "img": "common/media/011.jpg",
@@ -490,7 +453,7 @@
       "slug": "Designworks",
       "title": "<small>Agency</small> <div><span>Designworks</span></div>",
       "role": "Interaction Design & Front End Development.",
-      "description": "I worked in this project making the frontend and interactions. How the design idea it was clean, We tried not saturate the site with lots animations, and just I did a nice an elegant FadeIn/FadeOut through the site.",
+      "description": "Interaction Design & Frontend Development. How the idea of the design direction was clean we had to avoid saturate the site with lots animations. then we decided to go for a nice an elegant FadeIn/FadeOut through the site.",
       "link": "http://www.designworks.com",
       "year": "2014",
       "agency": "Designworks",
@@ -537,7 +500,7 @@
       "slug": "The Choice Protocol",
       "title": "<small>Students first</small><div><span>Choice Protocol</span></div>",
       "role": "Interaction Design & Front End Development.",
-      "description": "With Designworks team we did at least 3 proposals for this project, but this one, was the one that I more liked. I did Interfaces Design, Frontend and Backend in Wordpress.",
+      "description": "Interaction Design & Front End Development + CMS Integration. With Designworks we did at least 3 proposals for this project, but this one, was the one that I more liked.",
       "year": "2015",
       "agency": "Designworks",
       "img": "common/media/020.jpg",
@@ -583,7 +546,7 @@
       "slug": "Hino Trucks",
       "title": "<small>New Zealand</small><div><span>Hino Trucks</span></div>",
       "role": "Interaction Design & Front End Development.",
-      "description": "Interfaces Design and Front-end for Hino Trucks, It was required  a responsive website, with great images and modern transitions and interactions with the user, applying knowledge of CSS3 and javascript for the development.",
+      "description": "Interfaces Design and Front-end Development for Hino Trucks NZ, It was required  a responsive website, making modern css transitions and interactions for the user.",
       "link": "http://www.davidbastian.cl/proyectos/hino/preview/",
       "year": "2014",
       "agency": "Blacksheepdesign",
@@ -637,7 +600,7 @@
       "slug": "Proposal Blacksheepdesign",
       "title": "<small>Proposal</small> <div><span>Blacksheepdesign</span></div>",
       "role": "Design.",
-      "description": "I did a digital design proposal for the site of this agency. We tried to keep a simple design focused in its slogan (We love design), playing a little with that words, keeping a fresh and minimalist design.",
+      "description": "Design Direction. I did a digital design proposal for the site of this agency. We tried to keep a simple design focused in its slogan (We love design), playing a little with those words, keeping a fresh and minimalist design.",
       "year": "2013",
       "agency": "Blacksheepdesign",
       "img": "common/media/014b.jpg",
@@ -690,7 +653,7 @@
       "slug": "Barltop Graham",
       "title": "<small>Design Proposal</small><div><span>Barltop Graham</span></div>",
       "role": "Look & Feel Direction.",
-      "description": "Always I have liked and enjoyed follow the golden rules in design process, So for this proposal I have used the golden ratio (fibonacci) for the whole design. A clean & elegant design keeping the target of the client.",
+      "description": "Look & Feel Direction. In this proposal I have used the golden ratio (fibonacci) as a grid for the design. The result was a clean & elegant design keeping a nice proportion between Media and Text.",
       "year": "2013",
       "agency": "Blacksheepdesign",
       "img": "common/media/010.jpg",
@@ -737,7 +700,7 @@
       "role": "Interaction Design & Development.",
       "year": "2014",
       "agency": "Blacksheepdesign",
-      "description": "In this project I did Design, Front-end & Back-end, Main idea for this site it was make a clean design, elegant, with a nice contrast between big and small font types getting a fresh and contemporary experience through the site.",
+      "description": "Interaction Design, Frontend & Backend Development, Main idea for this site it was make a clean and elegant design , with a nice contrast between large and tiny font types getting a fresh and contemporary experience through the site.",
       "link": "http://wadham.co.nz/",
       "img": "common/media/005.jpg",
       "media": [{
@@ -777,7 +740,7 @@
       "role": "Interaction Design & Development.",
       "year": "2014",
       "agency": "Designworks",
-      "description": "A one page parallax scroll to show the achievements of the wellington airport a long of that year. I used a lot of transitions for this site to do a kind of trip along of the site focused on an airplane to guide the experience.",
+      "description": "Interaction Design & Development. A one page parallax scroll to show the achievements of the wellington airport along of that year. I used severals transitions for this site to keep the user focused and immersed on an airplane to guide the experience.",
       "link": "http://davidbastian.cl/proyectos/wellingtonairport/",
       "img": "common/media/016.jpg",
       "media": [{
@@ -808,7 +771,7 @@
       "slug": "Diocese of Palmerston North",
       "title": "<small>Diocese of</small><div><span>Palmerston North</span></div>",
       "role": "Look & Feel Design.",
-      "description": "A clean and subtle proposal of design, making a big white spaces with relaxing images, for improve the lecture and visibility, using a serif font family to get an sober and elegant design direction.",
+      "description": "Look & Feel Design. A clean and subtle proposal of design, focused in white spaces with relaxing images to keep a passive lecture and visibility, using mainly serif fonts  to get a sober and elegant direction.",
       "year": "2014",
       "agency": "Blacksheepdesign",
       "img": "common/media/017.jpg",
@@ -856,7 +819,7 @@
       "year": "2015",
       "agency": "Designworks",
       "role": "Interaction Design & Front End Development.",
-      "description": "I like the challenge to make a full responsive site on complex content design. So for this project I tried to develop a good way to use it in different platform, trying to fit well with a big paragraphs of content or random low quality pictures.",
+      "description": "Interaction Design & Front End Development. The Challenge was to make a full responsive site on complex content design. to Implement this I tried to develop  a site  with a way to use it in different platform  with several use of mediaqueries,  trying to fit well big paragraphs of content or random low quality pictures without lose quality.",
       "link": "http://davidbastian.cl/proyectos/anzf/",
       "img": "common/media/026.jpg",
       "media": [{
@@ -910,7 +873,7 @@
       "year": "2013",
       "agency": "Dittborn & Unzuetta",
       "role": "Interaction Design & Front End Development.",
-      "description": "This is one of my oldest project, but I still like. because I think it was a good ecommerce site when I did, with a nice way to show products vs full cover images.",
+      "description": "Interaction Design & Front End Development. This is one of the oldest project, but I still like it the way that it was made. Using a nice AI and UX to show products, I feel the layout still can be used in future projects.",
       "img": "common/media/013.jpg",
       "media": [{
           "type": "image",
@@ -954,7 +917,7 @@
       "slug": "Caritas Challenge",
       "title": "<small>Caritas</small> <div><span>Challenge</span></div>",
       "role": "Interaction Design & Front End Development.",
-      "description": "Project that I did interfaces & front end, A flat design inspired a little bit in 'international switzerland styled'. I worked with a system grids of 12 columns, trying to create an uncommon  layout.",
+      "description": "Interaction Design & Front End Development. A flat design with a system grids of 12 columns. The challenge was make a site clean, responsive, playing with diferents design techniques such asd overlap of images or color gradients for the backgrounds.",
       "link": "http://davidbastian.cl/proyectos/caritas/preview/",
       "year": "2014",
       "agency": "Blacksheepdesign",
@@ -1017,7 +980,7 @@
       "role": "Design, Develop.",
       "year": "2012",
       "agency": "Ilogica",
-      "description": "This is one of my oldest project, but I still like. because I think it was a good potal website when I did, with a nice way to show categories, products and  its dashboard.",
+      "description": "Design & Frontend Development. A kind of 'Youtube/Vimeo' website focused in the user experience and the managment of the dashboard page and how to updating & managing videos with a clean UX & UI.",
       "img": "common/media/024.jpg",
       "media": [{
           "type": "image",
@@ -1058,66 +1021,10 @@
     },
 
     {
-      "slug": "Kaufmann",
-      "title": "<small>Mercedez Benz</small><div><span>Kaufmann</span></div>",
-      "role": "Mobile Design.",
-      "year": "2011",
-      "agency": "Ilogica",
-      "description": "This is my oldest project here, but I still like. I think it was a good way to show the information & products, anyway the font size is small because it was a project for old smarthphones (years ago).",
-      "img": "common/media/022.jpg",
-      "media": [{
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/022.jpg"
-          }]
-        },
-        {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/022a.jpg"
-          }]
-        },
-        {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/022c.jpg"
-          }]
-        },
-        {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/022b.jpg"
-          }]
-        }
-      ]
-    },
-
-    {
-      "slug": "Awapuni School",
-      "title": "<small>School</small><div><span>Awapuni</span></div>",
-      "role": "Look & Feel Design.",
-      "description": "I did the look and feel for this site. I tried to make an interface simple keeping my design style, without complex things, just the necessary and useful.",
-      "year": "2013",
-      "agency": "Blacksheepdesign",
-      "img": "common/media/018.jpg",
-      "media": [{
-        "type": "image",
-
-        "links": [{
-          "src": "common/media/018a.jpg"
-        }]
-      }]
-    },
-
-    {
       "slug": "Pilar Rodriguez",
       "title": "<small>Food & Wine</small><div><span>Pilar Rodriguez</span></div>",
       "role": "Design, Develop, Art & Creative Direction.",
-      "description": "Project where I did an uncommon boxes design for the homepage, client wanted something different but still keeping the clean way to show the products, mixing the content always with her brands colors.",
+      "description": "Design, Develop, Art & Creative Direction. The look and feel direction was made with an uncommon design of squares. Mixing the content with the brand colors. technologies & libraries used: Wordpress for the CMS Integration, Javascript & Less",
       "link": "http://www.pilarrodriguez.cl/",
       "year": "2013",
       "img": "common/media/003.jpg",
