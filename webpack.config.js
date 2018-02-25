@@ -84,6 +84,7 @@ module.exports = {
       { from: "app/index.html" },
       { from: "app/common/media/", to: "common/media/" },
       { from: "app/common/social/", to: "common/social/" },
+      { from: "app/common/doc/", to: "common/doc/" },
       { from: "app/favicon.png" }
     ])
   ]

@@ -114,17 +114,14 @@ class Preloader {
             // console.log(link, type + ' ready', self.size, self.counter);
 
             progress.val = (self.counter * self.randomPercent) / self.size;
-
             document.body.querySelectorAll('.preloader-counter')[0].innerHTML = Math.round(progress.val) + '.';
 
             if (progress.val === self.randomPercent) {
-
-
                 if (self.url === '/' || self.url === '/about') {
                     self.preloadSingle();
-                    console.log('load single');
+                  //  console.log('load single');
                 } else {
-                    console.log('load home');
+                   // console.log('load home');
                     self.preloadHome();
                 }
 
@@ -142,7 +139,7 @@ class Preloader {
                             self.firstPreload = true;
 
                             TweenMax.to(document.body.querySelectorAll('.preloader'), 1, {
-                                y: -100,
+                                y: -50,
                                 opacity: 0,
                                 ease: 'Power3.easeInOut',
                                 onComplete: function () {

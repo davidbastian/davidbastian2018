@@ -19,6 +19,6 @@ class RouteController {
   updateView() {}
 }
 
-let r = new RouteController();
+const r = new RouteController();
 
 export default r;

@@ -68,16 +68,16 @@ class AboutView {
                 </p>
                <a href="https://twitter.com/davidbastian_cl" target="_blank">Twitter</a>
                <a href="https://cl.linkedin.com/in/davidbastianf" target="_blank">LinkedIn</a>
-               <a href="" target="_blank">Instagram</a>
-               <a href="http://davidbastiancl.tumblr.com/" target="_blank">Tumblr</a>
-               <a href="
-               " target="_blank">CV</a>
+               <a href="common/doc/davidbastiancv.pdf" target="_blank">CV</a>
             </div>
         </div>
       `;
         const aboutHTMLDOM = new DOMParser().parseFromString(markup, "text/html");
         const spans = aboutHTMLDOM.querySelectorAll('h2 span');
         const social = aboutHTMLDOM.querySelectorAll('.social')[0];
+
+        
+
         const tlParent = new TimelineMax({
             delay: 0.5,
             onComplete: function () {
@@ -104,9 +104,9 @@ class AboutView {
             for (let j = 0; j < spanSplitChars.length; j++) {
                 const char = spanSplitChars[j];
 
-                const charTween = TweenMax.to(char, getRandomArbitrary(0.02, 0.04), {
+                const charTween = TweenMax.to(char, getRandomArbitrary(0.01, 0.03), {
                     opacity: 1,
-                    delay: getRandomArbitrary(0.01, 0.04),
+                    delay: getRandomArbitrary(0.01, 0.03),
                     ease: SteppedEase.config(1)
                 });
 

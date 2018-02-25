@@ -96,11 +96,13 @@ class TransitionModule {
       TweenMax.to(s, 1, {
         autoAlpha: 0,
         ease: "Power3.easeInOut",
-        y: -100,
+        y: -50,
         onComplete: function () {
           s.outerHTML = "";
+          self.activeView.scroll.addEvents();
         }
       });
+
     }
 
 
@@ -110,7 +112,7 @@ class TransitionModule {
       TweenMax.to(self.oldView.el, 1, {
         autoAlpha: 0,
         ease: "Power3.easeInOut",
-        y: -100,
+        y: -50,
         onComplete: function () {
           self.oldView.el.outerHTML = "";
         }

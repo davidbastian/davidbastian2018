@@ -9,6 +9,7 @@ import transitionModule from "../../modules/module.transition";
 import {
   TweenMax
 } from "gsap";
+import enableInlineVideo from 'iphone-inline-video';
 
 import Config from '../../../config';
 
@@ -33,8 +34,8 @@ class SingleView {
     const self = this;
     const dot = (self.el.querySelector('.dot-inner'));
 
-    TweenMax.to(dot, 0.7, {
-      ease: 'Expo.easeIn',
+    TweenMax.to(dot, 1, {
+      ease: "Power3.easeIn",
       delay: 1,
       scale: 0.85,
       yoyo: true,
@@ -49,6 +50,12 @@ class SingleView {
         ease: 'Power3.easeInOut',
         opacity: 0
       });
+    }
+
+
+    function playVideo(video) {
+      //  console.log(video);
+      video.play();
     }
 
 
@@ -184,9 +191,14 @@ class SingleView {
         );
       }
     }
+
+
+
   }
 
   setMedia(project, mediaDOM) {
+
+
     for (let i = 0; i < project.media.length; i++) {
       const media = project.media[i];
 
@@ -202,19 +214,24 @@ class SingleView {
         mediaDOM.appendChild(ImageHTML.body.firstChild);
       }
 
-      if (media.type === "video") {
-        const markupVideo = `
-        <video  preload="auto" playsinline loop muted autoplay>
+      if (Config.checkDevice() === 'desktop') {
+        if (media.type === "video") {
+          const markupVideo = `
+        <video class="video" playsinline autoplay loop muted  src="${media.links[0].src}">
                 <source src="${media.links[0].src}" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         `;
-        const videoHTML = new DOMParser().parseFromString(
-          markupVideo,
-          "text/html"
-        );
+          const videoHTML = new DOMParser().parseFromString(
+            markupVideo,
+            "text/html"
+          );
 
-        mediaDOM.appendChild(videoHTML.body.firstChild);
+          mediaDOM.appendChild(videoHTML.body.firstChild);
+
+
+
+        }
       }
 
     }

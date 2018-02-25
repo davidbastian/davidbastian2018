@@ -117,7 +117,8 @@ class ScrollDotModule {
 
   removeEvents() {
     const self = this;
-    self.instance.off(self.onScroll);
+    self.instance.off();
+    
     self.dotEl.removeEventListener("mousedown", self.onDotEnter);
     window.removeEventListener("mousemove", self.onDotMove);
     window.removeEventListener("mouseup", self.onDotLeave);

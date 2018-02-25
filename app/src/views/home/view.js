@@ -36,8 +36,8 @@ class HomeView {
 
       const dot = (self.el.querySelector('.dot-inner'));
 
-      TweenMax.to(dot, 0.7, {
-        ease: 'Expo.easeIn',
+      TweenMax.to(dot, 1, {
+        ease: "Power3.easeIn",
         delay: 1,
         scale: 0.85,
         yoyo: true,

@@ -15,6 +15,7 @@
     "file-loader": "^0.11.1",
     "gsap": "^1.20.3",
     "ip": "^1.1.5",
+    "iphone-inline-video": "^2.2.2",
     "json-loader": "^0.5.4",
     "node-sass": "^4.5.3",
     "path": "^0.12.7",

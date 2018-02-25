@@ -58,7 +58,7 @@ class ScrollModule {
 
   removeEvents() {
     const self = this;
-    self.instance.off(self.onScroll);
+    self.instance.off();
   }
 
 
