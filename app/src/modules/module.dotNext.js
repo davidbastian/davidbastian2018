@@ -108,6 +108,8 @@ class DotNextModule {
     const self = this;
     self.dotReady = false;
 
+    self.dotEl.classList.add('active');
+
     TweenMax.to(self.dotEl.querySelectorAll('.dot-inner'), 0.5, {
       ease: 'Expo.easeOut',
       scale: 0.85,
@@ -120,6 +122,8 @@ class DotNextModule {
     self.dotLeft = true;
 
     const timingBack = 1.3;
+
+    self.dotEl.classList.remove('active');
 
     TweenMax.to(self.dotEl.querySelectorAll('.dot-inner'), 0.5, {
       ease: 'Expo.easeOut',
@@ -173,6 +177,8 @@ class DotNextModule {
   onDotMove(event) {
     const self = this;
     let e;
+
+    self.dotEl.classList.add('active');
 
     if (Config.checkDevice() === 'mobile' || Config.checkDevice() === 'tablet') {
       e = {

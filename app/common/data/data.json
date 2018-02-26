@@ -22,7 +22,7 @@
       "slug": "Resn FWA Club 100",
       "title": "<small>Resn Club 100</small><div><span>FWA<span></div>",
       "role": "Interaction Design & Front End Development.",
-      "description": "At Resn I was encharge to develop the mobile site to celebrate 100 FWA, doing prototypes, animations, physics, audio, little games, I used mainly GSAP Libraries for the motion transitions, Howler.js for the audio intergration and classic Javascript + CSS Perspective for the interactions.",
+      "description": "At Resn I was encharge to develop the mobile site to celebrate 100 FWA, doing prototypes, animations, physics, audio, little games, using mainly GSAP Libraries for the motion transitions, Howler.js for the audio intergration and classic Javascript + CSS Perspective for the interactions.",
       "link": "https://thefwa.com/cases/fwa-club-100",
       "year": "2017",
       "agency": "Resn",
@@ -51,7 +51,21 @@
           "type": "video",
 
           "links": [{
+            "src": "common/media/027d.mp4"
+          }]
+        },
+        {
+          "type": "video",
+
+          "links": [{
             "src": "common/media/027.mp4"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/027c.jpg"
           }]
         },
         {
@@ -154,7 +168,7 @@
       "slug": "Mailchimp.com",
       "title": "<small>Sections</small><div><span>Mailchimp.com<span></div>",
       "role": "Frontend & CMS Integration Developtment.",
-      "description": "At Resn we worked in several sections for the main site of Mailchimp, my role was mainly develop minisites, cms wordpress integration, custom dashboards, created guidelines for main sections, using multiples technologies & libraries such as PixiJS, Haml, Php, Ruby and Rails, Google Maps among others.",
+      "description": "At Resn we worked in several sections for the main site of Mailchimp, my role was mainly develop minisites, cms wordpress integration, custom admin dashboards, created development of guidelines for main sections, using multiples technologies & libraries such as PixiJS, Haml, Php, Ruby and Rails, Google Maps among others.",
       "link": "https://mailchimp.com/",
       "year": "2017",
       "agency": "Resn",

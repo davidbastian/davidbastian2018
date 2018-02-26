@@ -219,4 +219,10 @@ footer {
       margin-top: -4px;
     }
   }
+  &:hover {
+  //  cursor: grab;
+  }
+  &.active {
+  //  cursor: grabbing;
+  }
 }

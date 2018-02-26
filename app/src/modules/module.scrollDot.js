@@ -145,6 +145,8 @@ class ScrollDotModule {
   onDotEnter(e) {
     const self = this;
     self.scrollReady = false;
+    self.dotEl.classList.add('active');
+
     TweenMax.to(self.dotEl.querySelectorAll('.dot-inner'), 0.5, {
       ease: 'Expo.easeOut',
       scale: 0.85,
@@ -154,6 +156,7 @@ class ScrollDotModule {
   onDotLeave() {
     const self = this;
     self.scrollReady = true;
+    self.dotEl.classList.remove('active');
 
     TweenMax.to(self.dotEl.querySelectorAll('.dot-inner'), 0.5, {
       ease: 'Expo.easeOut',
@@ -165,6 +168,7 @@ class ScrollDotModule {
   onDotMove(event) {
     const self = this;
     let e;
+
 
     if (Config.checkDevice() === 'mobile' || Config.checkDevice() === 'tablet') {
       e = {
