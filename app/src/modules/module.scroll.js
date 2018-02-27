@@ -47,7 +47,8 @@ class ScrollModule {
 
     self.instance = new VirtualScroll({
       el: this.scrollWrap,
-      touchMultiplier: 5
+      touchMultiplier: 5,
+      firefoxMultiplier:35,
     });
   }
 

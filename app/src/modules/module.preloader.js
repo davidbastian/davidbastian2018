@@ -28,9 +28,20 @@ class Preloader {
                 const project = Data.projects[i];
                 const mediaLink = project.img;
                 this.preloadMedia(mediaLink);
+                mediaArray.push(mediaLink);
+
+                if (i <4) {
+                    for (let m = 0; m < project.media.length; m++) {
+                        const media = project.media[m].links[0].src;
+                        console.log(media);
+                        this.preloadMedia(media);
+                        mediaArray.push(media);
+                    }
+
+                }
             }
 
-            this.size = Data.projects.length;
+            this.size = mediaArray.length;
 
         } else {
             for (let i = 0; i < Data.projects.length; i++) {

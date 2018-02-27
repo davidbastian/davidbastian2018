@@ -167,7 +167,7 @@
     {
       "slug": "Mailchimp.com",
       "title": "<small>Sections</small><div><span>Mailchimp.com<span></div>",
-      "role": "Frontend & CMS Integration Developtment.",
+      "role": "Front end & CMS Integration Developtment.",
       "description": "At Resn we worked in several sections for the main site of Mailchimp, my role was mainly develop minisites, cms wordpress integration, custom admin dashboards, created development of guidelines for main sections, using multiples technologies & libraries such as PixiJS, Haml, Php, Ruby and Rails, Google Maps among others.",
       "link": "https://mailchimp.com/",
       "year": "2017",
@@ -193,6 +193,13 @@
 
           "links": [{
             "src": "common/media/031.mp4"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/031e.jpg"
           }]
         },
         {
