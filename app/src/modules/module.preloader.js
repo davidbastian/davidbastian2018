@@ -30,7 +30,7 @@ class Preloader {
                 this.preloadMedia(mediaLink);
                 mediaArray.push(mediaLink);
 
-                if (i <4) {
+                if (i <3) {
                     for (let m = 0; m < project.media.length; m++) {
                         const media = project.media[m].links[0].src;
                         console.log(media);
