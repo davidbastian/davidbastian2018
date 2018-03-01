@@ -29,12 +29,11 @@ class Preloader {
                 const mediaLink = project.img;
                 mediaArray.push(mediaLink);
 
-                if (i <3) {
+                if (i < 4) {
                     for (let m = 0; m < project.media.length; m++) {
                         const media = project.media[m].links[0].src;
                         mediaArray.push(media);
                     }
-
                 }
             }
 
@@ -69,6 +68,7 @@ class Preloader {
     preload(link) {
         let xhr = new XMLHttpRequest();
         xhr.open('get', link);
+
         xhr.send();
     }
 
@@ -89,7 +89,6 @@ class Preloader {
         for (let e = 0; e < mediaArray.length; e++) {
             const mediaLink = mediaArray[e].links[0].src;
             const mediaType = mediaArray[e].type;
-
             self.preload(mediaLink);
         }
 
@@ -103,9 +102,6 @@ class Preloader {
             const mediaLink = project.img;
             self.preload(mediaLink);
         }
-
-
-
 
     }
 
@@ -128,17 +124,12 @@ class Preloader {
             self.counter = self.counter + 1;
             // console.log(link, type + ' ready', self.size, self.counter);
 
+            console.log(self.counter, self.size);
+
             progress.val = (self.counter * self.randomPercent) / self.size;
             document.body.querySelectorAll('.preloader-counter')[0].innerHTML = Math.round(progress.val) + '.';
 
-            if (progress.val === self.randomPercent) {
-                if (self.url === '/' || self.url === '/about') {
-                    self.preloadSingle();
-                  //  console.log('load single');
-                } else {
-                   // console.log('load home');
-                    self.preloadHome();
-                }
+            if (self.counter === self.size) {
 
                 TweenMax.to(progress, 3, {
                     val: 99,
@@ -147,11 +138,11 @@ class Preloader {
                     onComplete: function () {
 
                         if (!self.firstPreload) {
-
                             App.router.addEvents();
                             App.router.updateUrl();
-
                             self.firstPreload = true;
+
+                           
 
                             TweenMax.to(document.body.querySelectorAll('.preloader'), 1, {
                                 y: -50,

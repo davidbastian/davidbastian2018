@@ -4,6 +4,7 @@ class TransitionModule {
   constructor(opt) {
     this.oldView = opt.oldView;
     this.activeView = opt.activeView;
+    
     this.init();
   }
 

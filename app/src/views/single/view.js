@@ -233,6 +233,9 @@ class SingleView {
 
         }
       }
+      if(i === project.media.length) {
+        App.router.preloader.preloadHome();
+      }
 
     }
 

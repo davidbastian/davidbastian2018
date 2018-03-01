@@ -11,7 +11,6 @@ import {
 
 import Config from '../../../config';
 
-
 class HomeView {
   init(params) {
     //  console.log("init Home", params, App);
@@ -107,9 +106,19 @@ class HomeView {
       `;
       const projectHTML = new DOMParser().parseFromString(markup, "text/html");
       homeWrap.appendChild(projectHTML.body.firstChild);
+
+      if (i === this.data.projects.length) {
+        App.router.preloader.preloadSingle();
+
+      }
     }
 
     console.log('complete SET DATA');
+    //App.router.preloader.preloadSingle();
+
+
+
+  //  App.preloader.preloadSingle();
   }
 }
 
