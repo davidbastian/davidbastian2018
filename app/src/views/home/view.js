@@ -108,6 +108,8 @@ class HomeView {
       const projectHTML = new DOMParser().parseFromString(markup, "text/html");
       homeWrap.appendChild(projectHTML.body.firstChild);
     }
+
+    console.log('complete SET DATA');
   }
 }
 
