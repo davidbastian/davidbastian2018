@@ -113,12 +113,12 @@ class HomeView {
       }
     }
 
-    console.log('complete SET DATA');
+    //  console.log('complete SET DATA');
     //App.router.preloader.preloadSingle();
 
 
 
-  //  App.preloader.preloadSingle();
+    //  App.preloader.preloadSingle();
   }
 }
 

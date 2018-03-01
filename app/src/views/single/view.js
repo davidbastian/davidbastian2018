@@ -229,11 +229,9 @@ class SingleView {
 
           mediaDOM.appendChild(videoHTML.body.firstChild);
 
-
-
         }
       }
-      if(i === project.media.length) {
+      if (i === project.media.length) {
         App.router.preloader.preloadHome();
       }
 

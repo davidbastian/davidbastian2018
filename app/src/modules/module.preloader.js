@@ -124,7 +124,7 @@ class Preloader {
             self.counter = self.counter + 1;
             // console.log(link, type + ' ready', self.size, self.counter);
 
-            console.log(self.counter, self.size);
+           // console.log(self.counter, self.size);
 
             progress.val = (self.counter * self.randomPercent) / self.size;
             document.body.querySelectorAll('.preloader-counter')[0].innerHTML = Math.round(progress.val) + '.';
