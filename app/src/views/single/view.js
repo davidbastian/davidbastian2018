@@ -86,6 +86,7 @@ class SingleView {
       ease: 0.06,
       delta: "y",
       direction: "y",
+      speed:6,
       view: self
     });
   }

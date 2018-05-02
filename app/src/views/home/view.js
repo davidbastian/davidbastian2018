@@ -109,16 +109,8 @@ class HomeView {
 
       if (i === this.data.projects.length) {
         App.router.preloader.preloadSingle();
-
       }
     }
-
-    //  console.log('complete SET DATA');
-    //App.router.preloader.preloadSingle();
-
-
-
-    //  App.preloader.preloadSingle();
   }
 }
 

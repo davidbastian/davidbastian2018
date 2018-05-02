@@ -54,9 +54,31 @@ class AppView {
 
     addEvents() {
 
-        document.addEventListener("touchmove", function (e) {
-            e.preventDefault();
+        window.addEventListener('load', function () {
+            var lastTouchY = 0;
+            var touchstartHandler = function (e) {
+                if (e.touches.length != 1) {
+                    return;
+                };
+                lastTouchY = e.touches[0].clientY;
+            }
+            var touchmoveHandler = function (e) {
+                var touchY = e.touches[0].clientY;
+                var touchYDelta = touchY - lastTouchY;
+                lastTouchY = touchY;
+
+                e.preventDefault();
+                return;
+            }
+
+            document.addEventListener('touchstart', touchstartHandler, {
+                passive: false
+            });
+            document.addEventListener('touchmove', touchmoveHandler, {
+                passive: false
+            });
         });
+
 
         if (Config.checkDevice() === 'desktop') {
             window.addEventListener('resize', this.onResize.bind(this));
@@ -85,8 +107,7 @@ class AppView {
             wrongDevice.classList.add('show');
             title.innerHTML = 'Please resize your window or buy a <span>Tamagoshi</span>';
 
-        } 
-        else {
+        } else {
             wrongDevice.classList.remove('show');
 
         }
