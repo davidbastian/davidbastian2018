@@ -79,6 +79,50 @@
     },
 
     {
+      "slug": "Think with Google 2019",
+      "title": "<small>Think with</small><div><span>Google 2019<span></div>",
+      "role": "Art Direction, Brand Identity & Design.",
+      "description": "At Resn I was responsible for developing a mobile site to celebrate 100 FWA; working in prototypes, animations, physics, audio integration and interactive games. I used GSAP libraries for the motion transitions, Howler.js for the audio integration, and classic JavaScript + CSS Perspective for the interactions.",
+      "year": "2018",
+      "agency": "Mediamonks",
+      "img": "common/media/033.jpg",
+      "media": [{
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/033.jpg"
+        }]
+      },{
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/034.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/033.gif"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/035.jpg"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/036.jpg"
+          }]
+          }
+      ]
+    },
+
+    {
       "slug": "Did you mean? Mailchimp Campaign",
       "title": "<small>Did you Mean?</small><div><span>Mailchimp<span></div>",
       "role": "Front End Development.",
