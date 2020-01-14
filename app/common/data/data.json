@@ -77,6 +77,29 @@
         }
       ]
     },
+    {
+      "slug": "Kusari II Adidas Landing Page",
+      "title": "<small>Landing Page</small><div><span>Kusari II Adidas<span></div>",
+      "role": "Design Direction & Animation.",
+      "description": "I worked on the art & brand direction for the `Think with Google 2019` Conference, making two diferent directions, creating an smart and fun way to apply the concept `Think` one direction was using a 2D and a Flat layer system, using basic shapes, and the other a 3D Optical Illusion using complexity and hidden messages in a orthographic projection.",
+      "year": "2018",
+      "agency": "Mediamonks",
+      "img": "common/media/037.jpg",
+      "media": [{
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/037.jpg"
+        }]
+      },{
+          "type": "video",
+
+          "links": [{
+            "src": "common/media/k5.mp4"
+          }]
+        }
+      ]
+    },
 
     {
       "slug": "Think with Google 2019",
