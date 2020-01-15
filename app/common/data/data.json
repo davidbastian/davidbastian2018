@@ -95,6 +95,12 @@
           "type": "video",
 
           "links": [{
+            "src": "common/media/039.mp4"
+          }]
+        },{
+          "type": "video",
+
+          "links": [{
             "src": "common/media/k5.mp4"
           }]
         }
