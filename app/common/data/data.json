@@ -103,6 +103,12 @@
           "links": [{
             "src": "common/media/k5.mp4"
           }]
+        },{
+          "type": "image",
+  
+          "links": [{
+            "src": "common/media/038.jpg"
+          }]
         }
       ]
     },
