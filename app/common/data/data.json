@@ -164,9 +164,9 @@
     },
 
     {
-      "slug": "Think with Google 2019",
-      "title": "<small>Think with</small><div><span>Google 2019<span></div>",
-      "role": "Art Direction, Brand Identity & Design.",
+      "slug": "Nespresso Homepage Proposal",
+      "title": "<small>Homepage Proposal</small><div><span>Nespresso<span></div>",
+      "role": "Art Direction, Interfaces Design.",
       "description": "I worked on the art & brand direction for the `Think with Google 2019` Conference, making two diferent directions, creating an smart and fun way to apply the concept `Think` one direction was using a 2D and a Flat layer system, using basic shapes, and the other a 3D Optical Illusion using complexity and hidden messages in a orthographic projection.",
       "year": "2018",
       "agency": "Mediamonks",
@@ -181,29 +181,28 @@
           "type": "image",
 
           "links": [{
-            "src": "common/media/034.jpg"
+            "src": "common/media/041.jpg"
+          }]
+        },{
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/042.jpg"
           }]
         }, {
           "type": "image",
 
           "links": [{
-            "src": "common/media/033.gif"
+            "src": "common/media/042.gif"
           }]
         },
         {
           "type": "image",
 
           "links": [{
-            "src": "common/media/035.jpg"
+            "src": "common/media/043.jpg"
           }]
-        },
-        {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/036.jpg"
-          }]
-          }
+        }
       ]
     },
 
