@@ -81,7 +81,7 @@
       "slug": "Kusari II Adidas Landing Page",
       "title": "<small>Landing Page</small><div><span>Kusari II Adidas<span></div>",
       "role": "Design Direction & Animation.",
-      "description": "I worked on the art & brand direction for the `Think with Google 2019` Conference, making two diferent directions, creating an smart and fun way to apply the concept `Think` one direction was using a 2D and a Flat layer system, using basic shapes, and the other a 3D Optical Illusion using complexity and hidden messages in a orthographic projection.",
+      "description": "I worked in the interfaces design for the Y3 Yohji Yamamoto Landing Page & pre-order sign up. the idea for the sign up, was try to not show the whole shoe, and make the user feel expectation. Landing page and the main moods and impressions, should be lab-like setting, industrial look & feel and artificial aesthetic, Using the light as a main design resource.",
       "year": "2018",
       "agency": "Mediamonks",
       "img": "common/media/037.jpg",
@@ -108,6 +108,12 @@
   
           "links": [{
             "src": "common/media/038.jpg"
+          }]
+        },{
+          "type": "video",
+
+          "links": [{
+            "src": "common/media/k6.mp4"
           }]
         }
       ]
