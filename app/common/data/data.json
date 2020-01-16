@@ -3,7 +3,7 @@
     "logo": "David Bastian.",
     "copyright": "© 2018 David Bastian. Chilean Designer & Web Developer.",
     "email": "d@davidbastian.red",
-    "aboutme": "<span>Im a Designer & Web Developer from Viña del Mar (Chile),</span> <span>but I am based in New Zealand.</span><span> I love to enjoy Good Art, Conceptualize, Design & Develop simple and clean Interfaces.</span>",
+    "aboutme": "<span>Im a Designer & Web Developer from Viña del Mar (Chile),</span> <span>but I am based in Amsterdam.</span><span><br> I love to enjoy Good Art, Conceptualize, Design <br>& Develop simple and clean Interfaces.</span>",
     "social": [{
         "title": "Twitter"
 
@@ -132,6 +132,50 @@
 
         "links": [{
           "src": "common/media/033.jpg"
+        }]
+      },{
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/034.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/033.gif"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/035.jpg"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/036.jpg"
+          }]
+          }
+      ]
+    },
+
+    {
+      "slug": "Think with Google 2019",
+      "title": "<small>Think with</small><div><span>Google 2019<span></div>",
+      "role": "Art Direction, Brand Identity & Design.",
+      "description": "I worked on the art & brand direction for the `Think with Google 2019` Conference, making two diferent directions, creating an smart and fun way to apply the concept `Think` one direction was using a 2D and a Flat layer system, using basic shapes, and the other a 3D Optical Illusion using complexity and hidden messages in a orthographic projection.",
+      "year": "2018",
+      "agency": "Mediamonks",
+      "img": "common/media/040.jpg",
+      "media": [{
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/040.jpg"
         }]
       },{
           "type": "image",
