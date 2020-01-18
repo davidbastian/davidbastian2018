@@ -167,10 +167,53 @@
       "slug": "Nespresso Homepage Proposal",
       "title": "<small>Homepage Proposal</small><div><span>Nespresso<span></div>",
       "role": "Art Direction, Interfaces Design.",
-      "description": "I worked on the art & brand direction for the `Think with Google 2019` Conference, making two diferent directions, creating an smart and fun way to apply the concept `Think` one direction was using a 2D and a Flat layer system, using basic shapes, and the other a 3D Optical Illusion using complexity and hidden messages in a orthographic projection.",
+      "description": "I propose create a ritual experience involving the concept of time as a personal and distinctive moment. Develop a connection between the exquisite and special moments of the day and the accompanying coffee tastes. Design using a combination of the metallic machine products and the capsules. Combining mixed media elements (images/videos/audio) inside an interactive collage technique.",
       "year": "2018",
       "agency": "Mediamonks",
       "img": "common/media/040.jpg",
+      "media": [{
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/040.jpg"
+        }]
+      },{
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/041.jpg"
+          }]
+        },{
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/042.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/042.gif"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/043.jpg"
+          }]
+        }
+      ]
+    },
+
+    {
+      "slug": "Puma NYC GP",
+      "title": "<small>Homepage Proposal</small><div><span>Nespresso<span></div>",
+      "role": "Art Direction.",
+      "description": "I propose create a ritual experience involving the concept of time as a personal and distinctive moment. Develop a connection between the exquisite and special moments of the day and the accompanying coffee tastes. Design using a combination of the metallic machine products and the capsules. Combining mixed media elements (images/videos/audio) inside an interactive collage technique.",
+      "year": "2018",
+      "agency": "Mediamonks",
+      "img": "common/media/044.jpg",
       "media": [{
         "type": "image",
 
