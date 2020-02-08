@@ -242,6 +242,36 @@
           }]
         }
       ]
+    }
+    , {
+      "slug": "Braun Museum AR Experience",
+      "title": "<small>AR Experience</small><div><span>Braun<span></div>",
+      "role": "Design, 3D Renders.",
+      "description": "Concept for this project was making an immersive AR Experience  where you will enter into a dark room  revealing & leveling up the shave machine as a main element of the scene using the light as a resource to create a subtle and luxurious atmosphere.",
+      "year": "2019",
+      "agency": "Mediamonks",
+      "img": "common/media/050.jpg",
+      "media": [{
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/050.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/049.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/051.jpg"
+          }]
+        }
+       
+      ]
     },
 
     {
