@@ -164,6 +164,13 @@ body {
 a {
   color: inherit; }
 
+video, img {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none; }
+
 h2 {
   font-size: 40px;
   letter-spacing: -1px; }
