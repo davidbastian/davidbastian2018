@@ -241,7 +241,7 @@ class SingleView {
     if (Config.checkDevice() === 'mobile' || Config.checkDevice() === 'tablet') {
 
 
-      const markupFooter = `<p class="copyright">© 2018 David Bastian. Chilean Designer &amp; Web Developer.
+      const markupFooter = `<p class="copyright">© 2020 David Bastian. Chilean Designer &amp; Web Developer.
             </p>`;
 
       const markupFooterHTML = new DOMParser().parseFromString(

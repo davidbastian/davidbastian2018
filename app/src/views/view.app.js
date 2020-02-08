@@ -15,6 +15,7 @@ class AppView {
         // console.log("AppView", Data);
 
         const markup = `
+    
         <header>
             <div class="container">
                 <a id="logo" href="#/">${Data.details.logo}</a>

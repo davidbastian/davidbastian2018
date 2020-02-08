@@ -99,10 +99,12 @@ class HomeView {
       const markup = `
         <a href= "#/${toSlug(project.slug)}"> 
             <img src="${project.img}" alt ="${project.slug}" />
+            
             <p>
                  ${project.slug} — ${project.role}
             </p>
         </a>
+        
       `;
       const projectHTML = new DOMParser().parseFromString(markup, "text/html");
       homeWrap.appendChild(projectHTML.body.firstChild);

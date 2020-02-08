@@ -21,6 +21,11 @@ a {
   color: inherit;
 }
 
+video,img {
+  user-select: none;
+  pointer-events: none;
+}
+
 h2 {
   font-size: 40px;
   letter-spacing: -1px;
