@@ -117,11 +117,11 @@
       ]
     },
     {
-      "slug": "Kusari II Adidas Landing Page",
+      "slug": "Yohji Yamamoto Kusari II Adidas Landing Page",
       "title": "<small>Landing Page</small><div><span>Kusari II Adidas<span></div>",
-      "role": "Design Direction & Animation.",
+      "role": "3D, Animation & Design.",
       "description": "I worked in the interfaces design & animation for the Y3 Yohji Yamamoto Landing Page & pre-order sign up. the idea for the sign up, was try to not show the whole shoe, and make the user feel expectation. Landing page and the main moods and impressions, should be lab-like setting, industrial look & feel and artificial aesthetic, Using the light as a main design resource.",
-      "year": "2018",
+      "year": "2019",
       "agency": "Mediamonks",
       "img": "common/media/037.jpg",
       "media": [{
@@ -202,8 +202,8 @@
     },
 
     {
-      "slug": "Nespresso Homepage Proposal",
-      "title": "<small>Homepage Proposal</small><div><span>Nespresso<span></div>",
+      "slug": "Nespresso Homepage Concept",
+      "title": "<small>Homepage Concept</small><div><span>Nespresso<span></div>",
       "role": "Art Direction, Interfaces Design.",
       "description": "I propose create a ritual experience involving the concept of time as a personal and distinctive moment. Develop a connection between the exquisite and special moments of the day and the accompanying coffee tastes. Design using a combination of the metallic machine products and the capsules. Combining mixed media elements (images/videos/audio) inside an interactive collage technique.",
       "year": "2018",
@@ -316,6 +316,43 @@
             "src": "common/media/029c.jpg"
           }]
         }
+      ]
+    } , {
+      "slug": "Redbull, Tokyo 2020 Olympics Blackout Data",
+      "title": "<small>Tokyo 2020 Olympics</small><div><span>Redbull<span></div>",
+      "role": "Design, 3D Renders.",
+      "description": "I worked in create an Interactive-Infographic website that display data from athletes for the new sports of the Olympics Games. These new sports will make their appearance for the first time during the Olympics in Tokyo. We needed to create neutral and unrecognizable athletes, So. for Art Direction I considered to use particles systems to create neutral but still cool looking humans.",
+      "year": "2019",
+      "agency": "Mediamonks",
+      "img": "common/media/052.jpg",
+      "media": [
+        
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/052.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/053.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/054.jpg"
+          }]
+        },{
+          "type": "video",
+
+          "links": [{
+            "src": "common/media/053.mp4"
+          }]
+        }
+       
       ]
     },
 
