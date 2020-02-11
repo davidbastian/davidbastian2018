@@ -119,7 +119,7 @@
     {
       "slug": "Yohji Yamamoto Kusari II Adidas Landing Page",
       "title": "<small>Landing Page</small><div><span>Kusari II Adidas<span></div>",
-      "role": "3D, Animation & Design.",
+      "role": "Design Direction & Animation.",
       "description": "I worked in the interfaces design & animation for the Y3 Yohji Yamamoto Landing Page & pre-order sign up. the idea for the sign up, was try to not show the whole shoe, and make the user feel expectation. Landing page and the main moods and impressions, should be lab-like setting, industrial look & feel and artificial aesthetic, Using the light as a main design resource.",
       "year": "2019",
       "agency": "Mediamonks",
@@ -274,6 +274,149 @@
       ]
     },
 
+     {
+      "slug": "Redbull, Tokyo 2020 Olympics Blackout Data",
+      "title": "<small>Tokyo 2020 Olympics</small><div><span>Redbull<span></div>",
+      "role": "Design, 3D Renders.",
+      "description": "I worked in create an Interactive-Infographic website that display data from athletes for the new sports of the Olympics Games. These new sports will make their appearance for the first time during the Olympics in Tokyo. We needed to create neutral and unrecognizable athletes, So. for Art Direction I considered to use particles systems to create neutral but still cool looking humans.",
+      "year": "2019",
+      "agency": "Mediamonks",
+      "img": "common/media/052.jpg",
+      "media": [
+        
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/052.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/053.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/054.jpg"
+          }]
+        },{
+          "type": "video",
+
+          "links": [{
+            "src": "common/media/053.mp4"
+          }]
+        }
+       
+      ]
+    },
+    
+
+    {
+      "slug": "Adidas ZX Flux Phase 01",
+      "title": "<small>Adidas</small><div><span>ZX Flux Phase 01<span></div>",
+      "role": "Design.",
+      "description": "I worked on the design for the first stage of this ecommerce campaign; using cinemograph techniques for the image development, and an unbalanced proportion for the text giving the idea of tension.",
+      "year": "2016",
+      "agency": "Resn",
+      "img": "common/media/028b.jpg",
+      "media": [{
+          "type": "video",
+
+          "links": [{
+            "src": "common/media/028a.mp4"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/028c.jpg"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/028.jpg"
+          }]
+        },
+
+        {
+          "type": "video",
+
+          "links": [{
+            "src": "common/media/028b.mp4"
+          }]
+        }
+      ]
+    },
+
+    {
+      "slug": "Eurovision2020 - Rotterdam, Pitch",
+      "title": "<small>Rotterdam Pitch</small><div><span>Eurovision 2020<span></div>",
+      "role": "Brand Exploration, Design & Creative Direction.",
+      "description": "At Mediamonks we worked to create the new Logotype for Eurovision 2020, my role was focused in the brand design and its application in different platforms. From the first idea until the final result (making severals options & concepts during the process). I develop a modular logo that include iconic elements relative to the event, such as eye(vision) & mouth for eurovision(voice), the rotterdam erasmus bridge for the city, the water, from the canals, and light from the new talents tat the event give to the world at the end. we didnt get the pitch but we were in the 3 finalists.",
+      "year": "2019",
+      "agency": "Mediamonks",
+      "img": "common/media/055.jpg",
+      "media": [
+        
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/056.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/055.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/057.jpg"
+          }]
+        },{
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/056.gif"
+          }]
+        },{
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/060.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/057.gif"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/059.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/058.gif"
+          }]
+        }
+       
+      ]
+    },
+
     {
       "slug": "Did you mean? Mailchimp Campaign",
       "title": "<small>Did you Mean?</small><div><span>Mailchimp<span></div>",
@@ -317,80 +460,43 @@
           }]
         }
       ]
-    } , {
-      "slug": "Redbull, Tokyo 2020 Olympics Blackout Data",
-      "title": "<small>Tokyo 2020 Olympics</small><div><span>Redbull<span></div>",
-      "role": "Design, 3D Renders.",
-      "description": "I worked in create an Interactive-Infographic website that display data from athletes for the new sports of the Olympics Games. These new sports will make their appearance for the first time during the Olympics in Tokyo. We needed to create neutral and unrecognizable athletes, So. for Art Direction I considered to use particles systems to create neutral but still cool looking humans.",
-      "year": "2019",
-      "agency": "Mediamonks",
-      "img": "common/media/052.jpg",
-      "media": [
-        
-        {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/052.jpg"
-          }]
-        }, {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/053.jpg"
-          }]
-        }, {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/054.jpg"
-          }]
-        },{
-          "type": "video",
-
-          "links": [{
-            "src": "common/media/053.mp4"
-          }]
-        }
-       
-      ]
-    },
+    } ,
 
     {
-      "slug": "Adidas ZX Flux Phase 01",
-      "title": "<small>Adidas</small><div><span>ZX Flux Phase 01<span></div>",
-      "role": "Design.",
-      "description": "I worked on the design for the first stage of this ecommerce campaign; using cinemograph techniques for the image development, and an unbalanced proportion for the text giving the idea of tension.",
-      "year": "2016",
-      "agency": "Resn",
-      "img": "common/media/028b.jpg",
+      "slug": "Lufthansa CLP Photorecognition",
+      "title": "<small>CLP Photorecognition</small><div><span>Lufthansa<span></div>",
+      "role": "Interfaces Design.",
+      "description": "At Mediamonks we create an app to suggest new trip directions relative to the object that you scan with your camera. using the Google lens photorecognition API. My role for this project was create the interfaces design.",
+      "year": "2018",
+      "agency": "Mediamonks",
+      "img": "common/media/061.jpg",
       "media": [{
-          "type": "video",
+          "type": "image",
 
           "links": [{
-            "src": "common/media/028a.mp4"
+            "src": "common/media/062.jpg"
           }]
         },
         {
           "type": "image",
 
           "links": [{
-            "src": "common/media/028c.jpg"
+            "src": "common/media/059.gif"
           }]
         },
         {
           "type": "image",
 
           "links": [{
-            "src": "common/media/028.jpg"
+            "src": "common/media/063.jpg"
           }]
         },
 
         {
-          "type": "video",
+          "type": "image",
 
           "links": [{
-            "src": "common/media/028b.mp4"
+            "src": "common/media/064.jpg"
           }]
         }
       ]
