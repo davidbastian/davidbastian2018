@@ -462,18 +462,12 @@
       "description": "I worked in the Interfaces Design for an LA Lakers+Google Application, this will display team stats, tickets, exclusive videos, icons player of the team. upcoming games, quizes & merchandasing. Using the most recognizable colours of the team for each user interface and Hexagonal details for the typography and other elements. This app will be called by Google Lens when the user scan a poster or Ads in the newspapers.",
       "year": "2019",
       "agency": "Mediamonks",
-      "img": "common/media/070.jpg",
-      "media": [{
+      "img": "common/media/079.jpg",
+      "media": [ {
         "type": "image",
 
         "links": [{
-          "src": "common/media/071.jpg"
-        }]
-      }, {
-        "type": "image",
-
-        "links": [{
-          "src": "common/media/072.jpg"
+          "src": "common/media/070.jpg"
         }]
       }, {
         "type": "image",
@@ -485,19 +479,31 @@
         "type": "image",
 
         "links": [{
-          "src": "common/media/074.jpg"
-        }]
-      }, {
-        "type": "image",
-
-        "links": [{
           "src": "common/media/075.jpg"
         }]
       }, {
         "type": "image",
 
         "links": [{
+          "src": "common/media/078.jpg"
+        }]
+      }, {
+        "type": "image",
+
+        "links": [{
           "src": "common/media/076.jpg"
+        }]
+      }, {
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/077.jpg"
+        }]
+      }, {
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/080.jpg"
         }]
       }]
     },
@@ -583,54 +589,6 @@
 
           "links": [{
             "src": "common/media/064.jpg"
-          }]
-        }
-      ]
-    },
-
-    {
-      "slug": "Mailchimp.com",
-      "title": "<small>Sections</small><div><span>Mailchimp.com<span></div>",
-      "role": "Front end & CMS Integration Developtment.",
-      "description": "At Resn we worked on several sections of the Mailchimp website. My role was to develop minisites, CMS WordPress integration, custom admin dashboards, and development of guidelines for main sections. I used multiple technologies and libraries such as PixiJS, Haml, PHP, Wordpress API REST, ACF, Ruby on Rails, and Google Maps among others.",
-      "link": "https://mailchimp.com/",
-      "year": "2017",
-      "agency": "Resn",
-      "img": "common/media/031.jpg",
-      "media": [{
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/031a.jpg"
-          }]
-        },
-        {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/031c.jpg"
-          }]
-        },
-
-        {
-          "type": "video",
-
-          "links": [{
-            "src": "common/media/031.mp4"
-          }]
-        },
-        {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/031e.jpg"
-          }]
-        },
-        {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/031d.jpg"
           }]
         }
       ]
