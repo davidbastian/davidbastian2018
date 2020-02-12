@@ -157,8 +157,6 @@
       }]
     },
 
-  
-
     {
       "slug": "Think with Google 2019",
       "title": "<small>Think with</small><div><span>Google 2019<span></div>",
@@ -275,48 +273,11 @@
        
       ]
     },
-  {
-      "slug": "Google Washoku, Umami Land Tickets",
-      "title": "<small>Umami Land</small><div><span>Google Washoku<span></div>",
-      "role": "Illustration, Design.",
-      "description": "For this project my role was design and illustrate tickets that will trigger a website experience. Scanning them using Google Lens or QR code, the challenge was make the design close to the original japanese tickets. and illustrate elements in 2D relatives of the actual website.",
-      "year": "2019",
-      "agency": "Mediamonks",
-      "img": "common/media/065.jpg",
-      "media": [ {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/066.jpg"
-          }]
-        }, {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/067.jpg"
-          }]
-        }, {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/068.jpg"
-          }]
-        }, {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/069.jpg"
-          }]
-        }
-       
-      ]
-    },
-
 
      {
       "slug": "Redbull, Tokyo 2020 Olympics Blackout Data",
       "title": "<small>Tokyo 2020 Olympics</small><div><span>Redbull<span></div>",
-      "role": "Interfaces Design, 3D Renders.",
+      "role": "Design, 3D Renders.",
       "description": "I worked in create an Interactive-Infographic website that display data from athletes for the new sports of the Olympics Games. These new sports will make their appearance for the first time during the Olympics in Tokyo. We needed to create neutral and unrecognizable athletes, So. for Art Direction I considered to use particles systems to create neutral but still cool looking humans.",
       "year": "2019",
       "agency": "Mediamonks",
@@ -455,53 +416,6 @@
        
       ]
     },
-    {
-      "slug": "Google Lens - Game on, LA Lakers",
-      "title": "<small>Google Lens</small><div><span>LA Lakers<span></div>",
-      "role": "Interfaces Design.",
-      "description": "I worked in the Interfaces Design for an LA Lakers+Google Application, this will display team stats, tickets, exclusive videos, icons player of the team. upcoming games, quizes & merchandasing. Using the most recognizable colours of the team for each user interface and Hexagonal details for the typography and other elements. This app will be called by Google Lens when the user scan a poster or Ads in the newspapers.",
-      "year": "2019",
-      "agency": "Mediamonks",
-      "img": "common/media/070.jpg",
-      "media": [{
-        "type": "image",
-
-        "links": [{
-          "src": "common/media/071.jpg"
-        }]
-      }, {
-        "type": "image",
-
-        "links": [{
-          "src": "common/media/072.jpg"
-        }]
-      }, {
-        "type": "image",
-
-        "links": [{
-          "src": "common/media/073.jpg"
-        }]
-      }, {
-        "type": "image",
-
-        "links": [{
-          "src": "common/media/074.jpg"
-        }]
-      }, {
-        "type": "image",
-
-        "links": [{
-          "src": "common/media/075.jpg"
-        }]
-      }, {
-        "type": "image",
-
-        "links": [{
-          "src": "common/media/076.jpg"
-        }]
-      }]
-    },
-    
 
     {
       "slug": "Did you mean? Mailchimp Campaign",
@@ -1042,6 +956,59 @@
     },
 
     {
+      "slug": "Proposal Blacksheepdesign",
+      "title": "<small>Proposal</small> <div><span>Blacksheepdesign</span></div>",
+      "role": "Design.",
+      "description": "I worked on the design direction proposal for the website redesign of this New Zealand based agency. We tried to keep a simple design, keeping a fresh and minimal aesthetic that is focused around the slogan ‘We love design’.",
+      "year": "2013",
+      "agency": "Blacksheepdesign",
+      "img": "common/media/014b.jpg",
+      "media": [{
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/014b.jpg"
+          }]
+        },
+        {
+          "type": "video",
+
+          "links": [{
+            "src": "common/media/014.mp4"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/014a.jpg"
+          }]
+        },
+        {
+          "type": "video",
+
+          "links": [{
+            "src": "common/media/014a.mp4"
+          }]
+        },
+        {
+          "type": "video",
+
+          "links": [{
+            "src": "common/media/014b.mp4"
+          }]
+        },
+        {
+          "type": "video",
+
+          "links": [{
+            "src": "common/media/014c.mp4"
+          }]
+        }
+      ]
+    },
+
+    {
       "slug": "Barltop Graham",
       "title": "<small>Design Proposal</small><div><span>Barltop Graham</span></div>",
       "role": "Look & Feel Direction.",
@@ -1093,6 +1060,7 @@
       "year": "2014",
       "agency": "Blacksheepdesign",
       "description": "I worked on the interaction design as well as the front-end and back-end development. The main idea for this site was to make a clean and elegant design, with a nice contrast between large and small font types to create a contemporary experience throughout the site.",
+      "link": "http://wadham.co.nz/",
       "img": "common/media/005.jpg",
       "media": [{
           "type": "image",
@@ -1259,6 +1227,52 @@
     },
 
     {
+      "slug": "Gacel",
+      "title": "<small>Ecommerce Website</small><div><span>Gacel</span></div>",
+      "year": "2013",
+      "agency": "Dittborn & Unzuetta",
+      "role": "Interaction Design & Front End Development.",
+      "description": "This is one of my oldest interaction design and front-end development projects, but I feel it is still relevant to ecommerce site design today. Using a nice AI and UX to show products I was pleased with the layout which has the potential to be applied to future projects.",
+      "img": "common/media/013.jpg",
+      "media": [{
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/013aa.jpg"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/013b.jpg"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/013c.jpg"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/013d.jpg"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/013e.jpg"
+          }]
+        }
+      ]
+    },
+
+    {
       "slug": "Caritas Challenge",
       "title": "<small>Caritas</small> <div><span>Challenge</span></div>",
       "role": "Interaction Design & Front End Development.",
@@ -1314,6 +1328,52 @@
 
           "links": [{
             "src": "common/media/006f.jpg"
+          }]
+        }
+      ]
+    },
+
+    {
+      "slug": "Iptv",
+      "title": "<small>Video Website</small><div><span>Iptv</span></div>",
+      "role": "Design, Develop.",
+      "year": "2012",
+      "agency": "Ilogica",
+      "description": "I did the design & front-end development of this site; a kind of YouTube/Vimeo website focused in user experience and the management of a central dashboard page. The challenge was finding a wat to update and manage the video content whilst maintaining a clean UX and UI.",
+      "img": "common/media/024.jpg",
+      "media": [{
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/024a.jpg"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/024b.jpg"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/024c.jpg"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/024d.jpg"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/024e.jpg"
           }]
         }
       ]
