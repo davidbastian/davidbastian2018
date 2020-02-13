@@ -497,13 +497,13 @@
         "type": "image",
 
         "links": [{
-          "src": "common/media/077.jpg"
+          "src": "common/media/080.jpg"
         }]
       }, {
         "type": "image",
 
         "links": [{
-          "src": "common/media/080.jpg"
+          "src": "common/media/077.jpg"
         }]
       }]
     },
@@ -625,6 +625,10 @@
         }
       ]
     },
+
+    
+
+
     {
       "slug": "Gallipoli The Scale of War",
       "title": "<small>Exhibition Website</small><div><span>The Scale of War<span></div>",
@@ -672,6 +676,40 @@
       ]
     },
     {
+      "slug": "Google Lens - Plant Doctor",
+      "title": "<small>Google Lens</small><div><span>Plant Doctor<span></div>",
+      "role": "Interfaces Design.",
+      "description": "I worked in the Interfaces Design for an Application to take care of your plants, This will display a calendar, wiki information, step by step tips & agenda. This app will be called by Google Lens when the user scan a real plant or a photography.",
+      "year": "2019",
+      "agency": "Mediamonks",
+      "img": "common/media/082b.jpg",
+      "media": [ {
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/082b.jpg"
+        }]
+      }, {
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/083.jpg"
+        }]
+      }, {
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/084.jpg"
+        }]
+      }, {
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/085.jpg"
+        }]
+      }]
+    },
+    {
       "slug": "Manfeild",
       "title": "<small>Events centre</small><div><span>Manfeild</span></div>",
       "role": "Design.",
@@ -716,6 +754,42 @@
           }]
         }
       ]
+    },
+
+    {
+      "slug": "Google Zoo, Tales by AI",
+      "title": "<small>Google Zoo</small><div><span>Tales by AI<span></div>",
+      "role": "Interfaces Design, Logotype Illustration.",
+      "description": "A Google experiment that uses machine learning to illustrate stories in real-time. All you have to do is use your imagination: Cloud Speech and Quick Draw do the rest by turning keywords into characters, places and objects.",
+      "year": "2019",
+      "agency": "Mediamonks",
+      "link": "https://thefwa.com/cases/tales-by-ai",
+      "img": "common/media/086.jpg",
+      "media": [ {
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/060.gif"
+        }]
+      }, {
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/083.jpg"
+        }]
+      }, {
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/084.jpg"
+        }]
+      }, {
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/085.jpg"
+        }]
+      }]
     },
     {
       "slug": "Christian Andrada",
@@ -771,6 +845,8 @@
         }]
       }]
     },
+
+
 
     {
       "slug": "Proposal Alloy Yachts",
