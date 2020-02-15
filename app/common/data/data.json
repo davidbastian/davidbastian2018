@@ -626,6 +626,52 @@
       ]
     },
 
+    {
+      "slug": "Samsung Doorways Experience",
+      "title": "<small> Doorways Experience</small><div><span>Samsung<span></div>",
+      "role": "Interfaces Design, HUD, Iconography.",
+      "description": "Whilst working at Designworks we were enlisted by Te Papa to work on this exhibition website. My role was to create the wireframes, front-end development, and interaction design. I used GSAP for the animations and angularJS for the implementation. We were awarded with a Gold Pin – best Awards NZ for this site.",
+      "year": "2019",
+      "agency": "Mediamonks",
+      "img": "common/media/096.jpg",
+      "media": [{
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/096.jpg"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/009a.jpg"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/009b.jpg"
+          }]
+        },
+        {
+          "type": "video",
+
+          "links": [{
+            "src": "common/media/009.mp4"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/009c.jpg"
+          }]
+        }
+      ]
+    },
+
     
 
 
@@ -671,6 +717,44 @@
 
           "links": [{
             "src": "common/media/009c.jpg"
+          }]
+        }
+      ]
+    },
+    {
+      "slug": "IBM Cloud Private for Data",
+      "title": "<small>Private for Data</small><div><span>IBM Cloud</span></div>",
+      "role": "Interfaces Design, Illustration.",
+      "description": "The idea for this project was create stories shaped by data, showing how real (or simulated) businesses can be use, with insights that help the audience to find new bussiness solutions. My role was create art direction and look and feel interfaces for the first phase.",
+      "img": "common/media/093.jpg",
+      "year": "2019",
+      "agency": "Mediamonks",
+      "media": [{
+          "type": "image",
+          "links": [{
+            "src": "common/media/093.jpg"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/092.jpg"
+          }]
+        },
+
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/094.jpg"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/095.jpg"
           }]
         }
       ]
@@ -764,7 +848,7 @@
       "year": "2019",
       "agency": "Mediamonks",
       "link": "https://thefwa.com/cases/tales-by-ai",
-      "img": "common/media/086.jpg",
+      "img": "common/media/090.jpg",
       "media": [ {
         "type": "image",
 
@@ -775,19 +859,31 @@
         "type": "image",
 
         "links": [{
-          "src": "common/media/083.jpg"
+          "src": "common/media/087.jpg"
         }]
       }, {
         "type": "image",
 
         "links": [{
-          "src": "common/media/084.jpg"
+          "src": "common/media/088.jpg"
         }]
       }, {
         "type": "image",
 
         "links": [{
-          "src": "common/media/085.jpg"
+          "src": "common/media/089.jpg"
+        }]
+      }, {
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/090.jpg"
+        }]
+      }, {
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/091.jpg"
         }]
       }]
     },
