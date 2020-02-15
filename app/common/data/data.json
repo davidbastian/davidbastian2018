@@ -626,51 +626,7 @@
       ]
     },
 
-    {
-      "slug": "Samsung Doorways Experience",
-      "title": "<small> Doorways Experience</small><div><span>Samsung<span></div>",
-      "role": "Interfaces Design, HUD, Iconography.",
-      "description": "Whilst working at Designworks we were enlisted by Te Papa to work on this exhibition website. My role was to create the wireframes, front-end development, and interaction design. I used GSAP for the animations and angularJS for the implementation. We were awarded with a Gold Pin – best Awards NZ for this site.",
-      "year": "2019",
-      "agency": "Mediamonks",
-      "img": "common/media/096.jpg",
-      "media": [{
-          "type": "image",
 
-          "links": [{
-            "src": "common/media/096.jpg"
-          }]
-        },
-        {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/009a.jpg"
-          }]
-        },
-        {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/009b.jpg"
-          }]
-        },
-        {
-          "type": "video",
-
-          "links": [{
-            "src": "common/media/009.mp4"
-          }]
-        },
-        {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/009c.jpg"
-          }]
-        }
-      ]
-    },
 
     
 
@@ -755,6 +711,52 @@
 
           "links": [{
             "src": "common/media/095.jpg"
+          }]
+        }
+      ]
+    },
+
+    {
+      "slug": "Samsung Doorways Experience",
+      "title": "<small> Doorways Experience</small><div><span>Samsung<span></div>",
+      "role": "Interfaces Design, HUD, Iconography.",
+      "description": "Whilst working at Designworks we were enlisted by Te Papa to work on this exhibition website. My role was to create the wireframes, front-end development, and interaction design. I used GSAP for the animations and angularJS for the implementation. We were awarded with a Gold Pin – best Awards NZ for this site.",
+      "year": "2019",
+      "agency": "Mediamonks",
+      "img": "common/media/096.jpg",
+      "media": [{
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/096.jpg"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/097.jpg"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/061.gif"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/098.jpg"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/0100.jpg"
           }]
         }
       ]
