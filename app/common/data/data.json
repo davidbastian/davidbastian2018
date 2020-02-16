@@ -927,6 +927,8 @@
         }
       ]
     },
+
+
     {
       "slug": "Allan Mcneill",
       "title": "<small>Chartered Accountants</small><div><span>Allan Mcneill</span></div>",
@@ -940,6 +942,42 @@
 
         "links": [{
           "src": "common/media/007a.jpg"
+        }]
+      }]
+    },
+
+    
+    {
+      "slug": "Google Lens - Paris Trip",
+      "title": "<small>Google Lens</small><div><span>Paris Trip</span></div>",
+      "role": "Interfaces Design.",
+      "description": "I worked in the Interfaces Design for an Application to take care of your plants, This will display a calendar, wiki information, step by step tips & agenda. This app will be called by Google Lens when the user scan a real plant or a photography.",
+      "year": "2018",
+      "agency": "Mediamonks",
+      "img": "common/media/0102.jpg",
+      "media": [{
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/062.gif"
+        }]
+      },{
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/0103.jpg"
+        }]
+      },{
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/0104.jpg"
+        }]
+      },{
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/0105.jpg"
         }]
       }]
     },
