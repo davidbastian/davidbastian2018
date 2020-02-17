@@ -316,7 +316,7 @@
      {
       "slug": "Redbull, Tokyo 2020 Olympics Blackout Data",
       "title": "<small>Tokyo 2020 Olympics</small><div><span>Redbull<span></div>",
-      "role": "Interfaces Design, 3D Renders.",
+      "role": "Interfaces Design, 3D Renders & Animation.",
       "description": "I worked in create an Interactive-Infographic website that display data from athletes for the new sports of the Olympics Games. These new sports will make their appearance for the first time during the Olympics in Tokyo. We needed to create neutral and unrecognizable athletes, So. for Art Direction I considered to use particles systems to create neutral but still cool looking humans.",
       "year": "2019",
       "agency": "Mediamonks",
@@ -623,6 +623,7 @@
       ]
     },
 
+  
     {
       "slug": "Davies Landscape Architects, Phase 02",
       "title": "<small>Phase 02</small><div><span>Davies Landscape</span></div>",
@@ -656,7 +657,7 @@
           "type": "image",
 
           "links": [{
-            "src": "common/media/0113.jpg"
+            "src": "common/media/0112a.jpg"
           }]
         }
 
@@ -798,6 +799,58 @@
         }
       ]
     },
+
+    {
+      "slug": "Google Pixel 4 - new features",
+      "title": "<small>Google</small><div><span>Pixel 4<span></div>",
+      "role": "Illustration, Design, Art Direction",
+      "description": "For this project my role was design and illustrate in an easy, conceptual & friendly way the new software features for the Pixel 4. Doing and exploring severals still shots for animation to generate multiples cases & examples.",
+      "year": "2020",
+      "agency": "Mediamonks",
+      "img": "common/media/0113.jpg",
+      "media": [
+        
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/0116.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/0117.jpg"
+          }]
+        },{
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/0114.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/0115.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/0118.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/065.gif"
+          }]
+        }
+       
+      ]
+    },
+
     {
       "slug": "Google Lens - Plant Doctor",
       "title": "<small>Google Lens</small><div><span>Plant Doctor<span></div>",
@@ -877,6 +930,9 @@
         }
       ]
     } ,
+
+
+
   
 
 
