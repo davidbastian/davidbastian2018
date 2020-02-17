@@ -19,6 +19,45 @@
     ]
   },
   "projects": [{
+      "slug": "FWA Certificates Redesign",
+      "title": "<small>Redesign</small><div><span>FWA Certificates<span></div>",
+      "role": "Creative & Art Direction, Design.",
+      "description": "At Mediamonks I was encharged to create the new FWA Certificates (realease soon in 2020), I used concepts such as Generative Art. Timeless, Modular, Recognizable. Having also each certificates its own design soul. FOTD, lines represent points, and gold stripes the amount of judges, FOTM, Each gradient are days of the months going to one point, and one line will represent the winner, FODY. Its a Circular calendar with 365 lines having a unique line representing the winner reach the center.",
+      "year": "2020",
+      "agency": "Mediamonks",
+      "img": "common/media/045.jpg",
+      "media": [{
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/045.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/046.jpg"
+          }]
+        },
+
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/047.jpg"
+          }]
+        },
+
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/048.jpg"
+          }]
+        }
+
+      ]
+    }, {
       "slug": "Resn FWA Club 100",
       "title": "<small>Resn Club 100</small><div><span>FWA<span></div>",
       "role": "Interaction Design & Front End Development.",
@@ -236,7 +275,42 @@
        
       ]
     },
+  {
+      "slug": "Google Washoku, Umami Land Tickets",
+      "title": "<small>Umami Land</small><div><span>Google Washoku<span></div>",
+      "role": "Illustration, Design.",
+      "description": "For this project my role was design and illustrate tickets that will trigger a website experience. Scanning them using Google Lens or QR code, the challenge was make the design close to the original japanese tickets. and illustrate elements in 2D relatives of the actual website.",
+      "year": "2019",
+      "agency": "Mediamonks",
+      "img": "common/media/065.jpg",
+      "media": [ {
+          "type": "image",
 
+          "links": [{
+            "src": "common/media/066.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/067.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/068.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/069.jpg"
+          }]
+        }
+       
+      ]
+    },
 
 
      {
@@ -726,7 +800,80 @@
       ]
     },
 
+    {
+      "slug": "Google Pixel 4 - new features",
+      "title": "<small>Google</small><div><span>Pixel 4<span></div>",
+      "role": "Illustration, Design, Art Direction",
+      "description": "For this project my role was design and illustrate in an easy, conceptual & friendly way the new software features for the Pixel 4. Doing and exploring severals still shots for animation to generate multiples cases & examples.",
+      "year": "2020",
+      "agency": "Mediamonks",
+      "img": "common/media/0113.jpg",
+      "media": [
+        
+        {
+          "type": "image",
 
+          "links": [{
+            "src": "common/media/0116.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/0117.jpg"
+          }]
+        },{
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/0114.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/0115.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/0118.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/065.gif"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/066.gif"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/0119.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/0120.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/0121.jpg"
+          }]
+        }
+       
+      ]
+    },
 
     {
       "slug": "Google Lens - Plant Doctor",
