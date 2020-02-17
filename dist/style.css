@@ -549,7 +549,7 @@ footer {
     .single .single-description .single-credits > div div,
     .single .single-description .single-credits > div a {
       display: block;
-      border-bottom: 1px dotted #afafaf;
+      border-bottom: 1px solid #f2f2f2;
       padding: 8px 0;
       line-height: 1.6em; }
 
