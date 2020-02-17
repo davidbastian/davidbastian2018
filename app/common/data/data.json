@@ -246,7 +246,7 @@
       ]
     }
     , {
-      "slug": "Braun Museum AR Experience",
+      "slug": "Braun AR Experience",
       "title": "<small>AR Experience</small><div><span>Braun<span></div>",
       "role": "Design, 3D Renders.",
       "description": "Concept for this project was making an immersive AR Experience  where you will enter into a dark room  revealing & leveling up the shave machine as a main element of the scene using the light as a resource to create a subtle and luxurious atmosphere.",
@@ -508,51 +508,48 @@
       }]
     },
     
-
     {
-      "slug": "Did you mean? Mailchimp Campaign",
-      "title": "<small>Did you Mean?</small><div><span>Mailchimp<span></div>",
-      "role": "Front End Development.",
-      "description": "Resn was enlisted by Mailchimp for the development and design production of this advertising campaign, led by Droga5. I worked on mainly front-end development for several sections; using technologies such as GSAP, Backbone, Google maps API, and PixiJS. This campaign was a huge hit, and we were awarded with a Cannes Cyber Grand Prix.",
-      "link": "https://mailchimp.com/did-you-mean/",
-      "year": "2017",
-      "agency": "Resn",
-      "img": "common/media/029.jpg",
+      "slug": "Davies Landscape Architects, Phase 01",
+      "title": "<small>Phase 01</small><div><span>Davies Landscape</span></div>",
+      "role": "Art Direction, Interactive Design.",
+      "description": "I worked on the design and front-end development. In this design proposal my idea was led by the quality of the architecture; keeping a clean and elegant design with lots of white space and powerful imagery & typography.",
+      "year": "2019",
+      "img": "common/media/0106.jpg",
+      "agency": "Freelance",
       "media": [{
-          "type": "video",
-
-          "links": [{
-            "src": "common/media/029d.mp4"
-          }]
-        }, {
           "type": "image",
 
           "links": [{
-            "src": "common/media/029d.jpg"
-          }]
-        }, {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/029b.jpg"
+            "src": "common/media/063.gif"
           }]
         },
         {
           "type": "image",
 
           "links": [{
-            "src": "common/media/029a.jpg"
+            "src": "common/media/0107.jpg"
           }]
         },
         {
           "type": "image",
 
           "links": [{
-            "src": "common/media/029c.jpg"
+            "src": "common/media/0108.jpg"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/0109.jpg"
           }]
         }
+
       ]
-    } ,
+    },
+
+
+
 
     {
       "slug": "Lufthansa CLP Photorecognition",
@@ -623,6 +620,46 @@
             "src": "common/media/030b.jpg"
           }]
         }
+      ]
+    },
+
+    {
+      "slug": "Davies Landscape Architects, Phase 02",
+      "title": "<small>Phase 02</small><div><span>Davies Landscape</span></div>",
+      "role": "Art Direction, Interactive Design.",
+      "description": "I worked on the design and front-end development. In this design proposal my idea was led by the quality of the architecture; keeping a clean and elegant design with lots of black space and powerful imagery & typography.",
+      "year": "2019",
+      "img": "common/media/0110.jpg",
+      "agency": "Freelance",
+      "media": [{
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/064.gif"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/0112.jpg"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/0110.jpg"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/0113.jpg"
+          }]
+        }
+
       ]
     },
 
@@ -795,6 +832,54 @@
         }]
       }]
     },
+
+    {
+      "slug": "Did you mean? Mailchimp Campaign",
+      "title": "<small>Did you Mean?</small><div><span>Mailchimp<span></div>",
+      "role": "Front End Development.",
+      "description": "Resn was enlisted by Mailchimp for the development and design production of this advertising campaign, led by Droga5. I worked on mainly front-end development for several sections; using technologies such as GSAP, Backbone, Google maps API, and PixiJS. This campaign was a huge hit, and we were awarded with a Cannes Cyber Grand Prix.",
+      "link": "https://mailchimp.com/did-you-mean/",
+      "year": "2017",
+      "agency": "Resn",
+      "img": "common/media/029.jpg",
+      "media": [{
+          "type": "video",
+
+          "links": [{
+            "src": "common/media/029d.mp4"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/029d.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/029b.jpg"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/029a.jpg"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/029c.jpg"
+          }]
+        }
+      ]
+    } ,
+  
+
+
     {
       "slug": "Manfeild",
       "title": "<small>Events centre</small><div><span>Manfeild</span></div>",
@@ -889,6 +974,8 @@
         }]
       }]
     },
+    
+ 
     {
       "slug": "Christian Andrada",
       "title": "<small>Speaker, Couch & Consultant</small><div><span>Christian Andrada</span></div>",
@@ -1111,6 +1198,7 @@
       ]
     },
 
+
     {
       "slug": "The Choice Protocol",
       "title": "<small>Students first</small><div><span>Choice Protocol</span></div>",
@@ -1146,13 +1234,6 @@
           "links": [{
             "src": "common/media/020a.mp4"
           }]
-        },
-        {
-          "type": "video",
-
-          "links": [{
-            "src": "common/media/020b.mp4"
-          }]
         }
       ]
     },
@@ -1162,7 +1243,7 @@
       "title": "<small>Company Website</small><div><span>Hino Trucks</span></div>",
       "role": "Interaction Design & Front End Development.",
       "description": "I worked on the interface design, and front-end development for Hino Trucks; a company based in New Zealand. This website was fully responsive, making modern CSS transitions and interactions by the user.",
-      "link": "http://www.davidbastian.cl/proyectos/hino/preview/",
+      "link": "https://davidbastian.red/projects/hino/preview/",
       "year": "2014",
       "agency": "Blacksheepdesign",
       "img": "common/media/023.jpg",
