@@ -1,20 +1,18 @@
-class AppController {
+
+class Controller {
   constructor(model, view) {
-    this.view = view;
-    this.model = model;
+    this.model = model
+    this.view = view
+  }
+
+  setView(){
 
   }
 
-  updateActiveView(view){
-    this.model.setActiveView(view);
-  }
+  updateView(){
 
-  setData(data) {
-    this.model.setData(data);
   }
 
 }
 
-const controller = new AppController();
-
-export default controller;
+export default Controller;

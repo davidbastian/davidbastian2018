@@ -1,34 +1,13 @@
-class AppModel {
+import Data from '../../common/data/data'
+class Model {
   constructor() {
-    this.updatingView = false;
-    this.firstView = true;
-    this.homeScroll = {
-      scrollTarget: 0,
-      scrollPos: 0,
-      dotPosX: 0,
-      dotTargetX: 0,
-      dotPosY: -40,
-      dotTargetY: -40,
-    }
-
-  }
-  setData(data) {
-    this.data = data;
+    this.data = Data;
   }
 
-  setActiveView(view) {
-    this.view = view;
-  }
+  getData(){
 
-  getActiveView() {
-    return this.view;
   }
-
-  getData() {
-    return this.data;
-  }
+  
 }
 
-const model = new AppModel();
-
-export default model;
+export default Model;
