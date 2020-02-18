@@ -1,12 +1,19 @@
 class View {
     constructor() {
         this.body = document.querySelector('body');
-        this.setup();
     }
 
-    setup() {
+    setup(data) {
         const markup=/*html*/ `
-            <header><a id="logo" href="#/">David Bastian.</a></header>
+            <header class="container">
+
+                    <a id="logo" href="#/">${data.details.logo}</a>
+                    <nav>
+                        <a href="#/about">about me</a>
+                        <a href="mailto:d@davidbastian.red" target="_blank">${data.details.email}</a>
+                    </nav>
+
+            </header>
             <main>main</main>
             <footer>footer</footer>
         `;

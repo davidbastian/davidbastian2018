@@ -1,5 +1,6 @@
 @import "reset";
 @import "variables";
+
 html,
 body {
   font-family: sans-serif;
@@ -16,17 +17,36 @@ body {
 a {
   color: inherit;
 }
+
 header {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  nav a {
+    margin-left: 40px;
+  }
+
   #logo {
     font-size: 17px;
   }
 
 }
 
-main {
-  
+main {}
+
+.container {
+  max-width: 2400px;
+  margin: 0 auto;
+  border-left: 5vw solid transparent;
+  border-right: 5vw solid transparent;
+  box-sizing: content-box;
+
+  @media screen and (max-width: 1200px) {
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+  }
 }
 
-footer {
-  
-}
+footer {}
