@@ -23,5 +23,17 @@
 
     h2 {
         line-height: 60px;
+
+        @media screen and (max-width: 765px) {
+
+            margin-top: -15vh;
+
+           font-size: 28px;
+           line-height: 1.2em;
+
+           br {
+               display: none;
+           }
+        }
     }
 }
