@@ -19,6 +19,10 @@
             @media screen and (max-width: 767px) {
                 font-size: 26px;
                 line-height: 36px;
+
+                br {
+                    display: none;
+                }
             }
         }
         .social {

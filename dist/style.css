@@ -458,7 +458,9 @@ footer {
     @media screen and (max-width: 767px) {
       #about .about-wrap h2 {
         font-size: 26px;
-        line-height: 36px; } }
+        line-height: 36px; }
+        #about .about-wrap h2 br {
+          display: none; } }
   #about .about-wrap .social {
     display: -webkit-box;
     display: -ms-flexbox;

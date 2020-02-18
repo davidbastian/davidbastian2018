@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "ed0f4b1593a4f836cde2"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "b312c18e30cc2db7bedd"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -9072,7 +9072,7 @@ var AppView = function () {
 
             if (_config2.default.checkDevice() === 'mobile') {
                 var viewport = document.querySelector("meta[name=viewport]");
-                viewport.setAttribute('content', 'width=device-width, initial-scale=0.8, maximum-scale=0.8, user-scalable=0');
+                viewport.setAttribute('content', 'width=device-width, initial-scale=0.9, maximum-scale=0.9, user-scalable=0');
             }
 
             this.addEvents();
