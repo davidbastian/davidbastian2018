@@ -5,15 +5,23 @@
     "email": "d@davidbastian.red",
     "aboutme": "<span>Im a Designer & Web Developer from Viña del Mar (Chile),</span> <span>but I am based in Amsterdam.</span><span><br> I love to enjoy Good Art, Conceptualize, Design <br>& Develop simple and clean Interfaces.</span>",
     "social": [{
-        "title": "Twitter"
+        "title": "Twitter",
+        "url":"https://twitter.com/davidbastian_cl"
 
       },
       {
-        "title": "Instagram"
+        "title": "Instagram",
+        "url":"https://www.instagram.com/davidbastian"
 
       },
       {
-        "title": "LinkedIn"
+        "title": "LinkedIn",
+        "url":"https://cl.linkedin.com/in/davidbastianf"
+
+      },
+      {
+        "title": "CV",
+        "url":"https://davidbastian.red/common/doc/davidbastiancv.pdf"
 
       }
     ]

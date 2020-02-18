@@ -1,5 +1,7 @@
 export function toSlug(str) {
-  return str.replace(/\s+/g, "-").toLowerCase();
+  let tags = /(&nbsp;|<([^>]+)>)/ig;
+  let s = str.replace(tags, "");
+  return s.replace(/\s+/g, "-").toLowerCase();
 }
 
 export function constrain(v, min, max) {

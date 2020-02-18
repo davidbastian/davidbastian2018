@@ -1,1 +1,25 @@
-#home {}
+#home {
+    display: flex;
+
+    .home-wrap {
+        display: flex;
+        padding-top: 18vh;
+        position: relative;
+        max-width: auto;
+    }
+
+
+
+    a {
+        height: 53vh;
+        margin-right: 10px;
+        display: block;
+        img {
+            height: 100%;
+            display: block;
+        }
+        p {
+            padding-top: 40px;
+        }
+    }
+}

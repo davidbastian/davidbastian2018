@@ -1,4 +1,64 @@
 @import "../../../common/styles/_variables";
+
 #single {
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    h2 {}
+
+    p {
+        line-height: 1.6em;
+    }
+
+    .single-info {
+        padding-bottom: 22vh;
+    }
+
+    .single-title {
+        padding-top: 30vh;
+    }
+
+
+    .single-description {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 380px;
+
+    }
+
+    .single-media {
+        max-width: 50vw;
+        width: 100%;
+
+        .single-media-inner {
+            padding-top: 18vh;
+
+            img,
+            video {
+                width: 100%;
+                height: auto;
+                display: block;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .single-credits {
+        margin-top: 20px;
+
+        div,
+        a {
+            display: block;
+            border-bottom: 1px solid $color05;
+            padding: 8px 0;
+            line-height: 1.6em;
+        }
+
+    }
 
 }

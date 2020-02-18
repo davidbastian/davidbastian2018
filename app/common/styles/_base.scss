@@ -8,6 +8,7 @@ body {
   font-weight: 400;
   overflow: hidden;
   user-select: none;
+
 }
 
 body {
@@ -18,11 +19,14 @@ a {
   color: inherit;
 }
 
-header {
+header,
+footer {
   height: 10vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 2;
 
   nav a {
     margin-left: 40px;
@@ -32,9 +36,23 @@ header {
     font-size: 17px;
   }
 
+  small {
+    color: $color03;
+  }
+
 }
 
-main {}
+main {
+  min-height: 80vh;
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
 
 .container {
   max-width: 2400px;
@@ -49,4 +67,15 @@ main {}
   }
 }
 
-footer {}
+h2 {
+  font-size: 40px;
+  letter-spacing: -1px;
+
+  small {
+    letter-spacing: 0;
+    font-size: 17px;
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+  }
+}
