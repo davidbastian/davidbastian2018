@@ -9,7 +9,7 @@ class HomeView {
       let projectHTML = /*html*/`
       <a href="#/${toSlug(project.slug)}">
         <img src="${project.img}" alt="">
-        <p>${project.slug} — ${project.role}</p>
+        <p><span>${project.slug}</span> <i>—</i> <span>${project.role}</span></p>
       </a>
       `;
 

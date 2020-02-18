@@ -1,11 +1,63 @@
+@import "../../../common/styles/_variables";
+
 #home {
     display: flex;
+
+    @media screen and (max-width: 765px) {
+       overflow-y: scroll;
+     }
+
+    
+
 
     .home-wrap {
         display: flex;
         padding-top: 18vh;
         position: relative;
         max-width: auto;
+        width: 100%;
+        
+
+        @media screen and (max-width: 765px) {
+            border: 0;
+            flex-direction: column;
+
+            a {
+                padding-right: 0;
+                padding-bottom: 10px;
+                height: auto;
+                width: 100vw;
+                padding: 4vw;
+                box-sizing: border-box;
+
+                p {
+                    padding-top: 10px;
+                    
+
+                    >span{
+
+                        &:last-child {
+                            font-size: 11px;
+                            display: block;
+                            padding-top: 5px;
+                            padding-bottom: 4vh;
+                            color: $color03;
+
+                        }
+                    }
+
+                    >i{
+
+                        display: none;
+                    }
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+       
     }
 
 
@@ -21,5 +73,17 @@
         p {
             padding-top: 40px;
         }
+
+        
     }
+
+
+    @media screen and (max-width: 765px) {
+        a {
+          height: 38vh;
+        }
+        #logo {
+          width: 60px;
+        }
+      }
 }

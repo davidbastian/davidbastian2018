@@ -1,13 +1,50 @@
 @import "../../../common/styles/_variables";
 
 #single {
+    @media screen and (max-width: 765px) {
+        overflow-y: scroll;
+
+        .single-wrap {
+            padding: 25vh 0;
+        }
+       
+    }
+
 
     .container {
         display: flex;
         justify-content: space-between;
-    }
 
-    h2 {}
+        @media screen and (max-width: 765px) {
+
+            flex-direction: column;
+
+            .single-description {
+                height: auto;
+            }
+
+            .single-title {
+                padding-top: 0vh;
+                padding-bottom: 5vw;
+                h2 {
+                    font-size: 32px;
+                }
+            }
+
+            .single-info {
+                padding-bottom: 5vh;
+            }
+
+            .single-media {
+                max-width: 100%;
+
+                .single-media-inner{
+                    padding-top: 0;
+                }
+            }
+        }
+
+    }
 
     p {
         line-height: 1.6em;

@@ -34,7 +34,7 @@ class SingleView {
       let mediaHTML;
       if (media.type === "video") {
         mediaHTML = /*html*/ `
-      <video class="video" playsinline="" autoplay="" loop="" muted="" src="${media.links[0].src}">
+      <video playsinline autoplay loop muted src="${media.links[0].src}">
                 <source src="${media.links[0].src}" type="video/mp4">
         </video>
       `;

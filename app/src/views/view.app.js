@@ -8,13 +8,17 @@ class View {
     }
 
     setup(data) {
-        const markup=/*html*/ `
-            <header class="container">
-                    <a id="logo" href="#/">${data.details.logo}</a>
-                    <nav>
-                        <a href="#/about">about me</a>
-                        <a href="mailto:d@davidbastian.red" target="_blank">${data.details.email}</a>
-                    </nav>
+        const markup = /*html*/ `
+            <header>
+                <div class="header-container container">
+                <a id="logo" href="#/">${data.details.logo}</a>
+                <nav>
+                    <a href="#/about">about me</a>
+                    <a href="mailto:d@davidbastian.red" target="_blank">${data.details.email}</a>
+                </nav>
+                
+                </div>
+                   
             </header>
             <main></main>
             <footer class="container">
@@ -24,20 +28,16 @@ class View {
         this.render(markup);
     }
 
-    updateView(type,data){
-        if(type === 'home') {
-          this.body.querySelector('main').innerHTML = new HomeView().setup(data);
-        }
-
-        else if(type === 'single') {
+    updateView(type, data) {
+        if (type === 'home') {
+            this.body.querySelector('main').innerHTML = new HomeView().setup(data);
+        } else if (type === 'single') {
             this.body.querySelector('main').innerHTML = new SingleView().setup(data);
-        }
-
-        else if(type === 'about') {
+        } else if (type === 'about') {
             this.body.querySelector('main').innerHTML = new AboutView().setup(data);
         }
     }
-    
+
     render(markup) {
         this.body.innerHTML = markup;
     }
