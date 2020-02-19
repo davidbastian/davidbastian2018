@@ -29,10 +29,12 @@ class View {
     }
 
     updateView(type, data) {
+        this.main = this.body.querySelector('main');
+
         if (type === 'home') {
-            this.body.querySelector('main').innerHTML = new HomeView().setup(data);
+             new HomeView().setup(data,this.main);          
         } else if (type === 'single') {
-            this.body.querySelector('main').innerHTML = new SingleView().setup(data);
+            new SingleView().setup(data,this.main);
         } else if (type === 'about') {
             this.body.querySelector('main').innerHTML = new AboutView().setup(data);
         }
