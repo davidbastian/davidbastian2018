@@ -30,13 +30,12 @@ class View {
 
     updateView(type, data) {
         this.main = this.body.querySelector('main');
-
         if (type === 'home') {
              new HomeView().setup(data,this.main);          
         } else if (type === 'single') {
             new SingleView().setup(data,this.main);
         } else if (type === 'about') {
-            this.body.querySelector('main').innerHTML = new AboutView().setup(data);
+            new AboutView().setup(data,this.main);
         }
     }
 

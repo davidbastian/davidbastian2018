@@ -24,10 +24,14 @@ class Controller {
     document.querySelector('main').innerHTML = "";
     if (('/' === params)) {
       history.pushState({}, null, '#/');
-      this.view.updateView('home',data);  
+      this.view.updateView('home',data); 
+      
+      
     } else if (('/about' === params) || ('/about/' === params)) {
       history.pushState({}, null, '#/about');
       this.view.updateView('about',data);
+
+      
     } else {
       for (let i = 0; i < data.projects.length; i++) {
         const project = data.projects[i];

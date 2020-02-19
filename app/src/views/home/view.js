@@ -2,21 +2,12 @@ import {
   toSlug
 } from '../../../common/utils/utils';
 import './style.scss';
-import {
-  TweenMax
-} from 'gsap';
+import HideHeader from '../../modules/module.hideHeader';
+import Carousel from '../../modules/module.carousel';
 
 class HomeView {
   setup(data, main) {
-    this.header = document.body.querySelector('header');
     this.main = main;
-
-
-    TweenMax.to(this.header, 0.5, {
-      y: 0 + '%',
-      ease: 'Power3.easeOut',
-    });
-
     let string = '';
     for (let i = 0; i < data.projects.length; i++) {
       let project = data.projects[i];
@@ -31,36 +22,36 @@ class HomeView {
 
     }
 
-    string = '<section id="home"><div class="home-wrap container">' + string + '</div></section>';
+    string = '<section id="home"><div class="home-wrap"><div class="container">' + string + '</div></div></section>';
     this.render(string);
   }
 
   render(string) {
-    this.main.innerHTML = string;
-    this.addEvents();
-  }
-
-  addEvents() {
     const self = this;
-    this.main.querySelector('#home').addEventListener('scroll', self.scroll.bind(this));
+
+    this.main.innerHTML = string;
+    new HideHeader({
+      el: this.main.querySelector('#home')
+    });
+
+    this.carousel = new Carousel({
+      container: document.body,
+      wrap:self.main.querySelector('#home'),
+      el:self.main.querySelector('.home-wrap'),
+      pos: 0,
+      ease: 0.05,
+      direction: "landscape",
+      delta: 100
+    });
+
+
+    this.carousel.init();
+
+    this.addEvents();
+
   }
 
-  scroll() {
-    let st = this.main.querySelector('#home').scrollTop;
-    if (st > this.lastScrollTop) {
-      TweenMax.to(this.header, 0.5, {
-        y: -100 + '%',
-        ease: 'Power3.easeOut',
-      });
-    } else {
-      TweenMax.to(this.header, 0.5, {
-        y: 0 + '%',
-        ease: 'Power3.easeOut',
-      });
-
-    }
-    this.lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-
+  addEvents(){
 
   }
 

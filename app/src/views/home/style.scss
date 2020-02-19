@@ -15,9 +15,12 @@
         display: flex;
         padding-top: 18vh;
         position: relative;
-        max-width: auto;
-        width: 100%;
-        
+
+        .container {
+            display: flex;
+            max-width: 100%;
+        }
+
 
         @media screen and (max-width: 765px) {
             border: 0;
@@ -26,7 +29,15 @@
             display: block;
             height: auto;
 
-            a {
+            .container {
+                border: 0;
+                flex-direction: column;
+                padding-bottom: 120px;
+                display: block;
+                height: auto;
+            }
+
+            a,.link {
                 padding-right: 0;
                 padding-bottom: 10px;
                 height: auto;
@@ -70,10 +81,11 @@
 
 
 
-    a {
+    a,.link {
         height: 53vh;
         margin-right: 10px;
         display: block;
+      
         i {
             display: none;
         }
@@ -83,6 +95,7 @@
         }
         p {
             padding-top: 30px;
+
 
             span {
                 &:last-child {

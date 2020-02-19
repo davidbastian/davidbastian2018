@@ -8,11 +8,18 @@ body {
   font-weight: 400;
   overflow: hidden;
   user-select: none;
+  overscroll-behavior-x: none;
+  touch-action: none;
 
 }
 
 body {
   overflow: hidden;
+
+  &.no-events {
+    user-select: none;
+    pointer-events: none;
+  }
 }
 
 a {

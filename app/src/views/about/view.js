@@ -1,6 +1,18 @@
 import './style.scss';
+import {
+  TweenMax
+} from 'gsap';
+
 class AboutView {
-  setup(data) {
+  setup(data, main) {
+    this.header = document.body.querySelector('header');
+    this.main = main;
+
+    TweenMax.to(this.header, 0.5, {
+      y: 0 + '%',
+      ease: 'Power3.easeOut',
+    });
+
     const markup = /*html*/ `
       <div>
         <h2>${data.details.aboutme}</h2>
@@ -9,9 +21,15 @@ class AboutView {
         </div>
       </div>
     `;
-    return '<section id="about"><div class="about-wrap container">' + markup + '</div></section>';
+    const string = '<section id="about"><div class="about-wrap container">' + markup + '</div></section>';
+
+    this.render(string);
 
 
+  }
+
+  render(string) {
+    this.main.innerHTML = string;
   }
 
   addSocial(data) {
@@ -27,7 +45,7 @@ class AboutView {
 
       string += socialHTML + "";
 
-     
+
     }
     return string;
   }

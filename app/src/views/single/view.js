@@ -1,18 +1,9 @@
 import './style.scss';
-import {
-  TweenMax
-} from 'gsap';
+import HideHeader from '../../modules/module.hideHeader';
 
 class SingleView {
   setup(data, main) {
-    this.header = document.body.querySelector('header');
     this.main = main;
-
-    TweenMax.to(this.header, 0.5, {
-      y: 0 + '%',
-      ease: 'Power3.easeOut',
-    });
-
 
     const markup = /*html*/ `
     <div class="container">
@@ -39,37 +30,13 @@ class SingleView {
 
   }
 
-  render(string){
-    console.log(string);
+  render(string) {
     this.main.innerHTML = string;
-    this.addEvents();
+    new HideHeader({
+      el: this.main.querySelector('#single')
+    });
 
   }
-
-  addEvents() {
-    const self = this;
-    this.main.querySelector('#single').addEventListener('scroll', self.scroll.bind(this));
-
-  }
-
-  scroll(){
-    let st = this.main.querySelector('#single').scrollTop;
-    if (st > this.lastScrollTop) {
-      TweenMax.to(this.header, 0.5, {
-        y: -100 + '%',
-        ease: 'Power3.easeOut',
-      });
-    } else {
-      TweenMax.to(this.header, 0.5, {
-        y: 0 + '%',
-        ease: 'Power3.easeOut',
-      });
-
-    }
-    this.lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-
-  }
-
   setMedia(data) {
     let string = '';
 
