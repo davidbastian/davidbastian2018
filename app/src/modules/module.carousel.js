@@ -96,11 +96,6 @@ class Carousel {
 
     down(e) {
 
-        console.log(e);
-
-      
-
-
         if (e.which === 1) {
 
             if (this.direction === "landscape") {
