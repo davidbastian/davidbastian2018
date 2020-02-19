@@ -1,5 +1,6 @@
 import './style.scss';
 import HideHeader from '../../modules/module.hideHeader';
+import Carousel from '../../modules/module.carousel';
 
 class SingleView {
   setup(data, main) {
@@ -31,10 +32,26 @@ class SingleView {
   }
 
   render(string) {
+    const self = this;
+    
     this.main.innerHTML = string;
     new HideHeader({
       el: this.main.querySelector('#single')
     });
+
+    this.carousel = new Carousel({
+      container: document.body,
+      wrap: self.main.querySelector('#single'),
+      el: self.main.querySelector('.single-media-inner'),
+      pos: 0,
+      ease: 0.05,
+      direction: "portait",
+      delta: 100,
+      zoom:1,
+    });
+
+    this.carousel.init();
+
 
   }
   setMedia(data) {

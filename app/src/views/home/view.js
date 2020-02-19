@@ -36,24 +36,19 @@ class HomeView {
 
     this.carousel = new Carousel({
       container: document.body,
-      wrap:self.main.querySelector('#home'),
-      el:self.main.querySelector('.home-wrap'),
+      wrap: self.main.querySelector('#home'),
+      el: self.main.querySelector('.home-wrap'),
       pos: 0,
       ease: 0.05,
       direction: "landscape",
-      delta: 100
+      delta: 100,
+      zoom:0.98
     });
-
 
     this.carousel.init();
 
-    this.addEvents();
-
   }
 
-  addEvents(){
-
-  }
 
 }
 

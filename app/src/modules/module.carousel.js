@@ -19,6 +19,7 @@ class Carousel {
         this.direction = opt.direction;
         this.delta = opt.delta;
         this.percent;
+        this.zoom = opt.zoom;
         this.mX = 0;
         this.valR = 0;
         this.valL = 0;
@@ -95,6 +96,7 @@ class Carousel {
     }
 
     down(e) {
+        const self = this;
 
         if (e.which === 1) {
 
@@ -108,7 +110,7 @@ class Carousel {
     
     
             TweenMax.to(this.wrap, 1, {
-                scale: 0.96,
+                scale: self.zoom,
                 ease: 'Power3.easeOut'
             });
 
