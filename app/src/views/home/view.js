@@ -4,6 +4,9 @@ import {
 import './style.scss';
 import HideHeader from '../../modules/module.hideHeader';
 import Carousel from '../../modules/module.carousel';
+import {
+  checkDevice
+} from '../../../common/utils/utils';
 
 class HomeView {
   setup(data, main) {
@@ -34,18 +37,21 @@ class HomeView {
       el: this.main.querySelector('#home')
     });
 
-    this.carousel = new Carousel({
-      container: document.body,
-      wrap: self.main.querySelector('#home'),
-      el: self.main.querySelector('.home-wrap'),
-      pos: 0,
-      ease: 0.05,
-      direction: "landscape",
-      delta: 100,
-      zoom:0.98
-    });
+    if (checkDevice() === 'desktop') {
 
-    this.carousel.init();
+      this.carousel = new Carousel({
+        container: document.body,
+        wrap: self.main.querySelector('#home'),
+        el: self.main.querySelector('.home-wrap'),
+        pos: 0,
+        ease: 0.05,
+        direction: "landscape",
+        delta: 100,
+        zoom: 0.98
+      });
+
+      this.carousel.init();
+    }
 
   }
 
