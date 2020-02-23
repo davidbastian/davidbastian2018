@@ -51,6 +51,7 @@ class HomeView {
       });
 
       this.carousel.init();
+      this.carousel.addDot();
     }
 
   }

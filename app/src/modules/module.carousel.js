@@ -18,7 +18,7 @@ class Carousel {
         this.moving = false;
         this.direction = opt.direction;
         this.delta = opt.delta;
-        this.percent;
+        this.percent = opt.percent;
         this.zoom = opt.zoom;
         this.mX = 0;
         this.valR = 0;
@@ -66,10 +66,6 @@ class Carousel {
     scroll(e) {
         const self = this;
 
-
-     //   if (App.model.scrollStatus) {
-
-
             if (!this.moving) {
 
                 if (e.deltaY < 0) {
@@ -90,8 +86,6 @@ class Carousel {
 
 
             }
-
-      //  }
 
     }
 
@@ -216,10 +210,21 @@ class Carousel {
         }
     }
 
+    addDot(){
+        let markup = /*html*/`
+        <div class ="dot">
+            <div class="dot-inner"></div>
+            <div class="dot-instructions"></div>
+        </div>
+        `;
+        markup = document.createRange().createContextualFragment(markup);
+        document.body.querySelector('main').appendChild(markup);
+    }
+
     reset(){
         this.pos = 0;
         this.target = 0;
-
+        this.percent = 0;
     }
 
 
