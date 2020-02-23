@@ -6,22 +6,22 @@
     "aboutme": "<span>I am Designer & Web Developer from Viña del Mar (Chile),</span> <span>but I am based in Amsterdam.</span><span><br> I love to enjoy Good Art, Conceptualize, Design <br>& Develop simple and clean Interfaces.</span>",
     "social": [{
         "title": "Twitter",
-        "url":"https://twitter.com/davidbastian_cl"
+        "url": "https://twitter.com/davidbastian_cl"
 
       },
       {
         "title": "Instagram",
-        "url":"https://www.instagram.com/davidbastian"
+        "url": "https://www.instagram.com/davidbastian"
 
       },
       {
         "title": "LinkedIn",
-        "url":"https://cl.linkedin.com/in/davidbastianf"
+        "url": "https://cl.linkedin.com/in/davidbastianf"
 
       },
       {
         "title": "CV",
-        "url":"https://davidbastian.red/common/doc/davidbastiancv.pdf"
+        "url": "https://davidbastian.red/common/doc/davidbastiancv.pdf"
 
       }
     ]
@@ -165,7 +165,7 @@
       }]
     },
 
-  
+
 
     {
       "slug": "Think with Google 2019",
@@ -252,8 +252,7 @@
           }]
         }
       ]
-    }
-    , {
+    }, {
       "slug": "Braun AR Experience",
       "title": "<small>AR Experience</small><div><span>Braun<span></div>",
       "role": "Design, 3D Renders.",
@@ -280,10 +279,10 @@
             "src": "common/media/051.jpg"
           }]
         }
-       
+
       ]
     },
-  {
+    {
       "slug": "Google Washoku, Umami Land Tickets",
       "title": "<small>Umami Land</small><div><span>Google Washoku<span></div>",
       "role": "Illustration, Design.",
@@ -291,7 +290,7 @@
       "year": "2019",
       "agency": "Mediamonks",
       "img": "common/media/065.jpg",
-      "media": [ {
+      "media": [{
           "type": "image",
 
           "links": [{
@@ -316,12 +315,12 @@
             "src": "common/media/069.jpg"
           }]
         }
-       
+
       ]
     },
 
 
-     {
+    {
       "slug": "Redbull, Tokyo 2020 Olympics Blackout Data",
       "title": "<small>Tokyo 2020 Olympics</small><div><span>Redbull<span></div>",
       "role": "Interfaces Design, 3D Renders & Animation.",
@@ -330,7 +329,7 @@
       "agency": "Mediamonks",
       "img": "common/media/052.jpg",
       "media": [
-        
+
         {
           "type": "image",
 
@@ -349,17 +348,17 @@
           "links": [{
             "src": "common/media/054.jpg"
           }]
-        },{
+        }, {
           "type": "video",
 
           "links": [{
             "src": "common/media/053.mp4"
           }]
         }
-       
+
       ]
     },
-    
+
 
     {
       "slug": "Adidas ZX Flux Phase 01",
@@ -410,7 +409,7 @@
       "agency": "Mediamonks",
       "img": "common/media/055.jpg",
       "media": [
-        
+
         {
           "type": "image",
 
@@ -429,13 +428,13 @@
           "links": [{
             "src": "common/media/057.jpg"
           }]
-        },{
+        }, {
           "type": "image",
 
           "links": [{
             "src": "common/media/056.gif"
           }]
-        },{
+        }, {
           "type": "image",
 
           "links": [{
@@ -460,7 +459,7 @@
             "src": "common/media/058.gif"
           }]
         }
-       
+
       ]
     },
     {
@@ -471,7 +470,7 @@
       "year": "2019",
       "agency": "Mediamonks",
       "img": "common/media/079.jpg",
-      "media": [ {
+      "media": [{
         "type": "image",
 
         "links": [{
@@ -515,7 +514,7 @@
         }]
       }]
     },
-    
+
     {
       "slug": "Davies Landscape Architects, Phase 01",
       "title": "<small>Phase 01</small><div><span>Davies Landscape</span></div>",
@@ -631,7 +630,41 @@
       ]
     },
 
-  
+    {
+      "slug": "Museum Beeld en Geluid - Interactions",
+      "title": "<small>Museum</small><div><span>Beeld en Geluid<span></div>",
+      "role": "Design, Art Direction, 3D & Animation.",
+      "description": "I worked for some friends on the design, front-end, and back-end development of their wedding photography website. It is still a work in progress, however please feel free to ask for more info on the project or about development direction.",
+      "year": "2018",
+      "agency": "Mediamonks",
+      "img": "common/media/0122.jpg",
+      "media": [{
+          "type": "video",
+
+          "links": [{
+            "src": "common/media/062.mp4"
+          }]
+        },
+
+
+        {
+          "type": "video",
+
+          "links": [{
+            "src": "common/media/080.mp4"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/0123.jpg"
+          }]
+        }
+      ]
+    },
+
+
     {
       "slug": "Davies Landscape Architects, Phase 02",
       "title": "<small>Phase 02</small><div><span>Davies Landscape</span></div>",
@@ -674,7 +707,7 @@
 
 
 
-    
+
 
 
     {
@@ -817,7 +850,7 @@
       "agency": "Mediamonks",
       "img": "common/media/0113.jpg",
       "media": [
-        
+
         {
           "type": "image",
 
@@ -830,7 +863,7 @@
           "links": [{
             "src": "common/media/0117.jpg"
           }]
-        },{
+        }, {
           "type": "image",
 
           "links": [{
@@ -879,7 +912,7 @@
             "src": "common/media/0121.jpg"
           }]
         }
-       
+
       ]
     },
 
@@ -891,7 +924,7 @@
       "year": "2019",
       "agency": "Mediamonks",
       "img": "common/media/082b.jpg",
-      "media": [ {
+      "media": [{
         "type": "image",
 
         "links": [{
@@ -961,11 +994,11 @@
           }]
         }
       ]
-    } ,
+    },
 
 
 
-  
+
 
 
     {
@@ -1024,7 +1057,7 @@
       "agency": "Mediamonks",
       "link": "https://thefwa.com/cases/tales-by-ai",
       "img": "common/media/090.jpg",
-      "media": [ {
+      "media": [{
         "type": "image",
 
         "links": [{
@@ -1062,8 +1095,8 @@
         }]
       }]
     },
-    
- 
+
+
     {
       "slug": "Christian Andrada",
       "title": "<small>Speaker, Couch & Consultant</small><div><span>Christian Andrada</span></div>",
@@ -1121,7 +1154,7 @@
       }]
     },
 
-    
+
     {
       "slug": "Google Lens - Paris Trip",
       "title": "<small>Google Lens</small><div><span>Paris Trip</span></div>",
@@ -1136,19 +1169,19 @@
         "links": [{
           "src": "common/media/062.gif"
         }]
-      },{
+      }, {
         "type": "image",
 
         "links": [{
           "src": "common/media/0103.jpg"
         }]
-      },{
+      }, {
         "type": "image",
 
         "links": [{
           "src": "common/media/0104.jpg"
         }]
-      },{
+      }, {
         "type": "image",
 
         "links": [{

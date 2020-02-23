@@ -19,16 +19,17 @@ class Controller {
   }
 
   updateUrl(data) {
+    ga('send', 'pageview', location.href);
     const self = this;
     const params = location.hash.slice(1) || "/";
     document.querySelector('main').innerHTML = "";
     if (('/' === params)) {
-      history.pushState({}, null, '#/');
+     // history.pushState({}, null, '#/');
       this.view.updateView('home',data); 
       
       
     } else if (('/about' === params) || ('/about/' === params)) {
-      history.pushState({}, null, '#/about');
+    //  history.pushState({}, null, '#/about');
       this.view.updateView('about',data);
 
       
