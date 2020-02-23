@@ -43,7 +43,7 @@ class HomeView {
         container: document.body,
         wrap: self.main.querySelector('#home'),
         el: self.main.querySelector('.home-wrap'),
-        pos: 0,
+        percent:20,
         ease: 0.05,
         direction: "landscape",
         delta: 100,
@@ -51,7 +51,6 @@ class HomeView {
       });
 
       this.carousel.init();
-      this.carousel.addDot();
     }
 
   }

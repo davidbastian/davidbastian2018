@@ -11,8 +11,6 @@ class Carousel {
     constructor(opt) {
         this.el = opt.el;
         this.wrap = opt.wrap;
-        this.pos = opt.pos;
-        this.target = opt.pos;
         this.ease = opt.ease;
         this.container = opt.container;
         this.moving = false;
@@ -23,13 +21,15 @@ class Carousel {
         this.mX = 0;
         this.valR = 0;
         this.valL = 0;
+        this.pos;
+        this.target;
         this.timeout;
         this.instance = new VirtualScroll({
             touchMultiplier: 6,
-            passive:true
+            passive: true
         });
 
-       
+
     }
 
     init() {
@@ -44,6 +44,7 @@ class Carousel {
     start() {
         if (this.direction === "landscape") {
             this.area = this.el.offsetWidth - this.wrap.offsetWidth;
+            this.pos = this.target = -this.percent * (this.el.offsetWidth) / 10;
         } else {
             this.area = this.el.offsetHeight - this.wrap.offsetHeight;
         }
@@ -55,9 +56,15 @@ class Carousel {
 
     addEvents() {
         const self = this;
-        window.addEventListener("mousemove", self.move.bind(this), {passive: true});
-        this.container.addEventListener("mousedown", self.down.bind(this), {passive: true});
-        window.addEventListener("mouseup", self.up.bind(this), {passive: true});
+        window.addEventListener("mousemove", self.move.bind(this), {
+            passive: true
+        });
+        this.container.addEventListener("mousedown", self.down.bind(this), {
+            passive: true
+        });
+        window.addEventListener("mouseup", self.up.bind(this), {
+            passive: true
+        });
         this.instance.on(self.scroll.bind(this));
 
 
@@ -66,26 +73,26 @@ class Carousel {
     scroll(e) {
         const self = this;
 
-            if (!this.moving) {
+        if (!this.moving) {
 
-                if (e.deltaY < 0) {
-                    self.target * 1;
-                } else {
-                    self.target * 1;
-                }
-
-                if (e.deltaX < 0) {
-                    self.target * 1;
-                } else {
-                    self.target * 1;
-                }
-
-                self.target += e.deltaY;
-                self.target += e.deltaX;
-                self.target = constrain(self.target, -self.area, 0);
-
-
+            if (e.deltaY < 0) {
+                self.target * 1;
+            } else {
+                self.target * 1;
             }
+
+            if (e.deltaX < 0) {
+                self.target * 1;
+            } else {
+                self.target * 1;
+            }
+
+            self.target += e.deltaY;
+            self.target += e.deltaX;
+            self.target = constrain(self.target, -self.area, 0);
+
+
+        }
 
     }
 
@@ -101,8 +108,8 @@ class Carousel {
             }
             this.moving = true;
             this.mX = 0;
-    
-    
+
+
             TweenMax.to(this.wrap, 1, {
                 scale: self.zoom,
                 ease: 'Power3.easeOut'
@@ -110,7 +117,7 @@ class Carousel {
 
         }
 
-       
+
 
     }
 
@@ -208,10 +215,11 @@ class Carousel {
                 "translateY(" + this.percent + "%) translateX(" + 0 + "%) translateZ(0)";
 
         }
+
     }
 
-    addDot(){
-        let markup = /*html*/`
+    addDot() {
+        let markup = /*html*/ `
         <div class ="dot">
             <div class="dot-inner"></div>
             <div class="dot-instructions"></div>
@@ -222,13 +230,8 @@ class Carousel {
     }
 
     reset(){
-        this.pos = 0;
-        this.target = 0;
-        this.percent = 0;
+        
     }
-
-
-
 
 }
 
