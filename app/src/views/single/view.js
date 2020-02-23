@@ -48,7 +48,7 @@ class SingleView {
         container: document.body,
         wrap: self.main.querySelector('#single'),
         el: self.main.querySelector('.single-media-inner'),
-        pos: 0,
+        percent:0,
         ease: 0.05,
         direction: "portait",
         delta: 100,

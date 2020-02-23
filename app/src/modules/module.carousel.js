@@ -37,18 +37,27 @@ class Carousel {
     }
 
     setup() {
-        this.start();
+        const self = this;
+        
+        setTimeout(function(){ 
+
+            self.start();
+
+        }, 1000);
+       
+    
 
     }
 
     start() {
         if (this.direction === "landscape") {
+            this.pos = this.target = -this.percent * (this.el.offsetWidth) / 100;
             this.area = this.el.offsetWidth - this.wrap.offsetWidth;
-            this.pos = this.target = -this.percent * (this.el.offsetWidth) / 10;
+          
         } else {
-            this.area = this.el.offsetHeight - this.wrap.offsetHeight;
+            this.pos = this.target = -this.percent * (this.el.offsetHeight) / 100;
+            this.area = this.el.offsetHeight - this.wrap.offsetHeight;   
         }
-
 
         this.addEvents();
         this.anima();
@@ -230,7 +239,7 @@ class Carousel {
     }
 
     reset(){
-        
+
     }
 
 }
