@@ -28,6 +28,8 @@ class Carousel {
             touchMultiplier: 6,
             passive: true
         });
+        this.type = opt.type;
+
 
 
     }
@@ -43,7 +45,7 @@ class Carousel {
 
             self.start();
 
-        }, 1000);
+        }, 100);
        
     
 
@@ -224,6 +226,12 @@ class Carousel {
                 "translateY(" + this.percent + "%) translateX(" + 0 + "%) translateZ(0)";
 
         }
+
+        window.App.setPercent(self.type,-this.percent);
+
+        console.log(window.App.getPercent(self.type));
+
+
 
     }
 

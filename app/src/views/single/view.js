@@ -6,8 +6,9 @@ import {
 } from '../../../common/utils/utils';
 
 class SingleView {
-  setup(data, main) {
+  setup(data, main,type) {
     this.main = main;
+    this.type = type;
 
     const markup = /*html*/ `
     <div class="container">
@@ -48,11 +49,12 @@ class SingleView {
         container: document.body,
         wrap: self.main.querySelector('#single'),
         el: self.main.querySelector('.single-media-inner'),
-        percent:0,
+        percent:window.App.getPercent(self.type),
         ease: 0.05,
         direction: "portait",
         delta: 100,
         zoom: 1,
+        type:self.type
       });
 
       this.carousel.init();

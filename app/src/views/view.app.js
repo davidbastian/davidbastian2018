@@ -31,11 +31,11 @@ class View {
     updateView(type, data) {
         this.main = this.body.querySelector('main');
         if (type === 'home') {
-             new HomeView().setup(data,this.main);          
+            new HomeView().setup(data, this.main,type);
         } else if (type === 'single') {
-            new SingleView().setup(data,this.main);
+            new SingleView().setup(data, this.main,type);
         } else if (type === 'about') {
-            new AboutView().setup(data,this.main);
+            new AboutView().setup(data, this.main);
         }
     }
 

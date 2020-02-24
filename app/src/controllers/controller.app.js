@@ -18,8 +18,18 @@ class Controller {
     window.addEventListener("hashchange", this.updateUrl.bind(this, data));
   }
 
+  getPercent(type){
+    return this.model.carousel[type].percent;
+  }
+
+  setPercent(type,val){
+    this.model.carousel[type].percent = val;
+
+  }
+
   updateUrl(data) {
     ga('send', 'pageview', location.href);
+    
     const self = this;
     const params = location.hash.slice(1) || "/";
     document.querySelector('main').innerHTML = "";
@@ -38,7 +48,7 @@ class Controller {
         const project = data.projects[i];
         const slug = toSlug(project.slug);
         if ('/'+slug === params) {
-          this.view.updateView('single',project);
+          this.view.updateView('single',project,self);
         }
       }
     }

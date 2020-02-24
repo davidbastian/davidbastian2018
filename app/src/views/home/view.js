@@ -9,8 +9,10 @@ import {
 } from '../../../common/utils/utils';
 
 class HomeView {
-  setup(data, main) {
+  setup(data, main,type) {
     this.main = main;
+    this.type = type;
+
     let string = '';
     for (let i = 0; i < data.projects.length; i++) {
       let project = data.projects[i];
@@ -31,29 +33,34 @@ class HomeView {
 
   render(string) {
     const self = this;
-
     this.main.innerHTML = string;
     new HideHeader({
       el: this.main.querySelector('#home')
     });
 
-    if (checkDevice() === 'desktop') {
+  
 
+    if (checkDevice() === 'desktop') {
       this.carousel = new Carousel({
         container: document.body,
         wrap: self.main.querySelector('#home'),
         el: self.main.querySelector('.home-wrap'),
-        percent:20,
         ease: 0.05,
         direction: "landscape",
+        percent:window.App.getPercent(self.type),
         delta: 100,
-        zoom: 0.98
+        zoom: 0.98,
+        type:self.type
       });
 
       this.carousel.init();
     }
 
+
+
   }
+
+
 
 
 }
