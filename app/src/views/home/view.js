@@ -101,7 +101,7 @@ class HomeView {
             <img src="${project.img}" alt ="${project.slug}" />
             
             <p>
-                 ${project.slug} — ${project.role}
+                 ${project.slug}  <span>${project.role}</span>
             </p>
         </a>
         

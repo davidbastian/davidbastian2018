@@ -87,6 +87,11 @@ header {
   top: 0;
   left: 0;
   width: 100%;
+  @media screen and (max-width: 767px) {
+    background: $color02;
+
+    border-bottom: 1px solid #cacaca;
+  }
   .container {
     //height: 10vh;
     display: flex;
@@ -94,9 +99,7 @@ header {
     align-items: center;
     position: relative;
     @media screen and (max-width: 767px) {
-      background: $color02;
       height: 10vh;
-      border-bottom: 1px solid #cacaca;
     }
   }
   nav {
@@ -200,6 +203,7 @@ footer {
   height: 80px;
   position: fixed;
   top: 40%;
+
   left: 0;
   z-index: 3;
   display: flex;

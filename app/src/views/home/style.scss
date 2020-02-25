@@ -4,6 +4,8 @@
     display: flex;
     padding-left: 5vw;
     padding-right: 5vw;
+
+  
     @media screen and (max-width: 1200px) {
       padding-left: 60px;
       padding-right: 60px;
@@ -19,7 +21,7 @@
     a {
       height: 53vh; // min-height: 500px;
       @media screen and (max-width: 767px) {
-        height: 50vh;
+        height: 45vh;
       }
       margin-right: 10px;
       display: block;
@@ -27,9 +29,15 @@
         margin-right: 0;
       }
       p {
-        padding-top: 40px;
+        padding-top: 30px;
+        span {
+          color:#afafaf;
+          display: block;
+          margin-left: 0px;
+          margin-top: 7px;
+        }
         @media screen and (max-width: 767px) {
-          line-height: 1.6em;
+          line-height: 1.2em;
         }
       }
       img {
