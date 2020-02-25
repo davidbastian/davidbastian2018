@@ -1,4 +1,4 @@
-import Data from '../../common/data/data-hide';
+import Data from '../../common/data/data';
 
 import Config from '../../config';
 

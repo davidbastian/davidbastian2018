@@ -18,7 +18,7 @@
       }
     ]
   },
-  "projects": [{
+  "projects": [ {
       "slug": "Resn FWA Club 100",
       "title": "<small>Resn Club 100</small><div><span>FWA<span></div>",
       "role": "Interaction Design & Front End Development.",
@@ -127,7 +127,7 @@
       "description": "I worked on the art & brand direction for the `Think with Google 2019` Conference, making two diferent directions, creating an smart and fun way to apply the concept `Think` one direction was using a 2D and a Flat layer system, using basic shapes, and the other a 3D Optical Illusion using complexity and hidden messages in a orthographic projection.",
       "year": "2018",
       "agency": "Mediamonks",
-      "img": "common/media/033.jpg",
+      "img": "common/media/032.gif",
       "media": [{
           "type": "image",
 
@@ -326,7 +326,7 @@
       "description": "At Mediamonks we worked to create the new Logotype for Eurovision 2020, my role was focused in the brand design and its application in different platforms. From the first idea until the final result (making severals options & concepts during the process). I develop a modular logo that include iconic elements relative to the event, such as eye(vision) & mouth for eurovision(voice), the rotterdam erasmus bridge for the city, the water, from the canals, and light from the new talents tat the event give to the world at the end. we didnt get the pitch but we were in the 3 finalists.",
       "year": "2019",
       "agency": "Mediamonks",
-      "img": "common/media/055.jpg",
+      "img": "common/media/055.gif",
       "media": [
         
         {
@@ -484,7 +484,7 @@
       "description": "At Mediamonks we create an app to suggest new trip directions relative to the object that you scan with your camera. using the Google lens photorecognition API. My role for this project was create the interfaces design.",
       "year": "2018",
       "agency": "Mediamonks",
-      "img": "common/media/061.jpg",
+      "img": "common/media/067.gif",
       "media": [{
           "type": "image",
 
@@ -646,7 +646,7 @@
       "title": "<small>Private for Data</small><div><span>IBM Cloud</span></div>",
       "role": "Interfaces Design, Illustration.",
       "description": "The idea for this project was create stories shaped by data, showing how real (or simulated) businesses can be use, with insights that help the audience to find new bussiness solutions. My role was create art direction and look and feel interfaces for the first phase.",
-      "img": "common/media/093.jpg",
+      "img": "common/media/093.gif",
       "year": "2019",
       "agency": "Mediamonks",
       "media": [{
@@ -725,7 +725,6 @@
         }
       ]
     },
-
 
 
     {
@@ -868,7 +867,7 @@
       "year": "2019",
       "agency": "Mediamonks",
       "link": "https://thefwa.com/cases/tales-by-ai",
-      "img": "common/media/090.jpg",
+      "img": "common/media/090.gif",
       "media": [ {
         "type": "image",
 

@@ -9,7 +9,7 @@ import transitionModule from "../../modules/module.transition";
 import {
   TweenMax
 } from "gsap";
-import enableInlineVideo from 'iphone-inline-video';
+
 
 import Config from '../../../config';
 

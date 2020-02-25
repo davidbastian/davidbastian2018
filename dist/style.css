@@ -424,7 +424,7 @@ footer {
       display: block; }
       @media screen and (max-width: 767px) {
         #home .home-wrap a {
-          height: 45vh; } }
+          height: 43vh; } }
       #home .home-wrap a:last-child {
         margin-right: 0; }
       #home .home-wrap a p {
@@ -436,7 +436,9 @@ footer {
           margin-top: 7px; }
         @media screen and (max-width: 767px) {
           #home .home-wrap a p {
-            line-height: 1.2em; } }
+            line-height: 1.1em; }
+            #home .home-wrap a p span {
+              margin-top: 5px; } }
       #home .home-wrap a img {
         display: block;
         height: 100%; }
