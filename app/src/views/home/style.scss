@@ -21,7 +21,7 @@
     a {
       height: 53vh; // min-height: 500px;
       @media screen and (max-width: 767px) {
-        height: 45vh;
+        height: 43vh;
       }
       margin-right: 10px;
       display: block;
@@ -37,7 +37,10 @@
           margin-top: 7px;
         }
         @media screen and (max-width: 767px) {
-          line-height: 1.2em;
+          line-height: 1.1em;
+          span{
+            margin-top: 5px;
+          }
         }
       }
       img {

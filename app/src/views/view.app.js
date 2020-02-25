@@ -7,7 +7,7 @@ class AppView {
 
         if (Config.checkDevice() === 'mobile') {
             let viewport = document.querySelector("meta[name=viewport]");
-            viewport.setAttribute('content', 'width=device-width, initial-scale=0.8, maximum-scale=0.8, user-scalable=0');
+            viewport.setAttribute('content', 'width=device-width, initial-scale=0.9, maximum-scale=0.9, user-scalable=0');
         }
 
 
