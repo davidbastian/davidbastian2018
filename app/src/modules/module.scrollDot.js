@@ -96,7 +96,10 @@ class ScrollDotModule {
     self.scrollArea = (directionEl - directionWrap) * 100 / directionEl;
 
     self.instance = new VirtualScroll({
-      el: this.scrollWrap
+      el: this.scrollWrap,
+      touchMultiplier: 6,
+      firefoxMultiplier: 35,
+      passive: true
     });
   }
 
