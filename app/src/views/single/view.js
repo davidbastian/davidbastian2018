@@ -83,7 +83,7 @@ class SingleView {
     this.scroll = new ScrollModule({
       el: self.el.querySelector(".single-media-inner"),
       wrap: window,
-      ease: 0.06,
+      ease: 0.05,
       delta: "y",
       direction: "y",
       speed:6,

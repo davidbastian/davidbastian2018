@@ -1,5 +1,5 @@
 import App from '../../index';
-import Data from '../../common/data/data-hide';
+import Data from '../../common/data/data';
 import {
     TweenMax
 } from 'gsap';

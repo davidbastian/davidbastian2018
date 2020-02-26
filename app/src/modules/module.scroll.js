@@ -1,5 +1,7 @@
 import VirtualScroll from "virtual-scroll";
-import { constrain } from "../../common/utils/utils";
+import {
+  constrain
+} from "../../common/utils/utils";
 
 class ScrollModule {
   constructor(opt) {
@@ -47,9 +49,12 @@ class ScrollModule {
 
     self.instance = new VirtualScroll({
       el: this.scrollWrap,
-      touchMultiplier: 7,
-      firefoxMultiplier:35,
+      touchMultiplier: 6,
+      firefoxMultiplier: 35,
+      passive: true
     });
+
+
   }
 
   addEvents() {

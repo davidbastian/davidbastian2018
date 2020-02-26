@@ -77,7 +77,7 @@ class HomeView {
     this.scroll = new ScrollDotModule({
       el: self.el.querySelector(".home-wrap"),
       wrap: window,
-      ease: 0.06,
+      ease: 0.05,
       delta: d,
       direction: "x",
       view: self,

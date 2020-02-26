@@ -715,6 +715,7 @@
         }
       ]
     },
+    
     {
       "slug": "IBM Cloud Private for Data",
       "title": "<small>Private for Data</small><div><span>IBM Cloud</span></div>",
@@ -1192,6 +1193,53 @@
     },
 
     {
+      "slug": "Gallipoli The Scale of War",
+      "title": "<small>Exhibition Website</small><div><span>The Scale of War<span></div>",
+      "role": "Interaction Design & Front End Development.",
+      "description": "Whilst working at Designworks we were enlisted by Te Papa to work on this exhibition website. My role was to create the wireframes, front-end development, and interaction design. I used GSAP for the animations and angularJS for the implementation. We were awarded with a Gold Pin – best Awards NZ for this site.",
+      "link": "http://davidbastian.cl/proyectos/gallipoli/#/scrubber",
+      "year": "2015",
+      "agency": "Designworks",
+      "img": "common/media/0122.jpg",
+      "media": [{
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/009.jpg"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/009a.jpg"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/009b.jpg"
+          }]
+        },
+        {
+          "type": "video",
+
+          "links": [{
+            "src": "common/media/009.mp4"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/009c.jpg"
+          }]
+        }
+      ]
+    },
+
+    {
       "slug": "Super Diversity Centre",
       "title": "<small>Centre</small> <div><span>Super Diversity</span></div>",
       "role": "Interaction Design & Front End Development.",
@@ -1277,6 +1325,8 @@
         }
       ]
     },
+
+
 
 
     {
