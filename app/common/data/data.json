@@ -625,31 +625,31 @@
 
     {
       "slug": "Interactions - Museum Beeld en Geluid",
-      "title": "<small>Interactions</small><div><span>Museum Beeld en Geluid<span></div>",
+      "title": "<small>Interactions Museum</small><div><span>Beeld en Geluid<span></div>",
       "role": "Design, Art Direction, Animation.",
-      "description": "I worked for some friends on the design, front-end, and back-end development of their wedding photography website. It is still a work in progress, however please feel free to ask for more info on the project or about development direction.",
+      "description": "Series of interactions and user interfaces made for Beeld en Geluid Museum, Developing Ideas for face recognition login with a futuristic touch. I Design and Animate severals interactions for mobile and stationary platforms.",
       "year": "2018",
       "agency": "Mediamonks",
       "img": "common/media/095.gif",
       "media": [{
-          "type": "image",
+          "type": "video",
 
           "links": [{
-            "src": "common/media/030.jpg"
+            "src": "common/media/062.mp4"
           }]
         },
         {
           "type": "image",
 
           "links": [{
-            "src": "common/media/030a.jpg"
+            "src": "common/media/0123.jpg"
           }]
         },
         {
-          "type": "image",
+          "type": "video",
 
           "links": [{
-            "src": "common/media/030b.jpg"
+            "src": "common/media/055.mp4"
           }]
         }
       ]
