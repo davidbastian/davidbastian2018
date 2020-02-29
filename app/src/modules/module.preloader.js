@@ -29,12 +29,6 @@ class Preloader {
                 const mediaLink = project.img;
                 mediaArray.push(mediaLink);
 
-                if (i < 4) {
-                    for (let m = 0; m < project.media.length; m++) {
-                        const media = project.media[m].links[0].src;
-                        mediaArray.push(media);
-                    }
-                }
             }
 
             for (let e = 0; e < mediaArray.length; e++) {
@@ -63,46 +57,6 @@ class Preloader {
 
             this.size = mediaArray.length;
         }
-    }
-
-    preload(link) {
-        let xhr = new XMLHttpRequest();
-        xhr.open('get', link);
-
-        xhr.send();
-    }
-
-
-    preloadSingle() {
-        const self = this;
-        const mediaArray = [];
-
-
-        for (let i = 0; i < Data.projects.length; i++) {
-            const project = Data.projects[i];
-            for (let m = 0; m < project.media.length; m++) {
-                const media = project.media[m];
-                mediaArray.push(media);
-            }
-        }
-
-        for (let e = 0; e < mediaArray.length; e++) {
-            const mediaLink = mediaArray[e].links[0].src;
-            const mediaType = mediaArray[e].type;
-            self.preload(mediaLink);
-        }
-
-    }
-
-    preloadHome() {
-        const self = this;
-
-        for (let i = 0; i < Data.projects.length; i++) {
-            const project = Data.projects[i];
-            const mediaLink = project.img;
-            self.preload(mediaLink);
-        }
-
     }
 
     preloadMedia(link, type) {
@@ -141,8 +95,6 @@ class Preloader {
                             App.router.addEvents();
                             App.router.updateUrl();
                             self.firstPreload = true;
-
-                           
 
                             TweenMax.to(document.body.querySelectorAll('.preloader'), 1, {
                                 y: -50,
