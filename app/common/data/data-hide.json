@@ -18,7 +18,7 @@
       }
     ]
   },
-  "projects": [ {
+  "projects": [{
       "slug": "Resn FWA Club 100",
       "title": "<small>Resn Club 100</small><div><span>FWA<span></div>",
       "role": "Interaction Design & Front End Development.",
@@ -236,8 +236,7 @@
        
       ]
     },
-
-
+ 
 
      {
       "slug": "Redbull, Tokyo 2020 Olympics Blackout Data",
@@ -549,6 +548,52 @@
       ]
     },
 
+    {
+      "slug": "Interactions - Museum Beeld en Geluid",
+      "title": "<small>Interactions Museum</small><div><span>Beeld en Geluid<span></div>",
+      "role": "Design, Art Direction, 3D, Animation.",
+      "description": "Series of interactions and user interfaces made for Beeld en Geluid Museum, Developing Ideas for face recognition login with a futuristic touch. I design and animate severals interactions for mobile and stationary platforms.",
+      "year": "2018",
+      "agency": "Mediamonks",
+      "img": "common/media/095.gif",
+      "media": [{
+          "type": "video",
+
+          "links": [{
+            "src": "common/media/062.mp4"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/0123.jpg"
+          }]
+        },
+        {
+          "type": "video",
+
+          "links": [{
+            "src": "common/media/056.mp4"
+          }]
+        },
+        {
+          "type": "video",
+
+          "links": [{
+            "src": "common/media/055.mp4"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/062.png"
+          }]
+        }
+      ]
+    },
+
   
     {
       "slug": "Davies Landscape Architects, Phase 02",
@@ -641,6 +686,7 @@
         }
       ]
     },
+    
     {
       "slug": "IBM Cloud Private for Data",
       "title": "<small>Private for Data</small><div><span>IBM Cloud</span></div>",
@@ -734,7 +780,7 @@
       "description": "I worked in the Interfaces Design for an Application to take care of your plants, This will display a calendar, wiki information, step by step tips & agenda. This app will be called by Google Lens when the user scan a real plant or a photography.",
       "year": "2019",
       "agency": "Mediamonks",
-      "img": "common/media/082b.jpg",
+      "img": "common/media/097.gif",
       "media": [ {
         "type": "image",
 
@@ -973,7 +1019,7 @@
       "description": "I worked in the Interfaces Design for an Application to plan your next trip to paris, This will display a turist places, 3D information, interactive timelapses & maps. This app will be called by Google Lens when the user scan a real plant or a photography.",
       "year": "2018",
       "agency": "Mediamonks",
-      "img": "common/media/0102.jpg",
+      "img": "common/media/094.gif",
       "media": [{
         "type": "image",
 
@@ -1038,6 +1084,45 @@
 
           "links": [{
             "src": "common/media/004.mp4"
+          }]
+        }
+      ]
+    },
+
+    {
+      "slug": "Photo & Interest App - Museum Beeld en Geluid",
+      "title": "<small>Photo & Interest App</small><div><span>Beeld en Geluid<span></div>",
+      "role": "Interaction Design, Animation.",
+      "description": "Series of interactions and user interfaces made for Beeld en Geluid Museum, Developing Ideas for a Photo & Media Applicatiom focused in the people interest. I design and animate severals interactions for app & web platforms.",
+      "year": "2018",
+      "agency": "Mediamonks",
+      "img": "common/media/096.gif",
+      "media": [{
+          "type": "video",
+
+          "links": [{
+            "src": "common/media/064.mp4"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/0124.jpg"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/0125.jpg"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/0126.jpg"
           }]
         }
       ]
@@ -1129,6 +1214,8 @@
         }
       ]
     },
+
+
 
 
     {
