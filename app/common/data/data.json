@@ -626,8 +626,8 @@
     {
       "slug": "Interactions - Museum Beeld en Geluid",
       "title": "<small>Interactions Museum</small><div><span>Beeld en Geluid<span></div>",
-      "role": "Design, Art Direction, Animation.",
-      "description": "Series of interactions and user interfaces made for Beeld en Geluid Museum, Developing Ideas for face recognition login with a futuristic touch. I Design and Animate severals interactions for mobile and stationary platforms.",
+      "role": "Design, Art Direction, 3D, Animation.",
+      "description": "Series of interactions and user interfaces made for Beeld en Geluid Museum, Developing Ideas for face recognition login with a futuristic touch. I design and animate severals interactions for mobile and stationary platforms.",
       "year": "2018",
       "agency": "Mediamonks",
       "img": "common/media/095.gif",
@@ -649,7 +649,21 @@
           "type": "video",
 
           "links": [{
+            "src": "common/media/056.mp4"
+          }]
+        },
+        {
+          "type": "video",
+
+          "links": [{
             "src": "common/media/055.mp4"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/062.png"
           }]
         }
       ]
@@ -1225,47 +1239,39 @@
     },
 
     {
-      "slug": "Gallipoli The Scale of War",
-      "title": "<small>Exhibition Website</small><div><span>The Scale of War<span></div>",
-      "role": "Interaction Design & Front End Development.",
-      "description": "Whilst working at Designworks we were enlisted by Te Papa to work on this exhibition website. My role was to create the wireframes, front-end development, and interaction design. I used GSAP for the animations and angularJS for the implementation. We were awarded with a Gold Pin – best Awards NZ for this site.",
-      "link": "http://davidbastian.cl/proyectos/gallipoli/#/scrubber",
-      "year": "2015",
-      "agency": "Designworks",
-      "img": "common/media/0122.jpg",
+      "slug": "Photo & Interest App - Museum Beeld en Geluid",
+      "title": "<small>Photo & Interest App</small><div><span>Beeld en Geluid<span></div>",
+      "role": "Interaction Design, Animation.",
+      "description": "Series of interactions and user interfaces made for Beeld en Geluid Museum, Developing Ideas for a Photo & Media Applicatiom focused in the people interest. I design and animate severals interactions for app & web platforms.",
+      "year": "2018",
+      "agency": "Mediamonks",
+      "img": "common/media/096.gif",
       "media": [{
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/009.jpg"
-          }]
-        },
-        {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/009a.jpg"
-          }]
-        },
-        {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/009b.jpg"
-          }]
-        },
-        {
           "type": "video",
 
           "links": [{
-            "src": "common/media/009.mp4"
+            "src": "common/media/064.mp4"
           }]
         },
         {
           "type": "image",
 
           "links": [{
-            "src": "common/media/009c.jpg"
+            "src": "common/media/0124.jpg"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/0125.jpg"
+          }]
+        },
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/0126.jpg"
           }]
         }
       ]
