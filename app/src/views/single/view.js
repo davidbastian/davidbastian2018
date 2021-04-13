@@ -15,6 +15,7 @@ import Config from '../../../config';
 
 class SingleView {
   init(params) {
+    console.log(params);
     //  console.log("init Single", params);
     this.params = params;
     this.data = App.model.getData();
@@ -80,15 +81,19 @@ class SingleView {
 
   setScroll() {
     const self = this;
+
+
     this.scroll = new ScrollModule({
       el: self.el.querySelector(".single-media-inner"),
       wrap: window,
       ease: 0.05,
       delta: "y",
       direction: "y",
-      speed:6,
+      speed: 6,
       view: self
     });
+
+
   }
 
   setData() {
@@ -105,7 +110,13 @@ class SingleView {
         self.nextSlug = undefined;
 
         if (this.data.projects[i + 1]) {
-          self.nextSlug = toSlug(this.data.projects[i + 1].slug);
+          if (this.data.projects[i + 1].type) {
+            self.nextSlug = toSlug(this.data.projects[i + 2].slug);
+          } else {
+            self.nextSlug = toSlug(this.data.projects[i + 1].slug);
+          }
+
+
 
         } else {
           self.nextSlug = toSlug(this.data.projects[0].slug);
@@ -215,20 +226,20 @@ class SingleView {
         mediaDOM.appendChild(ImageHTML.body.firstChild);
       }
 
-   //   if (Config.checkDevice() === 'desktop') {
-        if (media.type === "video") {
-          const markupVideo = `
+      //   if (Config.checkDevice() === 'desktop') {
+      if (media.type === "video") {
+        const markupVideo = `
         <video class="video" playsinline autoplay loop muted  src="${media.links[0].src}">
                 <source src="${media.links[0].src}" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         `;
-          const videoHTML = document.createRange().createContextualFragment(markupVideo);
+        const videoHTML = document.createRange().createContextualFragment(markupVideo);
 
-          mediaDOM.appendChild(videoHTML);
+        mediaDOM.appendChild(videoHTML);
 
-        }
-    //  }
+      }
+      //  }
       if (i === project.media.length) {
         App.router.preloader.preloadHome();
       }

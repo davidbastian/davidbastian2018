@@ -14,7 +14,7 @@ class AppView {
         this.addEvents();
         // console.log("AppView", Data);
 
-        const markup = `
+        const markup = /*html*/ `
     
         <header>
             <div class="container">
@@ -29,7 +29,7 @@ class AppView {
         
         <div class="preloader">
             <div class="preloader-counter">
-                0.
+                 <span class="counter-inner">0</span><span class="counter-dot"></span>
             </div>
         </div>
 
@@ -51,6 +51,23 @@ class AppView {
     `;
 
         document.body.innerHTML = markup;
+
+        var tl = new TimelineMax({
+            repeat: -1
+        });
+
+        tl.to(".counter-dot", .10, {
+                transformOrigin: "50% 100%",
+                scaleY: 0.9,
+                yoyo: true,
+                repeat: 1
+            })
+            .to(".counter-dot", .75, {
+                y: -40,
+                ease: Circ.easeOut,
+                yoyo: true,
+                repeat: 1
+            });
     }
 
     addEvents() {

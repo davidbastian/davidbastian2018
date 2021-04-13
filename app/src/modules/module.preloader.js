@@ -43,10 +43,16 @@ class Preloader {
         } else {
             for (let i = 0; i < Data.projects.length; i++) {
                 const project = Data.projects[i];
-                for (let m = 0; m < project.media.length; m++) {
-                    const media = project.media[m];
-                    mediaArray.push(media);
+                if (project.media) {
+                    for (let m = 0; m < project.media.length; m++) {
+                  
+                        const media = project.media[m];
+                        mediaArray.push(media);
+                    
+                    
                 }
+                }
+                
             }
 
             for (let e = 0; e < mediaArray.length; e++) {
@@ -71,7 +77,7 @@ class Preloader {
 
 
         function updateHandler() {
-            document.body.querySelectorAll('.preloader-counter')[0].innerHTML = Math.round(progress.val) + '.';
+            document.body.querySelectorAll('.counter-inner')[0].innerHTML = Math.round(progress.val);
         }
 
         xhr.onload = function () {
@@ -81,7 +87,7 @@ class Preloader {
            // console.log(self.counter, self.size);
 
             progress.val = (self.counter * self.randomPercent) / self.size;
-            document.body.querySelectorAll('.preloader-counter')[0].innerHTML = Math.round(progress.val) + '.';
+            document.body.querySelectorAll('.counter-inner')[0].innerHTML = Math.round(progress.val);
 
             if (self.counter === self.size) {
 
@@ -111,7 +117,7 @@ class Preloader {
                     }
                 });
 
-            }
+            } 
         };
 
 

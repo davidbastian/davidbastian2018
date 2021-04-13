@@ -1,9 +1,9 @@
 {
   "details": {
     "logo": "David Bastian.",
-    "copyright": "© 2020 David Bastian. Chilean Designer & Web Developer.",
+    "copyright": "© 2021 David Bastian. Chilean Designer & Developer.",
     "email": "d@davidbastian.red",
-    "aboutme": "<span>I am Designer & Web Developer from Viña del Mar (Chile),</span> <span>but I am based in Amsterdam.</span><span><br> I love to enjoy Good Art, Conceptualize, Design <br>& Develop simple and clean Interfaces.</span>",
+    "aboutme": "<span>I am Designer & Developer from Viña del Mar (Chile),</span> <span>but I am based in Amsterdam.</span><span><br> I love to enjoy Art, Conceptualize, Design <br>& Develop simple and clean Experiences.</span>",
     "social": [{
         "title": "Twitter"
 
@@ -26,7 +26,7 @@
       "link": "https://thefwa.com/cases/the-one-stroke-shave-vision",
       "year": "2021",
       "agency": "Mediamonks",
-      "img": "common/media/126a.jpg",
+      "img": "common/media/126n.jpg",
       "media": [{
           "type": "image",
 
@@ -105,6 +105,13 @@
         }
 
       ]
+    }, {
+      "slug": "Looper O+ ©",
+      "title": "<small>Looper</small><div><span>O+<span></div>",
+      "role": "Creative & Art Direction, Design, 3d prototype.",
+      "type": "confidential",
+      "img": "common/media/130.jpg"
+
     }, {
       "slug": "Resn FWA Club 100",
       "title": "<small>Resn Club 100</small><div><span>FWA<span></div>",
@@ -205,6 +212,14 @@
       }]
     },
 
+    {
+      "slug": "Meta Chair ©",
+      "title": "<small>Meta</small><div><span>Chair<span></div>",
+      "role": "Creative & Art Direction, Design, 3d prototype.",
+      "year": "2021",
+      "type": "confidential",
+      "img": "common/media/133.jpg"
+    },
 
 
     {
@@ -249,6 +264,13 @@
           }]
         }
       ]
+    }, {
+      "slug": "Low Blackie © Spoon",
+      "title": "<small>Low Blackie</small><div><span>Spoon<span></div>",
+      "role": "Creative & Art Direction, Design, 3d prototype.",
+      "year": "2021",
+      "type": "confidential",
+      "img": "common/media/131.jpg"
     },
 
 
@@ -260,21 +282,21 @@
       "year": "2020",
       "link": "https://thefwa.com/cases/air-jordan-xxxv-unveil",
       "agency": "Mediamonks",
-      "img": "common/media/0127.jpg",
+      "img": "common/media/0127n.jpg",
       "media": [{
           "type": "video",
 
           "links": [{
             "src": "common/media/126c.mp4"
           }]
-        },{
+        }, {
           "type": "video",
 
           "links": [{
             "src": "common/media/126f.mp4"
           }]
         },
-         {
+        {
           "type": "image",
 
           "links": [{
@@ -282,33 +304,33 @@
           }]
         },
         {
-         "type": "image",
+          "type": "image",
 
-         "links": [{
-           "src": "common/media/0127b.jpg"
-         }]
-       },
-       {
-        "type": "image",
+          "links": [{
+            "src": "common/media/0127b.jpg"
+          }]
+        },
+        {
+          "type": "image",
 
-        "links": [{
-          "src": "common/media/0127c.jpg"
-        }]
-      },
-      {
-       "type": "image",
+          "links": [{
+            "src": "common/media/0127c.jpg"
+          }]
+        },
+        {
+          "type": "image",
 
-       "links": [{
-         "src": "common/media/0127d.jpg"
-       }]
-     },
-     {
-      "type": "image",
+          "links": [{
+            "src": "common/media/0127d.jpg"
+          }]
+        },
+        {
+          "type": "image",
 
-      "links": [{
-        "src": "common/media/0127e.jpg"
-      }]
-    }
+          "links": [{
+            "src": "common/media/0127e.jpg"
+          }]
+        }
 
       ]
     },
@@ -355,7 +377,16 @@
           }]
         }
       ]
+    }, {
+      "slug": "Covid-19 Raincoat ©",
+      "title": "<small>Covid-19</small><div><span>Raincoat<span></div>",
+      "role": "Creative & Art Direction, Design, 3d prototype.",
+      "year": "2021",
+      "type": "confidential",
+      "img": "common/media/132.jpg"
+
     },
+
     {
       "slug": "Google, Umami Land",
       "title": "<small>Google</small><div><span>Umami Land<span></div>",
@@ -366,38 +397,36 @@
       "agency": "Mediamonks",
       "img": "common/media/0128b.jpg",
       "media": [{
-          "type": "image",
+        "type": "image",
 
-          "links": [{
-            "src": "common/media/0128.jpg"
-          }]
-        }, {
-          "type": "image",
+        "links": [{
+          "src": "common/media/0128.jpg"
+        }]
+      }, {
+        "type": "image",
 
-          "links": [{
-            "src": "common/media/0128d.jpg"
-          }]
-        }, {
-          "type": "image",
+        "links": [{
+          "src": "common/media/0128d.jpg"
+        }]
+      }, {
+        "type": "image",
 
-          "links": [{
-            "src": "common/media/0128f.jpg"
-          }]
-        } ,{
-          "type": "image",
+        "links": [{
+          "src": "common/media/0128f.jpg"
+        }]
+      }, {
+        "type": "image",
 
-          "links": [{
-            "src": "common/media/0128a.jpg"
-          }]
-        }
-        , {
-          "type": "image",
+        "links": [{
+          "src": "common/media/0128a.jpg"
+        }]
+      }, {
+        "type": "image",
 
-          "links": [{
-            "src": "common/media/0128c.jpg"
-          }]
-        }
-      ]
+        "links": [{
+          "src": "common/media/0128c.jpg"
+        }]
+      }]
     },
 
 
@@ -439,6 +468,7 @@
     },
 
 
+
     {
       "slug": "Redbull, Tokyo 2020 Olympics Blackout Data",
       "title": "<small>Tokyo 2020 Olympics</small><div><span>Redbull<span></div>",
@@ -477,6 +507,8 @@
 
       ]
     },
+
+  
 
 
     {
@@ -633,6 +665,15 @@
         }]
       }]
     },
+    {
+      "slug": "Sphere Poster",
+      "title": "<small>Sphere</small><div><span>Poster<span></div>",
+      "role": "Creative & Art Direction.",
+      "year": "2021",
+      "type": "confidential",
+      "img": "common/media/134.jpg"
+
+    },
 
     {
       "slug": "Davies Landscape Architects, Phase 01",
@@ -703,6 +744,16 @@
         }
 
       ]
+    },
+
+    {
+      "slug": "Sky Photographs",
+      "title": "<small>Sky</small><div><span>Photographs<span></div>",
+      "role": "Creative & Art Direction.",
+      "year": "2021",
+      "type": "confidential",
+      "img": "common/media/134.gif"
+
     },
 
 
@@ -780,6 +831,8 @@
         }
       ]
     },
+
+ 
 
     {
       "slug": "Interactions - Museum Beeld en Geluid",
@@ -868,8 +921,7 @@
       ]
     },
 
-
-
+  
 
 
 
@@ -1165,52 +1217,6 @@
 
 
 
-    {
-      "slug": "Manfeild",
-      "title": "<small>Events centre</small><div><span>Manfeild</span></div>",
-      "role": "Design.",
-      "description": "I worked on wireframes, art direction, and design for this project. My main idea was to take the colours of the photography on the page and implement them in each of the segments.",
-      "img": "common/media/008.jpg",
-      "year": "2013",
-      "agency": "Blacksheepdesign",
-      "media": [{
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/008b.jpg"
-          }]
-        },
-        {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/008c.jpg"
-          }]
-        },
-
-        {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/008f.jpg"
-          }]
-        },
-        {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/008e.jpg"
-          }]
-        },
-        {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/008d.jpg"
-          }]
-        }
-      ]
-    },
 
     {
       "slug": "Google Zoo, Tales by AI",
@@ -1475,59 +1481,7 @@
       ]
     },
 
-    {
-      "slug": "Hino Trucks",
-      "title": "<small>Company Website</small><div><span>Hino Trucks</span></div>",
-      "role": "Interaction Design & Front End Development.",
-      "description": "I worked on the interface design, and front-end development for Hino Trucks; a company based in New Zealand. This website was fully responsive, making modern CSS transitions and interactions by the user.",
-      "link": "https://davidbastian.red/projects/hino/preview/",
-      "year": "2014",
-      "agency": "Blacksheepdesign",
-      "img": "common/media/023.jpg",
-      "media": [{
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/023a.jpg"
-          }]
-        },
-        {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/023c.jpg"
-          }]
-        },
-        {
-          "type": "video",
-
-          "links": [{
-            "src": "common/media/023.mp4"
-          }]
-        },
-        {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/023d.jpg"
-          }]
-        },
-        {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/023e.jpg"
-          }]
-        },
-        {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/023f.jpg"
-          }]
-        }
-      ]
-    },
+   
 
     {
       "slug": "Barltop Graham",
@@ -1690,174 +1644,10 @@
           }]
         }
       ]
-    },
-
-    {
-      "slug": "Asian New Zealand Fundation",
-      "title": "<small>Fundation</small><div><span>Asian New Zealand</span></div>",
-      "year": "2015",
-      "agency": "Designworks",
-      "role": "Interaction Design & Front End Development.",
-      "description": "The challenge for this project was to create a fully responsive site with a complex content design. I worked on the interaction design and front-end development; developing a site that can be used across a variety of different devices whilst simultaneously maintaining media query functionality and image quality.",
-      "link": "http://davidbastian.red/projects/anzf/",
-      "img": "common/media/026.jpg",
-      "media": [{
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/026a.jpg"
-          }]
-        },
-        {
-          "type": "video",
-
-          "links": [{
-            "src": "common/media/026.mp4"
-          }]
-        },
-        {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/026c.jpg"
-          }]
-        },
-        {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/026b.jpg"
-          }]
-        },
-        {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/026d.jpg"
-          }]
-        },
-        {
-          "type": "video",
-
-          "links": [{
-            "src": "common/media/026a.mp4"
-          }]
-        }
-      ]
-    },
-
-    {
-      "slug": "Caritas Challenge",
-      "title": "<small>Caritas</small> <div><span>Challenge</span></div>",
-      "role": "Interaction Design & Front End Development.",
-      "description": "I worked on the interaction design and front-end development to create a flat design with a system of 12 -column grids. We created a site that was simultaneously clean and fully responsive by playing with different design techniques such as overlap of imagery, and colour gradients for the backgrounds.",
-      "link": "http://davidbastian.red/projects/caritas/preview/",
-      "year": "2014",
-      "agency": "Blacksheepdesign",
-      "img": "common/media/006.jpg",
-      "media": [{
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/006a.jpg"
-          }]
-        },
-        {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/006b.jpg"
-          }]
-        },
-        {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/006c.jpg"
-          }]
-        },
-        {
-          "type": "video",
-
-          "links": [{
-            "src": "common/media/006.mp4"
-          }]
-        },
-        {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/006d.jpg"
-          }]
-        },
-        {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/006e.jpg"
-          }]
-        },
-        {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/006f.jpg"
-          }]
-        }
-      ]
-    },
-
-    {
-      "slug": "Pilar Rodriguez",
-      "title": "<small>Company Website</small><div><span>Pilar Rodriguez</span></div>",
-      "role": "Design, Develop, Art & Creative Direction.",
-      "description": "I worked on the design, development, and creative direction of this website. The look and feel was created using an unusual design of squares, mixing the content with the brand colours. I used WordPress for the CMS integration, JavaScript, and Less.",
-      "link": "http://www.pilarrodriguez.cl/",
-      "year": "2013",
-      "img": "common/media/003.jpg",
-      "media": [{
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/003a.jpg"
-          }]
-        },
-        {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/003b.jpg"
-          }]
-        },
-        {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/003c.jpg"
-          }]
-        },
-        {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/003d.jpg"
-          }]
-        },
-        {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/003e.jpg"
-          }]
-        },
-        {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/003f.jpg"
-          }]
-        }
-      ]
     }
+
+   
+
+    
   ]
 }

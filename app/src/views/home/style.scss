@@ -1,11 +1,12 @@
 #home {
   display: flex;
+
   .home-wrap {
     display: flex;
     padding-left: 5vw;
     padding-right: 5vw;
 
-  
+
     @media screen and (max-width: 1200px) {
       padding-left: 60px;
       padding-right: 60px;
@@ -18,34 +19,75 @@
 
     padding-top: 18vh;
     position: relative;
+
     a {
-      height: 53vh; // min-height: 500px;
-      @media screen and (max-width: 767px) {
-        height: 43vh;
+      height: 62vh;
+      /*53vh; min-height: 500px;*/
+      margin-top: -2vh;
+      position: relative;
+      background-color: #e7e8e7;
+
+      >div {
+        height: 100%;
+        overflow: hidden;
       }
+
+      .confidential {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+        pointer-events: none;
+        opacity: 0;
+        text-align: center;
+
+        span {
+          line-height: 20px;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        height: 44vh;
+        margin-top: 0vh;
+      }
+
       margin-right: 10px;
       display: block;
+
       &:last-child {
         margin-right: 0;
       }
+
       p {
         padding-top: 30px;
+
         span {
-          color:#afafaf;
+          color: #afafaf;
           display: block;
           margin-left: 0px;
           margin-top: 7px;
         }
+
         @media screen and (max-width: 767px) {
           line-height: 1.1em;
-          span{
+
+          span {
             margin-top: 5px;
           }
         }
       }
+
       img {
         display: block;
         height: 100%;
+        filter: blur(0px);
+        will-change: filter;
+
       }
     }
   }

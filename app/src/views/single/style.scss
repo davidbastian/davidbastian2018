@@ -1,15 +1,24 @@
 @import "../../../common/styles/_variables";
 .single {
+  
   .single-next {
     position: absolute;
     right: 0;
     bottom: 10vh;
     font-size: 25vw;
     transform: translateX(100%);
+
+    @media screen and (max-width: 767px) {
+      bottom: 15vh;
+      font-size: 30vw;
+    }
   }
   .container {
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
+
+
   }
   .single-description {
     position: relative;

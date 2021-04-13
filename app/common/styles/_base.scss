@@ -43,11 +43,21 @@ h2 {
   top: 0;
   align-items: center;
   display: flex;
+
+  .counter-dot {
+    width: 4vw;
+    height: 4vw;
+    background-color: red;
+    display: inline-block;
+    border-radius: 100%;
+
+  }
   @media screen and (max-width: 1200px) {
     left: 60px;
   }
   @media screen and (max-width: 767px) {
     left: 20px;
+    margin-top: -4vh;
   }
   .preloader-counter {
     font-size: 25vw;
@@ -90,9 +100,11 @@ header {
   left: 0;
   width: 100%;
   @media screen and (max-width: 767px) {
-    background: $color02;
+   // background: $color02;
 
-    border-bottom: 1px solid #cacaca;
+   // border-bottom: 1px solid #cacaca;
+   background: #000000;
+    border-bottom: 1px solid #262626;
   }
   .container {
     //height: 10vh;
@@ -201,6 +213,10 @@ footer {
   @media screen and (max-width: 1200px) {
     width:60px;
     min-height: 60px;
+
+  }
+  @media screen and (max-width: 767px) {
+    margin-top: 2vh;
   }
   height: 80px;
   position: fixed;
@@ -235,5 +251,19 @@ footer {
   }
   &.active {
   //  cursor: grabbing;
+  }
+}
+
+// black theme
+html {
+  background: #000000;
+  color: white!important;
+
+  .confidential {
+    color:black!important;
+  }
+
+  .single-credits > div a, .single-credits > div div{
+    border-bottom: 1px solid #292929!important;
   }
 }
