@@ -275,6 +275,7 @@
        
       ]
     },
+    
  
 
      {
@@ -808,6 +809,82 @@
             "src": "common/media/0100.jpg"
           }]
         }
+      ]
+    },
+
+
+    {
+      "slug": "Google Pixel 4 - New Features",
+      "title": "<small>Google</small><div><span>Pixel 4<span></div>",
+      "role": "Illustration, Design.",
+      "description": "For this project my role was design and illustrate in an easy, conceptual & friendly way the new software and hardware features for the Pixel 4. Making and exploring severals still shots for animation to generate multiples cases & examples.",
+      "year": "2020",
+      "agency": "Mediamonks",
+      "img": "common/media/0113.jpg",
+      "media": [
+        
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/0116.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/0117.jpg"
+          }]
+        },{
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/0114.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/0115.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/0118.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/065.gif"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/066.gif"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/0119.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/0120.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/0121.jpg"
+          }]
+        }
+       
       ]
     },
 

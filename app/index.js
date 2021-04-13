@@ -3,7 +3,7 @@ import AppModel from "./src/models/model.app.js";
 import AppView from "./src/views/view.app.js";
 import AppController from "./src/controllers/controller.app.js";
 import Route from "./route.js";
-import Data from "./common/data/data-hide";
+import Data from "./common/data/data";
 
 class App {
   constructor() {

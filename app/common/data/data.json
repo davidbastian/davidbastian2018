@@ -19,13 +19,61 @@
     ]
   },
   "projects": [{
+      "slug": "The One Stroke Shave Vision",
+      "title": "<small>The One Stroke</small><div><span>Shave Vision<span></div>",
+      "role": "Art Direction, UI Design.",
+      "description": "This is a story of craftsmanship. An interactive film of three chapters allows users to discover the in-depth process that goes into crafting Braun’s most premium shaver, the Series 9. Showing that this process is shared across all creative disciplines, from art & fashion to industrial design.",
+      "link": "https://thefwa.com/cases/the-one-stroke-shave-vision",
+      "year": "2021",
+      "agency": "Mediamonks",
+      "img": "common/media/126a.jpg",
+      "media": [{
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/126a.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/126c.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/126d.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/126f.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/126g.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/126e.jpg"
+          }]
+        }
+
+      ]
+    }, {
       "slug": "FWA Certificates Redesign",
       "title": "<small>Redesign</small><div><span>FWA Certificates<span></div>",
       "role": "Creative & Art Direction, Design.",
       "description": "At Mediamonks I was encharged to create the new FWA Certificates, I used concepts such as Generative Art. Timeless, Modular, Recognizable. Having also each certificates its own design soul. FOTD, lines represent points, and gold stripes the amount of judges, FOTM, Each gradient are days of the months going to one point, and one line will represent the winner, FODY. Its a Circular calendar with 365 lines having a unique line representing the winner reach the center.",
       "year": "2020",
       "agency": "Mediamonks",
-      "img": "common/media/045.jpg",
+      "img": "common/media/045.gif",
       "media": [{
           "type": "image",
 
@@ -157,7 +205,7 @@
       }]
     },
 
-  
+
 
     {
       "slug": "Think with Google 2019",
@@ -203,6 +251,69 @@
       ]
     },
 
+
+    {
+      "slug": "Air Jordan XXXV Unveil",
+      "title": "<small>Air Jordan</small><div><span>XXXV Unveil<span></div>",
+      "role": "Interfaces & AR Design.",
+      "description": "We helped launch the Air Jordan XXXV with a live stream and virtual experience. Using WebGL and an AR web app, we put a virtual shoe in users’ hands. The digital unveil came complete with awe-inspiring animations starring top athletes, to keep hype among the Jordan community at an astronomical high.",
+      "year": "2020",
+      "link": "https://thefwa.com/cases/air-jordan-xxxv-unveil",
+      "agency": "Mediamonks",
+      "img": "common/media/0127.jpg",
+      "media": [{
+          "type": "video",
+
+          "links": [{
+            "src": "common/media/126c.mp4"
+          }]
+        },{
+          "type": "video",
+
+          "links": [{
+            "src": "common/media/126f.mp4"
+          }]
+        },
+         {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/0127a.jpg"
+          }]
+        },
+        {
+         "type": "image",
+
+         "links": [{
+           "src": "common/media/0127b.jpg"
+         }]
+       },
+       {
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/0127c.jpg"
+        }]
+      },
+      {
+       "type": "image",
+
+       "links": [{
+         "src": "common/media/0127d.jpg"
+       }]
+     },
+     {
+      "type": "image",
+
+      "links": [{
+        "src": "common/media/0127e.jpg"
+      }]
+    }
+
+      ]
+    },
+
+
     {
       "slug": "Nespresso Homepage Concept",
       "title": "<small>Homepage Concept</small><div><span>Nespresso<span></div>",
@@ -244,46 +355,61 @@
           }]
         }
       ]
-    }
-    , {
-      "slug": "Braun AR Experience",
-      "title": "<small>AR Experience</small><div><span>Braun<span></div>",
-      "role": "Design, 3D Renders.",
-      "description": "Concept for this project was making an immersive AR Experience  where you will enter into a dark room  revealing & leveling up the shave machine as a main element of the scene using the light as a resource to create a subtle and luxurious atmosphere.",
-      "year": "2019",
+    },
+    {
+      "slug": "Google, Umami Land",
+      "title": "<small>Google</small><div><span>Umami Land<span></div>",
+      "role": "Design, User Interfaces.",
+      "description": "Umami Land is a virtual theme park celebrating Japan’s food culture, known as washoku. Designed, illustrated and animated to make you hungry for more, the free-roaming WebGL experience teaches about a variety of trademark dishes while letting you find local restaurants that serve them through Google.",
+      "link": "https://umamiland.withgoogle.com/",
+      "year": "2021",
       "agency": "Mediamonks",
-      "img": "common/media/050.jpg",
+      "img": "common/media/0128b.jpg",
       "media": [{
           "type": "image",
 
           "links": [{
-            "src": "common/media/050.jpg"
+            "src": "common/media/0128.jpg"
           }]
         }, {
           "type": "image",
 
           "links": [{
-            "src": "common/media/049.jpg"
+            "src": "common/media/0128d.jpg"
           }]
         }, {
           "type": "image",
 
           "links": [{
-            "src": "common/media/051.jpg"
+            "src": "common/media/0128f.jpg"
+          }]
+        } ,{
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/0128a.jpg"
           }]
         }
-       
+        , {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/0128c.jpg"
+          }]
+        }
       ]
     },
-  {
-      "slug": "Google Washoku, Umami Land Tickets",
+
+
+    {
+      "slug": "Google, Umami Land Tickets",
       "title": "<small>Umami Land</small><div><span>Google Washoku<span></div>",
       "role": "Illustration, Design.",
-      "description": "For this project my role was design and illustrate tickets that will trigger a website experience. Scanning them using Google Lens or QR code, the challenge was make the design close to the original japanese tickets. and illustrate elements in 2D relatives of the actual website.",
+      "description": "For this project also my role was design and illustrate tickets that will trigger a website experience. Scanning them using Google Lens or QR code, the challenge was make the design close to the original japanese tickets. and illustrate elements in 2D relatives of the actual website.",
       "year": "2019",
       "agency": "Mediamonks",
       "img": "common/media/065.jpg",
-      "media": [ {
+      "media": [{
           "type": "image",
 
           "links": [{
@@ -308,12 +434,12 @@
             "src": "common/media/069.jpg"
           }]
         }
-       
+
       ]
     },
 
 
-     {
+    {
       "slug": "Redbull, Tokyo 2020 Olympics Blackout Data",
       "title": "<small>Tokyo 2020 Olympics</small><div><span>Redbull<span></div>",
       "role": "Interfaces Design, 3D Renders & Animation.",
@@ -322,7 +448,7 @@
       "agency": "Mediamonks",
       "img": "common/media/052.jpg",
       "media": [
-        
+
         {
           "type": "image",
 
@@ -341,17 +467,17 @@
           "links": [{
             "src": "common/media/054.jpg"
           }]
-        },{
+        }, {
           "type": "video",
 
           "links": [{
             "src": "common/media/053.mp4"
           }]
         }
-       
+
       ]
     },
-    
+
 
     {
       "slug": "Adidas ZX Flux Phase 01",
@@ -402,7 +528,7 @@
       "agency": "Mediamonks",
       "img": "common/media/055.gif",
       "media": [
-        
+
         {
           "type": "image",
 
@@ -421,13 +547,13 @@
           "links": [{
             "src": "common/media/057.jpg"
           }]
-        },{
+        }, {
           "type": "image",
 
           "links": [{
             "src": "common/media/056.gif"
           }]
-        },{
+        }, {
           "type": "image",
 
           "links": [{
@@ -452,7 +578,7 @@
             "src": "common/media/058.gif"
           }]
         }
-       
+
       ]
     },
     {
@@ -463,7 +589,7 @@
       "year": "2019",
       "agency": "Mediamonks",
       "img": "common/media/079.jpg",
-      "media": [ {
+      "media": [{
         "type": "image",
 
         "links": [{
@@ -507,7 +633,7 @@
         }]
       }]
     },
-    
+
     {
       "slug": "Davies Landscape Architects, Phase 01",
       "title": "<small>Phase 01</small><div><span>Davies Landscape</span></div>",
@@ -547,6 +673,38 @@
 
       ]
     },
+
+    {
+      "slug": "Braun AR Experience",
+      "title": "<small>AR Experience</small><div><span>Braun<span></div>",
+      "role": "Design, 3D Renders.",
+      "description": "Concept for this project was making an immersive AR Experience  where you will enter into a dark room  revealing & leveling up the shave machine as a main element of the scene using the light as a resource to create a subtle and luxurious atmosphere.",
+      "year": "2019",
+      "agency": "Mediamonks",
+      "img": "common/media/050.jpg",
+      "media": [{
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/050.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/049.jpg"
+          }]
+        }, {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/051.jpg"
+          }]
+        }
+
+      ]
+    },
+
 
 
 
@@ -669,7 +827,7 @@
       ]
     },
 
-  
+
     {
       "slug": "Davies Landscape Architects, Phase 02",
       "title": "<small>Phase 02</small><div><span>Davies Landscape</span></div>",
@@ -712,7 +870,7 @@
 
 
 
-    
+
 
 
     {
@@ -720,7 +878,7 @@
       "title": "<small>Exhibition Website</small><div><span>The Scale of War<span></div>",
       "role": "Interaction Design & Front End Development.",
       "description": "Whilst working at Designworks we were enlisted by Te Papa to work on this exhibition website. My role was to create the wireframes, front-end development, and interaction design. I used GSAP for the animations and angularJS for the implementation. We were awarded with a Gold Pin – best Awards NZ for this site.",
-      "link": "http://davidbastian.cl/proyectos/gallipoli/#/scrubber",
+      "link": "http://davidbastian.red/projects/gallipoli/#/scrubber",
       "year": "2015",
       "agency": "Designworks",
       "img": "common/media/009.jpg",
@@ -761,7 +919,7 @@
         }
       ]
     },
-    
+
     {
       "slug": "IBM Cloud Private for Data",
       "title": "<small>Private for Data</small><div><span>IBM Cloud</span></div>",
@@ -850,13 +1008,13 @@
     {
       "slug": "Google Pixel 4 - New Features",
       "title": "<small>Google</small><div><span>Pixel 4<span></div>",
-      "role": "Illustration, Design, Art Direction.",
+      "role": "Illustration, Design.",
       "description": "For this project my role was design and illustrate in an easy, conceptual & friendly way the new software features for the Pixel 4. Doing and exploring severals still shots for animation to generate multiples cases & examples.",
       "year": "2020",
       "agency": "Mediamonks",
       "img": "common/media/0113.jpg",
       "media": [
-        
+
         {
           "type": "image",
 
@@ -869,7 +1027,7 @@
           "links": [{
             "src": "common/media/0117.jpg"
           }]
-        },{
+        }, {
           "type": "image",
 
           "links": [{
@@ -918,7 +1076,7 @@
             "src": "common/media/0121.jpg"
           }]
         }
-       
+
       ]
     },
 
@@ -930,7 +1088,7 @@
       "year": "2019",
       "agency": "Mediamonks",
       "img": "common/media/097.gif",
-      "media": [ {
+      "media": [{
         "type": "image",
 
         "links": [{
@@ -1000,11 +1158,11 @@
           }]
         }
       ]
-    } ,
+    },
 
 
 
-  
+
 
 
     {
@@ -1063,7 +1221,7 @@
       "agency": "Mediamonks",
       "link": "https://thefwa.com/cases/tales-by-ai",
       "img": "common/media/090.gif",
-      "media": [ {
+      "media": [{
         "type": "image",
 
         "links": [{
@@ -1101,14 +1259,14 @@
         }]
       }]
     },
-    
- 
+
+
     {
       "slug": "Christian Andrada",
       "title": "<small>Speaker, Couch & Consultant</small><div><span>Christian Andrada</span></div>",
       "role": "Design, Development, Art & Creative Direction.",
       "description": "For this project I worked on art direction, creative idea, and web development. I used AngularJS for the front-end implementation, and WordPress for the back-end, powered with GSAP Utils.",
-      "link": "http://davidbastian.cl/proyectos/christian-andrada/",
+      "link": "http://davidbastian.red/projects/christian-andrada/",
       "year": "2015",
       "img": "common/media/001.jpg",
       "media": [{
@@ -1160,7 +1318,7 @@
       }]
     },
 
-    
+
     {
       "slug": "Google Lens - Paris Trip",
       "title": "<small>Google Lens</small><div><span>Paris Trip</span></div>",
@@ -1175,19 +1333,19 @@
         "links": [{
           "src": "common/media/062.gif"
         }]
-      },{
+      }, {
         "type": "image",
 
         "links": [{
           "src": "common/media/0103.jpg"
         }]
-      },{
+      }, {
         "type": "image",
 
         "links": [{
           "src": "common/media/0104.jpg"
         }]
-      },{
+      }, {
         "type": "image",
 
         "links": [{
@@ -1312,95 +1470,6 @@
 
           "links": [{
             "src": "common/media/011b.jpg"
-          }]
-        }
-      ]
-    },
-
-    {
-      "slug": "Designworks",
-      "title": "<small>Agency</small> <div><span>Designworks</span></div>",
-      "role": "Interaction Design & Front End Development.",
-      "description": "For this website redesign I worked on the interaction design and front-end development. To follow the clean and minimal art direction, the biggest challenge was finding a way to avoid saturating the site with lots of animations. We decided on an elegant fade-in/fade-out throughout the site.",
-      "link": "http://www.designworks.com",
-      "year": "2014",
-      "agency": "Designworks",
-      "img": "common/media/025a.jpg",
-      "media": [{
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/025b.jpg"
-          }]
-        },
-        {
-          "type": "video",
-
-          "links": [{
-            "src": "common/media/025.mp4"
-          }]
-        },
-        {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/025c.jpg"
-          }]
-        },
-        {
-          "type": "video",
-
-          "links": [{
-            "src": "common/media/025a.mp4"
-          }]
-        },
-        {
-          "type": "video",
-
-          "links": [{
-            "src": "common/media/025b.mp4"
-          }]
-        }
-      ]
-    },
-
-
-
-
-    {
-      "slug": "The Choice Protocol",
-      "title": "<small>Students first</small><div><span>Choice Protocol</span></div>",
-      "role": "Interaction Design & Front End Development.",
-      "description": "I worked on the interaction design, front-end development, and CMS integration whilst at Designworks. This is my favourite of the three different proposals that we did for this project.",
-      "year": "2015",
-      "agency": "Designworks",
-      "img": "common/media/020.jpg",
-      "media": [{
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/020.jpg"
-          }]
-        },
-        {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/020a.jpg"
-          }]
-        },
-        {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/020b.jpg"
-          }]
-        },
-        {
-          "type": "video",
-
-          "links": [{
-            "src": "common/media/020a.mp4"
           }]
         }
       ]
@@ -1551,7 +1620,7 @@
       "year": "2014",
       "agency": "Designworks",
       "description": "I worked on the interaction design and development of this project, utilising a one-page parallax scroll to show the achievements of the airport throughout the year. I used mainly javascript with the scroll event to create multiple transitions for this site to keep the user focused, whilst being immersed on an aeroplane to guide the experience.",
-      "link": "http://davidbastian.cl/proyectos/wellingtonairport/",
+      "link": "http://davidbastian.red/projects/wellingtonairport/",
       "img": "common/media/016.jpg",
       "media": [{
           "type": "image",
@@ -1630,7 +1699,7 @@
       "agency": "Designworks",
       "role": "Interaction Design & Front End Development.",
       "description": "The challenge for this project was to create a fully responsive site with a complex content design. I worked on the interaction design and front-end development; developing a site that can be used across a variety of different devices whilst simultaneously maintaining media query functionality and image quality.",
-      "link": "http://davidbastian.cl/proyectos/anzf/",
+      "link": "http://davidbastian.red/projects/anzf/",
       "img": "common/media/026.jpg",
       "media": [{
           "type": "image",
@@ -1682,7 +1751,7 @@
       "title": "<small>Caritas</small> <div><span>Challenge</span></div>",
       "role": "Interaction Design & Front End Development.",
       "description": "I worked on the interaction design and front-end development to create a flat design with a system of 12 -column grids. We created a site that was simultaneously clean and fully responsive by playing with different design techniques such as overlap of imagery, and colour gradients for the backgrounds.",
-      "link": "http://davidbastian.cl/proyectos/caritas/preview/",
+      "link": "http://davidbastian.red/projects/caritas/preview/",
       "year": "2014",
       "agency": "Blacksheepdesign",
       "img": "common/media/006.jpg",
