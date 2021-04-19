@@ -760,13 +760,61 @@
     },
 
     {
-      "slug": "Sky Photographs",
-      "title": "<small>Sky</small><div><span>Photographs<span></div>",
+      "slug": "Blue Sky Photographs",
+      "title": "<small>Photographs</small><div><span>Blue Sky<span></div>",
       "role": "Creative & Art Direction.",
+      "description": "I have been shooting photos around the world (Japan, NZ, Netherlands, France, Spain, Italy, Chile) with my smartphone under the limitation of a blue sky, trying to find interesting perspectives and dimensions more than the quality res of the actual camera. zoomming, cropping etc. If you like it or you find them interesting get them on Society 6 at the link below.", 
       "year": "2021",
-      "type": "confidential",
       "img": "common/media/134.gif",
-      "shop":"https://society6.com/product/light-sphere-gradient_poster"
+      "link":"https://society6.com/davidbastian/collection/sky-by-david-bastian",
+      "shop":true,
+      "media": [
+        
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/134d.jpg"
+          }]
+        },{
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/134c.jpg"
+          }]
+        },{
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/134e.jpg"
+          }]
+        },{
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/134g.jpg"
+          }]
+        },{
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/134h.jpg"
+          }]
+        },{
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/134i.jpg"
+          }]
+        },{
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/134f.jpg"
+          }]
+        }
+
+      ]
 
     },
 
@@ -841,7 +889,6 @@
       "role": "Design.",
       "description": "I worked for some friends on the design, front-end, and back-end development of their wedding photography website. It is still a work in progress, however please feel free to ask for more info on the project or about development direction.",
       "year": "2016",
-      "agency": "Freelance",
       "img": "common/media/030.jpg",
       "media": [{
           "type": "image",
@@ -1272,9 +1319,9 @@
 
 
     {
-      "slug": "Mono Series Poster",
-      "title": "<small>4 Spheres</small><div><span>Poster<span></div>",
-      "role": "Illustrations, Creative & Art Direction.",
+      "slug": "Monochrome Series",
+      "title": "<small>Illustrations</small><div><span>Monochrome Series<span></div>",
+      "role": "Illustrations.",
       "year": "2021",
       "type": "confidential",
       "img": "common/media/138.gif",
