@@ -100,20 +100,21 @@ class HomeView {
       let slug = toSlug(project.slug);
       const type = self.checkType(project);
 
-
       if (!type) {
-        slug = slug;
+        slug = '#/' + slug;
       } else {
-        slug = ""
+        slug = '#/'
       }
-      const markup = /*html*/`
-        <a href= "#/${slug}" data-type=${type}> 
+
+
+      const markup = /*html*/ `
+       
+      <a href= "${slug}" data-type=${type}> 
           <div>
-            <img src="${project.img}" alt ="${project.slug}" />
-            ${self.setConfidential(type)}
+            ${self.setMedia(type,project)}
+
           </div>
-           
-            
+
             <p>
                  ${project.slug} <span>${project.role}</span>
             </p>
@@ -133,19 +134,35 @@ class HomeView {
     self.addEvents(homeWrap);
   }
 
+  setMedia(type, project) {
+    let markup;
+    const self = this;
+    if (project.video) {
+
+      markup = /*html*/ ` ${self.setConfidential(type)}<video class="video media" playsinline autoplay loop muted src="${project.img}">
+      <source src="${project.img}" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>`
+    } else {
+      markup = /*html*/ ` ${self.setConfidential(type)}<img class="media" src="${project.img}" alt ="${project.slug}" />`
+    }
+
+    return markup;
+
+  }
+
   setConfidential(type) {
     if (type === "confidential") {
-      let markup = /*html*/ `
-                <div class="confidential">
+      const markup = /*html*/ `
+        <div class="confidential">
 
-                <span>
-                This project is protected, <br>
-                        if you would like to know more about it,<br>
-                        or invest on its creation, please contact me.
-                </span>
-                        
-                </div>`;
-
+        <span>
+        This project is protected, <br>
+                if you would like to know more about it,<br>
+                or invest on its creation, please contact me.
+        </span>
+                
+        </div>`;
       return markup;
     } else {
       return '';
@@ -170,43 +187,64 @@ class HomeView {
       link.addEventListener("click", function (e) {
         const dataType = e.currentTarget.getAttribute("data-type");
         if (!e.currentTarget.classList.contains('modal')) {
-          e.currentTarget.classList.add('modal');
-          TweenMax.to(e.currentTarget.querySelector('img'), 1, {opacity:0.5, ease: "Power3.easeInOut"});
-          TweenMax.to(e.currentTarget.querySelector('.confidential'), 1, {opacity:1, ease: "Power3.easeInOut"});
-          TweenMax.to(e.currentTarget.querySelector('img'), 1, {
-            filter: "blur(50px)",
-            autoRound: false,
-            ease: "Power2.easeOut"
-           // yoyo: true,
-           // repeat: -1
-          });
+          if (dataType === "confidential") {
+            e.currentTarget.classList.add('modal');
+            TweenMax.to(e.currentTarget.querySelector('.media'), 1, {
+              opacity: 0.5,
+              ease: "Power3.easeInOut"
+            });
+            TweenMax.to(e.currentTarget.querySelector('.confidential'), 1, {
+              opacity: 1,
+              ease: "Power3.easeInOut"
+            });
+            TweenMax.to(e.currentTarget.querySelector('.media'), 1, {
+              filter: "blur(50px)",
+              autoRound: false,
+              ease: "Power2.easeOut"
+              // yoyo: true,
+              // repeat: -1
+            });
+          }
+
         } else {
           e.currentTarget.classList.remove('modal');
-          TweenMax.to(e.currentTarget.querySelector('img'), 1, {opacity:1, ease: "Power3.easeOut"});
-          TweenMax.to(e.currentTarget.querySelector('img'), 0.5, {
+          TweenMax.to(e.currentTarget.querySelector('.media'), 1, {
+            opacity: 1,
+            ease: "Power3.easeOut"
+          });
+          TweenMax.to(e.currentTarget.querySelector('.media'), 0.5, {
             filter: "blur(0px)",
             autoRound: false,
             ease: "Power3.easeOut"
           });
-          TweenMax.to(e.currentTarget.querySelector('.confidential'), 0.5, {opacity:0, ease: "Power3.easeOut"});
+          TweenMax.to(e.currentTarget.querySelector('.confidential'), 0.5, {
+            opacity: 0,
+            ease: "Power3.easeOut"
+          });
 
         }
- 
+
 
       });
 
       link.addEventListener("mouseleave", function (e) {
         const dataType = e.currentTarget.getAttribute("data-type");
         if (dataType === "confidential") {
-         // console.log(e.currentTarget);
+          // console.log(e.currentTarget);
           e.currentTarget.classList.remove('modal');
-          TweenMax.to(e.currentTarget.querySelector('img'), 1, {opacity:1, ease: "Power3.easeOut"});
-          TweenMax.to(e.currentTarget.querySelector('img'), 0.5, {
+          TweenMax.to(e.currentTarget.querySelector('.media'), 1, {
+            opacity: 1,
+            ease: "Power3.easeOut"
+          });
+          TweenMax.to(e.currentTarget.querySelector('.media'), 0.5, {
             filter: "blur(0px)",
             autoRound: false,
             ease: "Power3.easeOut"
           });
-          TweenMax.to(e.currentTarget.querySelector('.confidential'), 0.5, {opacity:0, ease: "Power3.easeOut"});
+          TweenMax.to(e.currentTarget.querySelector('.confidential'), 0.5, {
+            opacity: 0,
+            ease: "Power3.easeOut"
+          });
         }
       });
 

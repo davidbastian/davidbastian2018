@@ -3,7 +3,7 @@
     "logo": "David Bastian.",
     "copyright": "© 2021 David Bastian. Chilean Designer & Developer.",
     "email": "d@davidbastian.red",
-    "aboutme": "<span>I am Designer & Developer from Viña del Mar (Chile),</span> <span>but I am based in Amsterdam.</span><span><br> I love to enjoy Art, Conceptualize, Design <br>& Develop simple and clean Experiences.</span>",
+    "aboutme": "<span>I am Designer & Developer from Viña del Mar (Chile),</span> <span>but I am based in Amsterdam.</span><span><br> I love to enjoy Art, Conceptualise, Design <br>& Develop simple and clean Experiences.</span>",
     "social": [{
         "title": "Twitter"
 
@@ -284,55 +284,56 @@
       "agency": "Mediamonks",
       "img": "common/media/0127n.jpg",
       "media": [{
-          "type": "video",
+        "type": "video",
 
-          "links": [{
-            "src": "common/media/126c.mp4"
-          }]
-        }, {
-          "type": "video",
+        "links": [{
+          "src": "common/media/126c.mp4"
+        }]
+      }, {
+        "type": "video",
 
-          "links": [{
-            "src": "common/media/126f.mp4"
-          }]
-        },
-        {
-          "type": "image",
+        "links": [{
+          "src": "common/media/126f.mp4"
+        }]
+      },
+      {
+        "type": "image",
 
-          "links": [{
-            "src": "common/media/0127a.jpg"
-          }]
-        },
-        {
-          "type": "image",
+        "links": [{
+          "src": "common/media/0127a.jpg"
+        }]
+      },
+      {
+        "type": "image",
 
-          "links": [{
-            "src": "common/media/0127b.jpg"
-          }]
-        },
-        {
-          "type": "image",
+        "links": [{
+          "src": "common/media/0127b.jpg"
+        }]
+      },
+      {
+        "type": "image",
 
-          "links": [{
-            "src": "common/media/0127c.jpg"
-          }]
-        },
-        {
-          "type": "image",
+        "links": [{
+          "src": "common/media/0127c.jpg"
+        }]
+      },
+      {
+        "type": "image",
 
-          "links": [{
-            "src": "common/media/0127d.jpg"
-          }]
-        },
-        {
-          "type": "image",
+        "links": [{
+          "src": "common/media/0127d.jpg"
+        }]
+      },
+      {
+        "type": "image",
 
-          "links": [{
-            "src": "common/media/0127e.jpg"
-          }]
-        }
+        "links": [{
+          "src": "common/media/0127e.jpg"
+        }]
+      }
 
-      ]
+    ]
+      
     },
 
 
@@ -508,6 +509,9 @@
       ]
     },
 
+        
+   
+
   
 
 
@@ -666,12 +670,21 @@
       }]
     },
     {
-      "slug": "Sphere Poster",
-      "title": "<small>Sphere</small><div><span>Poster<span></div>",
+      "slug": "I Sphere Poster",
+      "title": "<small>Poster</small><div><span>I Sphere<span></div>",
       "role": "Creative & Art Direction.",
-      "year": "2021",
-      "type": "confidential",
-      "img": "common/media/134.jpg"
+      "description": "This poster is part of series of posters with topic focused on Spheres, This one is for I Sphere and was conceptual visualised on soft lights and gradients, all made in Blender. If you like it, you can buy it on Society 6 on the link below.",
+      "year": "2020",
+      "img": "common/media/134.jpg",
+      "link": "https://society6.com/product/light-sphere-gradient_poster",
+      "shop":true,
+      "media": [{
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/134B.jpg"
+        }]
+      }]
 
     },
 
@@ -752,7 +765,8 @@
       "role": "Creative & Art Direction.",
       "year": "2021",
       "type": "confidential",
-      "img": "common/media/134.gif"
+      "img": "common/media/134.gif",
+      "shop":"https://society6.com/product/light-sphere-gradient_poster"
 
     },
 
@@ -798,6 +812,27 @@
           }]
         }
       ]
+    },
+
+    {
+      "slug": "Hand at the Moon Poster",
+      "title": "<small>Poster</small><div><span>Hand at the Moon<span></div>",
+      "role": "Creative & Art Direction.",
+      "year": "2021",
+      "description": "I worked for some friends on the design, front-end, and back-end development of their wedding photography website. It is still a work in progress, however please feel free to ask for more info on the project or about development direction.",
+      "img": "common/media/135.jpg",
+      "media": [
+        
+        {
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/135A.jpg"
+          }]
+        }
+
+      ]
+
     },
 
     {
@@ -921,6 +956,17 @@
       ]
     },
 
+
+    {
+      "slug": "Cooper Guys, Poster Series",
+      "title": "<small>Poster Series</small><div><span>Cooper Guys<span></div>",
+      "role": "Creative & Art Direction.",
+      "year": "2021",
+      "type": "confidential",
+      "img": "common/media/137.jpg",
+      "shop":"https://society6.com/product/light-sphere-gradient_poster"
+
+    },
   
 
 
@@ -1055,6 +1101,17 @@
           }]
         }
       ]
+    },
+
+    {
+      "slug": "IV Spheres Poster",
+      "title": "<small>4 Spheres</small><div><span>Poster<span></div>",
+      "role": "Creative & Art Direction.",
+      "year": "2021",
+      "type": "confidential",
+      "img": "common/media/136.jpg",
+      "shop":"https://society6.com/product/light-sphere-gradient_poster"
+
     },
 
     {
@@ -1214,7 +1271,16 @@
 
 
 
+    {
+      "slug": "Mono Series Poster",
+      "title": "<small>4 Spheres</small><div><span>Poster<span></div>",
+      "role": "Illustrations, Creative & Art Direction.",
+      "year": "2021",
+      "type": "confidential",
+      "img": "common/media/138.gif",
+      "shop":"https://society6.com/product/light-sphere-gradient_poster"
 
+    },
 
 
 
@@ -1265,6 +1331,9 @@
         }]
       }]
     },
+
+
+   
 
 
     {

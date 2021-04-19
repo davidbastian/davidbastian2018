@@ -89,7 +89,7 @@ class SingleView {
       ease: 0.05,
       delta: "y",
       direction: "y",
-      speed: 6,
+      speed: 20,
       view: self
     });
 
@@ -249,7 +249,7 @@ class SingleView {
     if (Config.checkDevice() === 'mobile' || Config.checkDevice() === 'tablet') {
 
 
-      const markupFooter = `<p class="copyright">© 2020 David Bastian. Chilean Designer &amp; Web Developer.
+      const markupFooter = `<p class="copyright">© 2021 David Bastian. Chilean Designer &amp; Developer.
             </p>`;
 
       const markupFooterHTML = new DOMParser().parseFromString(
@@ -263,6 +263,7 @@ class SingleView {
   }
 
   setCredits(project, creditsDOM) {
+    const self = this;
     let markupYear, markupLink, markupAgency;
 
     if (project.agency) {
@@ -280,7 +281,7 @@ class SingleView {
     if (project.link) {
       markupLink = `<a href = "${
         project.link
-      }" target="_blank">Take a Look</a>`;
+      }" target="_blank">${self.checkShop(project.shop)}</a>`;
     } else {
       markupLink = "";
     }
@@ -291,6 +292,16 @@ class SingleView {
     );
 
     creditsDOM.appendChild(creditsHTML.body.firstChild);
+  }
+
+  checkShop(shop){
+
+    if (shop) {
+      return "Buy it here"
+    } else {
+      return "Take a look"
+    }
+
   }
 }
 

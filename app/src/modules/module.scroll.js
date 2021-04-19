@@ -19,6 +19,7 @@ class ScrollModule {
     this.scrollDirection = opt.direction;
     this.scrollDelta = opt.delta;
     this.scrollStop = true;
+    this.speed = opt.speed
 
     this.init();
   }
@@ -49,9 +50,10 @@ class ScrollModule {
 
     self.instance = new VirtualScroll({
       el: this.scrollWrap,
-      touchMultiplier: 6,
+      touchMultiplier: this.speed,
       firefoxMultiplier: 35,
-      passive: true
+      passive: true,
+
     });
 
 

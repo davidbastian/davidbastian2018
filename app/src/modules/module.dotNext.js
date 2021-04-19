@@ -22,6 +22,8 @@ class DotNextModule {
     this.dotTargetY = -40;
     this.dotLeft = false;
 
+
+
     this.init();
   }
 
@@ -73,8 +75,8 @@ class DotNextModule {
 
 
     self.dotEl.addEventListener("touchstart", self.onDotEnter.bind(this));
-    window.addEventListener("touchmove", self.onDotMove.bind(this));
-    window.addEventListener("touchend", self.onDotLeave.bind(this));
+    self.dotEl.addEventListener("touchmove", self.onDotMove.bind(this));
+    self.dotEl.addEventListener("touchend", self.onDotLeave.bind(this));
     window.addEventListener("resize", self.onDotResize.bind(this));
   }
 
@@ -88,8 +90,8 @@ class DotNextModule {
 
 
     self.dotEl.removeEventListener("touchstart", self.onDotEnter);
-    window.removeEventListener("touchmove", self.onDotMove);
-    window.removeEventListener("touchend", self.onDotLeave);
+    self.dotEl.removeEventListener("touchmove", self.onDotMove);
+    self.dotEl.removeEventListener("touchend", self.onDotLeave);
     window.removeEventListener("resize", self.onDotResize);
   }
 
