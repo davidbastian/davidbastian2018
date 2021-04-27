@@ -336,49 +336,65 @@
       
     },
 
-
     {
-      "slug": "Nespresso Homepage Concept",
-      "title": "<small>Homepage Concept</small><div><span>Nespresso<span></div>",
-      "role": "Art Direction, Interfaces Design.",
-      "description": "I propose create a ritual experience involving the concept of time as a personal and distinctive moment. Develop a connection between the exquisite and special moments of the day and the accompanying coffee tastes. Design using a combination of the metallic machine products and the capsules. Combining mixed media elements (images/videos/audio) inside an interactive collage technique.",
-      "year": "2018",
-      "agency": "Mediamonks",
-      "img": "common/media/040.jpg",
-      "media": [{
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/040.jpg"
-          }]
-        }, {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/041.jpg"
-          }]
-        }, {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/042.jpg"
-          }]
-        }, {
-          "type": "image",
-
-          "links": [{
-            "src": "common/media/042.gif"
-          }]
-        },
+      "slug": "Copper Guys, Poster Series",
+      "title": "<small>Poster Series</small><div><span>Copper Guys<span></div>",
+      "role": "Creative & Art Direction, 3d Design.",
+      "year": "2019",
+      "description": "Inspired in the copper kid from Silverhaws tv series, I made a few simple experiments in Blender with a  basic human model. deforming the shape with multiples techniques. If you like some of them you can buy it in the link below at Society6.",
+      "img": "common/media/137.gif",
+      "shop":true,
+      "link":"https://society6.com/davidbastian/collection/copper-guys",
+      "media": [
+        
         {
           "type": "image",
 
           "links": [{
-            "src": "common/media/043.jpg"
+            "src": "common/media/137.jpg"
+          }]
+        },{
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/137d.jpg"
+          }]
+        },{
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/137c.jpg"
+          }]
+        },{
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/137b.jpg"
+          }]
+        },{
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/137e.jpg"
+          }]
+        },{
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/137f.jpg"
+          }]
+        },{
+          "type": "image",
+
+          "links": [{
+            "src": "common/media/137g.jpg"
           }]
         }
+
       ]
-    }, {
+
+    },
+    {
       "slug": "Covid-19 Raincoat ©",
       "title": "<small>Covid-19</small><div><span>Raincoat<span></div>",
       "role": "Creative & Art Direction, Design, 3d prototype.",
@@ -387,6 +403,62 @@
       "img": "common/media/132.jpg"
 
     },
+
+    {
+      "slug": "Google Lens - Game on, LA Lakers",
+      "title": "<small>Google Lens</small><div><span>LA Lakers<span></div>",
+      "role": "Interfaces Design.",
+      "description": "I worked in the Interfaces Design for an LA Lakers+Google Application, this will display team stats, tickets, exclusive videos, icons player of the team. upcoming games, quizes & merchandasing. Using the most recognizable colours of the team for each user interface and Hexagonal details for the typography and other elements. This app will be called by Google Lens when the user scan a poster or Ads in the newspapers.",
+      "year": "2019",
+      "agency": "Mediamonks",
+      "img": "common/media/079.jpg",
+      "media": [{
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/070.jpg"
+        }]
+      }, {
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/073.jpg"
+        }]
+      }, {
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/075.jpg"
+        }]
+      }, {
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/078.jpg"
+        }]
+      }, {
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/076.jpg"
+        }]
+      }, {
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/080.jpg"
+        }]
+      }, {
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/077.jpg"
+        }]
+      }]
+    },
+
+
+    
 
     {
       "slug": "Google, Umami Land",
@@ -617,72 +689,82 @@
 
       ]
     },
+
     {
-      "slug": "Google Lens - Game on, LA Lakers",
-      "title": "<small>Google Lens</small><div><span>LA Lakers<span></div>",
-      "role": "Interfaces Design.",
-      "description": "I worked in the Interfaces Design for an LA Lakers+Google Application, this will display team stats, tickets, exclusive videos, icons player of the team. upcoming games, quizes & merchandasing. Using the most recognizable colours of the team for each user interface and Hexagonal details for the typography and other elements. This app will be called by Google Lens when the user scan a poster or Ads in the newspapers.",
-      "year": "2019",
+      "slug": "Nespresso Homepage Concept",
+      "title": "<small>Homepage Concept</small><div><span>Nespresso<span></div>",
+      "role": "Art Direction, Interfaces Design.",
+      "description": "I propose create a ritual experience involving the concept of time as a personal and distinctive moment. Develop a connection between the exquisite and special moments of the day and the accompanying coffee tastes. Design using a combination of the metallic machine products and the capsules. Combining mixed media elements (images/videos/audio) inside an interactive collage technique.",
+      "year": "2018",
       "agency": "Mediamonks",
-      "img": "common/media/079.jpg",
+      "img": "common/media/040.jpg",
       "media": [{
-        "type": "image",
+          "type": "image",
 
-        "links": [{
-          "src": "common/media/070.jpg"
-        }]
-      }, {
-        "type": "image",
+          "links": [{
+            "src": "common/media/040.jpg"
+          }]
+        }, {
+          "type": "image",
 
-        "links": [{
-          "src": "common/media/073.jpg"
-        }]
-      }, {
-        "type": "image",
+          "links": [{
+            "src": "common/media/041.jpg"
+          }]
+        }, {
+          "type": "image",
 
-        "links": [{
-          "src": "common/media/075.jpg"
-        }]
-      }, {
-        "type": "image",
+          "links": [{
+            "src": "common/media/042.jpg"
+          }]
+        }, {
+          "type": "image",
 
-        "links": [{
-          "src": "common/media/078.jpg"
-        }]
-      }, {
-        "type": "image",
+          "links": [{
+            "src": "common/media/042.gif"
+          }]
+        },
+        {
+          "type": "image",
 
-        "links": [{
-          "src": "common/media/076.jpg"
-        }]
-      }, {
-        "type": "image",
-
-        "links": [{
-          "src": "common/media/080.jpg"
-        }]
-      }, {
-        "type": "image",
-
-        "links": [{
-          "src": "common/media/077.jpg"
-        }]
-      }]
+          "links": [{
+            "src": "common/media/043.jpg"
+          }]
+        }
+      ]
     },
+   
     {
-      "slug": "I Sphere Poster",
-      "title": "<small>Poster</small><div><span>I Sphere<span></div>",
-      "role": "Creative & Art Direction.",
-      "description": "This poster is part of series of posters with topic focused on Spheres, This one is for I Sphere and was conceptual visualised on soft lights and gradients, all made in Blender. If you like it, you can buy it on Society 6 on the link below.",
+      "slug": "One Sphere, Poster Series",
+      "title": "<small>Poster Series</small><div><span>Spheres Collection<span></div>",
+      "role": "Creative & Art Direction, 3d Design.",
+      "description": "These posters are part of series with topic focused on Spheres, It was conceptual visualised on soft lights gradients and cloths, all made in Blender. If you like them, you can get it on Society 6 on the link below.",
       "year": "2020",
       "img": "common/media/134.jpg",
-      "link": "https://society6.com/product/light-sphere-gradient_poster",
+      "link": "https://society6.com/davidbastian/collection/spheres",
       "shop":true,
       "media": [{
         "type": "image",
 
         "links": [{
-          "src": "common/media/134B.jpg"
+          "src": "common/media/134.jpg"
+        }]
+      },{
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/134s3.jpg"
+        }]
+      },{
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/134s4.jpg"
+        }]
+      },{
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/134s2.jpg"
         }]
       }]
 
@@ -817,6 +899,7 @@
       ]
 
     },
+    
 
 
 
@@ -867,15 +950,17 @@
       "title": "<small>Poster</small><div><span>Hand at the Moon<span></div>",
       "role": "Creative & Art Direction.",
       "year": "2021",
-      "description": "I worked for some friends on the design, front-end, and back-end development of their wedding photography website. It is still a work in progress, however please feel free to ask for more info on the project or about development direction.",
+      "description": "I always wanted to create something related with the moon landing, So I start to design an idea similar of the first feet on the moon, but why not a Hand?. I trying to keep as close as possible of the typical NASA shots, with lots of artifacts/contrast and low quality image. to achive a more realistic result. This piece was made in Blender and I have a lots of fun making it.",
       "img": "common/media/135.jpg",
+      "shop":true,
+      "link":"https://society6.com/product/hand-at-the-moon_print",
       "media": [
         
         {
           "type": "image",
 
           "links": [{
-            "src": "common/media/135A.jpg"
+            "src": "common/media/135B.jpg"
           }]
         }
 
@@ -961,6 +1046,42 @@
         }
       ]
     },
+    {
+      "slug": "Three Spheres, Poster Series",
+      "title": "<small>Poster Series</small><div><span>Spheres Collection<span></div>",
+      "role": "Creative & Art Direction, 3d Design.",
+      "description": "These posters are part of series with topic focused on Spheres, It was conceptual visualised on soft lights gradients and cloths, all made in Blender. If you like them, you can get it on Society 6 on the link below.",
+      "year": "2020",
+      "img": "common/media/134s3.jpg",
+      "link": "https://society6.com/davidbastian/collection/spheres",
+      "shop":true,
+      "media": [{
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/134s3.jpg"
+        }]
+      },{
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/134.jpg"
+        }]
+      },{
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/134s4.jpg"
+        }]
+      },{
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/134s2.jpg"
+        }]
+      }]
+
+    },
 
 
     {
@@ -1004,16 +1125,6 @@
     },
 
 
-    {
-      "slug": "Cooper Guys, Poster Series",
-      "title": "<small>Poster Series</small><div><span>Cooper Guys<span></div>",
-      "role": "Creative & Art Direction.",
-      "year": "2021",
-      "type": "confidential",
-      "img": "common/media/137.jpg",
-      "shop":"https://society6.com/product/light-sphere-gradient_poster"
-
-    },
   
 
 
@@ -1151,13 +1262,39 @@
     },
 
     {
-      "slug": "IV Spheres Poster",
-      "title": "<small>4 Spheres</small><div><span>Poster<span></div>",
-      "role": "Creative & Art Direction.",
-      "year": "2021",
-      "type": "confidential",
-      "img": "common/media/136.jpg",
-      "shop":"https://society6.com/product/light-sphere-gradient_poster"
+      "slug": "Four Spheres, Poster Series",
+      "title": "<small>Poster Series</small><div><span>Spheres Collection<span></div>",
+      "role": "Creative & Art Direction, 3d Design.",
+      "description": "These posters are part of series with topic focused on Spheres, It was conceptual visualised on soft lights gradients and cloths, all made in Blender. If you like them, you can get it on Society 6 on the link below.",
+      "year": "2020",
+      "img": "common/media/134s4.jpg",
+      "link": "https://society6.com/davidbastian/collection/spheres",
+      "shop":true,
+      "media": [{
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/134s4.jpg"
+        }]
+      },{
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/134.jpg"
+        }]
+      },{
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/134s2.jpg"
+        }]
+      },{
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/134s3.jpg"
+        }]
+      }]
 
     },
 
@@ -1595,6 +1732,42 @@
           }]
         }
       ]
+    },
+    {
+      "slug": "Two Spheres, Poster Series",
+      "title": "<small>Poster Series</small><div><span>Spheres Collection<span></div>",
+      "role": "Creative & Art Direction, 3d Design.",
+      "description": "These posters are part of series with topic focused on Spheres, It was conceptual visualised on soft lights gradients and cloths, all made in Blender. If you like them, you can get it on Society 6 on the link below.",
+      "year": "2020",
+      "img": "common/media/134s2.jpg",
+      "link": "https://society6.com/davidbastian/collection/spheres",
+      "shop":true,
+      "media": [{
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/134s2.jpg"
+        }]
+      },{
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/134.jpg"
+        }]
+      },{
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/134s4.jpg"
+        }]
+      },{
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/134s3.jpg"
+        }]
+      }]
+
     },
 
    
