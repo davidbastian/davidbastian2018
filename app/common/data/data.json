@@ -284,56 +284,56 @@
       "agency": "Mediamonks",
       "img": "common/media/0127n.jpg",
       "media": [{
-        "type": "video",
+          "type": "video",
 
-        "links": [{
-          "src": "common/media/126c.mp4"
-        }]
-      }, {
-        "type": "video",
+          "links": [{
+            "src": "common/media/126c.mp4"
+          }]
+        }, {
+          "type": "video",
 
-        "links": [{
-          "src": "common/media/126f.mp4"
-        }]
-      },
-      {
-        "type": "image",
+          "links": [{
+            "src": "common/media/126f.mp4"
+          }]
+        },
+        {
+          "type": "image",
 
-        "links": [{
-          "src": "common/media/0127a.jpg"
-        }]
-      },
-      {
-        "type": "image",
+          "links": [{
+            "src": "common/media/0127a.jpg"
+          }]
+        },
+        {
+          "type": "image",
 
-        "links": [{
-          "src": "common/media/0127b.jpg"
-        }]
-      },
-      {
-        "type": "image",
+          "links": [{
+            "src": "common/media/0127b.jpg"
+          }]
+        },
+        {
+          "type": "image",
 
-        "links": [{
-          "src": "common/media/0127c.jpg"
-        }]
-      },
-      {
-        "type": "image",
+          "links": [{
+            "src": "common/media/0127c.jpg"
+          }]
+        },
+        {
+          "type": "image",
 
-        "links": [{
-          "src": "common/media/0127d.jpg"
-        }]
-      },
-      {
-        "type": "image",
+          "links": [{
+            "src": "common/media/0127d.jpg"
+          }]
+        },
+        {
+          "type": "image",
 
-        "links": [{
-          "src": "common/media/0127e.jpg"
-        }]
-      }
+          "links": [{
+            "src": "common/media/0127e.jpg"
+          }]
+        }
 
-    ]
-      
+      ]
+
     },
 
     {
@@ -343,47 +343,47 @@
       "year": "2019",
       "description": "Inspired in the copper kid from Silverhaws tv series, I made a few simple experiments in Blender with a  basic human model. deforming the shape with multiples techniques. If you like some of them you can buy it in the link below at Society6.",
       "img": "common/media/137.gif",
-      "shop":true,
-      "link":"https://society6.com/davidbastian/collection/copper-guys",
+      "shop": true,
+      "link": "https://society6.com/davidbastian/collection/copper-guys",
       "media": [
-        
+
         {
           "type": "image",
 
           "links": [{
             "src": "common/media/137.jpg"
           }]
-        },{
+        }, {
           "type": "image",
 
           "links": [{
             "src": "common/media/137d.jpg"
           }]
-        },{
+        }, {
           "type": "image",
 
           "links": [{
             "src": "common/media/137c.jpg"
           }]
-        },{
+        }, {
           "type": "image",
 
           "links": [{
             "src": "common/media/137b.jpg"
           }]
-        },{
+        }, {
           "type": "image",
 
           "links": [{
             "src": "common/media/137e.jpg"
           }]
-        },{
+        }, {
           "type": "image",
 
           "links": [{
             "src": "common/media/137f.jpg"
           }]
-        },{
+        }, {
           "type": "image",
 
           "links": [{
@@ -458,7 +458,7 @@
     },
 
 
-    
+
 
     {
       "slug": "Google, Umami Land",
@@ -581,10 +581,10 @@
       ]
     },
 
-        
-   
 
-  
+
+
+
 
 
     {
@@ -732,7 +732,7 @@
         }
       ]
     },
-   
+
     {
       "slug": "One Sphere, Poster Series",
       "title": "<small>Poster Series</small><div><span>Spheres Collection<span></div>",
@@ -741,26 +741,26 @@
       "year": "2020",
       "img": "common/media/134.jpg",
       "link": "https://society6.com/davidbastian/collection/spheres",
-      "shop":true,
+      "shop": true,
       "media": [{
         "type": "image",
 
         "links": [{
           "src": "common/media/134.jpg"
         }]
-      },{
+      }, {
         "type": "image",
 
         "links": [{
           "src": "common/media/134s3.jpg"
         }]
-      },{
+      }, {
         "type": "image",
 
         "links": [{
           "src": "common/media/134s4.jpg"
         }]
-      },{
+      }, {
         "type": "image",
 
         "links": [{
@@ -845,50 +845,50 @@
       "slug": "Blue Sky Photographs",
       "title": "<small>Photographs</small><div><span>Blue Sky<span></div>",
       "role": "Creative & Art Direction.",
-      "description": "I have been shooting photos around the world (Japan, NZ, Netherlands, France, Spain, Italy, Chile) with my smartphone under the limitation of a blue sky, trying to find interesting perspectives and dimensions more than the quality res of the actual camera. zoomming, cropping etc. If you like it or you find them interesting get them on Society 6 at the link below.", 
+      "description": "I have been shooting photos around the world (Japan, NZ, Netherlands, France, Spain, Italy, Chile) with my smartphone under the limitation of a blue sky, trying to find interesting perspectives and dimensions more than the quality res of the actual camera. zoomming, cropping etc. If you like it or you find them interesting get them on Society 6 at the link below.",
       "year": "2021",
       "img": "common/media/134.gif",
-      "link":"https://society6.com/davidbastian/collection/sky-by-david-bastian",
-      "shop":true,
+      "link": "https://society6.com/davidbastian/collection/sky-by-david-bastian",
+      "shop": true,
       "media": [
-        
+
         {
           "type": "image",
 
           "links": [{
             "src": "common/media/134d.jpg"
           }]
-        },{
+        }, {
           "type": "image",
 
           "links": [{
             "src": "common/media/134c.jpg"
           }]
-        },{
+        }, {
           "type": "image",
 
           "links": [{
             "src": "common/media/134e.jpg"
           }]
-        },{
+        }, {
           "type": "image",
 
           "links": [{
             "src": "common/media/134g.jpg"
           }]
-        },{
+        }, {
           "type": "image",
 
           "links": [{
             "src": "common/media/134h.jpg"
           }]
-        },{
+        }, {
           "type": "image",
 
           "links": [{
             "src": "common/media/134i.jpg"
           }]
-        },{
+        }, {
           "type": "image",
 
           "links": [{
@@ -899,7 +899,7 @@
       ]
 
     },
-    
+
 
 
 
@@ -952,10 +952,10 @@
       "year": "2021",
       "description": "I always wanted to create something related with the moon landing, So I start to design an idea similar of the first feet on the moon, but why not a Hand?. I trying to keep as close as possible of the typical NASA shots, with lots of artifacts/contrast and low quality image. to achive a more realistic result. This piece was made in Blender and I have a lots of fun making it.",
       "img": "common/media/135.jpg",
-      "shop":true,
-      "link":"https://society6.com/product/hand-at-the-moon_print",
+      "shop": true,
+      "link": "https://society6.com/product/hand-at-the-moon_print",
       "media": [
-        
+
         {
           "type": "image",
 
@@ -999,7 +999,7 @@
       ]
     },
 
- 
+
 
     {
       "slug": "Interactions - Museum Beeld en Geluid",
@@ -1054,26 +1054,26 @@
       "year": "2020",
       "img": "common/media/134s3.jpg",
       "link": "https://society6.com/davidbastian/collection/spheres",
-      "shop":true,
+      "shop": true,
       "media": [{
         "type": "image",
 
         "links": [{
           "src": "common/media/134s3.jpg"
         }]
-      },{
+      }, {
         "type": "image",
 
         "links": [{
           "src": "common/media/134.jpg"
         }]
-      },{
+      }, {
         "type": "image",
 
         "links": [{
           "src": "common/media/134s4.jpg"
         }]
-      },{
+      }, {
         "type": "image",
 
         "links": [{
@@ -1125,7 +1125,7 @@
     },
 
 
-  
+
 
 
 
@@ -1269,26 +1269,26 @@
       "year": "2020",
       "img": "common/media/134s4.jpg",
       "link": "https://society6.com/davidbastian/collection/spheres",
-      "shop":true,
+      "shop": true,
       "media": [{
         "type": "image",
 
         "links": [{
           "src": "common/media/134s4.jpg"
         }]
-      },{
+      }, {
         "type": "image",
 
         "links": [{
           "src": "common/media/134.jpg"
         }]
-      },{
+      }, {
         "type": "image",
 
         "links": [{
           "src": "common/media/134s2.jpg"
         }]
-      },{
+      }, {
         "type": "image",
 
         "links": [{
@@ -1459,10 +1459,49 @@
       "slug": "Monochrome Series",
       "title": "<small>Illustrations</small><div><span>Monochrome Series<span></div>",
       "role": "Illustrations.",
-      "year": "2021",
-      "type": "confidential",
+      "description": "Years ago I decided to make a monochrome series of illustrations with concepts related with space, global warming, sustentability, depresion, ocean species, inspired in artist like moebius amd alejandro jodorowsky.  If you like some of them, you can get it on Society 6 on the link below.",
+      "year": "2019",
       "img": "common/media/138.gif",
-      "shop":"https://society6.com/product/light-sphere-gradient_poster"
+      "link": "https://society6.com/davidbastian/collection/monochrome-series",
+      "shop": true,
+      "media": [{
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/138a.jpg"
+        }]
+      }, {
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/138b.jpg"
+        }]
+      }, {
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/138c.jpg"
+        }]
+      }, {
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/138d.jpg"
+        }]
+      }, {
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/138e.jpg"
+        }]
+      }, {
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/138f.jpg"
+        }]
+      }]
+
 
     },
 
@@ -1517,7 +1556,7 @@
     },
 
 
-   
+
 
 
     {
@@ -1741,26 +1780,26 @@
       "year": "2020",
       "img": "common/media/134s2.jpg",
       "link": "https://society6.com/davidbastian/collection/spheres",
-      "shop":true,
+      "shop": true,
       "media": [{
         "type": "image",
 
         "links": [{
           "src": "common/media/134s2.jpg"
         }]
-      },{
+      }, {
         "type": "image",
 
         "links": [{
           "src": "common/media/134.jpg"
         }]
-      },{
+      }, {
         "type": "image",
 
         "links": [{
           "src": "common/media/134s4.jpg"
         }]
-      },{
+      }, {
         "type": "image",
 
         "links": [{
@@ -1770,7 +1809,7 @@
 
     },
 
-   
+
 
     {
       "slug": "Barltop Graham",
@@ -1935,8 +1974,8 @@
       ]
     }
 
-   
 
-    
+
+
   ]
 }
