@@ -108,10 +108,7 @@ class TransitionModule {
         }
       });
 
-    }
-
-
-    if (self.oldView) {
+    }else if (self.oldView) {
       this.oldView.removeEvents();
       console.log('hola1')
 
@@ -120,7 +117,8 @@ class TransitionModule {
         ease: "Power3.easeInOut",
         y: -50,
         onComplete: function () {
-        //  self.oldView.el.outerHTML = "";
+          
+          self.oldView.el.outerHTML = "";
         }
       });
     }
