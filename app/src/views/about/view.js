@@ -5,9 +5,8 @@ import {
 import "./style.scss";
 import transitionModule from "../../modules/module.transition";
 import {
-    TimeLineMax,
     TweenMax,
-    TimelineLite
+    gsap
 } from "gsap";
 
 
@@ -79,7 +78,7 @@ class AboutView {
 
         
 
-        const tlParent = new TimelineMax({
+        const tlParent = gsap.timeline({
             delay: 0.5,
             onComplete: function () {
                 TweenMax.to(social, 1.3, {
@@ -92,7 +91,7 @@ class AboutView {
         tlParent.pause();
 
         for (let i = 0; i < spans.length; i++) {
-            const tl = new TimelineMax({
+            const tl = gsap.timeline({
                 delay: getRandomArbitrary(0.4, 0.5)
             });
             const span = spans[i];
@@ -108,7 +107,7 @@ class AboutView {
                 const charTween = TweenMax.to(char, getRandomArbitrary(0.01, 0.03), {
                     opacity: 1,
                     delay: getRandomArbitrary(0.01, 0.03),
-                    ease: SteppedEase.config(1)
+                    ease: 'steps(1)'
                 });
 
                 tl.add(charTween);

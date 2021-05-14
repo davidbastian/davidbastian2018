@@ -1,6 +1,10 @@
 import Data from '../../common/data/data';
 
 import Config from '../../config';
+import {
+    TweenMax,
+    gsap
+} from 'gsap';
 
 class AppView {
     init() {
@@ -52,19 +56,21 @@ class AppView {
 
         document.body.innerHTML = markup;
 
-        var tl = new TimelineMax({
+        var tl = gsap.timeline({
             repeat: -1
         });
 
-        tl.to(".counter-dot", .10, {
+        tl.to(".counter-dot",  {
                 transformOrigin: "50% 100%",
                 scaleY: 0.9,
+                duration:.10,
                 yoyo: true,
                 repeat: 1
             })
-            .to(".counter-dot", .75, {
+            .to(".counter-dot",  {
                 y: -40,
-                ease: Circ.easeOut,
+                duration:.75,
+                ease: 'circ.out',
                 yoyo: true,
                 repeat: 1
             });

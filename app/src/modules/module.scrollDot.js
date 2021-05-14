@@ -5,6 +5,10 @@ import {
 
 import App from '../../index';
 import Config from '../../config';
+import {
+  TweenMax,
+  gsap
+} from "gsap";
 
 class ScrollDotModule {
   constructor(opt) {

@@ -1,4 +1,7 @@
 import App from "../../index";
+import {
+  TweenMax
+} from 'gsap';
 
 class TransitionModule {
   constructor(opt) {
@@ -94,12 +97,13 @@ class TransitionModule {
 
     if (self.oldView === self.activeView) {
       const s = document.querySelectorAll('.single')[0];
+      console.log('hola');
       TweenMax.to(s, 1, {
         autoAlpha: 0,
         ease: "Power3.easeInOut",
         y: -50,
         onComplete: function () {
-          s.outerHTML = "";
+         s.outerHTML = "";
           self.activeView.scroll.addEvents();
         }
       });
@@ -109,13 +113,14 @@ class TransitionModule {
 
     if (self.oldView) {
       this.oldView.removeEvents();
+      console.log('hola1')
 
       TweenMax.to(self.oldView.el, 1, {
         autoAlpha: 0,
         ease: "Power3.easeInOut",
         y: -50,
         onComplete: function () {
-          self.oldView.el.outerHTML = "";
+        //  self.oldView.el.outerHTML = "";
         }
       });
     }
