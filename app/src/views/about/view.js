@@ -68,7 +68,7 @@ class AboutView {
                <a href="https://twitter.com/davidbastian_cl" target="_blank">Twitter</a>
                <a href="https://www.instagram.com/davidbastian" target="_blank">Instagram</a>
                <a href="https://cl.linkedin.com/in/davidbastianf" target="_blank">LinkedIn</a>
-               <a class="hide" href="common/doc/davidbastiancv.pdf" target="_blank">CV</a>
+               <a href="common/doc/davidbastiancv.pdf" target="_blank">CV</a>
             </div>
         </div>
       `;
