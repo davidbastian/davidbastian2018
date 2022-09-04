@@ -139,8 +139,8 @@ class HomeView {
     const self = this;
     if (project.video) {
 
-      markup = /*html*/ ` ${self.setConfidential(type)}<video class="video media" playsinline autoplay loop muted src="${project.img}">
-      <source src="${project.img}" type="video/mp4">
+      markup = /*html*/ ` ${self.setConfidential(type)}<video class="video media" playsinline autoplay loop muted src="${project.video}">
+      <source src="${project.video}" type="video/mp4">
       Your browser does not support the video tag.
       </video>`
     } else {

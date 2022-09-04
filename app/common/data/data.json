@@ -18,7 +18,14 @@
       }
     ]
   },
-  "projects": [{
+  "projects": [ {
+    "slug": "Blazst Electric Bike ©",
+    "title": "<small>Blazst</small><div><span>Electric Bik<span></div>",
+    "role": "Creative & Art Direction, Design, 3d prototype.",
+    "type": "confidential",
+    "img": "common/media/093d.jpg"
+
+  },{
       "slug": "The One Stroke Shave Vision",
       "title": "<small>The One Stroke</small><div><span>Shave Vision<span></div>",
       "role": "Art Direction, UI Design.",
@@ -171,6 +178,8 @@
         }
       ]
     },
+
+
     {
       "slug": "Yohji Yamamoto Kusari II Adidas Landing Page",
       "title": "<small>Landing Page</small><div><span>Kusari II Adidas<span></div>",
@@ -221,6 +230,62 @@
       "img": "common/media/133.jpg"
     },
 
+    {
+      "slug": "Diego Stevens",
+      "title": "<small>Personal Website</small><div><span>Diego Stevens<span></div>",
+      "role": "Creative & Art Direction, Design, 3d & Develop.",
+      "description": "Website Made for Diego Stevens, Chilean Entrepreneur. The Challenge was develop a website simple to navigate. On one scroll page. giving a the user a full overview of Diego's highlights, his projects,long term plans, personal life and partners. Improving his brand signature with an elegant style with a fun touch of western movies.",
+      "link": "https://www.diegostevens.com/",
+      "img": "common/media/128.jpg",
+      "year": "2021",
+      "media": [{
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/128.jpg"
+        }]
+      },{
+        "type": "video",
+
+        "links": [{
+          "src": "common/media/128a.mp4"
+        }]
+      }, {
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/128aa.jpg"
+        }]
+      }, {
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/128b.jpg"
+        }]
+      }, {
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/128cc.jpg"
+        }]
+      }, {
+        "type": "image",
+
+        "links": [{
+          "src": "common/media/128bb.jpg"
+        }]
+      }
+    ]
+  },
+  {
+    "slug": "Rooplex Watch ©",
+    "title": "<small>Rooplex</small><div><span>Watch<span></div>",
+    "role": "Creative & Art Direction, Design, 3d prototype.",
+    "type": "confidential",
+    "img": "common/media/093c.jpg"
+
+  },
+
 
     {
       "slug": "Think with Google 2019",
@@ -264,7 +329,9 @@
           }]
         }
       ]
-    }, {
+    },
+    
+   {
       "slug": "Low Blackie © Spoon",
       "title": "<small>Low Blackie</small><div><span>Spoon<span></div>",
       "role": "Creative & Art Direction, Design, 3d prototype.",
@@ -272,6 +339,8 @@
       "type": "confidential",
       "img": "common/media/131.jpg"
     },
+
+    
 
 
     {
@@ -337,6 +406,16 @@
     },
 
     {
+      "slug": "Monks Explorations 03",
+      "title": "<small>Monks</small><div><span>Explorations<span></div>",
+      "role": "Creative & Art Direction, Design, 3d prototype.",
+      "year": "2021",
+      "type": "confidential",
+      "video": "common/media/137e_3_1.mp4"
+
+    },
+
+    {
       "slug": "Copper Guys, Poster Series",
       "title": "<small>Poster Series</small><div><span>Copper Guys<span></div>",
       "role": "Creative & Art Direction, 3d Design.",
@@ -394,13 +473,33 @@
       ]
 
     },
+
+    {
+      "slug": "Monks Explorations 01",
+      "title": "<small>Monks</small><div><span>Explorations<span></div>",
+      "role": "Creative & Art Direction, Design, 3d prototype.",
+      "year": "2021",
+      "type": "confidential",
+      "img": "common/media/120.jpg"
+
+    },
     {
       "slug": "Covid-19 Raincoat ©",
       "title": "<small>Covid-19</small><div><span>Raincoat<span></div>",
       "role": "Creative & Art Direction, Design, 3d prototype.",
       "year": "2021",
       "type": "confidential",
-      "img": "common/media/132.jpg"
+      "video": "common/media/0001-0180.webm"
+
+    },
+
+    {
+      "slug": "Monks Explorations 02",
+      "title": "<small>Monks</small><div><span>Explorations<span></div>",
+      "role": "Creative & Art Direction, Design, 3d prototype.",
+      "year": "2021",
+      "type": "confidential",
+      "video": "common/media/137e_1.mp4"
 
     },
 
@@ -456,7 +555,6 @@
         }]
       }]
     },
-
 
 
 
@@ -539,6 +637,8 @@
 
       ]
     },
+
+ 
 
 
 
@@ -810,6 +910,8 @@
       ]
     },
 
+    
+
     {
       "slug": "Braun AR Experience",
       "title": "<small>AR Experience</small><div><span>Braun<span></div>",
@@ -840,6 +942,18 @@
 
       ]
     },
+
+    {
+      "slug": "Monks Explorations 02",
+      "title": "<small>Monks</small><div><span>Explorations<span></div>",
+      "role": "Creative & Art Direction, Design, 3d prototype.",
+      "year": "2021",
+      "type": "confidential",
+      "video": "common/media/137e_2.mp4"
+
+    },
+
+
 
     {
       "slug": "Blue Sky Photographs",
