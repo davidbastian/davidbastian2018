@@ -1,3 +1,5 @@
+
+
 #home {
   display: flex;
 
@@ -30,6 +32,7 @@
       >div {
         height: 100%;
         overflow: hidden;
+        width: max-content;
       }
 
       .confidential {

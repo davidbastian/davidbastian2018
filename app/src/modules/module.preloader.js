@@ -10,93 +10,56 @@ import {
 
 class Preloader {
     constructor(url) {
-
         this.url = url;
-        this.getData();
         this.counter = 0;
         this.randomPercent = getRandomInt(20, 40);
-
+        this.size = 0;
+        this.firstPreload = false;
+        this.getData();
     }
 
     getData() {
-        const self = this;
         const mediaArray = [];
 
-        if (self.url === '/' || self.url === '/about') {
-
+        if (this.url === '/' || this.url === '/about') {
             for (let i = 0; i < Data.projects.length; i++) {
                 const project = Data.projects[i];
                 const mediaLink = project.img;
                 mediaArray.push(mediaLink);
-
             }
-
-            for (let e = 0; e < mediaArray.length; e++) {
-                const mediaLink = mediaArray[e];
-                this.preloadMedia(mediaLink);
-            }
-
-
-
-            this.size = mediaArray.length;
-
         } else {
             for (let i = 0; i < Data.projects.length; i++) {
                 const project = Data.projects[i];
                 if (project.media) {
                     for (let m = 0; m < project.media.length; m++) {
-                  
                         const media = project.media[m];
                         mediaArray.push(media);
-                    
-                    
+                    }
                 }
-                }
-                
             }
-
-            for (let e = 0; e < mediaArray.length; e++) {
-                const mediaLink = mediaArray[e].links[0].src;
-                const mediaType = mediaArray[e].type;
-                this.preloadMedia(mediaLink, mediaType);
-            }
-
-            this.size = mediaArray.length;
         }
+
+        this.size = mediaArray.length;
+        mediaArray.forEach(mediaLink => this.preloadMedia(mediaLink));
     }
 
-    preloadMedia(link, type) {
+    preloadMedia(link) {
         const self = this;
-        let progress = {
-            val: 0
-        };
+        let progress = { val: 0 };
 
-
-        let xhr = new XMLHttpRequest();
-        xhr.open('get', link);
-
-
-        function updateHandler() {
-            document.body.querySelectorAll('.counter-inner')[0].innerHTML = Math.round(progress.val);
-        }
-
-        xhr.onload = function () {
-            self.counter = self.counter + 1;
-            // console.log(link, type + ' ready', self.size, self.counter);
-
-           // console.log(self.counter, self.size);
-
+        fetch(link).then(() => {
+            self.counter += 1;
             progress.val = (self.counter * self.randomPercent) / self.size;
             document.body.querySelectorAll('.counter-inner')[0].innerHTML = Math.round(progress.val);
 
             if (self.counter === self.size) {
-
                 TweenMax.to(progress, 3, {
                     val: 99,
                     ease: 'Power3.easeInOut',
-                    onUpdate: updateHandler,
+                    onUpdate: function () {
+                        document.body.querySelectorAll('.counter-inner')[0].innerHTML = Math.round(progress.val);
+                    },
                     onComplete: function () {
-
                         if (!self.firstPreload) {
                             App.router.addEvents();
                             App.router.updateUrl();
@@ -110,21 +73,14 @@ class Preloader {
                                     document.body.querySelectorAll('.preloader')[0].outerHTML = "";
                                 }
                             });
-
-
-
                         }
                     }
                 });
-
-            } 
-        };
-
-
-
-        xhr.send();
+            }
+        }).catch(error => {
+            console.error('Error preloading media:', error);
+        });
     }
-
 }
 
 export default Preloader;

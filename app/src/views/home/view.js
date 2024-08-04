@@ -8,7 +8,7 @@ import transitionModule from "../../modules/module.transition";
 import {
   TweenMax
 } from "gsap";
-import Data from '../../../common/data/data';
+import Data from '../../../common/data/data-old';
 import Config from '../../../config';
 
 class HomeView {
