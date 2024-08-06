@@ -2,11 +2,6 @@
 
 import { gsap } from 'gsap';
 
-// Function to detect mobile or iPad devices
-function isMobileDevice() {
-    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    return /android|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent);
-}
 
 function updateBorderRadius() {
   // Select all images with the class .phone
@@ -59,6 +54,8 @@ images3.forEach(image => {
 
 
 }
+
+
 
 // Update border-radius on page load
 window.addEventListener('load', updateBorderRadius);
@@ -1042,326 +1039,345 @@ box-sizing: border-box;
     `;
     document.head.appendChild(style);
 }
+// Function to detect mobile or iPad devices
+function isMobileDevice() {
+  const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+  return /android|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent);
+}
 
+// Function to preload images and videos
+function preloadMedia(mediaElements, callback) {
+  let loadedCount = 0;
+  const total = mediaElements.length;
+  const loadingContainer = document.getElementById('loading-container');
+  const isMobile = isMobileDevice();
 
-    // Preload images and videos
-    function preloadMedia(mediaElements, callback) {
-        let loadedCount = 0;
-        const total = mediaElements.length;
-        const loadingContainer = document.getElementById('loading-container');
-        if (total === 0) {
-            // If no media, directly call callback
-            callback();
-            return;
-        }
-        mediaElements.forEach(element => {
-            console.log(`Loading element: ${element.tagName}`);
-            if (element.tagName === 'IMG') {
-                element.onload = mediaLoaded;
-                element.onerror = mediaLoaded;
-                element.src = element.src; // Trigger load
-            } else if (element.tagName === 'VIDEO') {
-                element.onloadeddata = mediaLoaded;
-                element.onerror = mediaLoaded;
-                element.load(); // Trigger loading
-            }
-        });
+  if (total === 0) {
+      callback();
+      return;
+  }
 
-        function mediaLoaded() {
-            loadedCount++;
-            console.log(`Media loaded: ${loadedCount} of ${total}`);
-            const percent = Math.round((loadedCount / total) * 100);
-            loadingContainer.innerText = `Loading... ${percent}%`;
-            if (loadedCount === total) {
-                console.log('All media loaded');
-                callback();
-            }
-        }
-    }
+  mediaElements.forEach(element => {
+      if (element.tagName === 'IMG') {
+          element.onload = mediaLoaded;
+          element.onerror = mediaLoaded;
+          element.src = element.src; // Trigger load
+      } else if (element.tagName === 'VIDEO') {
+          element.onloadeddata = mediaLoaded;
+          element.onerror = mediaLoaded;
+          
+          if (isMobile) {
+              element.pause(); // Pause the video if on mobile
+          } else {
+              element.load(); // Trigger loading
+          }
+      }
+  });
 
-    class WordAnimator {
-        constructor(text, container, mediaContainer) {
-            this.text = text;
-            this.container = container;
-            this.mediaContainer = mediaContainer;
-            this.words = text.split(' ');
-            this.timeline = gsap.timeline({
-                paused: true,
-                repeat: -1
-            });
-            this.createTimeline();
-            this.pausePending = false; // Track if a pause is pending
-            this.currentZIndex = 1; // Track the current z-index
-        }
-        createTimeline() {
-            // Add text words to the timeline
-            // Add the "Thank you!" message at the end
-            this.timeline.to(this.container, {
-                scale: 1,
-                opacity: 1,
-                duration: .3, // Display "Thank you!" for a moment
-                ease: 'power2.out',
-                onStart: () => {
-                    this.container.innerText = "Hello! I'm David,";
-                }
-            })
-           
-            .to(this.container, {
-                opacity: 0,
-                duration: .5, // Fade out "Thank you!"
-                ease: 'power2.in'
-            });
+  function mediaLoaded() {
+      loadedCount++;
+      const percent = Math.round((loadedCount / total) * 100);
+      loadingContainer.innerText = `Loading... ${percent}%`;
+      if (loadedCount === total) {
+          callback();
+      }
+  }
+}
 
-            this.words.forEach((word) => {
-                this.timeline.to(this.container, {
-                        scale: 1,
-                        opacity: 1,
-                        duration: 0.08, // Faster animation duration
-                        ease: 'power2.out',
-                        onStart: () => {
-                            this.container.innerText = word;
-                        }
-                    })
-                    .to(this.container, {
-                        opacity: 0,
-                        duration: 0.08, // Faster animation duration
-                        ease: 'power2.in',
-                        onComplete: () => {
-                            if (this.pausePending) {
-                                this.timeline.pause();
-                                this.pausePending = false; // Reset pause pending flag
-                            }
-                        }
-                    });
-            });
-            // Add the "and now let's see my work" message
-            this.timeline.to(this.container, {
-                    scale: 1,
-                    opacity: 1,
-                    duration: 1, // Faster animation duration
-                    ease: 'power2.out',
-                    onStart: () => {
-                        this.container.innerText = "and now let's see my work";
-                    }
-                })
-                .to(this.container, {
-                    opacity: 0,
-                    duration: 1, // Faster animation duration
-                    ease: 'power2.in'
-                });
-            // Define categories and their display order
-            const categories = ["interfaces","branding","3d"];
+class WordAnimator {
+  constructor(text, container, mediaContainer) {
+      this.text = text;
+      this.container = container;
+      this.mediaContainer = mediaContainer;
+      this.words = text.split(' ');
+      this.timeline = gsap.timeline({
+          paused: true,
+          repeat: -1
+      });
+      this.createTimeline();
+      this.pausePending = false;
+      this.currentZIndex = 1;
+  }
 
-            categories.forEach((category, index) => {
-                this.timeline.to(this.container, {
-                        scale: 1,
-                        opacity: 1,
-                        duration: 0.5,
-                        ease: 'power2.out',
-                        onStart: () => {
-                            this.container.innerText = category;
-                        }
-                    })
-                    .to(this.container, {
-                        opacity: 0,
-                        duration: 0.5,
-                        ease: 'power2.in'
-                    });
+  createTimeline() {
+      this.timeline.to(this.container, {
+          scale: 1,
+          opacity: 1,
+          duration: 0.3,
+          ease: 'power2.out',
+          onStart: () => {
+              this.container.innerText = "Hello! I'm David,";
+          }
+      })
+      .to(this.container, {
+          opacity: 0,
+          duration: 0.5,
+          ease: 'power2.in'
+      });
 
-                const figures = this.mediaContainer.querySelectorAll(`figure[data-category="${category}"]`);
-                figures.forEach((figure) => {
-                    this.timeline.fromTo(figure, {
-                            scale: 1,
-                            opacity: 0,
-                            zIndex: this.currentZIndex++
-                        }, {
-                            scale: 1,
-                            opacity: 1,
-                            duration: 0.05, // Faster animation duration
-                            ease: 'power2.out',
-                            onComplete: () => {
-                                if (this.pausePending) {
-                                    this.timeline.pause();
-                                    this.pausePending = false; // Reset pause pending flag
-                                }
-                            }
-                        })
-                        .to(figure, {
-                            opacity: 0,
-                            duration: 0.2, // Slightly longer fade out to create overlap
-                            ease: 'power2.in'
-                        }); // Overlap the animations slightly
-                });
-            });
+      this.words.forEach((word) => {
+          this.timeline.to(this.container, {
+                  scale: 1,
+                  opacity: 1,
+                  duration: 0.08,
+                  ease: 'power2.out',
+                  onStart: () => {
+                      this.container.innerText = word;
+                  }
+              })
+              .to(this.container, {
+                  opacity: 0,
+                  duration: 0.08,
+                  ease: 'power2.in',
+                  onComplete: () => {
+                      if (this.pausePending) {
+                          this.timeline.pause();
+                          this.pausePending = false;
+                      }
+                  }
+              });
+      });
 
-            // Display all remaining figures under "more"
-            this.timeline.to(this.container, {
-                    scale: 1,
-                    opacity: 1,
-                    duration: 0.5,
-                    ease: 'power2.out',
-                    onStart: () => {
-                        this.container.innerText = "and more...";
-                    }
-                })
-                .to(this.container, {
-                    opacity: 0,
-                    duration: 0.5,
-                    ease: 'power2.in'
-                });
-
-            const moreFigures = this.mediaContainer.querySelectorAll('figure:not([data-category="branding"]):not([data-category="3d"]):not([data-category="ar/vr"]):not([data-category="interfaces"])');
-            moreFigures.forEach((figure) => {
-                this.timeline.fromTo(figure, {
-                        scale: 1,
-                        opacity: 0,
-                        zIndex: this.currentZIndex++
-                    }, {
-                        scale: 1,
-                        opacity: 1,
-                        duration: 0.05, // Faster animation duration
-                        ease: 'power2.out',
-                        onComplete: () => {
-                            if (this.pausePending) {
-                                this.timeline.pause();
-                                this.pausePending = false; // Reset pause pending flag
-                            }
-                        }
-                    })
-                    .to(figure, {
-                        opacity: 0,
-                        duration: 0.2, // Slightly longer fade out to create overlap
-                        ease: 'power2.in'
-                    }); // Overlap the animations slightly
-            });
-
-              // Add the "Thank you!" message at the end
-                this.timeline.to(this.container, {
-                    scale: 1,
-                    opacity: 1,
-                    duration: 1, // Display "Thank you!" for a moment
-                    ease: 'power2.out',
-                    onStart: () => {
-                        this.container.innerText = "That's all for now, Thank you!";
-                    }
-                })
-                .to(this.container, {
-                    opacity: 0,
-                    duration: 1, // Fade out "Thank you!"
-                    ease: 'power2.in'
-                });
-        }
-        startAnimation() {
-            this.timeline.play();
-        }
-        pauseAnimation() {
-            // Set flag to pause the animation at the next appropriate time
-            this.pausePending = true;
-        }
-        setSpeed(scale) {
-            this.timeline.timeScale(scale);
-        }
-    }
-    document.addEventListener('DOMContentLoaded', () => {
-        injectHTMLandCSS();
-        const text = "Originally from Chile, I am a Designer and Developer currently based in The Netherlands. I love to concept and design minimal and creative products, working in multiple disciplines including branding, interactive design, illustration, 3D, animation, AR/VR, development, iconography, photography, typography, art and creative direction.";
-        const container = document.getElementById('text-container');
-        const mediaContainer = document.getElementById('media-container');
-        const controlDot = document.getElementById('control-dot');
-        const loadingContainer = document.getElementById('loading-container');
-        const instruction = document.getElementById('instruction');
-        const header = document.getElementById('header');
-        const animator = new WordAnimator(text, container, mediaContainer);
-        const mediaElements = mediaContainer.querySelectorAll('img, video');
-
-        preloadMedia(mediaElements, () => {
-            // Hide loading and show content
-            gsap.to(loadingContainer, {
-                opacity: 0,
-                duration: 0.5,
-                onComplete: () => {
-                loadingContainer.style.display = 'none';
-                instruction.style.display = 'block';
-           
-
+      this.timeline.to(this.container, {
+              scale: 1,
+              opacity: 1,
+              duration: 1,
+              ease: 'power2.out',
+              onStart: () => {
+                  this.container.innerText = "and now let's see my work";
               }
-            });
-            gsap.to([container, mediaContainer, controlDot], {
-                opacity: 1,
-                duration: 0.5,
-                display: 'block'
-            });
+          })
+          .to(this.container, {
+              opacity: 0,
+              duration: 1,
+              ease: 'power2.in'
+          });
 
-            let isHolding = false;
+      const categories = ["interfaces", "branding", "3d"];
+      categories.forEach((category) => {
+          this.timeline.to(this.container, {
+                  scale: 1,
+                  opacity: 1,
+                  duration: 0.5,
+                  ease: 'power2.out',
+                  onStart: () => {
+                      this.container.innerText = category;
+                  }
+              })
+              .to(this.container, {
+                  opacity: 0,
+                  duration: 0.5,
+                  ease: 'power2.in'
+              });
 
-            // Handle mouse down / touch start
-            const startHandler = () => {
-                isHolding = true;
-                gsap.to(controlDot, {
-                    scale: 0.3,
-                    duration: 0.3
-                });
-                animator.startAnimation();
-               /* header.style.display = 'none';*/
-                instruction.innerText = 'Drag left or right to control the speed';
-            };
+              const figures = this.mediaContainer.querySelectorAll(`figure[data-category="${category}"]`);
+              figures.forEach((figure) => {
+                  const video = figure.querySelector('video');
+                  
+                  // Play video when figure becomes visible
+                  this.timeline.fromTo(figure, {
+                          scale: 1,
+                          opacity: 0,
+                          zIndex: this.currentZIndex++
+                      }, {
+                          scale: 1,
+                          opacity: 1,
+                          duration: 0.05,
+                          ease: 'power2.out',
+                          onStart: () => {
+                              if (video) {
+                                  video.play();
+                              }
+                          },
+                          onComplete: () => {
+                              if (this.pausePending) {
+                                  this.timeline.pause();
+                                  this.pausePending = false;
+                              }
+                          }
+                      })
+                      // Pause video when figure fades out
+                      .to(figure, {
+                          opacity: 0,
+                          duration: 0.2,
+                          ease: 'power2.in',
+                          onStart: () => {
+                              if (video) {
+                                  video.pause();
+                              }
+                          }
+                      });
+              });
+          });
+  
+          this.timeline.to(this.container, {
+                  scale: 1,
+                  opacity: 1,
+                  duration: 0.5,
+                  ease: 'power2.out',
+                  onStart: () => {
+                      this.container.innerText = "and more...";
+                  }
+              })
+              .to(this.container, {
+                  opacity: 0,
+                  duration: 0.5,
+                  ease: 'power2.in'
+              });
+  
+          const moreFigures = this.mediaContainer.querySelectorAll('figure:not([data-category="branding"]):not([data-category="3d"]):not([data-category="ar/vr"]):not([data-category="interfaces"])');
+          moreFigures.forEach((figure) => {
+              const video = figure.querySelector('video');
+              
+              this.timeline.fromTo(figure, {
+                      scale: 1,
+                      opacity: 0,
+                      zIndex: this.currentZIndex++
+                  }, {
+                      scale: 1,
+                      opacity: 1,
+                      duration: 0.05,
+                      ease: 'power2.out',
+                      onStart: () => {
+                          if (video) {
+                              video.play();
+                          }
+                      },
+                      onComplete: () => {
+                          if (this.pausePending) {
+                              this.timeline.pause();
+                              this.pausePending = false;
+                          }
+                      }
+                  })
+                  .to(figure, {
+                      opacity: 0,
+                      duration: 0.2,
+                      ease: 'power2.in',
+                      onStart: () => {
+                          if (video) {
+                              video.pause();
+                          }
+                      }
+                  });
+          });
+      this.timeline.to(this.container, {
+          scale: 1,
+          opacity: 1,
+          duration: 1,
+          ease: 'power2.out',
+          onStart: () => {
+              this.container.innerText = "That's all for now, Thank you!";
+          }
+      })
+      .to(this.container, {
+          opacity: 0,
+          duration: 1,
+          ease: 'power2.in'
+      });
+  }
 
-            // Handle mouse move / touch move
-            const moveHandler = (x, y) => {
-                if (isHolding) {
-                    gsap.to(controlDot, {
-                        x: x - window.innerWidth / 2,
-                        y: y - window.innerHeight / 2,
-                        duration: 0.1
-                    });
+  startAnimation() {
+      this.timeline.play();
+  }
 
-                    // Adjust the timeline speed based on the horizontal position
-                    const windowWidth = window.innerWidth;
-                    const centerX = windowWidth / 2;
-                    const distanceFromCenter = x - centerX;
+  pauseAnimation() {
+      this.pausePending = true;
+  }
 
-                    // Adjust the speed scaling factor
-                    let speedScale = 1 + (distanceFromCenter / centerX) * 1.5;
+  setSpeed(scale) {
+      this.timeline.timeScale(scale);
+  }
+}
 
-                    // Clamp the speedScale to a minimum value to prevent issues
-                    speedScale = Math.max(0.1, speedScale); // Minimum speed scale of 0.1
+document.addEventListener('DOMContentLoaded', () => {
+  injectHTMLandCSS();
+  const text = "Originally from Chile, I am a Designer and Developer currently based in The Netherlands. I love to concept and design minimal and creative products, working in multiple disciplines including branding, interactive design, illustration, 3D, animation, AR/VR, development, iconography, photography, typography, art and creative direction.";
+  const container = document.getElementById('text-container');
+  const mediaContainer = document.getElementById('media-container');
+  const controlDot = document.getElementById('control-dot');
+  const loadingContainer = document.getElementById('loading-container');
+  const instruction = document.getElementById('instruction');
+  const header = document.getElementById('header');
+  const animator = new WordAnimator(text, container, mediaContainer);
+  const mediaElements = mediaContainer.querySelectorAll('img, video');
 
-                    animator.setSpeed(speedScale);
-                }
-            };
+  preloadMedia(mediaElements, () => {
+      gsap.to(loadingContainer, {
+          opacity: 0,
+          duration: 0.5,
+          onComplete: () => {
+              loadingContainer.style.display = 'none';
+              instruction.style.display = 'block';
+          }
+      });
+      gsap.to([container, mediaContainer, controlDot], {
+          opacity: 1,
+          duration: 0.5,
+          display: 'block'
+      });
 
-            // Handle mouse up / touch end / mouse leave
-            const endHandler = () => {
-                if (isHolding) {
-                    isHolding = false;
-                    gsap.to(controlDot, {
-                        scale: 1,
-                        x: 0,
-                        y: 0,
-                        duration: 0.3
-                    });
-                    animator.pauseAnimation();
-                    animator.setSpeed(1);
-                    instruction.innerText = 'Tap and hold the red dot to start';
-                    header.style.display = 'flex';
-                }
-            };
+      let isHolding = false;
 
-            controlDot.addEventListener('mousedown', startHandler);
-            controlDot.addEventListener('touchstart', (e) => {
-                e.preventDefault(); // Prevent default touch behavior
-                startHandler();
-            });
+      const startHandler = () => {
+          isHolding = true;
+          gsap.to(controlDot, {
+              scale: 0.3,
+              duration: 0.3
+          });
+          animator.startAnimation();
+          instruction.innerText = 'Drag left or right to control the speed';
+      };
 
-            window.addEventListener('mousemove', (e) => moveHandler(e.clientX, e.clientY));
-            window.addEventListener('touchmove', (e) => {
-                e.preventDefault(); // Prevent default touch behavior
-                moveHandler(e.touches[0].clientX, e.touches[0].clientY);
-            });
+      const moveHandler = (x, y) => {
+          if (isHolding) {
+              gsap.to(controlDot, {
+                  x: x - window.innerWidth / 2,
+                  y: y - window.innerHeight / 2,
+                  duration: 0.1
+              });
 
-            window.addEventListener('mouseup', endHandler);
-            window.addEventListener('touchend', endHandler);
-            window.addEventListener('mouseleave', endHandler);
-        });
-    });
+              const windowWidth = window.innerWidth;
+              const centerX = windowWidth / 2;
+              const distanceFromCenter = x - centerX;
 
+              let speedScale = 1 + (distanceFromCenter / centerX) * 1.5;
+              speedScale = Math.max(0.1, speedScale);
+
+              animator.setSpeed(speedScale);
+          }
+      };
+
+      const endHandler = () => {
+          if (isHolding) {
+              isHolding = false;
+              gsap.to(controlDot, {
+                  scale: 1,
+                  x: 0,
+                  y: 0,
+                  duration: 0.3
+              });
+              animator.pauseAnimation();
+              animator.setSpeed(1);
+              instruction.innerText = 'Tap and hold the red dot to start';
+              header.style.display = 'flex';
+          }
+      };
+
+      controlDot.addEventListener('mousedown', startHandler);
+      controlDot.addEventListener('touchstart', (e) => {
+          e.preventDefault();
+          startHandler();
+      });
+
+      window.addEventListener('mousemove', (e) => moveHandler(e.clientX, e.clientY));
+      window.addEventListener('touchmove', (e) => {
+          e.preventDefault();
+          moveHandler(e.touches[0].clientX, e.touches[0].clientY);
+      });
+
+      window.addEventListener('mouseup', endHandler);
+      window.addEventListener('touchend', endHandler);
+      window.addEventListener('mouseleave', endHandler);
+  });
+});
