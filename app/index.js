@@ -1035,6 +1035,14 @@ box-sizing: border-box;
     -webkit-user-drag: none;
   }
 
+  body.mobile #control-dot {
+  width: 50px;
+  height: 50px;
+  bottom: 60px; /* Position 60px from the bottom */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%);
+}
+
 
 
 
@@ -1172,14 +1180,9 @@ class WordAnimator {
                   ease: 'power2.in'
               });
 
-              const isMobile = isMobileDevice();
-
               const figures = this.mediaContainer.querySelectorAll(`figure[data-category="${category}"]`);
               figures.forEach((figure) => {
                   const video = figure.querySelector('video');
-                  if (video && isMobile) {
-                    video.pause();
-                }
                   
                   // Play video when figure becomes visible
                   this.timeline.fromTo(figure, {
@@ -1192,9 +1195,9 @@ class WordAnimator {
                           duration: 0.05,
                           ease: 'power2.out',
                           onStart: () => {
-                              /*if (video) {
+                              if (video) {
                                   video.play();
-                              }*/
+                              }
                           },
                           onComplete: () => {
                               if (this.pausePending) {
@@ -1209,9 +1212,9 @@ class WordAnimator {
                           duration: 0.2,
                           ease: 'power2.in',
                           onStart: () => {
-                              /*if (video) {
+                              if (video) {
                                   video.pause();
-                              }*/
+                              }
                           }
                       });
               });
@@ -1235,9 +1238,6 @@ class WordAnimator {
           const moreFigures = this.mediaContainer.querySelectorAll('figure:not([data-category="branding"]):not([data-category="3d"]):not([data-category="ar/vr"]):not([data-category="interfaces"])');
           moreFigures.forEach((figure) => {
               const video = figure.querySelector('video');
-              if (video && isMobile) {
-                video.pause();
-            }
               
               this.timeline.fromTo(figure, {
                       scale: 1,
@@ -1249,9 +1249,9 @@ class WordAnimator {
                       duration: 0.05,
                       ease: 'power2.out',
                       onStart: () => {
-                         /* if (video) {
+                          if (video) {
                               video.play();
-                          }*/
+                          }
                       },
                       onComplete: () => {
                           if (this.pausePending) {
@@ -1265,9 +1265,9 @@ class WordAnimator {
                       duration: 0.2,
                       ease: 'power2.in',
                       onStart: () => {
-                         /* if (video && isMobile) {
+                          if (video) {
                               video.pause();
-                          }*/
+                          }
                       }
                   });
           });
@@ -1299,7 +1299,6 @@ class WordAnimator {
       this.timeline.timeScale(scale);
   }
 }
-
 document.addEventListener('DOMContentLoaded', () => {
   injectHTMLandCSS();
   const text = "Originally from Chile, I am a Designer and Developer currently based in The Netherlands. I love to concept and design minimal and creative products, working in multiple disciplines including branding, interactive design, illustration, 3D, animation, AR/VR, development, iconography, photography, typography, art and creative direction.";
@@ -1311,6 +1310,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const header = document.getElementById('header');
   const animator = new WordAnimator(text, container, mediaContainer);
   const mediaElements = mediaContainer.querySelectorAll('img, video');
+
+  const isMobileDevice = () => {
+    return /android|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent || navigator.vendor || window.opera);
+  };
 
   preloadMedia(mediaElements, () => {
       gsap.to(loadingContainer, {
@@ -1328,6 +1331,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       let isHolding = false;
+      const initialDotPosition = { x: window.innerWidth / 2, y: window.innerHeight - 60 };
 
       const startHandler = () => {
           isHolding = true;
@@ -1341,9 +1345,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const moveHandler = (x, y) => {
           if (isHolding) {
+              const offsetX = isMobileDevice() ? x - initialDotPosition.x : x - window.innerWidth / 2;
+              const offsetY = isMobileDevice() ? y - initialDotPosition.y + 25 : y - window.innerHeight / 2;
+
               gsap.to(controlDot, {
-                  x: x - window.innerWidth / 2,
-                  y: y - window.innerHeight / 2,
+                  x: offsetX,
+                  y: offsetY,
                   duration: 0.1
               });
 
@@ -1358,14 +1365,18 @@ document.addEventListener('DOMContentLoaded', () => {
           }
       };
 
+
       const endHandler = () => {
           if (isHolding) {
               isHolding = false;
               gsap.to(controlDot, {
                   scale: 1,
-                  x: 0,
-                  y: 0,
-                  duration: 0.3
+                  x: isMobileDevice() ? '0%' :'-50%',
+                  y: isMobileDevice() ? 0 : '0%',
+                  left:isMobileDevice() ? '50%' : '50%',
+                  bottom: isMobileDevice() ? '60px' : '',
+                  duration: 0.3,
+                  ease: 'power2.out'
               });
               animator.pauseAnimation();
               animator.setSpeed(1);
@@ -1380,7 +1391,12 @@ document.addEventListener('DOMContentLoaded', () => {
           startHandler();
       });
 
-      window.addEventListener('mousemove', (e) => moveHandler(e.clientX, e.clientY));
+      window.addEventListener('mousemove', (e) => {
+          if (!isMobileDevice()) {
+              moveHandler(e.clientX, e.clientY);
+          }
+      });
+      
       window.addEventListener('touchmove', (e) => {
           e.preventDefault();
           moveHandler(e.touches[0].clientX, e.touches[0].clientY);
@@ -1389,5 +1405,6 @@ document.addEventListener('DOMContentLoaded', () => {
       window.addEventListener('mouseup', endHandler);
       window.addEventListener('touchend', endHandler);
       window.addEventListener('mouseleave', endHandler);
+      window.addEventListener('touchcancel', endHandler);
   });
 });
