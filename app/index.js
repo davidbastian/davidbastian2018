@@ -787,17 +787,7 @@ function injectHTMLandCSS() {
 </figure>
 
 
-<figure>
-  <img loading="lazy" class="media image"
-       src="https://assets.codepen.io/96398/bmw-cannes_1.png?width=1200&format=auto"
-       srcset="
-       https://assets.codepen.io/96398/bmw-cannes_1.png?width=480&format=auto 480w,
-       https://assets.codepen.io/96398/bmw-cannes_1.png?width=800&format=auto 800w,
-       https://assets.codepen.io/96398/bmw-cannes_1.png?width=1200&format=auto 1200w"
-       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
-       alt="">
-  <figcaption><b>BMW + Cannes</b>Key Visual, 3D, Procedual Materials, Light Treatment.</figcaption>
-</figure>
+
 
 
     </div>
@@ -1037,6 +1027,7 @@ box-sizing: border-box;
   #media-container {
     pointer-events:none;
   user-select:none;
+
   }
 
 
