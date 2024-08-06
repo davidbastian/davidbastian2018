@@ -556,65 +556,6 @@ function isMobileDevice() {
 
 
 
-
-function updateBorderRadius(type) {
-  // Select all images with the class .phone
-  const images = document.querySelectorAll('.phone');
-  const images2 = document.querySelectorAll('.tablet');
-  const images3 = document.querySelectorAll('.frame');
-
-  images.forEach(image => {
-    // Get the current width and height of the image
-    const height = image.clientHeight;
-
-    // Calculate 10% of the width and height
-    const borderRadiusHeight = height * 0.081;
-
-    // Set the border-radius
-    image.style.borderRadius = `${borderRadiusHeight}px`;
-    image.style.border = `${borderRadiusHeight * 0.2644}px solid black`;
-    image.style.outline = `${borderRadiusHeight * 0.0460}px solid lightgrey`;
-    image.style.outlineOffset = `0px`;
-    image.style.boxShadow = `0 0 ${borderRadiusHeight * 0.6996}px rgba(0, 0, 0, 0.68)`;
-  });
-
-
-  images2.forEach(image => {
-    // Get the current width and height of the image
-    const height = image.clientHeight;
-
-    // Calculate 10% of the width and height
-    const borderRadiusHeight = height * 0.06;
-
-    // Set the border-radius
-    image.style.borderRadius = `${borderRadiusHeight}px`;
-    image.style.border = `${borderRadiusHeight * 0.5044}px solid black`;
-    image.style.outline = `${borderRadiusHeight * 0.0460}px solid lightgrey`;
-    image.style.outlineOffset = `0px`;
-    image.style.boxShadow = `0 0 ${borderRadiusHeight * 0.6996}px rgba(0, 0, 0, 0.68)`;
-  });
-
-  images3.forEach(image => {
-    // Get the current width and height of the image
-    const height = image.clientHeight;
-
-    // Calculate 10% of the width and height
-    const borderRadiusHeight = height * 0.06;
-
-    // Set the border-radius
-    image.style.boxShadow = `0 0 ${borderRadiusHeight * 0.6996}px rgba(0, 0, 0, 0.68)`;
-  });
-
-
-
-}
-
-// Update border-radius on page load
-window.addEventListener('load', updateBorderRadius);
-
-// Update border-radius on window resize
-window.addEventListener('resize', updateBorderRadius);
-
 // Function to dynamically inject HTML and CSS
 function injectHTMLandCSS() {
   // Add .mobile class to body if it's a mobile device
@@ -937,192 +878,224 @@ function createFigureElement(item) {
 
 class WordAnimator {
   constructor(text, container, mediaContainer) {
-    this.text = text;
-    this.container = container;
-    this.mediaContainer = mediaContainer;
-    this.words = text.split(' ');
-    this.timeline = gsap.timeline({
-      paused: true,
-      repeat: -1
-    });
-    this.createTimeline();
-    this.pausePending = false; // Track if a pause is pending
-    this.currentZIndex = 1; // Track the current z-index
+      this.text = text;
+      this.container = container;
+      this.mediaContainer = mediaContainer;
+      this.words = text.split(' ');
+      this.timeline = gsap.timeline({ paused: true, repeat: -1 });
+      this.pausePending = false;
+      this.currentZIndex = 1;
+      this.currentElement = null;  // Track the currently active element
+      this.createTimeline();
+      this.setupResizeHandler();
   }
-
-  /* animateFigures(figures) {
-     figures.forEach((figure, index) => {
-         // Create the figure element and append it to the media container
-         const mediaContainer = document.getElementById('media-container');
-         const figureElement = createFigureElement(figure);
-         mediaContainer.appendChild(figureElement);
-   
-         // Animate the figure element
-         this.timeline.fromTo(figureElement, {
-             scale: 1,
-             opacity: 0,
-             zIndex: this.currentZIndex++
-         }, {
-             scale: 1,
-             opacity: 1,
-             duration: 0.05, // Faster animation duration
-             ease: 'power2.out',
-             onComplete: () => {
-                 if (this.pausePending) {
-                     this.timeline.pause();
-                     this.pausePending = false; // Reset pause pending flag
-                 }
-             }
-         })
-         .to(figureElement, {
-             opacity: 0,
-             duration: 0.2, // Slightly longer fade out to create overlap
-             ease: 'power2.in'
-         }); // Overlap the animations slightly
-     });
-   }*/
 
   createTimeline() {
-    // Add text words to the timeline
-    // Add the "Thank you!" message at the end
-    this.timeline.to(this.container, {
-      scale: 1,
-      opacity: 1,
-      duration: .3, // Display "Thank you!" for a moment
-      ease: 'power2.out',
-      onStart: () => {
-        this.container.innerText = "Hello! I'm David,";
-      }
-    })
-
-      .to(this.container, {
-        opacity: 0,
-        duration: .5, // Fade out "Thank you!"
-        ease: 'power2.in'
-      });
-
-    this.words.forEach((word) => {
       this.timeline.to(this.container, {
-        scale: 1,
-        opacity: 1,
-        duration: 0.08, // Faster animation duration
-        ease: 'power2.out',
-        onStart: () => {
-          this.container.innerText = word;
-        }
-      })
-        .to(this.container, {
-          opacity: 0,
-          duration: 0.08, // Faster animation duration
-          ease: 'power2.in',
-          onComplete: () => {
-            if (this.pausePending) {
-              this.timeline.pause();
-              this.pausePending = false; // Reset pause pending flag
-            }
+          scale: 1,
+          opacity: 1,
+          duration: .3,
+          ease: 'power2.out',
+          onStart: () => {
+              this.container.innerText = "Hello! I'm David,";
           }
-        });
-    });
-    // Add the "and now let's see my work" message
-    this.timeline.to(this.container, {
-      scale: 1,
-      opacity: 1,
-      duration: 1, // Faster animation duration
-      ease: 'power2.out',
-      onStart: () => {
-        this.container.innerText = "and now let's see my work";
-      }
-    })
+      })
       .to(this.container, {
-        opacity: 0,
-        duration: 1, // Faster animation duration
-        ease: 'power2.in'
+          opacity: 0,
+          duration: .5,
+          ease: 'power2.in'
       });
-    // Define categories and their display order
 
+      this.words.forEach((word) => {
+          this.timeline.to(this.container, {
+              scale: 1,
+              opacity: 1,
+              duration: 0.08,
+              ease: 'power2.out',
+              onStart: () => {
+                  this.container.innerText = word;
+              }
+          })
+          .to(this.container, {
+              opacity: 0,
+              duration: 0.08,
+              ease: 'power2.in',
+              onComplete: () => {
+                  if (this.pausePending) {
+                      this.timeline.pause();
+                      this.pausePending = false;
+                  }
+              }
+          });
+      });
 
-  // Iterate over figuresData and use timeline to animate elements
-  figuresData.forEach((figure) => {
-    const targetSelector = figure.type === 'image' ? '.image-placeholder' : '.video-placeholder';
-
-    this.timeline.fromTo(targetSelector, {
-        scale: 1,
-        opacity: 0,
-        zIndex: this.currentZIndex++
-    }, {
-        scale: 1,
-        opacity: 1,
-        duration: 0.5, // Animation duration
-        ease: 'power2.out',
-        onStart: () => {
-            if (figure.type === 'image') {
-                const imgElement = document.querySelector('.image-placeholder img');
-                const captionElement = document.querySelector('.image-placeholder figcaption b');
-
-                imgElement.src = figure.src;
-                imgElement.className = `media image ${figure.class || ''}`;
-                captionElement.textContent = figure.caption;
-                updateBorderRadius(imgElement)
-
-            } else if (figure.type === 'video') {
-                const videoElement = document.querySelector('.video-placeholder video');
-                const videoSource = document.querySelector('.video-placeholder video source');
-                const captionElement = document.querySelector('.video-placeholder figcaption b');
-
-                videoSource.src = figure.src;
-                videoElement.className = figure.class || '';
-                captionElement.textContent = figure.caption;
-                updateBorderRadius(videoElement)
-
-                // Load the new video source
-                videoElement.load();
-            }
-        },
-        onComplete: () => {
-            if (this.pausePending) {
-                this.timeline.pause();
-                this.pausePending = false; // Reset pause pending flag
-            }
-        }
-    })
-    .to(targetSelector, {
-        opacity: 0,
-        duration: 0.2,
-        ease: 'power2.in'
-    });
-});
-
-
-
-    // Add the "Thank you!" message at the end
-    this.timeline.to(this.container, {
-      scale: 1,
-      opacity: 1,
-      duration: 1, // Display "Thank you!" for a moment
-      ease: 'power2.out',
-      onStart: () => {
-        this.container.innerText = "That's all for now, Thank you!";
-      }
-    })
+      this.timeline.to(this.container, {
+          scale: 1,
+          opacity: 1,
+          duration: 1,
+          ease: 'power2.out',
+          onStart: () => {
+              this.container.innerText = "and now let's see my work";
+          }
+      })
       .to(this.container, {
-        opacity: 0,
-        duration: 1, // Fade out "Thank you!"
-        ease: 'power2.in'
+          opacity: 0,
+          duration: 1,
+          ease: 'power2.in'
+      });
+
+      figuresData.forEach((figure) => {
+          const targetSelector = figure.type === 'image' ? '.image-placeholder' : '.video-placeholder';
+
+          // Reset the placeholders before showing the next figure
+          this.timeline.add(() => {
+              this.resetPlaceholderStyles();
+          });
+
+          this.timeline.fromTo(targetSelector, {
+              scale: 1,
+              opacity: 0,
+              zIndex: this.currentZIndex++
+          }, {
+              scale: 1,
+              opacity: 1,
+              duration: 0.5,
+              ease: 'power2.out',
+              onStart: () => {
+                  if (figure.type === 'image') {
+                      const imgElement = document.querySelector('.image-placeholder img');
+                      const captionElement = document.querySelector('.image-placeholder figcaption b');
+
+                      imgElement.src = figure.src;
+                      imgElement.className = `media image ${figure.class || ''}`;
+                      captionElement.textContent = figure.caption;
+
+                      this.currentElement = imgElement;  // Track the current element
+                      
+                      // Apply border radius immediately after the element is loaded
+                      imgElement.onload = () => {
+                          updateBorderRadius(imgElement);
+                      };
+
+                  } else if (figure.type === 'video') {
+                      const videoElement = document.querySelector('.video-placeholder video');
+                      const videoSource = document.querySelector('.video-placeholder video source');
+                      const captionElement = document.querySelector('.video-placeholder figcaption b');
+
+                      videoSource.src = figure.src;
+                      videoElement.className = figure.class || '';
+                      captionElement.textContent = figure.caption;
+
+                      this.currentElement = videoElement;  // Track the current element
+                      
+                      // Load and apply border radius after the video metadata is loaded
+                      videoElement.onloadedmetadata = () => {
+                          updateBorderRadius(videoElement);
+                      };
+
+                      videoElement.load();
+                  }
+              },
+              onComplete: () => {
+                  if (this.pausePending) {
+                      this.timeline.pause();
+                      this.pausePending = false;
+                  }
+              }
+          })
+          .to(targetSelector, {
+              opacity: 0,
+              duration: 0.2,
+              ease: 'power2.in'
+          });
+      });
+
+      this.timeline.to(this.container, {
+          scale: 1,
+          opacity: 1,
+          duration: 1,
+          ease: 'power2.out',
+          onStart: () => {
+              this.container.innerText = "That's all for now, Thank you!";
+          }
+      })
+      .to(this.container, {
+          opacity: 0,
+          duration: 1,
+          ease: 'power2.in'
       });
   }
+
+  resetPlaceholderStyles() {
+      const imgPlaceholder = document.querySelector('.image-placeholder img');
+      const videoPlaceholder = document.querySelector('.video-placeholder video');
+
+      if (imgPlaceholder) {
+          imgPlaceholder.className = 'media image';
+          imgPlaceholder.src = '';
+          imgPlaceholder.style = '';  // Reset any inline styles
+      }
+
+      if (videoPlaceholder) {
+          videoPlaceholder.className = '';
+          videoPlaceholder.querySelector('source').src = '';
+          videoPlaceholder.style = '';  // Reset any inline styles
+          videoPlaceholder.load();  // Reset the video element
+      }
+  }
+
+  setupResizeHandler() {
+      window.addEventListener('resize', () => {
+          if (this.currentElement) {
+              updateBorderRadius(this.currentElement);
+          }
+      });
+  }
+
   startAnimation() {
-    this.timeline.play();
+      this.timeline.play();
   }
+
   pauseAnimation() {
-    // Set flag to pause the animation at the next appropriate time
-    this.pausePending = true;
+      this.pausePending = true;
   }
+
   setSpeed(scale) {
-    this.timeline.timeScale(scale);
+      this.timeline.timeScale(scale);
   }
-} 
+}
 
+// Function to update border radius based on the class
+function updateBorderRadius(element) {
+  if (element.classList.contains('phone')) {
+      applyBorderRadius(element, 0.081, 0.2644, 0.0460, 0.6996);
+  } else if (element.classList.contains('tablet')) {
+      applyBorderRadius(element, 0.06, 0.5044, 0.0460, 0.6996);
+  } else if (element.classList.contains('frame')) {
+      applyShadowOnly(element, 0.06, 0.6996);
+  }
+}
 
+// Helper functions to apply border radius and shadow
+function applyBorderRadius(element, borderRadiusFactor, borderFactor, outlineFactor, shadowFactor) {
+  const height = element.clientHeight;
+  const borderRadiusHeight = height * borderRadiusFactor;
+
+  element.style.borderRadius = `${borderRadiusHeight}px`;
+  element.style.border = `${borderRadiusHeight * borderFactor}px solid black`;
+  element.style.outline = `${borderRadiusHeight * outlineFactor}px solid lightgrey`;
+  element.style.outlineOffset = `0px`;
+  element.style.boxShadow = `0 0 ${borderRadiusHeight * shadowFactor}px rgba(0, 0, 0, 0.68)`;
+}
+
+function applyShadowOnly(element, borderRadiusFactor, shadowFactor) {
+  const height = element.clientHeight;
+  const borderRadiusHeight = height * borderRadiusFactor;
+
+  element.style.boxShadow = `0 0 ${borderRadiusHeight * shadowFactor}px rgba(0, 0, 0, 0.68)`;
+}
+
+// Initialize and run everything when DOM content is loaded
 document.addEventListener('DOMContentLoaded', () => {
   injectHTMLandCSS();
   const text = "Originally from Chile, I am a Designer and Developer currently based in The Netherlands. I love to concept and design minimal and creative products, working in multiple disciplines including branding, interactive design, illustration, 3D, animation, AR/VR, development, iconography, photography, typography, art and creative direction.";
@@ -1134,133 +1107,116 @@ document.addEventListener('DOMContentLoaded', () => {
   const header = document.getElementById('header');
   const animator = new WordAnimator(text, container, mediaContainer);
 
-   // Initialize and categorize the data
-
-
   preloadAssets(figuresData, () => {
-    // Hide loading and show content;
-
-    gsap.to(loadingContainer, {
-      opacity: 0,
-      duration: 0.5,
-      onComplete: () => {
-        loadingContainer.style.display = 'none';
-        instruction.style.display = 'block';
-      }
-    });
-    gsap.to([container, mediaContainer, controlDot], {
-      opacity: 1,
-      duration: 0.5,
-      display: 'block'
-    });
-
-    let isHolding = false;
-
-    // Handle mouse down / touch start
-    const startHandler = () => {
-      isHolding = true;
-      gsap.to(controlDot, {
-        scale: 0.3,
-        duration: 0.3
+      gsap.to(loadingContainer, {
+          opacity: 0,
+          duration: 0.5,
+          onComplete: () => {
+              loadingContainer.style.display = 'none';
+              instruction.style.display = 'block';
+          }
       });
-      animator.startAnimation();
-      instruction.innerText = 'Drag left or right to control the speed';
-    };
+      gsap.to([container, mediaContainer, controlDot], {
+          opacity: 1,
+          duration: 0.5,
+          display: 'block'
+      });
 
-    // Handle mouse move / touch move
-    const moveHandler = (x, y) => {
-      if (isHolding) {
-        gsap.to(controlDot, {
-          x: x - window.innerWidth / 2,
-          y: y - window.innerHeight / 2,
-          duration: 0.1
-        });
+      let isHolding = false;
 
-        // Adjust the timeline speed based on the horizontal position
-        const windowWidth = window.innerWidth;
-        const centerX = windowWidth / 2;
-        const distanceFromCenter = x - centerX;
+      const startHandler = () => {
+          isHolding = true;
+          gsap.to(controlDot, {
+              scale: 0.3,
+              duration: 0.3
+          });
+          animator.startAnimation();
+          instruction.innerText = 'Drag left or right to control the speed';
+      };
 
-        // Adjust the speed scaling factor
-        let speedScale = 1 + (distanceFromCenter / centerX) * 1.5;
+      const moveHandler = (x, y) => {
+          if (isHolding) {
+              gsap.to(controlDot, {
+                  x: x - window.innerWidth / 2,
+                  y: y - window.innerHeight / 2,
+                  duration: 0.1
+              });
 
-        // Clamp the speedScale to a minimum value to prevent issues
-        speedScale = Math.max(0.1, speedScale); // Minimum speed scale of 0.1
+              const windowWidth = window.innerWidth;
+              const centerX = windowWidth / 2;
+              const distanceFromCenter = x - centerX;
 
-        animator.setSpeed(speedScale);
-      }
-    };
+              let speedScale = 1 + (distanceFromCenter / centerX) * 1.5;
+              speedScale = Math.max(0.1, speedScale);
 
-    // Handle mouse up / touch end / mouse leave
-    const endHandler = () => {
-      if (isHolding) {
-        isHolding = false;
-        gsap.to(controlDot, {
-          scale: 1,
-          x: 0,
-          y: 0,
-          duration: 0.3
-        });
-        animator.pauseAnimation();
-        animator.setSpeed(1);
-        instruction.innerText = 'Tap and hold the red dot to start';
-        header.style.display = 'flex';
-      }
-    };
+              animator.setSpeed(speedScale);
+          }
+      };
 
-    controlDot.addEventListener('mousedown', startHandler);
-    controlDot.addEventListener('touchstart', (e) => {
-      e.preventDefault(); // Prevent default touch behavior
-      startHandler();
-    });
+      const endHandler = () => {
+          if (isHolding) {
+              isHolding = false;
+              gsap.to(controlDot, {
+                  scale: 1,
+                  x: 0,
+                  y: 0,
+                  duration: 0.3
+              });
+              animator.pauseAnimation();
+              animator.setSpeed(1);
+              instruction.innerText = 'Tap and hold the red dot to start';
+              header.style.display = 'flex';
+          }
+      };
 
-    window.addEventListener('mousemove', (e) => moveHandler(e.clientX, e.clientY));
-    window.addEventListener('touchmove', (e) => {
-      e.preventDefault(); // Prevent default touch behavior
-      moveHandler(e.touches[0].clientX, e.touches[0].clientY);
-    });
+      controlDot.addEventListener('mousedown', startHandler);
+      controlDot.addEventListener('touchstart', (e) => {
+          e.preventDefault();
+          startHandler();
+      });
 
-    window.addEventListener('mouseup', endHandler);
-    window.addEventListener('touchend', endHandler);
-    window.addEventListener('mouseleave', endHandler);
+      window.addEventListener('mousemove', (e) => moveHandler(e.clientX, e.clientY));
+      window.addEventListener('touchmove', (e) => {
+          e.preventDefault();
+          moveHandler(e.touches[0].clientX, e.touches[0].clientY);
+      });
+
+      window.addEventListener('mouseup', endHandler);
+      window.addEventListener('touchend', endHandler);
+      window.addEventListener('mouseleave', endHandler);
   });
 });
 
-
-
-
-// Preload assets function
 function preloadAssets(assets, callback) {
   let loadedAssets = 0;
   const totalAssets = assets.length;
   const loadingText = document.getElementById('loading-container');
 
   assets.forEach(asset => {
-    let media;
+      let media;
 
-    if (asset.type === 'image') {
-      media = new Image();
-      media.src = asset.src;
-    } else if (asset.type === 'video') {
-      media = document.createElement('video');
-      media.src = asset.src;
-    }
-
-    const onLoadHandler = () => {
-      loadedAssets++;
-      const percentage = Math.floor((loadedAssets / totalAssets) * 100);
-      if (loadingText) {
-        loadingText.innerText = `${percentage}%`;
+      if (asset.type === 'image') {
+          media = new Image();
+          media.src = asset.src;
+      } else if (asset.type === 'video') {
+          media = document.createElement('video');
+          media.src = asset.src;
       }
 
-      if (loadedAssets === totalAssets) {
-        callback();
-      }
-    };
+      const onLoadHandler = () => {
+          loadedAssets++;
+          const percentage = Math.floor((loadedAssets / totalAssets) * 100);
+          if (loadingText) {
+              loadingText.innerText = `${percentage}%`;
+          }
 
-    // Handle load and error events
-    media.onload = onLoadHandler;
-    media.oncanplaythrough = onLoadHandler;
-    media.onerror = onLoadHandler;
+          if (loadedAssets === totalAssets) {
+              callback();
+          }
+      };
+
+      media.onload = onLoadHandler;
+      media.oncanplaythrough = onLoadHandler;
+      media.onerror = onLoadHandler;
   });
 }
