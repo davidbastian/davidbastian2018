@@ -90,148 +90,252 @@ function injectHTMLandCSS() {
     </div>
 
     <div id="media-container">
-            <figure data-category="interfaces">
-      <video class="media video" autoplay="" muted="" loop="">
-        <source src="https://assets.codepen.io/96398/p%26amp%3Bg_braun_maxbraun_timeline_desktop_v003_1.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <figcaption><b>Braun 100 years anniversary - Poster Generator</b>Design Direction, Art Direction, UI Design, Illustration, Iconography.</figcaption>
-    </figure>
+<figure data-category="interfaces">
+  <video class="media video" autoplay="" muted="" loop="">
+    <source src="https://assets.codepen.io/96398/p%26amp%3Bg_braun_maxbraun_timeline_desktop_v003_1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <figcaption><b>Braun 100 years anniversary - Poster Generator</b>Design Direction, Art Direction, UI Design, Illustration, Iconography.</figcaption>
+</figure>
 
-   <figure data-category="3d">
-      <img class="media image scale" src="https://assets.codepen.io/96398/p001_3.png" alt="">
-      <figcaption><b>Blackie © Spoon </b>Creative &amp; Art Direction, Design, 3d prototype.</figcaption>
-    </figure>
+<figure data-category="3d">
+  <img loading="lazy" class="media image scale"
+       src="https://assets.codepen.io/96398/p001_3.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/p001_3.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/p001_3.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/p001_3.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
+  <figcaption><b>Blackie © Spoon </b>Creative &amp; Art Direction, Design, 3d prototype.</figcaption>
+</figure>
 
-    <figure class="poster2">
-      <img class="media image" src="https://assets.codepen.io/96398/p003_3.png" alt="">
-      <figcaption><b>Three Spheres, Poster Series </b>Creative &amp; Art Direction, 3d Design.</figcaption>
-    </figure>
+<figure class="poster2">
+  <img loading="lazy" class="media image"
+       src="https://assets.codepen.io/96398/p003_3.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/p003_3.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/p003_3.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/p003_3.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
+  <figcaption><b>Three Spheres, Poster Series </b>Creative &amp; Art Direction, 3d Design.</figcaption>
+</figure>
 
-     <figure data-category="3d">
-      <img class="media image" src="https://assets.codepen.io/96398/p002_3.png" alt="">
-      <figcaption><b>Meta Chair</b>Creative &amp; Art Direction, Design, 3d prototype.</figcaption>
-    </figure>
+<figure data-category="3d">
+  <img loading="lazy" class="media image"
+       src="https://assets.codepen.io/96398/p002_3.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/p002_3.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/p002_3.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/p002_3.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
+  <figcaption><b>Meta Chair</b>Creative &amp; Art Direction, Design, 3d prototype.</figcaption>
+</figure>
 
-    <figure class="poster3">
-      <img class="media image" src="https://assets.codepen.io/96398/p005_3.png" alt="">
-      <figcaption><b>One Sphere, Poster Series </b>Creative &amp; Art Direction, 3d Design.</figcaption>
-    </figure>
+<figure class="poster3">
+  <img loading="lazy" class="media image"
+       src="https://assets.codepen.io/96398/p005_3.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/p005_3.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/p005_3.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/p005_3.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
+  <figcaption><b>One Sphere, Poster Series </b>Creative &amp; Art Direction, 3d Design.</figcaption>
+</figure>
 
-     <figure data-category="interfaces">
+<figure data-category="interfaces">
+  <video class="media video tablet" autoplay="" muted="" loop="">
+    <source src="https://assets.codepen.io/96398/Untitled-4br_1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <figcaption><b>The One Stroke Shave Vision </b>Art Direction, UI Design.</figcaption>
+</figure>
 
-        <video class="media video tablet" autoplay="" muted="" loop="">
-          <source src="https://assets.codepen.io/96398/Untitled-4br_1.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+<figure data-category="branding">
+  <video class="media video" autoplay="" muted="" loop="">
+    <source src="https://assets.codepen.io/96398/p007.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <figcaption><b>The Monks Explorations 02</b>Animation, Design, 3d Concept.</figcaption>
+</figure>
 
-      <figcaption><b>The One Stroke Shave Vision </b>Art Direction, UI Design.</figcaption>
-    </figure>
+<figure data-category="branding">
+  <img loading="lazy" class="media image scale" style="filter:invert(1)"
+       src="https://assets.codepen.io/96398/p006_3.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/p006_3.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/p006_3.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/p006_3.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
+  <figcaption><b>People Expressions Icons set</b>Design Iconography, Design Direction.</figcaption>
+</figure>
 
-    <figure data-category="branding">
-      <video class="media video" autoplay="" muted="" loop="">
-        <source src="https://assets.codepen.io/96398/p007.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <figcaption><b>The Monks Explorations 02</b>Animation, Design, 3d Concept.</figcaption>
-    </figure>
+<figure data-category="3d">
+  <video class="media video special2" autoplay="" muted="" loop="" playsinline="">
+    <source src="https://assets.codepen.io/96398/ssB-1.mov" type="video/mp4; codecs=&quot;hvc1&quot;">
+    <source src="https://assets.codepen.io/96398/p009.webm" type="video/webm">
+    Your browser does not support the video tag.
+  </video>
+  <figcaption><b>Covid-19 Raincoat © </b>Creative &amp; Art Direction, 3d prototype.</figcaption>
+</figure>
 
-    <figure data-category="branding">
-      <img class="media image scale" style="filter:invert(1)" src="https://assets.codepen.io/96398/p006_3.png" alt="">
-      <figcaption><b>People Expressions Icons set</b>Design Iconography, Design Direction.</figcaption>
-    </figure>
+<figure>
+  <img loading="lazy" class="media poster image"
+       src="https://assets.codepen.io/96398/p008_2.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/p008_2.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/p008_2.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/p008_2.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
+  <figcaption><b>Blue Sky Photographs</b>Creative &amp; Art Direction.</figcaption>
+</figure>
 
-      <figure data-category="3d">
-      <video class="media video special2" autoplay="" muted="" loop="" playsinline="">
-        <source src="https://assets.codepen.io/96398/ssB-1.mov" type="video/mp4; codecs=&quot;hvc1&quot;">
-        <source src="https://assets.codepen.io/96398/p009.webm" type="video/webm">
-        Your browser does not support the video tag.
-      </video>
-      <figcaption><b>Covid-19 Raincoat © </b>Creative &amp; Art Direction, 3d prototype.</figcaption>
-    </figure>
+<figure data-category="3d">
+  <video class="media video phone" autoplay="" muted="" loop="" playsinline="">
+    <source src="https://assets.codepen.io/96398/ajxxxv9.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <figcaption><b>Air Jordan XXXV Unveil </b>Interfaces, AR Design, Key Visual, Motion Tracking.</figcaption>
+</figure>
 
-    <figure>
-      <img class="media poster image" src="https://assets.codepen.io/96398/p008_2.png" alt="">
-      <figcaption><b>Blue Sky Photographs</b>Creative &amp; Art Direction.</figcaption>
-    </figure>
+<figure data-category="3d">
+  <img loading="lazy" class="media image"
+       src="https://assets.codepen.io/96398/p010_2.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/p010_2.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/p010_2.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/p010_2.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
+  <figcaption><b>Looper O+ © </b>Creative &amp; Art Direction, Design, 3d prototype.</figcaption>
+</figure>
 
-    <figure data-category="3d">
+<figure class="poster2">
+  <video class="media video" autoplay="" muted="" loop="" playsinline="">
+    <source src="https://assets.codepen.io/96398/0001-0150_1+%281%29.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <figcaption><b>Copper Guys, Poster Series </b>Creative &amp; Art Direction, 3d Design.</figcaption>
+</figure>
 
-        <video class="media video phone" autoplay="" muted="" loop="" playsinline="">
-          <source src="https://assets.codepen.io/96398/ajxxxv9.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-     
-     
-      <figcaption><b>Air Jordan XXXV Unveil </b>Interfaces, AR Design, Key Visual, Motion Tracking.</figcaption>
-    </figure>
+<figure class="land1">
+  <video class="media video" autoplay="" muted="" loop="" playsinline="">
+    <source src="https://assets.codepen.io/96398/p015b0001-0099_1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <figcaption><b>The Monks Explorations 02</b>Animation, Design, 3d Concept.</figcaption>
+</figure>
 
-      
-    <figure data-category="3d">
-      <img class="media image" src="https://assets.codepen.io/96398/p010_2.png" alt="">
-      <figcaption><b>Looper O+ © </b>Creative &amp; Art Direction, Design, 3d prototype.</figcaption>
-    </figure>
+<figure data-category="posters">
+  <img loading="lazy" class="media image"
+       src="https://assets.codepen.io/96398/p014_2.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/p014_2.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/p014_2.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/p014_2.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
+  <figcaption><b>Braun 100 years anniversary - Poster Selected</b>Design Direction, Art Direction, Illustration.</figcaption>
+</figure>
 
+<figure class="poster">
+  <img loading="lazy" class="media poster image"
+       src="https://assets.codepen.io/96398/p016_5.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/p016_5.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/p016_5.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/p016_5.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
+  <figcaption><b>Hand at the Moon Poster</b>Art &amp; Creative Direction.</figcaption>
+</figure>
 
-    <figure class="poster2">
-      <video class="media video" autoplay="" muted="" loop="" playsinline="">
-        <source src="https://assets.codepen.io/96398/0001-0150_1+%281%29.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <figcaption><b>Copper Guys, Poster Series </b>Creative &amp; Art Direction, 3d Design.</figcaption>
-    </figure>
+<figure data-category="branding">
+  <img loading="lazy" class="media image"
+       src="https://assets.codepen.io/96398/p016_4.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/p016_4.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/p016_4.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/p016_4.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
+  <figcaption><b>Eurovision2020 - Rotterdam, Pitch </b>Brand Exploration, Design &amp; Creative Direction.</figcaption>
+</figure>
 
-    <figure class="land1">
-      <video class="media video" autoplay="" muted="" loop="" playsinline="">
-        <source src="https://assets.codepen.io/96398/p015b0001-0099_1.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <figcaption><b>The Monks Explorations 02</b>Animation, Design, 3d Concept.</figcaption>
-    </figure>
+<figure data-category="3d">
+  <img loading="lazy" class="media image"
+       src="https://assets.codepen.io/96398/p018_2.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/p018_2.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/p018_2.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/p018_2.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
+  <figcaption><b>Blazst Electric Bike © </b>Creative &amp; Art Direction, Design, 3d prototype.</figcaption>
+</figure>
 
-    <figure data-category="posters">
-      <img class="media image" src="https://assets.codepen.io/96398/p014_2.png" alt="">
-      <figcaption><b>Braun 100 years anniversary - Poster Selected</b>Design Direction, Art Direction, Illustration.</figcaption>
-    </figure>
-
-    <figure class="poster">
-      <img class="media poster image" src="https://assets.codepen.io/96398/p016_5.png" alt="">
-      <figcaption><b>Hand at the Moon Poster</b>Art &amp; Creative Direction.</figcaption>
-    </figure>
-
-        <figure data-category="branding">
-      <img class="media image" src="https://assets.codepen.io/96398/p016_4.png" alt="">
-      <figcaption><b>Eurovision2020 - Rotterdam, Pitch </b>Brand Exploration, Design &amp; Creative Direction.</figcaption>
-    </figure>
-
-    <figure data-category="3d">
-      <img class="media image" src="https://assets.codepen.io/96398/p018_2.png" alt="">
-      <figcaption><b>Blazst Electric Bike © </b>Creative &amp; Art Direction, Design, 3d prototype.</figcaption>
-    </figure>
-    
-    
-    <figure class="poster4">
-  <img class="media image" src="https://assets.codepen.io/96398/p017_2.png" alt="">
+<figure class="poster4">
+  <img loading="lazy" class="media image"
+       src="https://assets.codepen.io/96398/p017_2.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/p017_2.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/p017_2.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/p017_2.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
   <figcaption><b>Braun 100 years anniversary - Poster Selected</b>Design Direction, Art Direction, Illustration.</figcaption>
 </figure>
 
 <figure>
-  <img class="media image" src="https://assets.codepen.io/96398/p019_2.png" alt="">
+  <img loading="lazy" class="media image"
+       src="https://assets.codepen.io/96398/p019_2.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/p019_2.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/p019_2.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/p019_2.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
   <figcaption><b>FWA Certificates Redesign</b>Creative &amp; Art Direction, Design.</figcaption>
 </figure>
 
 <figure>
-  <img class="media image" src="https://assets.codepen.io/96398/p020_1.png" alt="">
+  <img loading="lazy" class="media image"
+       src="https://assets.codepen.io/96398/p020_1.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/p020_1.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/p020_1.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/p020_1.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
   <figcaption><b>The Monks Explorations 01</b>Animation, Design, 3d Concept.</figcaption>
 </figure>
 
- <figure data-category="branding">
-  <img class="media image" src="https://assets.codepen.io/96398/p021_1.png" alt="">
+<figure data-category="branding">
+  <img loading="lazy" class="media image"
+       src="https://assets.codepen.io/96398/p021_1.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/p021_1.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/p021_1.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/p021_1.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
   <figcaption><b>The Ellinikon Experience Center</b>Design Direction, Iconography Direction, Branding, Art Direction.</figcaption>
 </figure>
 
- <figure class="poster4">
-  <img class="media image" src="https://assets.codepen.io/96398/p022_1.png" alt="">
+<figure class="poster4">
+  <img loading="lazy" class="media image"
+       src="https://assets.codepen.io/96398/p022_1.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/p022_1.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/p022_1.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/p022_1.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
   <figcaption><b>Braun 100 years anniversary - Poster Selected</b>Design Direction, Art Direction, Illustration.</figcaption>
 </figure>
 
@@ -251,34 +355,70 @@ function injectHTMLandCSS() {
   <figcaption><b>BMW Connected Drive Suite Artwork Branding</b>3D Concept, Art Direction, Animation.</figcaption>
 </figure>
 
-    <figure data-category="branding">
-  <img class="media image" src="https://assets.codepen.io/96398/p025_1.png" alt="">
+<figure data-category="branding">
+  <img loading="lazy" class="media image"
+       src="https://assets.codepen.io/96398/p025_1.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/p025_1.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/p025_1.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/p025_1.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
   <figcaption><b>The Monks Explorations 01</b>Animation, Design, 3d Concept.</figcaption>
 </figure>
-    
-    
-    
- <figure data-category="branding">
-  <img class="media image" src="https://assets.codepen.io/96398/eli_4.png" alt="">
+
+<figure data-category="branding">
+  <img loading="lazy" class="media image"
+       src="https://assets.codepen.io/96398/eli_4.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/eli_4.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/eli_4.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/eli_4.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
   <figcaption><b>The Ellinikon Experience Center</b>Design Direction, Iconography Direction, Branding, Art Direction.</figcaption>
 </figure>
 
-   <figure class="land2">
-  <img class="media image" src="https://assets.codepen.io/96398/p027_1.png" alt="">
+<figure class="land2">
+  <img loading="lazy" class="media image"
+       src="https://assets.codepen.io/96398/p027_1.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/p027_1.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/p027_1.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/p027_1.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
   <figcaption><b>Core Monks Expression</b>Branding, Design, Concept.</figcaption>
 </figure>
 
-   <figure class="poster4">
-  <img class="media image" src="https://assets.codepen.io/96398/p029_1.png" alt="">
+<figure class="poster4">
+  <img loading="lazy" class="media image"
+       src="https://assets.codepen.io/96398/p029_1.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/p029_1.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/p029_1.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/p029_1.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
   <figcaption><b>Braun 100 years anniversary - Poster Selected</b>Design Direction, Art Direction, Illustration.</figcaption>
 </figure>
 
-   <figure class="land2">
-  <img class="media image" src="https://assets.codepen.io/96398/p028_1.png" alt="">
+<figure class="land2">
+  <img loading="lazy" class="media image"
+       src="https://assets.codepen.io/96398/p028_1.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/p028_1.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/p028_1.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/p028_1.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
   <figcaption><b>Rotato © Watch concept</b>Design &amp; Creative Direction, 3D Concept.</figcaption>
 </figure>
 
-      <figure data-category="3d">
+
+
+
+<figure data-category="3d">
   <video class="media video" autoplay="" muted="" loop="" playsinline="">
     <source src="https://assets.codepen.io/96398/p030_1.mp4" type="video/mp4">
     Your browser does not support the video tag.
@@ -286,36 +426,67 @@ function injectHTMLandCSS() {
   <figcaption><b>Sony Bravia XR</b>3D Concept, Key Visual, Animation.</figcaption>
 </figure>
 
-     <figure data-category="interfaces">
-  <img class="media image" src="https://assets.codepen.io/96398/p031_1.png" alt="">
+<figure data-category="interfaces">
+  <img loading="lazy" class="media image"
+       src="https://assets.codepen.io/96398/p031_1.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/p031_1.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/p031_1.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/p031_1.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
   <figcaption><b>Diego Stevens</b>Creative &amp; Art Direction, Design, 3d &amp; Develop.</figcaption>
 </figure>
 
-   <figure class="branding">
-  <img class="media image" src="https://assets.codepen.io/96398/p032_2.png" alt="">
+<figure class="branding">
+  <img loading="lazy" class="media image"
+       src="https://assets.codepen.io/96398/p032_2.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/p032_2.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/p032_2.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/p032_2.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
   <figcaption><b>Triangles, Squares &amp; Circles</b>Typography Exploration.</figcaption>
 </figure>
 
-   <figure class="poster6">
-  <img class="media image" src="https://assets.codepen.io/96398/p034.png" alt="">
+<figure class="poster6">
+  <img loading="lazy" class="media image"
+       src="https://assets.codepen.io/96398/p034.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/p034.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/p034.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/p034.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
   <figcaption><b>Core Monks Expression</b>Branding, Design, Concept.</figcaption>
 </figure>
 
-      <figure>
-  <img class="media image" src="https://assets.codepen.io/96398/p033_2.png" alt="">
+<figure>
+  <img loading="lazy" class="media image"
+       src="https://assets.codepen.io/96398/p033_2.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/p033_2.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/p033_2.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/p033_2.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
   <figcaption><b>Think with Google 2019 </b>Art Direction, Brand Identity &amp; Design.</figcaption>
 </figure>
 
-
-     <figure data-category="interfaces">
-  <img class="media image" src="https://assets.codepen.io/96398/Figma_Tn2L6evjo7.png" alt="">
+<figure data-category="interfaces">
+  <img loading="lazy" class="media image"
+       src="https://assets.codepen.io/96398/Figma_Tn2L6evjo7.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/Figma_Tn2L6evjo7.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/Figma_Tn2L6evjo7.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/Figma_Tn2L6evjo7.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
   <figcaption><b>Google Lens - Lakers App </b>Art Direction, Interfaces Design.</figcaption>
 </figure>
 
-
-
-
-      <figure data-category="3d">
+<figure data-category="3d">
   <video class="media video" autoplay="" muted="" loop="" playsinline="">
     <source src="https://assets.codepen.io/96398/p035.mp4" type="video/mp4">
     Your browser does not support the video tag.
@@ -324,19 +495,31 @@ function injectHTMLandCSS() {
 </figure>
 
 
-    <figure data-category="3d">
-  <img class="media image" src="https://assets.codepen.io/96398/rumba_1.png" alt="">
-  <figcaption><b>Plant-Pot &amp; Robot vaccum Cleaner</b>Design &amp; Creative Direction, 3D Concept.</figcaption>
+<figure data-category="3d">
+  <img loading="lazy" class="media image"
+       src="https://assets.codepen.io/96398/rumba_1.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/rumba_1.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/rumba_1.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/rumba_1.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
+  <figcaption><b>Plant-Pot &amp; Robot vacuum Cleaner</b>Design &amp; Creative Direction, 3D Concept.</figcaption>
 </figure>
 
-   <figure data-category="branding">
-  <img class="media image" src="https://assets.codepen.io/96398/p036_1.png" alt="">
+<figure data-category="branding">
+  <img loading="lazy" class="media image"
+       src="https://assets.codepen.io/96398/p036_1.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/p036_1.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/p036_1.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/p036_1.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
   <figcaption><b>Think with Google 2019 </b>Art Direction, Brand Identity &amp; Design.</figcaption>
 </figure>
-    
-    
-    
- <figure data-category="branding">
+
+<figure data-category="branding">
   <video class="media video" autoplay="" muted="" loop="" playsinline="">
     <source src="https://assets.codepen.io/96398/20001-0120.mp4" type="video/mp4">
     Your browser does not support the video tag.
@@ -360,29 +543,21 @@ function injectHTMLandCSS() {
   <figcaption><b>Yohji Yamamoto Kusari II Adidas Landing Page</b>Design Direction &amp; Animation.</figcaption>
 </figure>
 
-    <figure data-category="3d">
- 
-    <video class="media video phone" autoplay="" muted="" loop="" playsinline="">
-      <source src="https://assets.codepen.io/96398/002.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-
-
-  <figcaption><b> Samsung Dreamground</b>Art Direction, AR, Motion Tracking, UI.</figcaption>
+<figure data-category="3d">
+  <video class="media video phone" autoplay="" muted="" loop="" playsinline="">
+    <source src="https://assets.codepen.io/96398/002.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <figcaption><b>Samsung Dreamground</b>Art Direction, AR, Motion Tracking, UI.</figcaption>
 </figure>
 
-   <figure data-category="3d">
- 
-    <video class="media video" autoplay="" muted="" loop="" playsinline="">
-      <source src="https://assets.codepen.io/96398/zolviz-greg-livingroom-day-night-timelapse-v1.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-
-
+<figure data-category="3d">
+  <video class="media video" autoplay="" muted="" loop="" playsinline="">
+    <source src="https://assets.codepen.io/96398/zolviz-greg-livingroom-day-night-timelapse-v1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
   <figcaption><b>zolviz</b>Founder, Art Direction, Design, 3D, Branding.</figcaption>
 </figure>
-
-
 
 <figure>
   <video class="media video" autoplay="" muted="" loop="">
@@ -392,20 +567,41 @@ function injectHTMLandCSS() {
   <figcaption><b>Puma Basketball Experimental Shop</b>Art Direction, Animation Direction, UI Design, 3D.</figcaption>
 </figure>
 
-   <figure data-category="branding">
-  <img class="media image" src="https://assets.codepen.io/96398/nikon_3.png" alt="">
+<figure data-category="branding">
+  <img loading="lazy" class="media image"
+       src="https://assets.codepen.io/96398/nikon_3.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/nikon_3.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/nikon_3.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/nikon_3.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
   <figcaption><b>Nikon Catalogue Template</b>Design System, Branding, Layout Design.</figcaption>
 </figure>
 
-   <figure data-category="interfaces">
-  <img class="media image" src="https://assets.codepen.io/96398/p005_5.png" alt="">
+<figure data-category="interfaces">
+  <img loading="lazy" class="media image"
+       src="https://assets.codepen.io/96398/p005_5.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/p005_5.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/p005_5.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/p005_5.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
   <figcaption><b>Braun One Stroke</b>Design System, CTA's Design.</figcaption>
 </figure>
 
 
 
-   <figure data-category="branding">
-  <img class="media image special" src="https://assets.codepen.io/96398/Group3196_2.png" alt="">
+<figure data-category="branding">
+  <img loading="lazy" class="media image special"
+       src="https://assets.codepen.io/96398/Group3196_2.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/Group3196_2.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/Group3196_2.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/Group3196_2.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
   <figcaption><b>Core Monks Expression</b>Branding, Design, Concept.</figcaption>
 </figure>
 
@@ -418,11 +614,16 @@ function injectHTMLandCSS() {
 </figure>
 
 <figure>
-  <img class="media image" src="https://assets.codepen.io/96398/sphere3-gradient22_1.png" alt="">
+  <img loading="lazy" class="media image"
+       src="https://assets.codepen.io/96398/sphere3-gradient22_1.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/sphere3-gradient22_1.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/sphere3-gradient22_1.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/sphere3-gradient22_1.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
   <figcaption><b>Three Spheres, Poster Series </b>Creative &amp; Art Direction, 3d Design.</figcaption>
 </figure>
-
-
 
 <figure data-category="interfaces">
   <video class="media video" autoplay="" muted="" loop="">
@@ -431,9 +632,15 @@ function injectHTMLandCSS() {
   </video>
   <figcaption><b>Redbull, Tokyo 2020 Olympics Blackout Data </b>Interfaces Design, 3D Renders &amp; Animation.</figcaption>
 </figure>
-
-   <figure>
-  <img class="media image" src="https://assets.codepen.io/96398/CORE3_3.png" alt="">
+<figure>
+  <img loading="lazy" class="media image"
+       src="https://assets.codepen.io/96398/CORE3_3.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/CORE3_3.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/CORE3_3.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/CORE3_3.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
   <figcaption><b>Core Monks Expression</b>Branding, Design, Concept.</figcaption>
 </figure>
 
@@ -446,32 +653,20 @@ function injectHTMLandCSS() {
 </figure>
 
 <figure data-category="interfaces">
-
-    
- 
-    <video class="media video phone" autoplay="" muted="" loop="" playsinline="">
-      <source src="https://assets.codepen.io/96398/001_1.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-
-
+  <video class="media video phone" autoplay="" muted="" loop="" playsinline="">
+    <source src="https://assets.codepen.io/96398/001_1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
   <figcaption><b> Google Zoo, Tales by AI </b>Interfaces Design, Logotype Illustration, Animation.</figcaption>
 </figure>
 
 <figure data-category="3d">
-
-    
- 
-    <video class="media video " autoplay="" muted="" loop="" playsinline="">
-      <source src="https://assets.codepen.io/96398/cc0000001-0100.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-
-
+  <video class="media video" autoplay="" muted="" loop="" playsinline="">
+    <source src="https://assets.codepen.io/96398/cc0000001-0100.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
   <figcaption><b>Coca-cola, Beverage Lab</b>3d Comp, Procedual materials, Animation.</figcaption>
 </figure>
-
-
 
 <figure data-category="interfaces">
   <video class="media video" autoplay="" muted="" loop="">
@@ -481,14 +676,19 @@ function injectHTMLandCSS() {
   <figcaption><b>Microsoft Ignite 2020 - Virtual Event</b>Art Direction, Animation, Look &amp; Feel, 3D Particles.</figcaption>
 </figure>
 
-  <figure data-category="interfaces">
-    <img class="media video tablet" src="https://assets.codepen.io/96398/sdfaz_1.png" alt="">
- 
-
+<figure data-category="interfaces">
+  <img loading="lazy" class="media video tablet"
+       src="https://assets.codepen.io/96398/sdfaz_1.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/sdfaz_1.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/sdfaz_1.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/sdfaz_1.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
   <figcaption><b>Davies Landscape Architects, Phase 01 </b>Art Direction, Interactive Design, UI Design.</figcaption>
 </figure>
 
-  <figure data-category="branding">
+<figure data-category="branding">
   <video class="media video" autoplay="" muted="" loop="">
     <source src="https://assets.codepen.io/96398/think4.mp4" type="video/mp4">
     Your browser does not support the video tag.
@@ -505,50 +705,57 @@ function injectHTMLandCSS() {
 </figure>
 
 <figure>
-  <img class="media image" src="https://assets.codepen.io/96398/car-s.png" alt="">
+  <img loading="lazy" class="media image"
+       src="https://assets.codepen.io/96398/car-s.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/car-s.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/car-s.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/car-s.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
   <figcaption><b>Desert Bartone Concept Car Remix</b>AI, Midjourney, prompts.</figcaption>
 </figure>
 
-   <figure data-category="3d">
-  <img class="media image" src="https://assets.codepen.io/96398/arc_3.png" alt="">
+
+<figure data-category="3d">
+  <img loading="lazy" class="media image"
+       src="https://assets.codepen.io/96398/arc_3.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/arc_3.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/arc_3.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/arc_3.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
   <figcaption><b>The Ellinikon Experience Center</b>Design Direction, Iconography Direction, Branding, Light Direction.</figcaption>
 </figure>
 
 <figure data-category="interfaces">
-
-    <video class="media video phone" autoplay="" muted="" loop="" playsinline="">
-      <source src="https://assets.codepen.io/96398/kusari-mobile23+%281%29.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
- 
+  <video class="media video phone" autoplay="" muted="" loop="" playsinline="">
+    <source src="https://assets.codepen.io/96398/kusari-mobile23+%281%29.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
   <figcaption><b>Yohji Yamamoto Kusari II Adidas Landing Page</b>Design Direction &amp; Animation.</figcaption>
 </figure>
 
 <figure data-category="branding">
- <img class="media image" src="https://assets.codepen.io/96398/a06760be-6eab-4916-9b15-77a6d0be6499.png" alt="">
- 
- 
+  <img loading="lazy" class="media image"
+       src="https://assets.codepen.io/96398/a06760be-6eab-4916-9b15-77a6d0be6499.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/a06760be-6eab-4916-9b15-77a6d0be6499.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/a06760be-6eab-4916-9b15-77a6d0be6499.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/a06760be-6eab-4916-9b15-77a6d0be6499.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
   <figcaption><b>EUROVISION 2020, Proposal</b>Art Direction, Illustration, Branding</figcaption>
 </figure>
 
-
-
-
 <figure data-category="interfaces">
-
-    
- 
-     
-    <video class="media video " autoplay="" muted="" loop="" playsinline="">
-      <source src="https://assets.codepen.io/96398/01-+Select+2ND+Flavorss_1.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-
-
-
+  <video class="media video" autoplay="" muted="" loop="" playsinline="">
+    <source src="https://assets.codepen.io/96398/01-+Select+2ND+Flavorss_1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
   <figcaption><b>Coca-cola, Beverage Lab</b>UI, Iconography, Spatial Design.</figcaption>
 </figure>
-
 
 <figure>
   <video class="media video" autoplay="" muted="" loop="">
@@ -559,19 +766,43 @@ function injectHTMLandCSS() {
 </figure>
 
 <figure>
-  <img class="media image" src="https://assets.codepen.io/96398/Frame+9.png" alt="">
+  <img loading="lazy" class="media image"
+       src="https://assets.codepen.io/96398/Frame+9.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/Frame+9.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/Frame+9.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/Frame+9.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
   <figcaption><b>Core Monks Expression</b>Branding, Design, Concept.</figcaption>
 </figure>
 
 <figure data-category="3d">
-  <img class="media image" src="https://assets.codepen.io/96398/bmw-cannes20B3.png" alt="">
+  <img loading="lazy" class="media image"
+       src="https://assets.codepen.io/96398/bmw-cannes20B3.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/bmw-cannes20B3.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/bmw-cannes20B3.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/bmw-cannes20B3.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
   <figcaption><b>BMW + Cannes</b>Key Visual, 3D, Light Treatment.</figcaption>
 </figure>
 
+
 <figure>
-  <img class="media image" src="https://assets.codepen.io/96398/bmw-cannes_1.png" alt="">
+  <img loading="lazy" class="media image"
+       src="https://assets.codepen.io/96398/bmw-cannes_1.png?width=1200&format=auto"
+       srcset="
+       https://assets.codepen.io/96398/bmw-cannes_1.png?width=480&format=auto 480w,
+       https://assets.codepen.io/96398/bmw-cannes_1.png?width=800&format=auto 800w,
+       https://assets.codepen.io/96398/bmw-cannes_1.png?width=1200&format=auto 1200w"
+       sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 1200px"
+       alt="">
   <figcaption><b>BMW + Cannes</b>Key Visual, 3D, Procedual Materials, Light Treatment.</figcaption>
 </figure>
+
+
     </div>
 
     `;
@@ -700,14 +931,21 @@ body.mobile  #text-container, body.mobile  #loading-container{
   height: 100%;
 }
 #control-dot {
-  width: 50px;
-  height: 50px;
+  width: 1.4VW;
+  height: 1.4VW;
   background-color: red;
-  border-radius: 50%;
+  border-radius: 100%;
   position: absolute;
   z-index: 10;
   cursor: pointer;
 }
+
+body.mobile #control-dot {
+  width: 50px;
+  height: 50px;
+
+}
+
 #instruction {
   animation: pulse 1s infinite alternate;
   position: fixed;
@@ -787,6 +1025,7 @@ figure img, figure video {
   max-width: 100%;
   max-height: 100%;
   width: auto;
+  pointer-events:none;
   height: auto;
   object-fit: contain;
   transform:scale(.7)

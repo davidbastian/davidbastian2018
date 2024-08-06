@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "mvc es6",
   "main": "webpack.config.js",
-  "dependencies": {},
+  "dependencies": {
+    "sharp": "^0.33.4"
+  },
   "devDependencies": {
     "@babel/core": "^7.13.10",
     "@babel/preset-env": "^7.13.10",
