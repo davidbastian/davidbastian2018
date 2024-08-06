@@ -972,6 +972,11 @@ margin-left:5px;
 text-decoration:none;
 color:black}
 
+body.mobile #header a {
+margin-left:20px;
+}
+
+
 @keyframes pulse {
   0% { opacity: .3; }
   100% { opacity:1; }
@@ -1016,7 +1021,7 @@ figure img, figure video {
   height: auto;
   object-fit: contain;
   transform:scale(.7);
-  user-select:none;
+  user-select:none;    -webkit-user-drag: none;
 }
   .phone,.tablet {
 box-sizing: border-box;
@@ -1027,7 +1032,7 @@ box-sizing: border-box;
   #media-container {
     pointer-events:none;
   user-select:none;
-
+    -webkit-user-drag: none;
   }
 
 
@@ -1167,9 +1172,14 @@ class WordAnimator {
                   ease: 'power2.in'
               });
 
+              const isMobile = isMobileDevice();
+
               const figures = this.mediaContainer.querySelectorAll(`figure[data-category="${category}"]`);
               figures.forEach((figure) => {
                   const video = figure.querySelector('video');
+                  if (video && isMobile) {
+                    video.pause();
+                }
                   
                   // Play video when figure becomes visible
                   this.timeline.fromTo(figure, {
@@ -1182,9 +1192,9 @@ class WordAnimator {
                           duration: 0.05,
                           ease: 'power2.out',
                           onStart: () => {
-                              if (video) {
+                              /*if (video) {
                                   video.play();
-                              }
+                              }*/
                           },
                           onComplete: () => {
                               if (this.pausePending) {
@@ -1199,9 +1209,9 @@ class WordAnimator {
                           duration: 0.2,
                           ease: 'power2.in',
                           onStart: () => {
-                              if (video) {
+                              /*if (video) {
                                   video.pause();
-                              }
+                              }*/
                           }
                       });
               });
@@ -1225,6 +1235,9 @@ class WordAnimator {
           const moreFigures = this.mediaContainer.querySelectorAll('figure:not([data-category="branding"]):not([data-category="3d"]):not([data-category="ar/vr"]):not([data-category="interfaces"])');
           moreFigures.forEach((figure) => {
               const video = figure.querySelector('video');
+              if (video && isMobile) {
+                video.pause();
+            }
               
               this.timeline.fromTo(figure, {
                       scale: 1,
@@ -1236,9 +1249,9 @@ class WordAnimator {
                       duration: 0.05,
                       ease: 'power2.out',
                       onStart: () => {
-                          if (video) {
+                         /* if (video) {
                               video.play();
-                          }
+                          }*/
                       },
                       onComplete: () => {
                           if (this.pausePending) {
@@ -1252,9 +1265,9 @@ class WordAnimator {
                       duration: 0.2,
                       ease: 'power2.in',
                       onStart: () => {
-                          if (video) {
+                         /* if (video && isMobile) {
                               video.pause();
-                          }
+                          }*/
                       }
                   });
           });
