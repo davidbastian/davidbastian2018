@@ -824,8 +824,34 @@ box-sizing: border-box;
 }
 
 
+// Categorize figures data
+function categorizeFiguresData(figuresData) {
+  const categorizedData = {
+      branding: [],
+      '3d': [],
+      interfaces: [],
+      more: []
+  };
+
+  figuresData.forEach(figure => {
+      if (figure.category === 'branding') {
+          categorizedData.branding.push(figure);
+      } else if (figure.category === '3d') {
+          categorizedData['3d'].push(figure);
+      } else if (figure.category === 'interfaces') {
+          categorizedData.interfaces.push(figure);
+      } else {
+          categorizedData.more.push(figure);
+      }
+  });
+
+  return categorizedData;
+}
+
+
+
 class WordAnimator {
-  constructor(text, container, mediaContainer) {
+  constructor(text, container, mediaContainer, categorizedData) {
       this.text = text;
       this.container = container;
       this.mediaContainer = mediaContainer;
@@ -834,8 +860,12 @@ class WordAnimator {
       this.pausePending = false;
       this.currentZIndex = 1;
       this.currentElement = null;  // Track the currently active element
+      this.categorizedData = categorizedData;
+      console.log(this.categorizedData.interfaces)
       this.createTimeline();
       this.setupResizeHandler();
+ 
+   
   }
 
   createTimeline() {
@@ -892,71 +922,9 @@ class WordAnimator {
           ease: 'power2.in'
       });
 
-      figuresData.forEach((figure) => {
-          const targetSelector = figure.type === 'image' ? '.image-placeholder' : '.video-placeholder';
-
-          // Reset the placeholders before showing the next figure
-          this.timeline.add(() => {
-              this.resetPlaceholderStyles();
-          });
-
-          this.timeline.fromTo(targetSelector, {
-              scale: 1,
-              opacity: 0,
-              zIndex: this.currentZIndex++
-          }, {
-              scale: 1,
-              opacity: 1,
-              duration: 0.5,
-              ease: 'power2.out',
-              onStart: () => {
-                  if (figure.type === 'image') {
-                      const imgElement = document.querySelector('.image-placeholder img');
-                      const captionElement = document.querySelector('.image-placeholder figcaption b');
-
-                      imgElement.src = figure.src;
-                      imgElement.className = `media image ${figure.class || ''}`;
-                      captionElement.textContent = figure.caption;
-
-                      this.currentElement = imgElement;  // Track the current element
-                      
-                      // Apply border radius immediately after the element is loaded
-                      imgElement.onload = () => {
-                          updateBorderRadius(imgElement);
-                      };
-
-                  } else if (figure.type === 'video') {
-                      const videoElement = document.querySelector('.video-placeholder video');
-                      const videoSource = document.querySelector('.video-placeholder video source');
-                      const captionElement = document.querySelector('.video-placeholder figcaption b');
-
-                      videoSource.src = figure.src;
-                      videoElement.className = figure.class || '';
-                      captionElement.textContent = figure.caption;
-
-                      this.currentElement = videoElement;  // Track the current element
-                      
-                      // Load and apply border radius after the video metadata is loaded
-                      videoElement.onloadedmetadata = () => {
-                          updateBorderRadius(videoElement);
-                      };
-
-                      videoElement.load();
-                  }
-              },
-              onComplete: () => {
-                  if (this.pausePending) {
-                      this.timeline.pause();
-                      this.pausePending = false;
-                  }
-              }
-          })
-          .to(targetSelector, {
-              opacity: 0,
-              duration: 0.2,
-              ease: 'power2.in'
-          });
-      });
+  // Create animations for categorized data
+  this.createCategoryAnimation('interfaces', this.categorizedData.interfaces);
+  this.createCategoryAnimation('branding', this.categorizedData.branding);
 
       this.timeline.to(this.container, {
           scale: 1,
@@ -973,6 +941,61 @@ class WordAnimator {
           ease: 'power2.in'
       });
   }
+
+  createCategoryAnimation(categoryName, categoryData) {
+    this.timeline.to(this.container, {
+        scale: 1,
+        opacity: 1,
+        duration: 0.5,
+        ease: 'power2.out',
+        onStart: () => {
+            this.container.innerText = categoryName;
+        }
+    })
+    .to(this.container, {
+        opacity: 0,
+        duration: 0.5,
+        ease: 'power2.in'
+    });
+
+    categoryData.forEach((figure) => {
+        const targetSelector = figure.type === 'image' ? '.image-placeholder' : '.video-placeholder';
+
+        // Reset the placeholders before showing the next figure
+        this.timeline.add(() => {
+            this.resetPlaceholderStyles();
+        });
+
+        this.timeline.fromTo(targetSelector, {
+            scale: 1,
+            opacity: 0,
+            zIndex: this.currentZIndex++
+        }, {
+            scale: 1,
+            opacity: 1,
+            duration: 0.5,
+            ease: 'power2.out',
+            onStart: () => {
+                if (figure.type === 'image') {
+                    this.setupImage(figure);
+                } else if (figure.type === 'video') {
+                    this.setupVideo(figure);
+                }
+            },
+            onComplete: () => {
+                if (this.pausePending) {
+                    this.timeline.pause();
+                    this.pausePending = false;
+                }
+            }
+        })
+        .to(targetSelector, {
+            opacity: 0,
+            duration: 0.2,
+            ease: 'power2.in'
+        });
+    });
+}
 
   resetPlaceholderStyles() {
       const imgPlaceholder = document.querySelector('.image-placeholder img');
@@ -991,6 +1014,58 @@ class WordAnimator {
           videoPlaceholder.load();  // Reset the video element
       }
   }
+  setupImage(figure) {
+    const imgElement = document.querySelector('.image-placeholder img');
+    const captionElement = document.querySelector('.image-placeholder figcaption b');
+
+    imgElement.src = figure.src;
+    imgElement.className = `media image ${figure.class || ''}`;
+    captionElement.textContent = figure.caption;
+
+    this.currentElement = imgElement;
+
+    imgElement.onload = () => {
+        updateBorderRadius(imgElement);
+    };
+}
+
+setupVideo(figure) {
+    const videoElement = document.querySelector('.video-placeholder video');
+    const videoSource = document.querySelector('.video-placeholder video source');
+    const captionElement = document.querySelector('.video-placeholder figcaption b');
+
+    videoSource.src = figure.src;
+    videoElement.className = figure.class || '';
+    captionElement.textContent = figure.caption;
+
+    this.currentElement = videoElement;
+
+    videoElement.onloadedmetadata = () => {
+        updateBorderRadius(videoElement);
+    };
+
+    videoElement.load();
+}
+
+resetPlaceholderStyles() {
+    const imgPlaceholder = document.querySelector('.image-placeholder img');
+    const videoPlaceholder = document.querySelector('.video-placeholder video');
+
+    if (imgPlaceholder) {
+        imgPlaceholder.className = 'media image';
+        imgPlaceholder.src = '';
+        imgPlaceholder.style = '';
+    }
+
+    if (videoPlaceholder) {
+        videoPlaceholder.className = '';
+        videoPlaceholder.querySelector('source').src = '';
+        videoPlaceholder.style = '';
+        videoPlaceholder.load();
+    }
+}
+
+
 
   setupResizeHandler() {
       window.addEventListener('resize', () => {
@@ -1053,7 +1128,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const loadingContainer = document.getElementById('loading-container');
   const instruction = document.getElementById('instruction');
   const header = document.getElementById('header');
-  const animator = new WordAnimator(text, container, mediaContainer);
+
+  const categorizedData = categorizeFiguresData(figuresData); // Categorize the data
+  const animator = new WordAnimator(text, container, mediaContainer, categorizedData);
+
 
   preloadAssets(figuresData, () => {
       gsap.to(loadingContainer, {
