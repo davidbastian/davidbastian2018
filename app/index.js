@@ -1025,13 +1025,19 @@ figure img, figure video {
   pointer-events:none;
   height: auto;
   object-fit: contain;
-  transform:scale(.7)
+  transform:scale(.7);
+  user-select:none;
 }
   .phone,.tablet {
 box-sizing: border-box;
   }
 
   .scale {transform:scale(1)!important}
+
+  #media-container {
+    pointer-events:none;
+  user-select:none;
+  }
 
 
 
