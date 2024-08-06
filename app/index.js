@@ -894,7 +894,7 @@ img, video {
 
 
 body.mobile  #text-container{
-top: -145px;
+top:0px;
 left:0;
 }
 
@@ -972,7 +972,7 @@ margin-left:5px;
 text-decoration:none;
 color:black}
 
-body.mobile #header a {
+body.mobile #header nav a {
 margin-left:20px;
 }
 
