@@ -925,6 +925,8 @@ class WordAnimator {
   // Create animations for categorized data
   this.createCategoryAnimation('interfaces', this.categorizedData.interfaces);
   this.createCategoryAnimation('branding', this.categorizedData.branding);
+  this.createCategoryAnimation('3d', this.categorizedData['3d']);
+  this.createCategoryAnimation('and more...', this.categorizedData.more);
 
       this.timeline.to(this.container, {
           scale: 1,
