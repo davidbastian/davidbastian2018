@@ -555,7 +555,6 @@ function isMobileDevice() {
 }
 
 
-
 // Function to dynamically inject HTML and CSS
 function injectHTMLandCSS() {
   // Add .mobile class to body if it's a mobile device
@@ -824,57 +823,6 @@ box-sizing: border-box;
   document.head.appendChild(style);
 }
 
-
-// Function to create a figure element
-function createFigureElement(item) {
-    const figure = document.createElement('figure');
-
-    // Set the data-category attribute or class
-    if (item.category) {
-        figure.setAttribute('data-category', item.category);
-    }
-    if (item.class) {
-        figure.className = item.class;
-    }
-
-    let mediaElement;
-
-    // Create image element
-    if (item.type === 'image') {
-        mediaElement = document.createElement('img');
-        mediaElement.className = item.class || '';
-        mediaElement.src = item.src;
-        mediaElement.alt = item.caption || '';
-
-    // Create video element
-    } else if (item.type === 'video') {
-        mediaElement = document.createElement('video');
-        mediaElement.className = item.class || '';
-        mediaElement.autoplay = true;
-        mediaElement.muted = true;
-        mediaElement.loop = true;
-
-        // Create the source element for the video
-        const source = document.createElement('source');
-        source.src = item.src;
-        source.type = 'video/mp4';
-
-        mediaElement.appendChild(source);
-
-        // Fallback content for unsupported browsers
-        mediaElement.innerHTML = 'Your browser does not support the video tag.';
-    }
-
-    // Append the media element to the figure
-    figure.appendChild(mediaElement);
-
-    // Create and append the figcaption
-    const figcaption = document.createElement('figcaption');
-    figcaption.innerHTML = `<b>${item.caption}</b> ${item.description}`;
-    figure.appendChild(figcaption);
-
-    return figure;
-}
 
 class WordAnimator {
   constructor(text, container, mediaContainer) {
